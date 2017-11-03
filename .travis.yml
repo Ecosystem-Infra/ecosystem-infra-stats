@@ -1,11 +1,9 @@
 branches:
   only:
     - master
-install:
-  - git clone https://chromium.googlesource.com/chromium/src.git chromium
-  - git clone https://github.com/w3c/web-platform-tests.git
 script:
-  - ls chromium
-  - ls web-platform-tests
-  - ./chromium-wpt-owners.sh chromium
+  - git clone https://github.com/w3c/web-platform-tests.git
   - ./wpt-stats.sh web-platform-tests
+  - git clone --bare https://chromium.googlesource.com/chromium/src.git chromium.git
+  - du -sh chromium.git
+  - ./chromium-wpt-owners.sh chromium.git
