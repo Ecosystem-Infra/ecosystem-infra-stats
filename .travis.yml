@@ -2,8 +2,9 @@ branches:
   only:
     - master
 script:
+  - mkdir out
   - git clone https://github.com/w3c/web-platform-tests.git
-  - ./wpt-stats.sh web-platform-tests
+  - ./wpt-stats.sh web-platform-tests | tee out/wpt-stats.txt
   # some tricks to transfer less data and use less disk space
   # https://stackoverflow.com/a/4909267 + https://stackoverflow.com/a/10637882
   - mkdir chromium
@@ -14,4 +15,19 @@ script:
   - echo "third_party/WebKit/LayoutTests/external/wpt/*" > .git/info/sparse-checkout
   - git checkout master
   - cd ..
-  - ./chromium-wpt-owners.sh chromium
+  - ./chromium-wpt-owners.sh chromium | tee out/chromium-wpt-owners.txt
+  - cp static/* out/
+after_success:
+  - openssl aes-256-cbc -K $encrypted_c74da90f7ccf_key -iv $encrypted_c74da90f7ccf_iv -in deploy_key.enc -out deploy_key -d
+  - chmod 0600 deploy_key
+  - eval "$(ssh-agent -s)"
+  - ssh-add deploy_key
+  - git config --global user.email "bot@foolip.org"
+  - git config --global user.name "Automat af Ekosystem"
+  - git clone --branch gh-pages git@github.com:foolip/ecosystem-infra-stats.git gh-pages
+  - rm -rf gh-pages/*
+  - cp out/* gh-pages/
+  - cd gh-pages
+  - git add -A
+  - git commit -m "Automatic update" -m "Using commit $TRAVIS_COMMIT" -m "https://travis-ci.org/foolip/ecosystem-infra-stats/builds/$TRAVIS_BUILD_ID"
+  - git push
