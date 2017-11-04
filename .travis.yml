@@ -3,7 +3,16 @@ branches:
     - master
 script:
   - git clone https://github.com/w3c/web-platform-tests.git
+  - find web-platform-tests -type d # TODO remove
   - ./wpt-stats.sh web-platform-tests
-  - git clone --bare https://chromium.googlesource.com/chromium/src.git chromium.git
-  - du -sh chromium.git
-  - ./chromium-wpt-owners.sh chromium.git
+  # https://stackoverflow.com/a/4909267
+  - mkdir chromium
+  - cd chromium
+  - git init
+  - git config core.sparseCheckout true
+  - git remote add -f origin https://chromium.googlesource.com/chromium/src.git
+  - echo "third_party/WebKit/LayoutTests/external/wpt/*" > .git/info/sparse-checkout
+  - git checkout master
+  - cd ..
+  - find chromium -type d # TODO remove
+  - ./chromium-wpt-owners.sh chromium
