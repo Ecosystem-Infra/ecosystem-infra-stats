@@ -1,4 +1,5 @@
 Missing OWNERS: acid
+Orphaned OWNERS: assumptions
 Missing COMPONENT: battery-status
 Missing TEAM: clipboard-apis
 Missing COMPONENT: clipboard-apis
@@ -12,8 +13,6 @@ Missing TEAM: encrypted-media
 Missing COMPONENT: encrypted-media
 Missing OWNERS: entries-api
 Missing TEAM: hr-time
-Missing TEAM: infrastructure
-Missing COMPONENT: infrastructure
 Missing TEAM: keyboard-lock
 Missing COMPONENT: keyboard-lock
 Missing TEAM: longtask-timing
@@ -27,6 +26,7 @@ Missing COMPONENT: page-visibility
 Missing TEAM: paint-timing
 Missing OWNERS: payment-method-basic-card
 Missing TEAM: performance-timeline
+Orphaned OWNERS: progress-events
 Missing TEAM: quirks-mode
 Missing COMPONENT: quirks-mode
 Missing OWNERS: requestidlecallback
@@ -38,7 +38,6 @@ Missing TEAM: screen-orientation
 Missing OWNERS: speech-api
 Missing OWNERS: trusted-types
 Missing TEAM: user-timing
-Missing OWNERS: visual-viewport
 Missing OWNERS: wake-lock
 Missing TEAM: wasm
 Missing TEAM: webaudio
