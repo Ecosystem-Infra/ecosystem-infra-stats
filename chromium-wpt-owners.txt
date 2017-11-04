@@ -13,6 +13,8 @@ Missing TEAM: encrypted-media
 Missing COMPONENT: encrypted-media
 Missing OWNERS: entries-api
 Missing TEAM: hr-time
+Missing TEAM: infrastructure
+Missing COMPONENT: infrastructure
 Missing TEAM: keyboard-lock
 Missing COMPONENT: keyboard-lock
 Missing TEAM: longtask-timing
