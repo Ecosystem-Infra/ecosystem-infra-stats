@@ -6,9 +6,8 @@ script:
   - ./wpt-stats.sh web-platform-tests
   # some tricks to transfer less data and use less disk space
   # https://stackoverflow.com/a/4909267 + https://stackoverflow.com/a/10637882
-  # 100k commit is assumed to be >1 years worth
   - mkdir chromium
-  - git clone --bare --depth=100000 https://chromium.googlesource.com/chromium/src.git chromium/.git
+  - git clone --bare --depth=1 https://chromium.googlesource.com/chromium/src.git chromium/.git
   - cd chromium
   - git config core.bare false
   - git config core.sparseCheckout true
