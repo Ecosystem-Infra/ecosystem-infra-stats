@@ -3,16 +3,16 @@ branches:
     - master
 script:
   - git clone https://github.com/w3c/web-platform-tests.git
-  - find web-platform-tests -type d # TODO remove
   - ./wpt-stats.sh web-platform-tests
-  # https://stackoverflow.com/a/4909267
+  # some tricks to transfer less data and use less disk space
+  # https://stackoverflow.com/a/4909267 + https://stackoverflow.com/a/10637882
+  # 100k commit is assumed to be >1 years worth
   - mkdir chromium
+  - git clone --bare --depth=100000 https://chromium.googlesource.com/chromium/src.git chromium/.git
   - cd chromium
-  - git init
+  - git config core.bare false
   - git config core.sparseCheckout true
-  - git remote add -f origin https://chromium.googlesource.com/chromium/src.git
   - echo "third_party/WebKit/LayoutTests/external/wpt/*" > .git/info/sparse-checkout
   - git checkout master
   - cd ..
-  - find chromium -type d # TODO remove
   - ./chromium-wpt-owners.sh chromium
