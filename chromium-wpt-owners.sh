@@ -9,7 +9,7 @@ cd "$CHROMIUM_DIR/third_party/WebKit/LayoutTests/external/wpt"
 (
     find * -maxdepth 0 -type d;
     find css/* -maxdepth 0 -type d
-) | grep -vE '^(common|css|css/fonts|css/reference|css/support|css/vendor-imports|fonts|infrastructure|interfaces|media)$' | while read d; do
+) | grep -vE '^(common|css|css/fonts|css/reference|css/support|css/vendor-imports|fonts|interfaces|media)$' | while read d; do
     if [[ ! -f "$d/OWNERS" ]]; then
         echo "Missing OWNERS: $d"
         continue
