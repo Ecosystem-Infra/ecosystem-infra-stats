@@ -14,9 +14,11 @@ script:
   # use mirror, as github suppports --shallow-since and gives smaller packs
   - git clone --shallow-since=2017-01-01 https://github.com/scheib/chromium.git
   # chromium import stats
-  - python wpt-import-stats.py chromium web-platform-tests | tee out/wpt-import-stats.txt
+  - python wpt-import-stats.py chromium web-platform-tests
+  - cp latency.json out/
   # chromium export stats
-  - python wpt-export-stats.py chromium | tee out/wpt-export-stats.txt
+  - python wpt-export-stats.py chromium
+  - cp mins.json export-latencies.csv out/
   # chromium usage stats
   - mv wpt-usage-stats chromium/third_party/WebKit/Tools/Scripts/
   - chromium/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 | tee out/chromium-usage-stats.txt
