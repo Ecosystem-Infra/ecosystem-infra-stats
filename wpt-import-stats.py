@@ -117,7 +117,7 @@ def get_latencies(imports):
 
             wpt_commit_time = dateutil.parser.parse(wpt_date)
             delay = (import_time - wpt_commit_time).total_seconds() / 60
-            print("WPT {} latency={}".format(wpt_sha, delay))
+            # print("WPT {} latency={}".format(wpt_sha, delay))
             latency_by_month[import_month].append(delay)
 
     print(latency_by_month)
