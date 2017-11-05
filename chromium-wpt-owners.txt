@@ -37,10 +37,11 @@ Missing TEAM: resources
 Missing COMPONENT: resources
 Missing TEAM: resource-timing
 Missing TEAM: screen-orientation
-Orphaned OWNERS: selectors
 Missing OWNERS: speech-api
 Missing OWNERS: trusted-types
 Missing TEAM: user-timing
+Orphaned OWNERS: viewport
+Missing OWNERS: visual-viewport
 Missing OWNERS: wake-lock
 Missing TEAM: wasm
 Missing TEAM: webaudio
