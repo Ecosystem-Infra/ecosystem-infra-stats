@@ -22,6 +22,10 @@ script:
   - echo "third_party/WebKit/*" > .git/info/sparse-checkout
   - git checkout master
   - cd -
+  # chromium import stats
+  - python wpt-import-stats.py | tee out/wpt-import-stats.txt
+  # chromium export stats
+  - python wpt-export-stats.py | tee out/wpt-export-stats.txt
   # chromium usage stats
   - mv wpt-usage-stats chromium/src/third_party/WebKit/Tools/Scripts/
   - chromium/src/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 | tee out/chromium-usage-stats.txt
