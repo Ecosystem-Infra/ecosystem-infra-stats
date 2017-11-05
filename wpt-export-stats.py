@@ -16,8 +16,7 @@ import subprocess
 
 # Only PRs after this time (UTC) will be processed.
 CUTOFF = '2017-01-01T00:00:00Z'
-# Please change this to your chromium checkout.
-CHROMIUM_DIR = os.path.expanduser('~/chromium/src')
+CHROMIUM_DIR = sys.argv[1]
 # Provide GitHub token to get full results (otherwise limited to <500 PRs).
 GH_USER = ''
 GH_TOKEN = ''

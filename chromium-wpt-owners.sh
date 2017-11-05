@@ -3,8 +3,8 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-CHROMIUM_DIR="$1"
-cd "$CHROMIUM_DIR/src/third_party/WebKit/LayoutTests/external/wpt"
+CHROMIUM_WPT_DIR="$1"
+cd "$CHROMIUM_WPT_DIR"
 
 (
     find * -maxdepth 0 -type d;

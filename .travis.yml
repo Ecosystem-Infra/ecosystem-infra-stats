@@ -10,27 +10,18 @@ script:
   - git clone https://github.com/w3c/web-platform-tests.git
   # upstream wpt stats
   - ./wpt-stats.sh web-platform-tests | tee out/wpt-stats.txt
-  # chromium checkout (hard!)
-  # some tricks to transfer less data and use less disk space:
-  # https://stackoverflow.com/a/4909267 + https://stackoverflow.com/a/10637882
-  # 1 years in chromium is ~85k commits and increasing
-  - mkdir -p chromium/src
-  - git clone --bare --depth=10000 https://chromium.googlesource.com/chromium/src.git chromium/src/.git
-  - cd chromium/src
-  - git config core.bare false
-  - git config core.sparseCheckout true
-  - echo "third_party/WebKit/*" > .git/info/sparse-checkout
-  - git checkout master
-  - cd -
+  # chromium checkout
+  # use mirror, as github suppports --shallow-since and gives smaller packs
+  - git clone --shallow-since=2017-01-01 https://github.com/scheib/chromium.git
   # chromium import stats
-  - python wpt-import-stats.py | tee out/wpt-import-stats.txt
+  - python wpt-import-stats.py chromium web-platform-tests | tee out/wpt-import-stats.txt
   # chromium export stats
-  - python wpt-export-stats.py | tee out/wpt-export-stats.txt
+  - python wpt-export-stats.py chromium | tee out/wpt-export-stats.txt
   # chromium usage stats
-  - mv wpt-usage-stats chromium/src/third_party/WebKit/Tools/Scripts/
-  - chromium/src/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 | tee out/chromium-usage-stats.txt
+  - mv wpt-usage-stats chromium/third_party/WebKit/Tools/Scripts/
+  - chromium/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 | tee out/chromium-usage-stats.txt
   # bonus: chromium OWNERS check
-  - ./chromium-wpt-owners.sh chromium | tee out/chromium-wpt-owners.txt
+  - ./chromium-wpt-owners.sh chromium/third_party/WebKit/LayoutTests/external/wpt | tee out/chromium-wpt-owners.txt
   - cp static/* out/
 after_success:
   - openssl aes-256-cbc -K $encrypted_c74da90f7ccf_key -iv $encrypted_c74da90f7ccf_iv -in deploy_key.enc -out deploy_key -d

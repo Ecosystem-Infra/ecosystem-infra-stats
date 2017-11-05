@@ -9,13 +9,12 @@ import re
 import numpy
 import os
 import subprocess
+import sys
 
 # Only commits after this time (UTC) will be processed.
 CUTOFF = '2017-06-01T00:00:00Z'
-# Please change this to your chromium checkout.
-CHROMIUM_DIR = os.path.expanduser('~/chromium/src')
-# Please change this to your upstream WPT checkout.
-WPT_DIR = os.path.expanduser('~/github/web-platform-tests')
+CHROMIUM_DIR = sys.argv[1]
+WPT_DIR = sys.argv[2]
 CHROMIUM_WPT_PATH = 'third_party/WebKit/LayoutTests/external/wpt'
 # Target SLA (in minutes).
 SLA = 12*60
