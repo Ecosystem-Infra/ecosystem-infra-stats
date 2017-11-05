@@ -12,14 +12,14 @@ import os
 import requests
 import re
 import subprocess
+import sys
 
 
 # Only PRs after this time (UTC) will be processed.
 CUTOFF = '2017-01-01T00:00:00Z'
 CHROMIUM_DIR = sys.argv[1]
-# Provide GitHub token to get full results (otherwise limited to <500 PRs).
-GH_USER = ''
-GH_TOKEN = ''
+GH_USER = os.environ.get('GH_USER')
+GH_TOKEN = os.environ.get('GH_TOKEN')
 # Target SLA (in minutes).
 SLA = 60
 # GitHub cache. Remove to fetch PRs again.
@@ -40,7 +40,9 @@ def fetch_all_prs():
 
     print('Fetching all PRs')
     base_url = 'https://api.github.com/search/issues?q=repo:w3c/web-platform-tests%20type:pr%20label:chromium-export%20is:merged'
-    github_oauth = (GH_USER, GH_TOKEN) if GH_TOKEN else None
+    github_oauth = (GH_USER, GH_TOKEN) if (GH_USER and GH_TOKEN) else None
+    if github_oauth is None:
+        print('Warning: Provide GH_USER and GH_TOKEN to get full results (otherwise limited to <500 PRs)')
 
     res = requests.get(base_url, auth=github_oauth)
     data = res.json()
