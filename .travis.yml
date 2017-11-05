@@ -9,7 +9,7 @@ script:
   # upstream wpt checkout (easy!)
   - git clone https://github.com/w3c/web-platform-tests.git
   # upstream wpt stats
-  - ./wpt-stats.sh web-platform-tests | tee out/wpt-stats.txt
+  - ./wpt-stats.sh web-platform-tests > out/wpt-stats.csv
   # chromium checkout
   # use mirror, as github suppports --shallow-since and gives smaller packs
   - git clone --shallow-since=2017-01-01 https://github.com/scheib/chromium.git
