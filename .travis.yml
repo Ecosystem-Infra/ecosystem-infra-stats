@@ -9,16 +9,16 @@ script:
   # upstream wpt checkout (easy!)
   - git clone https://github.com/w3c/web-platform-tests.git
   # upstream wpt stats
-  - ./wpt-stats.sh web-platform-tests > out/wpt-stats.csv
+  - ./wpt-stats.sh web-platform-tests > out/wpt-commits.csv
   # chromium checkout
   # use mirror, as github suppports --shallow-since and gives smaller packs
   - git clone --shallow-since=2017-01-01 https://github.com/scheib/chromium.git
   # chromium import stats
   - python wpt-import-stats.py chromium web-platform-tests
-  - cp latency.json out/
+  - mv latency.json out/chromium-import-latency.csv
   # chromium export stats
   - python wpt-export-stats.py chromium
-  - cp mins.json export-latencies.csv out/
+  - mv export-latencies.csv out/chromium-export-latency.csv
   # chromium usage stats
   - mv wpt-usage-stats chromium/third_party/WebKit/Tools/Scripts/
   - chromium/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 | tee out/chromium-usage-stats.txt
