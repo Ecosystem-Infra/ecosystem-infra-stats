@@ -1,20 +1,31 @@
 branches:
   only:
     - master
+language: python
+python:
+  - "2.7"
 script:
   - mkdir out
+  # upstream wpt checkout (easy!)
   - git clone https://github.com/w3c/web-platform-tests.git
+  # upstream wpt stats
   - ./wpt-stats.sh web-platform-tests | tee out/wpt-stats.txt
-  # some tricks to transfer less data and use less disk space
+  # chromium checkout (hard!)
+  # some tricks to transfer less data and use less disk space:
   # https://stackoverflow.com/a/4909267 + https://stackoverflow.com/a/10637882
-  - mkdir chromium
-  - git clone --bare --depth=1 https://chromium.googlesource.com/chromium/src.git chromium/.git
-  - cd chromium
+  # 100k commits is assumed to be >1 years worth
+  - mkdir -p chromium/src
+  - git clone --bare --depth=100000 https://chromium.googlesource.com/chromium/src.git chromium/src/.git
+  - cd chromium/src
   - git config core.bare false
   - git config core.sparseCheckout true
-  - echo "third_party/WebKit/LayoutTests/external/wpt/*" > .git/info/sparse-checkout
+  - echo "third_party/WebKit/*" > .git/info/sparse-checkout
   - git checkout master
-  - cd ..
+  - cd -
+  # chromium usage stats
+  - mv wpt-usage-stats chromium/src/third_party/WebKit/Tools/Scripts/
+  - chromium/src/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 | tee out/chromium-usage-stats.txt
+  # bonus: chromium OWNERS check
   - ./chromium-wpt-owners.sh chromium | tee out/chromium-wpt-owners.txt
   - cp static/* out/
 after_success:

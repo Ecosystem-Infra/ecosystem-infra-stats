@@ -4,7 +4,7 @@ set -o nounset
 set -o pipefail
 
 CHROMIUM_DIR="$1"
-cd "$CHROMIUM_DIR/third_party/WebKit/LayoutTests/external/wpt"
+cd "$CHROMIUM_DIR/src/third_party/WebKit/LayoutTests/external/wpt"
 
 (
     find * -maxdepth 0 -type d;
