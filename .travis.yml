@@ -13,9 +13,9 @@ script:
   # chromium checkout (hard!)
   # some tricks to transfer less data and use less disk space:
   # https://stackoverflow.com/a/4909267 + https://stackoverflow.com/a/10637882
-  # 100k commits is assumed to be >1 years worth
+  # 1 years in chromium is ~85k commits and increasing
   - mkdir -p chromium/src
-  - git clone --bare --depth=100000 https://chromium.googlesource.com/chromium/src.git chromium/src/.git
+  - git clone --bare --depth=10000 https://chromium.googlesource.com/chromium/src.git chromium/src/.git
   - cd chromium/src
   - git config core.bare false
   - git config core.sparseCheckout true
