@@ -1,0 +1,19 @@
+Fetching all PRs
+676 total PRs
+Fetching page 1
+Fetching page 2
+Fetching page 3
+Fetching page 4
+Fetching page 5
+Fetching page 6
+Fetching page 7
+Fetching page 8
+Fetching page 9
+Fetching page 10
+No items in page 10 stopping
+Fetched 450 merged PRs with chromium-export label
+Writing file prs.json
+450 merged since 2017-01-01T00:00:00Z
+[1/450] PR: https://github.com/w3c/web-platform-tests/pull/8062
+Found Change-Id I41c42ae090837eceaf90d3b3c7c4f6383c4ef821
+git log origin/master --format=%H -1 --grep=^Change-Id: I41c42ae090837eceaf90d3b3c7c4f6383c4ef821$
