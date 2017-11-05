@@ -176,7 +176,7 @@ def calculate_pr_delays(prs):
         print('Skipped PRs:', skipped)
 
     items = min_differences_by_month.items()
-    items = sorted(items, reverse=True, key=lambda i: i[0])
+    items = sorted(items, key=lambda i: i[0])
     print(items)
 
     print('Writing file', MINS_FILE)
