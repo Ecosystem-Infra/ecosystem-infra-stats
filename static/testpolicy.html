@@ -1,0 +1,96 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Testing Policy</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js" integrity="sha256-N4u5BjTLNwmGul6RgLoESPNqDFVUibVuOYhP4gJgrew=" crossorigin="anonymous"></script>
+<h1>Testing Policy</h1>
+<div><canvas></canvas></div>
+<script>
+const data = {
+  datasets: [{
+    label: '# of specs',
+    data: [
+      { x: '2016-09-23T13:37:15Z', y: 1, }, // Pointer Events
+      { x: '2016-10-05T14:28:56Z', y: 1 }, // WHATWG HTML
+      { x: '2017-01-25T10:49:22Z', y: 13 }, // WHATWG generally
+      { x: '2017-04-26T09:13:41Z', y: 1 }, // Service Workers
+      { x: '2017-05-04T18:10:49Z', y: 12 }, // Web Performance WG (now 14, but how to represent?)
+      { x: '2017-05-11T19:11:31Z', y: 1 }, // IndexedDB
+      { x: '2017-05-16T16:20:02Z', y: 1 }, // Pointer Lock
+      { x: '2017-07-14T03:33:17Z', y: 1 }, // Payment Request
+      { x: '2017-08-20T22:49:59Z', y: 1 }, // Web Animations
+      { x: '2017-08-22T17:50:54Z', y: 1 }, // WebVTT
+      { x: '2017-08-23T16:24:11Z', y: 6 }, // FX Task Force
+      { x: '2017-09-04T20:43:32Z', y: 34 }, // CSSWG
+      { x: '2017-09-06T11:06:19Z', y: 1 }, // Intersection Observer
+      { x: '2017-09-08T14:52:43Z', y: 8 }, // SVGWG
+      { x: '2017-09-11T06:54:04Z', y: 1 }, // Content Security Policy
+      { x: '2017-10-18T08:03:56Z', y: 1 }, // Generic Sensor API
+      { x: '2017-10-18T16:25:38Z', y: 1 }, // Static Range
+      { x: '2017-10-18T16:26:05Z', y: 1 }, // UI Events
+      { x: '2017-10-18T16:28:54Z', y: 1 }, // File API
+      { x: '2017-10-18T17:25:15Z', y: 1 }, // Clipboard API and Events
+      { x: '2017-10-19T14:53:23Z', y: 1 }, // File and Directory Entries
+      { x: '2017-10-19T15:59:26Z', y: 1 }, // Feature Policy
+      { x: '2017-10-19T16:03:13Z', y: 1 }, // WebUSB
+      { x: '2017-10-19T16:05:36Z', y: 1 }, // Keyboard Lock
+      { x: '2017-10-19T17:10:20Z', y: 1 }, // Web Audio API
+      { x: '2017-10-19T18:10:11Z', y: 1 }, // Resize Observer
+      { x: '2017-10-20T19:47:29Z', y: 1 }, // Vibration
+      { x: '2017-10-23T11:25:14Z', y: 1 }, // Touch Events
+      { x: '2017-10-23T13:32:45Z', y: 1 }, // Battery Status API
+      { x: '2017-10-23T13:50:45Z', y: 1 }, // HTML Media Capture
+      { x: '2017-10-23T14:40:40Z', y: 1 }, // Accelerometer
+      { x: '2017-10-24T06:15:50Z', y: 1 }, // Orientation Sensor
+      { x: '2017-10-24T06:16:13Z', y: 1 }, // Gyroscope
+      { x: '2017-10-24T08:45:14Z', y: 1 }, // Magnetometer
+      { x: '2017-10-24T09:02:42Z', y: 1 }, // Ambient Light
+      { x: '2017-10-25T17:22:27Z', y: 1 }, // WebVR
+      { x: '2017-10-27T17:51:14Z', y: 2 }, // Gamepad API
+      { x: '2017-11-03T15:24:44Z', y: 1 }, // DOM Parsing and Serialization
+    ],
+    borderColor: 'hsl(100, 40%, 50%)',
+    pointRadius: 0,
+    steppedLine: true,
+  },
+  {
+    label: 'future?',
+    borderColor: 'hsl(10, 100%, 60%)',
+    borderDash: [4, 4],
+    pointRadius: 0,
+  }]
+}
+
+function massageDatasets([historical, future]) {
+  let ySum = 0;
+  for (const point of historical.data) {
+    ySum += point.y;
+    point.y = ySum;
+  }
+  future.data = [
+    historical.data[historical.data.length - 1],
+    { x: '2018-03-01T00:00:00Z', y: 200 },
+  ];
+}
+massageDatasets(data.datasets);
+
+new Chart(document.querySelector('canvas'), {
+  type: 'line',
+  data: data,
+  options: {
+    legend: {
+      display: true,
+      position: 'right',
+    },
+    scales: {
+      xAxes: [{
+        type: 'time',
+        time: { unit: 'month' },
+      }],
+      yAxes: [{
+        ticks: { beginAtZero: true },
+      }],
+    },
+  },
+});
+</script>
