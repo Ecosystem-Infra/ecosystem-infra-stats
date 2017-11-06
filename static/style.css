@@ -1,0 +1,12 @@
+body {
+    max-width: 800px;
+    margin: auto;
+}
+h1 {
+    font-family: sans-serif;
+    font-size: 24px;
+    text-align: center;
+}
+div {
+    margin: 24px 0;
+}
