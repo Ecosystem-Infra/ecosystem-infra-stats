@@ -120,7 +120,7 @@ def get_latencies(imports):
             # print("WPT {} latency={}".format(wpt_sha, delay))
             latency_by_month[import_month].append(delay)
 
-    print(latency_by_month)
+    # print(latency_by_month)
     return latency_by_month
 
 
