@@ -1,3 +1,212 @@
+Author: junov@chromium.org
+No-WPT-Author: junov@chromium.org
+commit 1559b27f89ed89733c3c38b5eb06e27259224bab
+third_party/WebKit/LayoutTests/fast/canvas/canvas-incremental-repaint.html
+third_party/WebKit/LayoutTests/fast/canvas/canvas-toDataURL-jpeg-maximum-quality.html
+third_party/WebKit/LayoutTests/fast/canvas/canvas-toDataURL-webp.html
+third_party/WebKit/LayoutTests/fast/canvas/script-tests/canvas-lost-gpu-context.js
+third_party/WebKit/LayoutTests/fast/canvas/script-tests/canvas-toBlob-toDataURL-race.js
+third_party/WebKit/LayoutTests/virtual/display_list_2d_canvas/fast/canvas/canvas-lost-gpu-context-expected.txt
+third_party/WebKit/LayoutTests/virtual/gpu/fast/canvas/canvas-lost-gpu-context-expected.txt
+third_party/WebKit/Source/core/paint/HTMLCanvasPainterTest.cpp
+third_party/WebKit/Source/modules/canvas/canvas2d/CanvasRenderingContext2DTest.cpp
+third_party/WebKit/Source/platform/BUILD.gn
+third_party/WebKit/Source/platform/graphics/Canvas2DLayerBridge.cpp
+third_party/WebKit/Source/platform/graphics/Canvas2DLayerBridge.h
+third_party/WebKit/Source/platform/graphics/Canvas2DLayerBridgeTest.cpp
+third_party/WebKit/Source/platform/graphics/CanvasColorParams.cpp
+third_party/WebKit/Source/platform/graphics/CanvasColorParams.h
+third_party/WebKit/Source/platform/graphics/CanvasResource.cpp
+third_party/WebKit/Source/platform/graphics/CanvasResource.h
+third_party/WebKit/Source/platform/graphics/CanvasResourceProvider.cpp
+third_party/WebKit/Source/platform/graphics/CanvasResourceProvider.h
+third_party/WebKit/Source/platform/graphics/DEPS
+third_party/WebKit/Source/platform/graphics/GraphicsTypes.h
+third_party/WebKit/Source/platform/graphics/ImageBuffer.cpp
+third_party/WebKit/Source/platform/graphics/ImageBuffer.h
+third_party/WebKit/Source/platform/graphics/ImageBufferSurface.cpp
+third_party/WebKit/Source/platform/graphics/ImageBufferSurface.h
+third_party/WebKit/Source/platform/graphics/RecordingImageBufferSurface.cpp
+third_party/WebKit/Source/platform/graphics/RecordingImageBufferSurface.h
+
+Author: hajimehoshi@chromium.org
+No-WPT-Author: hajimehoshi@chromium.org
+commit f2727812421e1d947313ac60a82f6607c655572f
+third_party/WebKit/LayoutTests/inspector-protocol/performance/perf-metrics-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/performance/perf-push-metrics-expected.txt
+third_party/WebKit/Source/bindings/core/v8/ScriptPromiseResolver.cpp
+third_party/WebKit/Source/bindings/core/v8/ScriptPromiseResolver.h
+third_party/WebKit/Source/core/css/FontFaceSet.cpp
+third_party/WebKit/Source/core/css/FontFaceSet.h
+third_party/WebKit/Source/core/css/FontFaceSetDocument.h
+third_party/WebKit/Source/core/css/FontFaceSetWorker.h
+third_party/WebKit/Source/core/dom/BUILD.gn
+third_party/WebKit/Source/core/dom/ContextLifecycleNotifier.cpp
+third_party/WebKit/Source/core/dom/ContextLifecycleNotifier.h
+third_party/WebKit/Source/core/dom/ContextLifecycleObserver.h
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/dom/ExecutionContext.cpp
+third_party/WebKit/Source/core/dom/PausableObject.cpp
+third_party/WebKit/Source/core/dom/PausableObject.h
+third_party/WebKit/Source/core/dom/PausableObjectTest.cpp
+third_party/WebKit/Source/core/dom/ScriptedAnimationController.cpp
+third_party/WebKit/Source/core/dom/ScriptedAnimationController.h
+third_party/WebKit/Source/core/dom/ScriptedIdleTaskController.cpp
+third_party/WebKit/Source/core/dom/ScriptedIdleTaskController.h
+third_party/WebKit/Source/core/dom/SuspendableObject.h
+third_party/WebKit/Source/core/dom/events/EventTarget.h
+third_party/WebKit/Source/core/exported/WebHelperPluginImpl.cpp
+third_party/WebKit/Source/core/frame/DOMTimer.h
+third_party/WebKit/Source/core/frame/LocalDOMWindow.cpp
+third_party/WebKit/Source/core/frame/SuspendableScriptExecutor.cpp
+third_party/WebKit/Source/core/frame/SuspendableTimer.cpp
+third_party/WebKit/Source/core/frame/SuspendableTimer.h
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.cpp
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.h
+third_party/WebKit/Source/core/html/media/HTMLVideoElement.h
+third_party/WebKit/Source/core/html/parser/HTMLDocumentParser.cpp
+third_party/WebKit/Source/core/html/parser/HTMLDocumentParser.h
+third_party/WebKit/Source/core/intersection_observer/IntersectionObserverController.cpp
+third_party/WebKit/Source/core/intersection_observer/IntersectionObserverController.h
+third_party/WebKit/Source/core/layout/LayoutObject.cpp
+third_party/WebKit/Source/core/leak_detector/WebLeakDetector.cpp
+third_party/WebKit/Source/core/svg/SVGSVGElement.cpp
+third_party/WebKit/Source/core/svg/animation/SMILTimeContainer.cpp
+third_party/WebKit/Source/core/svg/animation/SMILTimeContainer.h
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/workers/DedicatedWorker.h
+third_party/WebKit/Source/core/workers/WorkerGlobalScope.cpp
+third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequest.cpp
+third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequest.h
+third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequestProgressEventThrottle.cpp
+third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequestProgressEventThrottle.h
+third_party/WebKit/Source/modules/battery/BatteryManager.cpp
+third_party/WebKit/Source/modules/battery/BatteryManager.h
+third_party/WebKit/Source/modules/eventsource/EventSource.h
+third_party/WebKit/Source/modules/indexeddb/IDBOpenDBRequest.h
+third_party/WebKit/Source/modules/indexeddb/IDBRequest.cpp
+third_party/WebKit/Source/modules/indexeddb/IDBRequest.h
+third_party/WebKit/Source/modules/mediarecorder/MediaRecorder.cpp
+third_party/WebKit/Source/modules/mediarecorder/MediaRecorder.h
+third_party/WebKit/Source/modules/mediasource/SourceBuffer.cpp
+third_party/WebKit/Source/modules/mediasource/SourceBuffer.h
+third_party/WebKit/Source/modules/mediastream/MediaDevices.cpp
+third_party/WebKit/Source/modules/mediastream/MediaDevices.h
+third_party/WebKit/Source/modules/mediastream/UserMediaRequest.h
+third_party/WebKit/Source/modules/peerconnection/RTCDataChannel.cpp
+third_party/WebKit/Source/modules/peerconnection/RTCDataChannel.h
+third_party/WebKit/Source/modules/peerconnection/RTCPeerConnection.cpp
+third_party/WebKit/Source/modules/peerconnection/RTCPeerConnection.h
+third_party/WebKit/Source/modules/permissions/PermissionStatus.cpp
+third_party/WebKit/Source/modules/permissions/PermissionStatus.h
+third_party/WebKit/Source/modules/presentation/PresentationAvailability.cpp
+third_party/WebKit/Source/modules/presentation/PresentationAvailability.h
+third_party/WebKit/Source/modules/sensor/Sensor.h
+third_party/WebKit/Source/modules/serviceworkers/ServiceWorker.h
+third_party/WebKit/Source/modules/vr/VRDisplay.cpp
+third_party/WebKit/Source/modules/vr/VRDisplay.h
+third_party/WebKit/Source/modules/webaudio/BaseAudioContext.cpp
+third_party/WebKit/Source/modules/webaudio/BaseAudioContext.h
+third_party/WebKit/Source/modules/websockets/DOMWebSocket.cpp
+third_party/WebKit/Source/modules/websockets/DOMWebSocket.h
+third_party/WebKit/Source/platform/InstanceCounters.h
+
+Author: bugsnash@chromium.org
+No-WPT-Author: bugsnash@chromium.org
+commit 406dacf613a5932419b283111df9849115830cc9
+third_party/WebKit/LayoutTests/fast/css/getComputedStyle/computed-style-listing-expected.txt
+third_party/WebKit/LayoutTests/fast/css/getComputedStyle/computed-style-without-renderer-listing-expected.txt
+third_party/WebKit/LayoutTests/svg/css/getComputedStyle-listing-expected.txt
+third_party/WebKit/LayoutTests/typedcssom/the-stylepropertymap/computed-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/css-properties-as-js-properties-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/css-property-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/css-properties-as-js-properties-expected.txt
+third_party/WebKit/LayoutTests/webexposed/css-property-listing-expected.txt
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/CSSComputedStyleDeclaration.cpp
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/ComputedStyleCSSValueMapping.cpp
+third_party/WebKit/Source/core/css/properties/longhands/CSSPropertyAPIBackgroundBox.cpp
+third_party/WebKit/Source/core/css/properties/longhands/CSSPropertyAPIBackgroundClip.cpp
+third_party/WebKit/Source/core/css/properties/longhands/CSSPropertyAPIWebkitMaskOrigin.cpp
+third_party/WebKit/Source/core/css/properties/longhands/CSSPropertyAPIWebkitOrigin.cpp
+third_party/WebKit/Source/core/css/resolver/StyleResolver.cpp
+third_party/WebKit/Source/core/frame/UseCounter.cpp
+
+Author: loonybear@chromium.org
+WPT-Author: loonybear@chromium.org
+commit 2e71399980fa36ede2925e9e13bed869d8f9312c
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/OWNERS
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/dom/MessagePort.h
+third_party/WebKit/Source/core/dom/SecurityContext.cpp
+third_party/WebKit/Source/core/dom/SecurityContext.h
+third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
+third_party/WebKit/Source/core/exported/LocalFrameClientImpl.h
+third_party/WebKit/Source/core/exported/WebFrame.cpp
+third_party/WebKit/Source/core/exported/WebFrameTest.cpp
+third_party/WebKit/Source/core/exported/WebPluginContainerTest.cpp
+third_party/WebKit/Source/core/exported/WebRemoteFrameImpl.cpp
+third_party/WebKit/Source/core/exported/WebRemoteFrameImpl.h
+third_party/WebKit/Source/core/exported/WebViewTest.cpp
+third_party/WebKit/Source/core/frame/Deprecation.cpp
+third_party/WebKit/Source/core/frame/Frame.cpp
+third_party/WebKit/Source/core/frame/Frame.h
+third_party/WebKit/Source/core/frame/FrameOwner.h
+third_party/WebKit/Source/core/frame/FrameTestHelpers.cpp
+third_party/WebKit/Source/core/frame/FrameTestHelpers.h
+third_party/WebKit/Source/core/frame/LocalFrameClient.h
+third_party/WebKit/Source/core/frame/RemoteFrameOwner.cpp
+third_party/WebKit/Source/core/frame/RemoteFrameOwner.h
+third_party/WebKit/Source/core/frame/WebLocalFrameImpl.cpp
+third_party/WebKit/Source/core/frame/WebLocalFrameImpl.h
+third_party/WebKit/Source/core/html/HTMLFrameElement.cpp
+third_party/WebKit/Source/core/html/HTMLFrameElement.h
+third_party/WebKit/Source/core/html/HTMLFrameElementTest.cpp
+third_party/WebKit/Source/core/html/HTMLFrameOwnerElement.cpp
+third_party/WebKit/Source/core/html/HTMLFrameOwnerElement.h
+third_party/WebKit/Source/core/html/HTMLIFrameElement.cpp
+third_party/WebKit/Source/core/html/HTMLIFrameElement.h
+third_party/WebKit/Source/core/html/HTMLIFrameElementTest.cpp
+third_party/WebKit/Source/core/html/HTMLPlugInElement.cpp
+third_party/WebKit/Source/core/html/HTMLPlugInElement.h
+third_party/WebKit/Source/core/loader/DocumentLoaderTest.cpp
+third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequest.cpp
+third_party/WebKit/Source/modules/encryptedmedia/NavigatorRequestMediaKeySystemAccess.cpp
+third_party/WebKit/Source/modules/geolocation/Geolocation.cpp
+third_party/WebKit/Source/modules/mediastream/UserMediaRequest.cpp
+third_party/WebKit/Source/modules/webmidi/NavigatorWebMIDI.cpp
+third_party/WebKit/Source/platform/exported/Platform.cpp
+third_party/WebKit/Source/platform/feature_policy/FeaturePolicy.cpp
+third_party/WebKit/Source/platform/feature_policy/FeaturePolicy.h
+third_party/WebKit/Source/platform/feature_policy/FeaturePolicyTest.cpp
+third_party/WebKit/common/BUILD.gn
+third_party/WebKit/common/feature_policy/OWNERS
+third_party/WebKit/common/feature_policy/README.md
+third_party/WebKit/common/feature_policy/feature_policy.cc
+third_party/WebKit/common/feature_policy/feature_policy.h
+third_party/WebKit/common/feature_policy/feature_policy_feature.h
+third_party/WebKit/common/feature_policy/feature_policy_unittest.cc
+third_party/WebKit/public/BUILD.gn
+third_party/WebKit/public/platform/Platform.h
+third_party/WebKit/public/platform/WebFeaturePolicy.h
+third_party/WebKit/public/platform/WebFeaturePolicyFeature.h
+third_party/WebKit/public/platform/WebSecurityOrigin.h
+third_party/WebKit/public/platform/WebURLRequest.h
+third_party/WebKit/public/web/WebFrame.h
+third_party/WebKit/public/web/WebFrameClient.h
+third_party/WebKit/public/web/WebLocalFrame.h
+third_party/WebKit/public/web/WebRemoteFrame.h
+
+Author: japhet@chromium.org
+No-WPT-Author: japhet@chromium.org
+commit 1aec1a92fb786cae0a24ff2b22d4858d4486252e
+third_party/WebKit/LayoutTests/http/tests/security/subresourceIntegrity/clear-integrity-attribute-expected.txt
+third_party/WebKit/Source/core/loader/modulescript/ModuleScriptLoaderTest.cpp
+third_party/WebKit/Source/core/loader/resource/ScriptResource.cpp
+third_party/WebKit/Source/platform/loader/fetch/Resource.cpp
+
 Author: maxmorin@chromium.org
 No-WPT-Author: maxmorin@chromium.org
 commit 5f93cebdc920d48612d7ec612c7c7724d715d7af
@@ -3230,4 +3439,4 @@ third_party/WebKit/Source/core/paint/PaintLayer.h
 third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
 third_party/WebKit/Source/platform/graphics/paint/DisplayItem.h
 
-49 source+test changes, 6 in wpt
+54 source+test changes, 7 in wpt
