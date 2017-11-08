@@ -50,31 +50,22 @@ const data = {
       { x: '2017-11-03T15:24:44Z', y: 1 }, // DOM Parsing and Serialization
       { x: '2017-11-07T17:17:48Z', y: 1 }, // Web MIDI API
       { x: '2017-11-08T00:06:07Z', y: 1 }, // WebRTC
+      { x: '2017-11-08T02:00:15Z', y: 1 }, // Presentation API
     ],
     borderColor: 'hsl(100, 40%, 50%)',
     pointRadius: 0,
     steppedLine: true,
-  },
-  {
-    label: 'future?',
-    borderColor: 'hsl(10, 100%, 60%)',
-    borderDash: [4, 4],
-    pointRadius: 0,
   }]
 }
 
-function massageDatasets([historical, future]) {
+function makeAccumulative(dataset) {
   let ySum = 0;
-  for (const point of historical.data) {
+  for (const point of dataset.data) {
     ySum += point.y;
     point.y = ySum;
   }
-  future.data = [
-    historical.data[historical.data.length - 1],
-    { x: '2018-03-01T00:00:00Z', y: 200 },
-  ];
 }
-massageDatasets(data.datasets);
+makeAccumulative(data.datasets[0]);
 
 new Chart(document.querySelector('canvas'), {
   type: 'line',
