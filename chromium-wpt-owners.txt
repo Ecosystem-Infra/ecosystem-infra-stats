@@ -1,4 +1,5 @@
 Missing OWNERS: acid
+Missing OWNERS: async_cookies
 Missing COMPONENT: battery-status
 Missing TEAM: clipboard-apis
 Missing COMPONENT: clipboard-apis
@@ -6,6 +7,7 @@ Missing TEAM: compat
 Missing COMPONENT: compat
 Missing TEAM: console
 Missing COMPONENT: console
+Missing OWNERS: cssom-view
 Missing TEAM: domparsing
 Missing TEAM: domxpath
 Missing TEAM: encrypted-media
@@ -23,8 +25,6 @@ Missing COMPONENT: quirks-mode
 Missing TEAM: resources
 Missing COMPONENT: resources
 Missing TEAM: screen-orientation
-Orphaned OWNERS: selectors
-Missing OWNERS: wake-lock
 Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing TEAM: WebCryptoAPI
@@ -32,3 +32,6 @@ Missing TEAM: webmessaging
 Missing TEAM: webrtc
 Missing TEAM: css/CSS2
 Missing COMPONENT: css/CSS2
+Missing OWNERS: css/css-grid-1
+Missing OWNERS: css/css-position-3
+Missing OWNERS: css/css-writing-modes-3
