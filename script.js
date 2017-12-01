@@ -36,8 +36,8 @@ fetch('wpt-commits.csv')
   .then(response => response.text())
   .then(text => {
     const table = parseCSV(text);
-    // drop the end of the data set (the future). TODO: automatic
-    table.rows = table.rows.slice(0, table.rows.length - 2);
+    // drop the end of the data set (current month).
+    table.rows = table.rows.slice(0, table.rows.length - 1);
 
     const data = {
       labels: table.rows.map(row => row[0]),
@@ -80,37 +80,3 @@ fetch('wpt-commits.csv')
       },
     });
   });
-
-const wptCommitData = {
-  labels: [
-    'GitHub PR',
-    'Chromium export',
-    'Gecko export',
-    'Servo export',
-  ],
-  datasets: [{
-    data: [395-80-52-57, 80, 52, 57],
-    backgroundColor: [
-      GITHUB_GREEN,
-      CHROME_BLUE,
-      FIREFOX_ORANGE,
-      FIREFOX_YELLOW,
-    ]
-  }],
-};
-
-new Chart(document.querySelector('#wpt-commits-30d canvas'), {
-  type: 'doughnut',
-  data: wptCommitData,
-  options: {
-    title: {
-      fontSize: 18,
-      display: true,
-      text: ['web-platform-tests commit origin (last 30 days)'],
-    },
-    legend: {
-      display: true,
-      position: 'right',
-    },
-  },
-});
