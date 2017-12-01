@@ -220,10 +220,10 @@ def analyze_mins(min_differences):
             num_prs = len(np_diffs)
             month_stat = {
                 'Month': month,
-                'PRs': num_prs,
                 '50th percentile': numpy.percentile(np_diffs, 50),
                 '90th percentile': numpy.percentile(np_diffs, 90),
                 'Average': numpy.average(np_diffs),
+                'PRs': num_prs,
                 sla_field: (np_diffs <= SLA).sum() / float(num_prs),
             }
             writer.writerow(month_stat)

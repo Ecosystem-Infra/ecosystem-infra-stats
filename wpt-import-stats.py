@@ -169,10 +169,10 @@ def analyze(latencies):
             narr = numpy.asarray(latency_by_month[month])
             month_stat = {
                 'Month': month,
-                'PRs': len(narr),
                 '50th percentile': numpy.percentile(narr, 50),
                 '90th percentile': numpy.percentile(narr, 90),
                 'Average': numpy.average(narr),
+                'PRs': len(narr),
                 sla_field: (narr < SLA).sum() / float(len(narr)),
             }
             writer.writerow(month_stat)
