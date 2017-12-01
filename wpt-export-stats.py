@@ -37,13 +37,13 @@ def fetch_all_prs():
 
     print('Fetching all PRs')
 
-    url = ('/search/issues?q='
+    base_url = ('/search/issues?q='
            'repo:w3c/web-platform-tests%20'
            'type:pr%20'
            'is:merged%20'
            'label:chromium-export')
 
-    init_data = github_request(url)
+    init_data = github_request(base_url)
     total = init_data['total_count']
     print(total, 'total PRs')
 
@@ -55,7 +55,7 @@ def fetch_all_prs():
     cutoff = dateutil.parser.parse(CUTOFF)
     for page in range(1, total_pages + 1):
         print('Fetching page', page)
-        url += '&page={}&per_page={}'.format(page, page_size)
+        url = base_url + '&page={}&per_page={}'.format(page, page_size)
         data = github_request(url)
         if 'items' not in data:
             print('No items in page {}. Probably reached rate limit. Stopping.'.format(page))
@@ -73,17 +73,6 @@ def fetch_all_prs():
     with open(PRS_FILE, 'w') as f:
         json.dump(prs, f)
     return prs
-
-
-def filter_prs(prs, cutoff):
-    cutoff_time = dateutil.parser.parse(cutoff)
-    filtered_prs = []
-    for pr in prs:
-        pr_closed_at = dateutil.parser.parse(pr['closed_at'])
-        if pr_closed_at >= cutoff_time:
-            filtered_prs.append(pr)
-    print(len(filtered_prs), 'merged since', cutoff)
-    return filtered_prs
 
 
 def get_sha_from_change_id(change_id):
@@ -220,8 +209,7 @@ def analyze_mins(min_differences):
 
 def main():
     all_prs = fetch_all_prs()
-    filtered_prs = filter_prs(all_prs, CUTOFF)
-    min_differences = calculate_pr_delays(filtered_prs)
+    min_differences = calculate_pr_delays(all_prs)
     analyze_mins(min_differences)
 
 
