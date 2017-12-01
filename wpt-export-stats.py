@@ -30,7 +30,7 @@ SLA = 60
 # GitHub cache. Remove to fetch PRs again.
 PRS_FILE = 'prs.json'
 # Result files.
-MINS_FILE = 'mins.json'
+MINS_FILE = 'export-mins.json'
 CSV_FILE = 'export-latencies.csv'
 
 _GITHUB_DATE_FORMAT = '%Y-%m-%dT%H:%M:%SZ'
@@ -228,20 +228,18 @@ def analyze_mins(min_differences):
             }
             writer.writerow(month_stat)
 
-    out_of_sla = []
     quarter_total = len(this_quarter)
-    for mins in this_quarter:
-        if mins > SLA:
-            out_of_sla.append(mins)
-    average = numpy.average(this_quarter)
+    np_this_quarter = numpy.asarray(this_quarter)
+    average = numpy.average(np_this_quarter)
+    out_of_sla = (np_this_quarter > SLA).sum()
     print('This quarter since', QUARTER_START, '(PR merge time):')
     print('Average CL committed to PR merged latency:', average, 'minutes')
-    print('Quarter 50th percentile', numpy.percentile(this_quarter, 50))
-    print('Quarter 90th percentile', numpy.percentile(this_quarter, 90))
+    print('Quarter 50th percentile', numpy.percentile(np_this_quarter, 50))
+    print('Quarter 90th percentile', numpy.percentile(np_this_quarter, 90))
     print('{} / {} PRs out of {} min SLA ({})'.format(
-        len(out_of_sla), quarter_total, SLA, len(out_of_sla) / float(quarter_total)))
+        out_of_sla, quarter_total, SLA, out_of_sla / float(quarter_total)))
     print('KR: (in_sla - 0.5) * 2 = ',
-          ((quarter_total - len(out_of_sla)) / float(quarter_total) - 0.5) * 2)
+          ((quarter_total - out_of_sla) / float(quarter_total) - 0.5) * 2)
 
 
 def main():
