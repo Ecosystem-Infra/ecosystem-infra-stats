@@ -3,6 +3,7 @@ Python 3 please.
 """
 
 from __future__ import print_function
+import dateutil.parser
 import json
 import os
 import requests
@@ -18,15 +19,19 @@ QUARTER_START = '2017-10-01T00:00:00Z'
 # Read tokens from env vars.
 GH_USER = os.environ.get('GH_USER')
 GH_TOKEN = os.environ.get('GH_TOKEN')
+GH_AUTH = (GH_USER, GH_TOKEN) if (GH_USER and GH_TOKEN) else None
+if GH_AUTH is None:
+    print('Warning: Provide GH_USER and GH_TOKEN to get full results')
 
 # GitHub cache. Delete the file to fetch PRs again.
-PRS_FILE = 'prs.json'
+CHROMIUM_PRS_FILE = 'prs-chromium.json'
+NON_CHROMIUM_PRS_FILE = 'prs-others.json'
 
 try:
     CHROMIUM_DIR = sys.argv[1]
 except IndexError:
     CHROMIUM_DIR = os.path.expanduser('~/chromium/src')
-
+CHROMIUM_WPT_PATH = 'third_party/WebKit/LayoutTests/external/wpt'
 try:
     WPT_DIR = sys.argv[2]
 except IndexError:
@@ -48,47 +53,8 @@ def wpt_git(args):
     return git(args, cwd=WPT_DIR)
 
 
-def fetch_all_prs():
-    try:
-        with open(PRS_FILE) as f:
-            all_prs = json.load(f)
-            print('Read', len(all_prs), 'PRs from', PRS_FILE)
-            return all_prs
-    except Exception:
-        pass
+def github_request(url):
+    base_url = 'https://api.github.com'
+    res = requests.get(base_url + url, auth=GH_AUTH)
+    return res.json()
 
-    print('Fetching all PRs')
-    base_url = 'https://api.github.com/search/issues?q=repo:w3c/web-platform-tests%20type:pr%20label:chromium-export%20is:merged'
-    github_oauth = (GH_USER, GH_TOKEN) if (GH_USER and GH_TOKEN) else None
-    if github_oauth is None:
-        print('Warning: Provide GH_USER and GH_TOKEN to get full results (otherwise limited to <500 PRs)')
-
-    res = requests.get(base_url, auth=github_oauth)
-    data = res.json()
-
-    total = data['total_count']
-
-    print(total, 'total PRs')
-
-    page_size = 50
-    total_pages = int(total / page_size) + 1
-
-    prs = []
-
-    for page in range(1, total_pages + 1):
-        print('Fetching page', page)
-        res = requests.get(
-            '{}&page={}&per_page={}'.format(base_url, page, page_size),
-            auth=github_oauth)
-        data = res.json()
-        if 'items' not in data:
-            print('No items in page', page, 'stopping')
-            break
-        prs.extend(data['items'])
-
-    print('Fetched', len(prs), 'merged PRs with chromium-export label')
-
-    print('Writing file', PRS_FILE)
-    with open(PRS_FILE, 'w') as f:
-        json.dump(prs, f)
-    return prs

@@ -17,11 +17,62 @@ from wpt_common import *
 
 # Target SLA (in minutes).
 SLA = 60
+# Cache file.
+PRS_FILE = 'prs-chromium.json'
 # Result files.
 MINS_FILE = 'export-mins.json'
 CSV_FILE = 'export-latencies.csv'
 
 _GITHUB_DATE_FORMAT = '%Y-%m-%dT%H:%M:%SZ'
+
+
+def fetch_all_prs():
+    try:
+        with open(PRS_FILE) as f:
+            all_prs = json.load(f)
+            print('Read', len(all_prs), 'PRs from', PRS_FILE)
+            return all_prs
+    except Exception:
+        pass
+
+    print('Fetching all PRs')
+
+    url = ('/search/issues?q='
+           'repo:w3c/web-platform-tests%20'
+           'type:pr%20'
+           'is:merged%20'
+           'label:chromium-export')
+
+    init_data = github_request(url)
+    total = init_data['total_count']
+    print(total, 'total PRs')
+
+    page_size = 100
+    total_pages = int(total / page_size) + 1
+
+    prs = []
+
+    cutoff = dateutil.parser.parse(CUTOFF)
+    for page in range(1, total_pages + 1):
+        print('Fetching page', page)
+        url += '&page={}&per_page={}'.format(page, page_size)
+        data = github_request(url)
+        if 'items' not in data:
+            print('No items in page {}. Probably reached rate limit. Stopping.'.format(page))
+            break
+        prs.extend(data['items'])
+
+        last_item_closed_at = data['items'][-1]['closed_at']
+        if dateutil.parser.parse(last_item_closed_at) < cutoff:
+            print('Reached cutoff point. Stop fetching more PRs.')
+            break
+
+    print('Fetched', len(prs), 'merged PRs with chromium-export label')
+
+    print('Writing file', PRS_FILE)
+    with open(PRS_FILE, 'w') as f:
+        json.dump(prs, f)
+    return prs
 
 
 def filter_prs(prs, cutoff):
