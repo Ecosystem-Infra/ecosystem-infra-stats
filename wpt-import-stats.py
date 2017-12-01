@@ -3,8 +3,8 @@
 
 from __future__ import print_function
 from collections import defaultdict, namedtuple
+import csv
 import dateutil.parser
-import json
 import re
 import numpy
 import os
@@ -18,6 +18,7 @@ WPT_DIR = sys.argv[2]
 CHROMIUM_WPT_PATH = 'third_party/WebKit/LayoutTests/external/wpt'
 # Target SLA (in minutes).
 SLA = 12*60
+CSV_FILE = 'import-latencies.csv'
 
 
 Import = namedtuple('Import', 'cr_sha, wpt_sha, date')
@@ -124,25 +125,25 @@ def get_latencies(imports):
     return latency_by_month
 
 
-def analyze_latency(latency_by_month):
-    print("Month, Average, 50th percentile, 90th percentile, % meeting SLA")
-    for month in sorted(latency_by_month.keys()):
-        narr = numpy.asarray(latency_by_month[month])
-        print("{}, {}, {}, {}, {}".format(
-            month, numpy.average(narr), numpy.percentile(narr, 50),
-            numpy.percentile(narr, 90), (narr < SLA).sum() / float(len(narr))
-        ))
-
 def main():
     print("Chromium", chromium_git(['rev-parse', 'HEAD']))
     print("WPT", wpt_git(['rev-parse', 'HEAD']))
     imports = list_imports()
     latency_by_month = get_latencies(imports)
-    with open('latency.json', 'w') as f:
-        json.dump(latency_by_month, f)
-    # with open('latency.json') as f:
-    #     latency_by_month = json.load(f)
-    analyze_latency(latency_by_month)
+    sla_field = '% meeting SLA ({} mins)'.format(SLA)
+    with open(CSV_FILE, 'w') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=['Month', '50th percentile', '90th percentile', 'Average', sla_field])
+        writer.writeheader()
+        for month in sorted(latency_by_month.keys()):
+            narr = numpy.asarray(latency_by_month[month])
+            month_stat = {
+                'Month': month,
+                '50th percentile': numpy.percentile(narr, 50),
+                '90th percentile': numpy.percentile(narr, 90),
+                'Average': numpy.average(narr),
+                sla_field: (narr < SLA).sum() / float(len(narr)),
+            }
+            writer.writerow(month_stat)
 
 
 if __name__ == '__main__':

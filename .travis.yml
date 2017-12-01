@@ -15,7 +15,7 @@ script:
   - git clone --shallow-since=2017-01-01 https://github.com/scheib/chromium.git
   # chromium import stats
   - python wpt-import-stats.py chromium web-platform-tests
-  - mv latency.json out/chromium-import-latency.json
+  - mv import-latencies.csv out/chromium-import-latency.csv
   # chromium export stats
   - python wpt-export-stats.py chromium
   - mv export-latencies.csv out/chromium-export-latency.csv

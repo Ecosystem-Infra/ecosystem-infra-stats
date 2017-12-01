@@ -195,8 +195,8 @@ def calculate_pr_delays(prs):
                 'Month': key,
                 '50th percentile': numpy.percentile(np_diffs, 50),
                 '90th percentile': numpy.percentile(np_diffs, 90),
-                sla_field: (np_diffs <= SLA).sum() / float(len(np_diffs)),
                 'Average': numpy.average(np_diffs),
+                sla_field: (np_diffs <= SLA).sum() / float(len(np_diffs)),
             }
             print(month_stat)
             writer.writerow(month_stat)
