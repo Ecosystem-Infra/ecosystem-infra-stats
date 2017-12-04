@@ -3,8 +3,6 @@ Python 3 please.
 """
 
 from __future__ import print_function
-import dateutil.parser
-import json
 import os
 import requests
 import sys
