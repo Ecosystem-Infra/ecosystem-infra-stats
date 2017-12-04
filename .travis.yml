@@ -4,15 +4,18 @@ branches:
 language: python
 python:
   - "2.7"
+install:
+  # dependencies of wpt-{import,export}-stats.py
+  - pip install numpy python-dateutil requests
+  # depot tools (for git crrev-parse)
+  - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+  - export PATH=$PATH:$PWD/depot_tools
 script:
   - mkdir out
   # upstream wpt checkout (easy!)
   - git clone https://github.com/w3c/web-platform-tests.git
   # upstream wpt stats
   - ./wpt-stats.sh web-platform-tests > out/wpt-commits.csv
-  # depot tools (for git crrev-parse)
-  - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-  - export PATH=$PATH:$PWD/depot_tools
   # chromium checkout
   # use mirror, as github suppports --shallow-since and gives smaller packs
   - git clone --shallow-since=2017-01-01 https://github.com/scheib/chromium.git
@@ -24,7 +27,7 @@ script:
   - mv export-latencies.csv out/chromium-export-latency.csv
   # chromium usage stats
   - mv wpt-usage-stats chromium/third_party/WebKit/Tools/Scripts/
-  - chromium/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 > out/chromium-usage-stats.txt
+  - python chromium/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 > out/chromium-usage-stats.txt
   # bonus: chromium OWNERS check
   - ./chromium-wpt-owners.sh chromium/third_party/WebKit/LayoutTests/external/wpt > out/chromium-wpt-owners.txt
   - mv static/* out/
