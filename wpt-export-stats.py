@@ -32,7 +32,7 @@ def fetch_all_prs():
             all_prs = json.load(f)
             print('Read', len(all_prs), 'PRs from', PRS_FILE)
             return all_prs
-    except Exception:
+    except (IOError, ValueError):
         pass
 
     print('Fetching all PRs')
@@ -58,7 +58,8 @@ def fetch_all_prs():
         url = base_url + '&page={}&per_page={}'.format(page, page_size)
         data = github_request(url)
         if 'items' not in data:
-            print('No items in page {}. Probably reached rate limit. Stopping.'.format(page))
+            print('No items in page {}. Probably reached rate limit. Stopping.'
+                  .format(page))
             break
         prs.extend(data['items'])
 
@@ -100,7 +101,7 @@ def calculate_pr_delays(prs):
             min_differences = json.load(f)
             print('Read', len(min_differences), 'results from', MINS_FILE)
             return min_differences
-    except Exception:
+    except (IOError, ValueError):
         pass
 
     min_differences = {}
@@ -109,7 +110,8 @@ def calculate_pr_delays(prs):
 
     for index, pr in enumerate(prs):
         pr_number = pr['number']
-        print('[%d/%d] PR: https://github.com/w3c/web-platform-tests/pull/%s' % (index+1, total_prs, pr_number))
+        print('[{}/{}] PR: https://github.com/w3c/web-platform-tests/pull/{}'
+              .format(index+1, total_prs, pr_number))
         pr_closed_at = dateutil.parser.parse(pr['closed_at'])
 
         match = re.search(r'^Change-Id\: (.+)$', pr['body'], re.MULTILINE)
@@ -120,7 +122,8 @@ def calculate_pr_delays(prs):
             sha = get_sha_from_change_id(change_id)
         except AttributeError:
             print('Could not get Change-Id from PR, trying Cr-Commit-Position')
-            match = re.search(r'^Cr-Commit-Position\: (.+)$', pr['body'], re.MULTILINE)
+            match = re.search(r'^Cr-Commit-Position\: (.+)$', pr['body'],
+                              re.MULTILINE)
 
             try:
                 commit_position = match.groups()[0].strip()
@@ -170,15 +173,18 @@ def analyze_mins(min_differences):
     this_quarter = []
     quarter_cutoff = dateutil.parser.parse(QUARTER_START)
     for datapoint in min_differences.values():
-        min_differences_by_month[datapoint['month']].append(datapoint['latency'])
+        min_differences_by_month[datapoint['month']].append(
+            datapoint['latency'])
         if dateutil.parser.parse(datapoint['time']) >= quarter_cutoff:
             this_quarter.append(datapoint['latency'])
 
-    print('NOTE: Results eariler than cutoff time (%s) are not accurate.' % CUTOFF)
+    print('NOTE: Results eariler than cutoff time ({}) are not accurate.'
+          .format(CUTOFF))
     print('Writing file', CSV_FILE)
     sla_field = '% meeting SLA ({} mins)'.format(SLA)
     with open(CSV_FILE, 'w') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=['Month', 'PRs', '50th percentile', '90th percentile', 'Average', sla_field])
+        writer = csv.DictWriter(csvfile, fieldnames=[
+            'Month', '50th percentile', '90th percentile', 'Average', 'PRs', sla_field])
         writer.writeheader()
         for month in sorted(min_differences_by_month.keys()):
             np_diffs = numpy.asarray(min_differences_by_month[month])
