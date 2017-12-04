@@ -140,10 +140,10 @@ def calculate_pr_delays(prs):
 
         output = chromium_git(['show', '-s', '--format=%cI', sha])
         commit_time = dateutil.parser.parse(output)
+        mins_difference = (pr_closed_at - commit_time).total_seconds() / 60
 
         print('Committed at', commit_time)
         print('PR closed at', pr_closed_at)
-        mins_difference = (pr_closed_at - commit_time).total_seconds() / 60
         print('Delay (mins):', mins_difference)
         if mins_difference < 0:
             print('Negative delay. SKIPPING!')

@@ -137,15 +137,22 @@ def get_latencies(imports, all_prs):
 
     latencies = {}
     total_prs = len(all_prs)
-    for i, pr in enumerate(all_prs):
-        print("[{}/{}] PR: {}".format(i + 1, len(total_prs), pr['html_url']))
+    for index, pr in enumerate(all_prs):
+        print("[{}/{}] PR: {}".format(index + 1, total_prs, pr['html_url']))
         merge_commit = pr['merge_commit_sha']
         merged_at = pr['merged_at']
-        assert merge_commit
         try:
             wpt_git(['cat-file', '-t', merge_commit])
         except subprocess.CalledProcessError:
             print('Merge commit {} does not exist. SKIPPING!'.format(merged_at))
+            continue
+        if _compare_commits(merge_commit, imports[-1].wpt_sha) > 0:
+            print('Merge point {} after last import point {}. SKIPPING!'
+                  .format(merge_commit, imports[-1].wpt_sha))
+            continue
+        if _compare_commits(merge_commit, imports[0].wpt_sha) < 0:
+            print('Merge point {} before first import point {}. SKIPPING!'
+                  .format(merge_commit, imports[0].wpt_sha))
             continue
 
         index_found = binary_search_import(merge_commit, imports)
@@ -162,6 +169,11 @@ def get_latencies(imports, all_prs):
         import_time = dateutil.parser.parse(imports[index_found].date)
         wpt_merge_time = dateutil.parser.parse(merged_at)
         delay = (import_time - wpt_merge_time).total_seconds() / 60
+        print('PR merged at {} imported at {}'.format(
+            merge_commit, import_found.wpt_sha))
+        print('Chromium import {} at {}'.format(
+            import_found.cr_sha, import_found.date))
+        print('Delay (mins):', delay)
         latencies[merge_commit] = {
             'import_sha': import_found.cr_sha,
             'import_time': import_found.date,
