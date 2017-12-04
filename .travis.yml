@@ -6,7 +6,7 @@ python:
   - "3.6"
 install:
   # dependencies of wpt-{import,export}-stats.py
-  - pip install numpy dateutil requests
+  - pip install numpy python-dateutil requests
   # depot tools (for git crrev-parse)
   - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
   - export PATH=$PATH:$PWD/depot_tools
