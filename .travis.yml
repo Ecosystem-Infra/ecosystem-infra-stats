@@ -3,16 +3,19 @@ branches:
     - master
 language: python
 python:
-  - "2.7"
+  - "3.6"
+install:
+  # dependencies of wpt-{import,export}-stats.py
+  - pip install numpy dateutil requests
+  # depot tools (for git crrev-parse)
+  - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+  - export PATH=$PATH:$PWD/depot_tools
 script:
   - mkdir out
   # upstream wpt checkout (easy!)
   - git clone https://github.com/w3c/web-platform-tests.git
   # upstream wpt stats
   - ./wpt-stats.sh web-platform-tests > out/wpt-commits.csv
-  # depot tools (for git crrev-parse)
-  - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-  - export PATH=$PATH:$PWD/depot_tools
   # chromium checkout
   # use mirror, as github suppports --shallow-since and gives smaller packs
   - git clone --shallow-since=2017-01-01 https://github.com/scheib/chromium.git
