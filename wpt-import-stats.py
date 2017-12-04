@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 # History: https://gist.github.com/Hexcles/ec48b4f674ad66c6d34cf279c262a4de
 # Requirements: python-dateutil, numpy & requests
 

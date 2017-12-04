@@ -1,5 +1,5 @@
 """A bunch of common functions shared by wpt-{import,export}-stats.
-Python 3 please.
+Python 6 (2 and 3 compatible) please.
 """
 
 from __future__ import print_function

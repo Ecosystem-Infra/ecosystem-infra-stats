@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 # History: https://gist.github.com/jeffcarp/f1fb015e38f50e82d30b8c69b67faa74
 #          https://gist.github.com/Hexcles/ec811c9dd45a0f21bb3fc3243bfa857a
 # Requirements: python-datautil, numpy & requests
