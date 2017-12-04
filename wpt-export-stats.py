@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # History: https://gist.github.com/jeffcarp/f1fb015e38f50e82d30b8c69b67faa74
 #          https://gist.github.com/Hexcles/ec811c9dd45a0f21bb3fc3243bfa857a
-# Requirements: numpy & requests ( sudo apt install python-{numpy,requests} )
+# Requirements: python-datautil, numpy & requests
 
 from __future__ import print_function
 import csv
@@ -110,8 +110,7 @@ def calculate_pr_delays(prs):
 
     for index, pr in enumerate(prs):
         pr_number = pr['number']
-        print('[{}/{}] PR: https://github.com/w3c/web-platform-tests/pull/{}'
-              .format(index+1, total_prs, pr_number))
+        print('[{}/{}] PR: {}'.format(index+1, total_prs, pr['html_url']))
         pr_closed_at = dateutil.parser.parse(pr['closed_at'])
 
         match = re.search(r'^Change-Id\: (.+)$', pr['body'], re.MULTILINE)

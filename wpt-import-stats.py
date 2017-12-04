@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # History: https://gist.github.com/Hexcles/ec48b4f674ad66c6d34cf279c262a4de
-# Requirements: numpy & dateutil ( sudo apt install python-{numpy,dateutil} )
+# Requirements: python-dateutil, numpy & requests
 
 from __future__ import print_function
 from collections import defaultdict, namedtuple
@@ -136,8 +136,9 @@ def get_latencies(imports, all_prs):
         pass
 
     latencies = {}
+    total_prs = len(all_prs)
     for i, pr in enumerate(all_prs):
-        print("{}/{} PRs".format(i + 1, len(all_prs)))
+        print("[{}/{}] PR: {}".format(i + 1, len(total_prs), pr['html_url']))
         merge_commit = pr['merge_commit_sha']
         merged_at = pr['merged_at']
         assert merge_commit
