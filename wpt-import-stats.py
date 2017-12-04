@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 # History: https://gist.github.com/Hexcles/ec48b4f674ad66c6d34cf279c262a4de
 # Requirements: numpy & dateutil ( sudo apt install python-{numpy,dateutil} )
 
@@ -9,22 +9,17 @@ import dateutil.parser
 import json
 import re
 import numpy
-import os
 import subprocess
-import sys
 
-# Only PRs after this time (UTC) will be processed.
-CUTOFF = '2017-07-01T00:00:00Z'
-QUARTER_START = '2017-10-01T00:00:00Z'
-try:
-    CHROMIUM_DIR = sys.argv[1]
-    WPT_DIR = sys.argv[2]
-except IndexError:
-    CHROMIUM_DIR = os.path.expanduser('~/chromium/src')
-    WPT_DIR = os.path.expanduser('~/github/web-platform-tests')
-CHROMIUM_WPT_PATH = 'third_party/WebKit/LayoutTests/external/wpt'
+# FIXME: I know this is bad...
+from wpt_common import *
+
+
 # Target SLA (in minutes).
 SLA = 12*60
+# Cache file.
+PRS_FILE = 'prs-others.json'
+# Result files.
 MINS_FILE = 'import-mins.json'
 CSV_FILE = 'import-latencies.csv'
 
@@ -32,19 +27,56 @@ CSV_FILE = 'import-latencies.csv'
 Import = namedtuple('Import', 'cr_sha, wpt_sha, date')
 
 
-def git(args, cwd):
-    command = ['git'] + args
-    # print('EXEC: {} (CWD: {})'.format(' '.join(command), cwd))
-    output = subprocess.check_output(command, cwd=cwd)
-    return output.rstrip()
+def fetch_all_prs():
+    try:
+        with open(PRS_FILE) as f:
+            all_prs = json.load(f)
+            print('Read', len(all_prs), 'PRs from', PRS_FILE)
+            return all_prs
+    except (IOError, ValueError):
+        pass
 
+    print('Fetching all PRs')
 
-def chromium_git(args):
-    return git(args, cwd=CHROMIUM_DIR)
+    # Sorting by merged date is not supported, so we sort by created date
+    # instead, which is good enough because a PR cannot be merged before
+    # being created.
+    base_url = ('/repos/w3c/web-platform-tests/pulls?'
+                'sort=created&direction=desc&state=closed')
+    prs = []
 
+    cutoff = dateutil.parser.parse(CUTOFF)
+    # 5000 is the rate limit. We'll break early.
+    for page in range(1, 5000):
+        print('Fetching page', page)
+        url = base_url + '&page={}'.format(page)
+        data = github_request(url)
+        if not data:
+            print('No items in page {}. Probably reached rate limit. Stopping.'
+                  .format(page))
+            break
 
-def wpt_git(args):
-    return git(args, cwd=WPT_DIR)
+        finished = False
+        for pr in data:
+            if pr['user']['login'] == 'chromium-wpt-export-bot':
+                continue
+            if not pr.get('merged_at'):
+                continue
+            if dateutil.parser.parse(pr['merged_at']) < cutoff:
+                print('Reached cutoff point. Stop fetching more PRs.')
+                finished = True
+                break
+            prs.append(pr)
+        if finished:
+            break
+
+    print('Fetched {} PRs without the chromium-export label merged after {}'
+          .format(len(prs), CUTOFF))
+
+    print('Writing file', PRS_FILE)
+    with open(PRS_FILE, 'w') as f:
+        json.dump(prs, f)
+    return prs
 
 
 def list_imports():
@@ -52,11 +84,12 @@ def list_imports():
         'log', '--format=%H|%s|%cI',
         '--grep=^[Ii]mport wpt@',
         '--after', CUTOFF,
+        '--reverse',  # our binary_search uses chronological order.
         # Uncomment the line below to count only auto imports.
         # '--author', 'blink-w3c-test-autoroller@chromium.org'
     ])
     imports = []
-    subject_re = re.compile(r'^import wpt@(\w+)', re.IGNORECASE)
+    subject_re = re.compile(r'^[Ii]mport wpt@(\w+)')
     for line in output.split('\n'):
         cr_sha, subject, date = line.split('|')
         match = subject_re.match(subject)
@@ -67,80 +100,72 @@ def list_imports():
     return imports
 
 
-def list_wpt_commits(sha1, sha2):
-    output = wpt_git(
-        ['log', '--format=%H|%cI',
-         '{}..{}'.format(sha1, sha2)]
-    )
-    wpt_commits = []
-    if not output:
-        return wpt_commits
-
-    for line in output.split('\n'):
-        wpt_commits.append(tuple(line.split('|')))
-    return wpt_commits
+def _compare_commits(sha1, sha2):
+    if sha1 == sha2:
+        return 0
+    count = wpt_git(['rev-list', '--count', '{}..{}'.format(sha1, sha2)])
+    if int(count) > 0:
+        # SHA1 is before SHA2
+        return -1
+    else:
+        return 1
 
 
-def get_affected_dirs(cr_sha):
-    output = chromium_git(['show', '-s', '--format=%b', cr_sha])
-    tail = output[output.find('Directory owners for changes in this CL:'):]
-    dirs = []
-    dir_re = re.compile(r'^  external/wpt/(.+)$')
-    for line in tail.split('\n'):
-        match = dir_re.match(line)
-        if not match:
-            continue
-        dirs.append(match.groups()[0])
-    return dirs
+def binary_search_import(wpt_commit, imports):
+    """Finds which import includes the given wpt_commit."""
+    left = 0
+    right = len(imports) - 1
+    while left < right:
+        mid = (left + right) // 2
+        current = imports[mid]
+        comp = _compare_commits(wpt_commit, current.wpt_sha)
+        if comp <= 0:
+            right = mid
+        else:
+            left = mid+1
+    return left
 
 
-def contains_imported_changes(wpt_sha):
-    output = wpt_git(['diff', '--name-only', '--no-renames', wpt_sha])
-    for line in output.split('\n'):
-        # FIXME: Instead of checking whether the file exists in current
-        # Chromium revision, we should check if it is in the import CL.
-        filename = os.path.join(CHROMIUM_DIR, CHROMIUM_WPT_PATH, line.strip())
-        if os.path.exists(filename):
-            return True
-    return False
-
-
-def get_latencies(imports):
+def get_latencies(imports, all_prs):
     try:
         with open(MINS_FILE) as f:
             latencies = json.load(f)
             print('Read', len(latencies), 'results from', MINS_FILE)
             return latencies
-    except Exception:
+    except (IOError, ValueError):
         pass
 
     latencies = {}
-    previous = None
-    current = None
-    for step, i in enumerate(imports):
-        # Note the commits are ordered reverse chronologically,
-        # i.e. the iteration goes back in time.
-        current = previous
-        previous = i
-        if not current:
+    for i, pr in enumerate(all_prs):
+        print("{}/{} PRs".format(i + 1, len(all_prs)))
+        merge_commit = pr['merge_commit_sha']
+        merged_at = pr['merged_at']
+        assert merge_commit
+        try:
+            wpt_git(['cat-file', '-t', merge_commit])
+        except subprocess.CalledProcessError:
+            print('Merge commit {} does not exist. SKIPPING!'.format(merged_at))
             continue
 
-        print("{}/{} import {}".format(step, len(imports)-1, current.cr_sha))
-        import_time = dateutil.parser.parse(current.date)
-        # affected_dirs = get_affected_dirs(current.cr_sha)
-        wpt_commits = list_wpt_commits(previous.wpt_sha, current.wpt_sha)
-        for wpt_sha, wpt_date in wpt_commits:
-            if not contains_imported_changes(wpt_sha):
-                print("SKIPPING WPT commit", wpt_sha)
-                continue
+        index_found = binary_search_import(merge_commit, imports)
+        import_found = imports[index_found]
+        previous_import = imports[index_found - 1]
+        # Check if I get my binary search right :)
+        assert _compare_commits(merge_commit, import_found.wpt_sha) <= 0, \
+               "PR merge point {} after import {}".format(
+                   merge_commit, import_found)
+        assert _compare_commits(merge_commit, previous_import.wpt_sha) > 0, \
+               "PR merge point {} before the previous import {}".format(
+                   merge_commit, previous_import)
 
-            wpt_commit_time = dateutil.parser.parse(wpt_date)
-            delay = (import_time - wpt_commit_time).total_seconds() / 60
-            latencies[wpt_sha] = {
-                'import_sha': current.cr_sha,
-                'import_time': current.date,
-                'latency': delay,
-            }
+        import_time = dateutil.parser.parse(imports[index_found].date)
+        wpt_merge_time = dateutil.parser.parse(merged_at)
+        delay = (import_time - wpt_merge_time).total_seconds() / 60
+        latencies[merge_commit] = {
+            'import_sha': import_found.cr_sha,
+            'import_time': import_found.date,
+            'latency': delay,
+        }
 
     print('Writing file', MINS_FILE)
     with open(MINS_FILE, 'w') as f:
@@ -153,17 +178,17 @@ def analyze(latencies):
     latency_by_month = defaultdict(list)
     this_quarter = []
     quarter_cutoff = dateutil.parser.parse(QUARTER_START)
-    for datapoint in latencies.itervalues():
+    for datapoint in latencies.values():
         import_time = dateutil.parser.parse(datapoint['import_time'])
         import_month = import_time.strftime('%Y-%m')
         latency_by_month[import_month].append(datapoint['latency'])
         if import_time >= quarter_cutoff:
             this_quarter.append(datapoint['latency'])
-            print("{},{},{}".format(datapoint['import_sha'], datapoint['import_time'], datapoint['latency']))
 
     sla_field = '% meeting SLA ({} mins)'.format(SLA)
     with open(CSV_FILE, 'w') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=['Month', 'PRs', '50th percentile', '90th percentile', 'Average', sla_field])
+        writer = csv.DictWriter(csvfile, fieldnames=[
+            'Month', '50th percentile', '90th percentile', 'Average', 'PRs', sla_field])
         writer.writeheader()
         for month in sorted(latency_by_month.keys()):
             narr = numpy.asarray(latency_by_month[month])
@@ -191,10 +216,9 @@ def analyze(latencies):
 
 
 def main():
-    print("Chromium", chromium_git(['rev-parse', 'HEAD']))
-    print("WPT", wpt_git(['rev-parse', 'HEAD']))
+    all_prs = fetch_all_prs()
     imports = list_imports()
-    latencies = get_latencies(imports)
+    latencies = get_latencies(imports, all_prs)
     analyze(latencies)
 
 
