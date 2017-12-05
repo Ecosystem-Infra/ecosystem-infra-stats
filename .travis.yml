@@ -5,8 +5,7 @@ language: python
 python:
   - "2.7"
 install:
-  # dependencies of wpt-{import,export}-stats.py
-  - pip install numpy python-dateutil requests
+  - pip install -r requirements.txt
   # depot tools (for git crrev-parse)
   - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
   - export PATH=$PATH:$PWD/depot_tools
@@ -30,6 +29,9 @@ script:
   - python chromium/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 > out/chromium-usage-stats.txt
   # bonus: chromium OWNERS check
   - ./chromium-wpt-owners.sh chromium/third_party/WebKit/LayoutTests/external/wpt > out/chromium-wpt-owners.txt
+  # crbug.com queries
+  - openssl aes-256-cbc -K $encrypted_c74da90f7ccf_key -iv $encrypted_c74da90f7ccf_iv -in monorail-api-key.json.enc -out monorail-api-key.json -d
+  - GOOGLE_APPLICATION_CREDENTIALS="monorail-api-key.json" python crbug.py > out/crbug.md
   - mv static/* out/
 after_success:
   - openssl aes-256-cbc -K $encrypted_c74da90f7ccf_key -iv $encrypted_c74da90f7ccf_iv -in deploy_key.enc -out deploy_key -d
