@@ -9,6 +9,11 @@ install:
   # depot tools (for git crrev-parse)
   - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
   - export PATH=$PATH:$PWD/depot_tools
+  # deploy key (no point in doing anything without it)
+  - openssl aes-256-cbc -K $encrypted_d0eff0af4314_key -iv $encrypted_d0eff0af4314_iv -in deploy_key.enc -out deploy_key -d
+  - chmod 0600 deploy_key
+  - eval "$(ssh-agent -s)"
+  - ssh-add deploy_key
 script:
   - mkdir out
   # upstream wpt checkout (easy!)
@@ -31,16 +36,12 @@ script:
   - ./chromium-wpt-owners.sh chromium/third_party/WebKit/LayoutTests/external/wpt > out/chromium-wpt-owners.txt
   - mv static/* out/
 after_success:
-  - openssl aes-256-cbc -K $encrypted_d0eff0af4314_key -iv $encrypted_d0eff0af4314_iv -in deploy_key.enc -out deploy_key -d
-  - chmod 0600 deploy_key
-  - eval "$(ssh-agent -s)"
-  - ssh-add deploy_key
-  - git config --global user.email "bot@foolip.org"
-  - git config --global user.name "Automat af Ekosystem"
   - git clone --branch gh-pages git@github.com:foolip/ecosystem-infra-stats.git gh-pages
   - rm -rf gh-pages/*
   - cp out/* gh-pages/
   - cd gh-pages
+  - git config user.email "bot@foolip.org"
+  - git config user.name "Automat af Ekosystem"
   - git add -A
   - git commit -m "Automatic update" -m "Using commit $TRAVIS_COMMIT" -m "https://travis-ci.org/foolip/ecosystem-infra-stats/builds/$TRAVIS_BUILD_ID"
   - git push
