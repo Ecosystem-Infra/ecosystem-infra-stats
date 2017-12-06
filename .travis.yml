@@ -31,7 +31,7 @@ script:
   - ./chromium-wpt-owners.sh chromium/third_party/WebKit/LayoutTests/external/wpt > out/chromium-wpt-owners.txt
   - mv static/* out/
 after_success:
-  - openssl aes-256-cbc -K $encrypted_c74da90f7ccf_key -iv $encrypted_c74da90f7ccf_iv -in deploy_key.enc -out deploy_key -d
+  - openssl aes-256-cbc -K $encrypted_d0eff0af4314_key -iv $encrypted_d0eff0af4314_iv -in deploy_key.enc -out deploy_key -d
   - chmod 0600 deploy_key
   - eval "$(ssh-agent -s)"
   - ssh-add deploy_key
