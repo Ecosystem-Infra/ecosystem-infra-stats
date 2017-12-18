@@ -31,7 +31,7 @@ script:
   - mv export-latencies.csv out/chromium-export-latency.csv
   # chromium usage stats
   - mv wpt-usage-stats chromium/third_party/WebKit/Tools/Scripts/
-  - python chromium/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-11-01 2017-12-01 > out/chromium-usage-stats.txt
+  - python chromium/third_party/WebKit/Tools/Scripts/wpt-usage-stats 2017-12-01 2018-01-01 > out/chromium-usage-stats.txt
   # bonus: chromium OWNERS check
   - ./chromium-wpt-owners.sh chromium/third_party/WebKit/LayoutTests/external/wpt > out/chromium-wpt-owners.txt
   - mv static/* out/
