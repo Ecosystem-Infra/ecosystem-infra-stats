@@ -55,4 +55,3 @@ def github_request(url):
     base_url = 'https://api.github.com'
     res = requests.get(base_url + url, auth=GH_AUTH)
     return res.json()
-
