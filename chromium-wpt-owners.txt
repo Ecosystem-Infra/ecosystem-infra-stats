@@ -16,6 +16,7 @@ Missing COMPONENT: keyboard-lock
 Missing TEAM: mediacapture-streams
 Missing TEAM: media-source
 Missing COMPONENT: media-source
+Missing OWNERS: mimesniff
 Missing COMPONENT: notifications
 Missing TEAM: page-visibility
 Missing COMPONENT: page-visibility
@@ -33,3 +34,4 @@ Missing TEAM: css/CSS2
 Missing COMPONENT: css/CSS2
 Missing OWNERS: css/css-contain
 Missing OWNERS: css/css-overflow
+Missing OWNERS: css/css-style-attr
