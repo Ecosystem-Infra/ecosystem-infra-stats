@@ -9,7 +9,6 @@ Missing COMPONENT: console
 Missing TEAM: domparsing
 Missing TEAM: domxpath
 Missing TEAM: encrypted-media
-Missing COMPONENT: encrypted-media
 Missing OWNERS: geolocation-sensor
 Missing TEAM: keyboard-lock
 Missing COMPONENT: keyboard-lock
@@ -17,11 +16,10 @@ Missing TEAM: mediacapture-streams
 Missing TEAM: media-source
 Missing COMPONENT: media-source
 Missing OWNERS: mimesniff
-Missing COMPONENT: notifications
 Missing TEAM: page-visibility
 Missing COMPONENT: page-visibility
-Missing TEAM: quirks-mode
-Missing COMPONENT: quirks-mode
+Missing OWNERS: quirks
+Orphaned OWNERS: quirks-mode
 Missing TEAM: resources
 Missing COMPONENT: resources
 Missing TEAM: screen-orientation
