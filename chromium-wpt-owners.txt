@@ -28,6 +28,8 @@ Missing TEAM: webaudio
 Missing TEAM: WebCryptoAPI
 Missing TEAM: webmessaging
 Missing TEAM: webrtc
+Missing OWNERS: xhr
+Orphaned OWNERS: XMLHttpRequest
 Missing TEAM: css/CSS2
 Missing COMPONENT: css/CSS2
 Missing OWNERS: css/css-contain
