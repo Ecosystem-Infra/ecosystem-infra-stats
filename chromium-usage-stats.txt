@@ -1,3 +1,279 @@
+Author: fs@opera.com
+WPT-Author: fs@opera.com
+commit 5bc544493e96018f011162c09186d317a558674f
+third_party/WebKit/LayoutTests/css3/motion-path/combine-anchor-transform-expected.html
+third_party/WebKit/LayoutTests/css3/motion-path/combine-independent-anchor-expected.html
+third_party/WebKit/LayoutTests/css3/motion-path/offset-anchor-rotation-expected.html
+third_party/WebKit/LayoutTests/external/wpt/css/motion/offset-anchor-transform-box-fill-box-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/motion/offset-anchor-transform-box-fill-box.html
+third_party/WebKit/Source/core/style/ComputedStyle.cpp
+
+Author: andypaicu@chromium.org
+No-WPT-Author: andypaicu@chromium.org
+commit cced8d86e2cb6448bc58d59f7b1e80c5a4829c32
+third_party/WebKit/LayoutTests/http/tests/security/contentSecurityPolicy/csp3-experimental/csp3-strict-dynamic.html
+third_party/WebKit/LayoutTests/http/tests/security/contentSecurityPolicy/csp3-experimental/csp3_nonces.html
+third_party/WebKit/LayoutTests/http/tests/security/contentSecurityPolicy/csp3-experimental/csp3_script_event_handlers_allowed.html
+third_party/WebKit/LayoutTests/http/tests/security/contentSecurityPolicy/resources/pass.png
+third_party/WebKit/Source/core/frame/csp/SourceListDirective.cpp
+
+Author: rakina@chromium.org
+WPT-Author: rakina@chromium.org
+commit 1673861ecc8c136aad3448a0d91362f7dfc58963
+third_party/WebKit/LayoutTests/external/wpt/html/dom/interfaces-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/shadow-dom/slots-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/shadow-dom/slots-fallback-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/element-instance-property-listing-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/element-instance-property-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/html/HTMLSlotElement.cpp
+third_party/WebKit/Source/core/html/HTMLSlotElement.h
+third_party/WebKit/Source/core/html/HTMLSlotElement.idl
+
+Author: paulirish@chromium.org
+No-WPT-Author: paulirish@chromium.org
+commit 0abb457a25c1abe799a534842e0cc6d831df2ed0
+third_party/WebKit/LayoutTests/http/tests/devtools/audits2/audits2-limited-run-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/audits2/audits2-successful-run-expected.txt
+third_party/WebKit/Source/devtools/PRESUBMIT.py
+third_party/WebKit/Source/devtools/front_end/audits2/audits2Panel.css
+third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/renderer/category-renderer.js
+third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/renderer/details-renderer.js
+third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/renderer/report-renderer.js
+third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/renderer/util.js
+third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/report-styles.css
+third_party/WebKit/Source/devtools/front_end/audits2_worker/lighthouse/lighthouse-background.js
+
+Author: kozyatinskiy@chromium.org
+No-WPT-Author: kozyatinskiy@chromium.org
+commit 08e2be9a29ceeafdd89be831c20c160e7ca4b81d
+third_party/WebKit/LayoutTests/inspector-protocol/debugger/message-channel-async-stack-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/debugger/message-channel-async-stack.js
+third_party/WebKit/Source/core/frame/LocalDOMWindow.cpp
+third_party/WebKit/Source/core/inspector/ThreadDebugger.cpp
+third_party/WebKit/Source/core/inspector/ThreadDebugger.h
+third_party/WebKit/Source/core/messaging/BlinkCloneableMessage.h
+third_party/WebKit/Source/core/messaging/BlinkCloneableMessageStructTraits.cpp
+third_party/WebKit/Source/core/messaging/BlinkCloneableMessageStructTraits.h
+third_party/WebKit/Source/core/messaging/MessagePort.cpp
+third_party/WebKit/common/message_port/cloneable_message.h
+third_party/WebKit/common/message_port/cloneable_message_struct_traits.cc
+third_party/WebKit/common/message_port/cloneable_message_struct_traits.h
+third_party/WebKit/common/message_port/message_port.mojom
+
+Author: rlanday@chromium.org
+No-WPT-Author: rlanday@chromium.org
+commit 308f9ad3c2a3c91523c5efbbd426a533646d9d5c
+third_party/WebKit/LayoutTests/fast/events/inputevents/inputevent-ime.html
+third_party/WebKit/Source/core/editing/ime/InputMethodController.cpp
+third_party/WebKit/Source/core/editing/ime/InputMethodControllerTest.cpp
+
+Author: srirama.m@samsung.com
+WPT-Author: srirama.m@samsung.com
+commit 53f1c0f95e568d4b6b184904f98cfde2833c603c
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/embedded-content/media-elements/track/track-element/track-cue-negative-duration.html
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/embedded-content/media-elements/track/track-element/track-cue-negative-timestamp-events.html
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/embedded-content/media-elements/track/track-element/track-cue-negative-timestamp-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/embedded-content/media-elements/track/track-element/track-cue-negative-timestamp.html
+third_party/WebKit/Source/core/html/track/CueTimeline.cpp
+third_party/WebKit/Source/core/html/track/TextTrack.cpp
+third_party/WebKit/Source/core/html/track/TextTrackCue.cpp
+third_party/WebKit/Source/core/html/track/TextTrackCueList.cpp
+
+Author: smcgruer@chromium.org
+WPT-Author: smcgruer@chromium.org
+commit 5494d16b35fe0108017c95d39ce5c040bb4e3a82
+third_party/WebKit/LayoutTests/external/wpt/web-animations/animation-model/combining-effects/effect-composition-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/Animatable/animate-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/constructor-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/processing-a-keyframes-argument-001-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/processing-a-keyframes-argument-002-expected.txt
+third_party/WebKit/Source/bindings/core/v8/BUILD.gn
+third_party/WebKit/Source/bindings/core/v8/IDLTypesTest.cpp
+third_party/WebKit/Source/bindings/modules/v8/generated.gni
+third_party/WebKit/Source/core/animation/BasePropertyIndexedKeyframe.idl
+third_party/WebKit/Source/core/animation/EffectInput.cpp
+third_party/WebKit/Source/core/animation/EffectInput.h
+third_party/WebKit/Source/core/animation/EffectInputTest.cpp
+third_party/WebKit/Source/core/animation/ElementAnimation.cpp
+third_party/WebKit/Source/core/animation/ElementAnimation.h
+third_party/WebKit/Source/core/animation/ElementAnimation.idl
+third_party/WebKit/Source/core/animation/KeyframeEffect.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffect.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.idl
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.h
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.idl
+third_party/WebKit/Source/core/animation/KeyframeEffectTest.cpp
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/modules/indexeddb/IDBDatabase.h
+third_party/WebKit/Source/modules/indexeddb/IDBKeyPath.h
+third_party/WebKit/Source/modules/locks/LockManager.h
+third_party/WebKit/Source/modules/websockets/DOMWebSocket.cpp
+
+Author: xidachen@chromium.org
+No-WPT-Author: xidachen@chromium.org
+commit 037f13946d29591fe1c1f6eeae6187645674aad0
+third_party/WebKit/LayoutTests/http/tests/csspaint/shadow-blur-scale-with-page-zoom-expected.html
+third_party/WebKit/LayoutTests/http/tests/csspaint/shadow-blur-scale-with-page-zoom.html
+third_party/WebKit/Source/modules/canvas/canvas2d/BaseRenderingContext2D.h
+third_party/WebKit/Source/modules/csspaint/PaintRenderingContext2D.cpp
+third_party/WebKit/Source/modules/csspaint/PaintRenderingContext2D.h
+
+Author: sunyunjia@chromium.org
+No-WPT-Author: sunyunjia@chromium.org
+commit 0d3134426aaa0499424fcf363552bc6a4f037145
+third_party/WebKit/LayoutTests/css-parser/snap-points-parsing.html
+third_party/WebKit/LayoutTests/webexposed/css-properties-as-js-properties-expected.txt
+third_party/WebKit/LayoutTests/webexposed/css-property-listing-expected.txt
+third_party/WebKit/Source/build/scripts/make_computed_style_base.py
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/ComputedStyleCSSValueMapping.cpp
+third_party/WebKit/Source/core/css/StylePropertySerializer.cpp
+third_party/WebKit/Source/core/css/css.dict
+third_party/WebKit/Source/core/css/parser/CSS.proto
+third_party/WebKit/Source/core/css/parser/CSSParserFastPaths.cpp
+third_party/WebKit/Source/core/css/parser/CSSProtoConverter.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollMarginBlockEndCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollMarginBlockStartCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollMarginBottomCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollMarginInlineEndCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollMarginInlineStartCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollMarginLeftCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollMarginRightCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollMarginTopCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollSnapMarginBlockEndCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollSnapMarginBlockStartCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollSnapMarginBottomCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollSnapMarginInlineEndCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollSnapMarginInlineStartCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollSnapMarginLeftCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollSnapMarginRightCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/ScrollSnapMarginTopCustom.cpp
+third_party/WebKit/Source/core/css/properties/shorthands/ScrollMarginBlockCustom.cpp
+third_party/WebKit/Source/core/css/properties/shorthands/ScrollMarginCustom.cpp
+third_party/WebKit/Source/core/css/properties/shorthands/ScrollMarginInlineCustom.cpp
+third_party/WebKit/Source/core/css/properties/shorthands/ScrollSnapMarginBlockCustom.cpp
+third_party/WebKit/Source/core/css/properties/shorthands/ScrollSnapMarginCustom.cpp
+third_party/WebKit/Source/core/css/properties/shorthands/ScrollSnapMarginInlineCustom.cpp
+third_party/WebKit/Source/core/frame/UseCounter.cpp
+third_party/WebKit/Source/core/page/scrolling/SnapCoordinator.cpp
+third_party/WebKit/Source/core/page/scrolling/SnapCoordinatorTest.cpp
+third_party/WebKit/Source/core/style/ComputedStyle.h
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit 4f17bd28170e9cfb6b67bc1c37828ce99bc211d9
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/fast/forms/suggested-value-after-empty-suggested-value-expected.txt
+third_party/WebKit/LayoutTests/fast/forms/suggested-value-expected.txt
+third_party/WebKit/Source/core/dom/SlotAssignment.cpp
+third_party/WebKit/Source/core/html/forms/HTMLOptGroupElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLOptGroupElement.h
+third_party/WebKit/Source/core/html/forms/HTMLOptionElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLSelectElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLSelectElement.h
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit bb4692c0babd2fdd7f54e6f4f876a6e060d9bb8a
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/editing/editability/ignored-content-expected.txt
+third_party/WebKit/LayoutTests/editing/pasteboard/paste-noplugin-expected.txt
+third_party/WebKit/LayoutTests/fast/parser/object-with-textarea-fallback-expected.txt
+third_party/WebKit/Source/core/html/HTMLEmbedElement.cpp
+third_party/WebKit/Source/core/html/HTMLObjectElement.cpp
+third_party/WebKit/Source/core/html/HTMLPlugInElement.cpp
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit f3853c0b84da0994c4d28ca8c38737d257e95075
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/fast/dom/HTMLMeterElement/meter-element-markup-expected.txt
+third_party/WebKit/LayoutTests/shadow-dom/ua/meter-and-ua-shadow.html
+third_party/WebKit/LayoutTests/shadow-dom/ua/meter-fallback-expected.html
+third_party/WebKit/LayoutTests/shadow-dom/ua/meter-fallback.html
+third_party/WebKit/Source/core/html/HTMLMeterElement.cpp
+
+Author: pfeldman@chromium.org
+No-WPT-Author: pfeldman@chromium.org
+commit d16260bf91889bb7ead1fe490d087bc2ed02d58b
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/elements-panel-rewrite-href-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/elements-panel-selection-after-delete.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/event-listener-sidebar-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/event-listener-sidebar-jquery1-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/event-listener-sidebar-jquery2-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/selected-element-changes-execution-context-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/selected-element-changes-execution-context.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-2/metrics-box-sizing-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-2/metrics-box-sizing.js
+third_party/WebKit/Source/devtools/front_end/elements/ElementsTreeElement.js
+third_party/WebKit/Source/devtools/front_end/elements/ElementsTreeOutline.js
+third_party/WebKit/Source/devtools/front_end/elements_test_runner/ElementsTestRunner.js
+third_party/WebKit/Source/devtools/front_end/sdk/DOMModel.js
+
+Author: jsbell@chromium.org
+No-WPT-Author: jsbell@chromium.org
+commit 20b6df783d5775f40c2fcfc39f5ecf54920b75a0
+third_party/WebKit/LayoutTests/http/tests/locks/query.html
+third_party/WebKit/Source/modules/locks/LockInfo.idl
+third_party/WebKit/Source/modules/locks/LockManager.cpp
+third_party/WebKit/public/platform/modules/locks/lock_manager.mojom
+
+Author: eostroukhov@chromium.org
+No-WPT-Author: eostroukhov@chromium.org
+commit 927fd20565f2e2192a61f17013816d2cf3f9720b
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/get-request-post-data-expected.txt
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/get-request-post-data.js
+third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
+third_party/WebKit/Source/core/inspector/NetworkResourcesData.cpp
+third_party/WebKit/Source/core/inspector/NetworkResourcesData.h
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+third_party/WebKit/Source/core/probe/CoreProbes.pidl
+third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequest.cpp
+
+Author: schenney@chromium.org
+No-WPT-Author: schenney@chromium.org
+commit eab1ec606de5921ae4e78ce5ce690076e0a37a71
+third_party/WebKit/LayoutTests/images/huge-image-viewport-scale-expected.txt
+third_party/WebKit/Source/core/html/ImageDocument.cpp
+third_party/WebKit/Source/core/html/ImageDocument.h
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit 56f2d861c19897381a5ad3bf1db19bf9a8fdac6a
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/fast/dom/shadow/details-summary-distributed-expected.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/details-summary-distributed.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/offset-parent-does-not-leak-ua-shadow.html
+third_party/WebKit/LayoutTests/platform/linux/html/details_summary/details-remove-summary-1-and-click-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/html/details_summary/details-remove-summary-4-and-click-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/html/details_summary/details-remove-summary-1-and-click-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/html/details_summary/details-remove-summary-4-and-click-expected.txt
+third_party/WebKit/LayoutTests/platform/win/html/details_summary/details-remove-summary-1-and-click-expected.txt
+third_party/WebKit/LayoutTests/platform/win/html/details_summary/details-remove-summary-4-and-click-expected.txt
+third_party/WebKit/LayoutTests/shadow-dom/ua/summary-details-and-ua-shadow.html
+third_party/WebKit/LayoutTests/shadow-dom/ua/summary-details-distribution-expected.html
+third_party/WebKit/LayoutTests/shadow-dom/ua/summary-details-distribution.html
+third_party/WebKit/Source/core/dom/Node.h
+third_party/WebKit/Source/core/dom/ShadowRoot.h
+third_party/WebKit/Source/core/dom/SlotAssignment.cpp
+third_party/WebKit/Source/core/dom/SlotAssignment.h
+third_party/WebKit/Source/core/html/HTMLContentElement.cpp
+third_party/WebKit/Source/core/html/HTMLContentElement.h
+third_party/WebKit/Source/core/html/HTMLDetailsElement.cpp
+third_party/WebKit/Source/core/html/HTMLDetailsElement.h
+third_party/WebKit/Source/core/html/HTMLSlotElement.cpp
+third_party/WebKit/Source/core/html/HTMLSlotElement.h
+third_party/WebKit/Source/core/html/HTMLSummaryElement.cpp
+
 Author: ericwilligers@chromium.org
 No-WPT-Author: ericwilligers@chromium.org
 commit c1229dbd9e3cd0af88c684124ba5b7ef10a4daaa
@@ -1543,4 +1819,4 @@ third_party/WebKit/Source/core/css/cssom/CSSTranslation.cpp
 third_party/WebKit/Source/core/css/cssom/CSSUnitValue.cpp
 third_party/WebKit/Source/core/css/cssom/CSSUnitValue.h
 
-108 source+test changes, 26 in wpt
+126 source+test changes, 30 in wpt
