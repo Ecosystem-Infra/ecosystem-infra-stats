@@ -1,3 +1,1304 @@
+Author: djmix.kim@samsung.com
+No-WPT-Author: djmix.kim@samsung.com
+commit ac79e3ee399c4985e6d078757e9e6fe665841634
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/accessibility/edit-aria-attributes-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/accessibility/accessibility-ignoredNodes-expected.txt
+third_party/WebKit/Source/modules/accessibility/AXARIAGridCell.h
+third_party/WebKit/Source/modules/accessibility/AXARIAGridRow.h
+third_party/WebKit/Source/modules/accessibility/AXEnums.h
+third_party/WebKit/Source/modules/accessibility/AXLayoutObject.cpp
+third_party/WebKit/Source/modules/accessibility/AXLayoutObject.h
+third_party/WebKit/Source/modules/accessibility/AXListBoxOption.cpp
+third_party/WebKit/Source/modules/accessibility/AXListBoxOption.h
+third_party/WebKit/Source/modules/accessibility/AXMenuListOption.cpp
+third_party/WebKit/Source/modules/accessibility/AXMenuListOption.h
+third_party/WebKit/Source/modules/accessibility/AXObject.h
+third_party/WebKit/Source/modules/accessibility/AXTableCell.h
+third_party/WebKit/Source/modules/accessibility/AXTableColumn.h
+third_party/WebKit/Source/modules/accessibility/AXTableRow.h
+third_party/WebKit/Source/modules/accessibility/InspectorAccessibilityAgent.cpp
+third_party/WebKit/Source/modules/exported/WebAXObject.cpp
+third_party/WebKit/public/web/WebAXEnums.h
+third_party/WebKit/public/web/WebAXObject.h
+
+Author: rego@igalia.com
+WPT-Author: rego@igalia.com
+commit ea343b082054dcdb48e3a2c10abb62b8c52257d6
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/layout-algorithm/grid-find-fr-size-gutters-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/layout-algorithm/grid-find-fr-size-gutters-002.html
+third_party/WebKit/Source/core/layout/GridTrackSizingAlgorithm.cpp
+
+Author: nikhil.sahni@samsung.com
+No-WPT-Author: nikhil.sahni@samsung.com
+commit a35f17126683c5270273b4a3c765ad05fb829f35
+third_party/WebKit/LayoutTests/imagecapture/setOptions-reject.html
+third_party/WebKit/LayoutTests/imagecapture/setOptions.html
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/modules/imagecapture/ImageCapture.idl
+third_party/WebKit/public/platform/web_feature.mojom
+
+Author: kpaulhamus@chromium.org
+No-WPT-Author: kpaulhamus@chromium.org
+commit 83a16a8fccf339ec16f9a4ab61069c6f7cf0a929
+third_party/WebKit/LayoutTests/webauth/idl.html
+third_party/WebKit/Source/modules/credentialmanager/AuthenticatorAssertionResponse.idl
+third_party/WebKit/Source/modules/credentialmanager/CollectedClientData.idl
+
+Author: futhark@chromium.org
+WPT-Author: futhark@chromium.org
+commit 394e62d9a30231f2d4a226e5e2f585ec36397b81
+third_party/WebKit/LayoutTests/external/wpt/css/selectors/hover-002-manual.html
+third_party/WebKit/LayoutTests/external/wpt_automation/css/selectors/hover-002-manual-automation.js
+third_party/WebKit/LayoutTests/resources/testharnessreport.js
+third_party/WebKit/Source/core/dom/Element.cpp
+third_party/WebKit/Source/core/layout/LayoutObject.cpp
+third_party/WebKit/Source/core/style/ComputedStyle.h
+
+Author: fergal@chromium.org
+No-WPT-Author: fergal@chromium.org
+commit 7d8f1e30e8d6918f4da3657e03be88d555deccd8
+third_party/WebKit/LayoutTests/fast/dom/margin-height-guarded-crash-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/margin-height-guarded-crash.html
+third_party/WebKit/Source/core/dom/Document.cpp
+
+Author: bhagirathi.s@samsung.com
+WPT-Author: bhagirathi.s@samsung.com
+commit 44a62b9acc20db8c1d63d4b90ecff1e17dfe85f2
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/rellist-feature-detection.html
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/text-level-semantics/the-a-element/rellist-feature-detection.html
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/text-level-semantics/the-area-element/rellist-feature-detection.html
+third_party/WebKit/LayoutTests/fast/dom/HTMLLinkElement/rellist-feature-detection.html
+third_party/WebKit/Source/core/html/HTMLLinkElement.idl
+
+Author: xidachen@chromium.org
+WPT-Author: xidachen@chromium.org
+commit c1f66677277a28a186de6251d31b77fb921f7769
+third_party/WebKit/LayoutTests/external/wpt/css/css-paint-api/parse-input-arguments-018-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-paint-api/parse-input-arguments-018.https.html
+third_party/WebKit/Source/modules/csspaint/CSSPaintImageGeneratorImpl.cpp
+third_party/WebKit/Source/modules/csspaint/CSSPaintImageGeneratorImpl.h
+
+Author: shanmuga.m@samsung.com
+WPT-Author: shanmuga.m@samsung.com
+commit 54f8d098b694704893f7abdbba3b1a6ee18ed687
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/forms/the-input-element/checkbox-click-events-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/forms/the-input-element/checkbox-expected.txt
+third_party/WebKit/LayoutTests/fast/forms/checkbox/checkbox-keyboard-event.html
+third_party/WebKit/Source/core/html/forms/CheckboxInputType.cpp
+third_party/WebKit/Source/core/html/forms/HTMLInputElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLInputElement.h
+
+Author: meade@chromium.org
+No-WPT-Author: meade@chromium.org
+commit 32c5f6b31c49bb0673bdc0cb0e464765d6ca82a1
+third_party/WebKit/LayoutTests/fast/css/invalid-font-face-crash.html
+third_party/WebKit/Source/core/css/AtRuleCSSStyleDeclaration.cpp
+
+Author: junho0924.seo@lge.com
+No-WPT-Author: junho0924.seo@lge.com
+commit 604e3794f34769458dd7bc0791f583d061dd9cd3
+third_party/WebKit/LayoutTests/fast/spatial-navigation/snav-backtrack-out-of-non-navigable-iframe-expected.txt
+third_party/WebKit/LayoutTests/fast/spatial-navigation/snav-backtrack-out-of-non-navigable-iframe.html
+third_party/WebKit/Source/core/page/FocusController.cpp
+third_party/WebKit/Source/core/page/FocusController.h
+
+Author: gyuyoung.kim@lge.com
+WPT-Author: gyuyoung.kim@lge.com
+commit 1bf88154ac0134a84bba13fc4bec7b0a0939c673
+third_party/WebKit/LayoutTests/external/wpt/html/dom/usvstring-reflection.html
+third_party/WebKit/Source/modules/beacon/NavigatorBeacon.idl
+
+Author: jfernandez@igalia.com
+WPT-Author: jfernandez@igalia.com
+commit db99fa6fc1d16bfc187b539f06d947ef04fae8b5
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/resources/alignment-parsing-utils.js
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/abspos/grid-positioned-items-content-alignment-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/abspos/grid-positioned-items-content-alignment-rtl-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/support/grid-alignment.css
+third_party/WebKit/LayoutTests/external/wpt/css/support/alignment.css
+third_party/WebKit/LayoutTests/fast/alignment/new-alignment-values.html
+third_party/WebKit/LayoutTests/fast/alignment/overwrite-content-alignment-expected.txt
+third_party/WebKit/LayoutTests/fast/alignment/overwrite-content-alignment.html
+third_party/WebKit/LayoutTests/fast/alignment/overwrite-self-alignment-expected.txt
+third_party/WebKit/LayoutTests/fast/alignment/overwrite-self-alignment.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-align-content.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-align-items.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-align-self.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-justify-content.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-justify-items.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-justify-self.html
+third_party/WebKit/LayoutTests/fast/css-grid-layout/resources/grid-alignment.css
+third_party/WebKit/LayoutTests/paint/invalidation/overflow/align-items-overflow-change-expected.html
+third_party/WebKit/LayoutTests/paint/invalidation/overflow/align-items-overflow-change.html
+third_party/WebKit/LayoutTests/paint/invalidation/overflow/align-self-overflow-change-expected.html
+third_party/WebKit/LayoutTests/paint/invalidation/overflow/align-self-overflow-change.html
+third_party/WebKit/LayoutTests/paint/invalidation/overflow/justify-items-overflow-change-expected.html
+third_party/WebKit/LayoutTests/paint/invalidation/overflow/justify-items-overflow-change.html
+third_party/WebKit/LayoutTests/paint/invalidation/overflow/justify-self-overflow-change-expected.html
+third_party/WebKit/LayoutTests/paint/invalidation/overflow/justify-self-overflow-change.html
+third_party/WebKit/Source/core/css/CSSContentDistributionValue.cpp
+third_party/WebKit/Source/core/css/properties/CSSParsingUtils.cpp
+third_party/WebKit/Source/core/css/properties/ComputedStyleUtils.cpp
+third_party/WebKit/Source/core/css/resolver/StyleBuilderConverter.cpp
+
+Author: hayato@chromium.org
+WPT-Author: hayato@chromium.org
+commit 9c33d17ab679a084b3c61a00179a95515b061a49
+third_party/WebKit/LayoutTests/external/wpt/shadow-dom/event-composed-path-with-related-target.html
+third_party/WebKit/Source/core/dom/events/EventPath.cpp
+third_party/WebKit/Source/core/dom/events/EventPath.h
+
+Author: bajones@chromium.org
+No-WPT-Author: bajones@chromium.org
+commit 19bd94e2cd3156be01ffe1e8b60b943de0728b34
+third_party/WebKit/LayoutTests/vr/resources/mock-vr-service.js
+third_party/WebKit/LayoutTests/xr/xrWebGLLayer_dirty_framebuffer.html
+third_party/WebKit/Source/modules/webgl/WebGLFramebuffer.h
+third_party/WebKit/Source/modules/webgl/WebGLRenderingContextBase.cpp
+third_party/WebKit/Source/modules/xr/XRFrameProvider.cpp
+third_party/WebKit/Source/modules/xr/XRFrameProvider.h
+third_party/WebKit/Source/modules/xr/XRWebGLLayer.cpp
+
+Author: kozyatinskiy@chromium.org
+No-WPT-Author: kozyatinskiy@chromium.org
+commit 55daf265ddce7a7d10288a0024d4b2b93b966008
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoints-ui-restored-breakpoint.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-pause/pause-in-inline-script-expected.txt
+third_party/WebKit/Source/devtools/front_end/test_runner/TestRunner.js
+
+Author: kozyatinskiy@chromium.org
+No-WPT-Author: kozyatinskiy@chromium.org
+commit 54d66e5393ca37b52ba893e3554f4ccc7c90f141
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoint-manager-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoint-manager.js
+third_party/WebKit/Source/devtools/BUILD.gn
+third_party/WebKit/Source/devtools/front_end/bindings/BreakpointManager.js
+third_party/WebKit/Source/devtools/front_end/sources_test_runner/BreakpointManagerTestRunner.js
+third_party/WebKit/Source/devtools/front_end/sources_test_runner/module.json
+
+Author: rlanday@chromium.org
+No-WPT-Author: rlanday@chromium.org
+commit 0d331b4d9460618ebf29546593e74f940b77621d
+third_party/WebKit/LayoutTests/fast/events/inputevents/inputevent-ime.html
+third_party/WebKit/Source/core/editing/ime/InputMethodController.cpp
+third_party/WebKit/Source/core/editing/ime/InputMethodController.h
+
+Author: fs@opera.com
+No-WPT-Author: fs@opera.com
+commit c797e29ff1478d59ca68913c41eab692df6666ac
+third_party/WebKit/LayoutTests/fast/backgrounds/background-clip-text-with-blend-mode-expected.html
+third_party/WebKit/LayoutTests/fast/backgrounds/background-clip-text-with-blend-mode.html
+third_party/WebKit/Source/core/paint/BoxModelObjectPainter.cpp
+
+Author: npm@chromium.org
+WPT-Author: npm@chromium.org
+commit 226d6541a89503346b0ba6a56b523408080c978e
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/performance-timeline/idlharness.html
+third_party/WebKit/LayoutTests/http/tests/serviceworker/webexposed/global-interface-listing-service-worker-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/stable/http/tests/serviceworker/webexposed/global-interface-listing-service-worker-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/http/tests/serviceworker/webexposed/global-interface-listing-service-worker-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-dedicated-worker-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-shared-worker-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-dedicated-worker-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-shared-worker-expected.txt
+third_party/WebKit/Source/core/timing/PerformanceObserver.cpp
+third_party/WebKit/Source/core/timing/PerformanceObserver.h
+third_party/WebKit/Source/core/timing/PerformanceObserver.idl
+
+Author: kpaulhamus@chromium.org
+No-WPT-Author: kpaulhamus@chromium.org
+commit 9d87fb0d0069424e866825bd38d8b50fbac5a3d8
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/credentialscontainer-create-basics.html
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/credentialscontainer-create-from-nested-frame.html
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/credentialscontainer-create-origins.html
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/resources/credential-helpers.js
+third_party/WebKit/Source/modules/credentialmanager/CredentialManagerTypeConverters.cpp
+third_party/WebKit/Source/modules/credentialmanager/CredentialManagerTypeConverters.h
+third_party/WebKit/Source/modules/credentialmanager/CredentialsContainer.cpp
+third_party/WebKit/public/platform/modules/credentialmanager/credential_manager.mojom
+third_party/WebKit/public/platform/modules/webauth/authenticator.mojom
+
+Author: hugoh@vewd.com
+No-WPT-Author: hugoh@vewd.com
+commit b1eaec2e1fe9eb6bc37b6a43a574a081d914b2af
+third_party/WebKit/LayoutTests/fast/spatial-navigation/snav-stay-in-overflow-div-expected.txt
+third_party/WebKit/LayoutTests/fast/spatial-navigation/snav-stay-in-overflow-div.html
+third_party/WebKit/Source/core/page/FocusController.cpp
+third_party/WebKit/Source/core/page/SpatialNavigation.cpp
+third_party/WebKit/Source/core/page/SpatialNavigation.h
+third_party/WebKit/Source/core/page/SpatialNavigationTest.cpp
+
+Author: kpaulhamus@chromium.org
+No-WPT-Author: kpaulhamus@chromium.org
+commit cd76a26ef8c3eee5fbab993913c2056172846682
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/credentialscontainer-create-basics.html
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/credentialscontainer-create-from-nested-frame.html
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/credentialscontainer-create-origins.html
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/resources/credential-helpers.js
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/resources/nested-mock-authenticator-client.html
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/resources/publickey-create-helper.html
+third_party/WebKit/Source/modules/credentialmanager/CredentialManagerTypeConverters.cpp
+third_party/WebKit/Source/modules/credentialmanager/CredentialsContainer.cpp
+third_party/WebKit/Source/platform/weborigin/SecurityOriginTest.cpp
+third_party/WebKit/public/platform/modules/credentialmanager/credential_manager.mojom
+third_party/WebKit/public/platform/modules/webauth/authenticator.mojom
+
+Author: smcgruer@chromium.org
+WPT-Author: smcgruer@chromium.org
+commit f73ccec7a667bde2737e20ed0ae3da62483b2669
+third_party/WebKit/LayoutTests/external/wpt/html/dom/usvstring-reflection.html
+third_party/WebKit/Source/modules/beacon/NavigatorBeacon.idl
+
+Author: gyuyoung.kim@lge.com
+WPT-Author: gyuyoung.kim@lge.com
+commit f164b48cc02fbcb3c27cf53910818423fb11e3ae
+third_party/WebKit/LayoutTests/external/wpt/html/dom/usvstring-reflection.html
+third_party/WebKit/Source/modules/beacon/NavigatorBeacon.idl
+
+Author: toyoshim@chromium.org
+No-WPT-Author: toyoshim@chromium.org
+commit 13b9fae4754806a5a72df14b71cc409f73caa8d2
+third_party/WebKit/LayoutTests/http/tests/xmlhttprequest/origin-exact-matching/43-expected.txt
+third_party/WebKit/Source/core/loader/DocumentThreadableLoader.cpp
+third_party/WebKit/Source/platform/exported/WebCORS.cpp
+third_party/WebKit/Source/platform/loader/BUILD.gn
+third_party/WebKit/Source/platform/loader/README.md
+third_party/WebKit/Source/platform/loader/cors/CORS.cpp
+third_party/WebKit/Source/platform/loader/cors/CORS.h
+third_party/WebKit/Source/platform/loader/fetch/ResourceLoader.cpp
+third_party/WebKit/public/platform/WebCORS.h
+
+Author: meade@chromium.org
+No-WPT-Author: meade@chromium.org
+commit 4e4f284da26ddd29261853bad70a67848bb00539
+third_party/WebKit/LayoutTests/css3/fonts/font-feature-settings-parsing-prefixed-expected.txt
+third_party/WebKit/LayoutTests/css3/fonts/font-feature-settings-parsing-prefixed.html
+third_party/WebKit/LayoutTests/fast/css/css-font-face-src-value-uri.html
+third_party/WebKit/LayoutTests/fast/css/font-face-src-escaped-parsing.html
+third_party/WebKit/LayoutTests/fast/css/font-face-src-parsing-expected.txt
+third_party/WebKit/LayoutTests/fast/css/font-face-src-parsing.html
+third_party/WebKit/LayoutTests/fast/css/font-face-style-attribute.html
+third_party/WebKit/LayoutTests/fast/css/fontface-cssText.html
+third_party/WebKit/Source/build/scripts/core/css/parser/make_atrule_names.py
+third_party/WebKit/Source/build/scripts/core/css/parser/templates/AtRuleDescriptors.cpp.tmpl
+third_party/WebKit/Source/build/scripts/core/css/parser/templates/AtRuleDescriptors.h.tmpl
+third_party/WebKit/Source/core/css/AbstractPropertySetCSSStyleDeclaration.h
+third_party/WebKit/Source/core/css/AtRuleCSSStyleDeclaration.cpp
+third_party/WebKit/Source/core/css/AtRuleCSSStyleDeclaration.h
+third_party/WebKit/Source/core/css/AtRuleDescriptorSerializer.cpp
+third_party/WebKit/Source/core/css/AtRuleDescriptorSerializer.h
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/CSSFontFaceRule.cpp
+third_party/WebKit/Source/core/css/CSSFontFaceRule.h
+third_party/WebKit/Source/core/css/CSSStyleDeclaration.h
+third_party/WebKit/Source/core/css/FontFace.cpp
+third_party/WebKit/Source/core/css/FontFace.h
+third_party/WebKit/Source/core/css/FontFaceCacheTest.cpp
+third_party/WebKit/Source/core/css/StyleAttributeMutationScope.cpp
+third_party/WebKit/Source/core/css/StyleAttributeMutationScope.h
+third_party/WebKit/Source/core/css/StyleRule.cpp
+third_party/WebKit/Source/core/css/StyleRule.h
+third_party/WebKit/Source/core/css/StyleSheetContents.cpp
+third_party/WebKit/Source/core/css/parser/AtRuleDescriptorParser.cpp
+third_party/WebKit/Source/core/css/parser/AtRuleDescriptorParser.h
+third_party/WebKit/Source/core/css/parser/AtRuleDescriptorValueSet.cpp
+third_party/WebKit/Source/core/css/parser/AtRuleDescriptorValueSet.h
+third_party/WebKit/Source/core/css/parser/CSSParserImpl.cpp
+third_party/WebKit/Source/core/frame/FrameSerializer.cpp
+third_party/WebKit/Source/core/frame/FrameSerializer.h
+
+Author: rego@igalia.com
+No-WPT-Author: rego@igalia.com
+commit f52219fdc7968529a0e9530c8da04fe7d4f46b3e
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-painting-item-overflow-expected.html
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-painting-item-overflow.html
+third_party/WebKit/Source/core/layout/LayoutGrid.cpp
+third_party/WebKit/Source/core/paint/GridPainter.cpp
+
+Author: rlanday@chromium.org
+No-WPT-Author: rlanday@chromium.org
+commit d2e83f778ee04311b18b6a5ee5f5f5786d6d51ea
+third_party/WebKit/LayoutTests/fast/events/inputevents/inputevent-ime.html
+third_party/WebKit/Source/core/editing/ime/InputMethodController.cpp
+third_party/WebKit/Source/core/editing/ime/InputMethodControllerTest.cpp
+
+Author: pfeldman@chromium.org
+No-WPT-Author: pfeldman@chromium.org
+commit ed9388054c24171adc1c1ac5e9795f1832e8f179
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/edit/perform-undo-undo.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-2/perform-undo-perform-of-mergable-action.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-4/styles-keyframes.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-4/undo-add-new-rule.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-4/undo-add-property.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-4/undo-add-rule-crash.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/undo-after-cancelled-editing.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/undo-change-property.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/undo-property-toggle.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/undo-set-selector-text.js
+third_party/WebKit/Source/devtools/front_end/elements/ElementsPanel.js
+third_party/WebKit/Source/devtools/front_end/elements_test_runner/ElementsTestRunner.js
+third_party/WebKit/Source/devtools/front_end/elements_test_runner/SetOuterHTMLTestRunner.js
+third_party/WebKit/Source/devtools/front_end/sdk/CSSModel.js
+third_party/WebKit/Source/devtools/front_end/sdk/CSSProperty.js
+third_party/WebKit/Source/devtools/front_end/sdk/DOMModel.js
+
+Author: kozyatinskiy@chromium.org
+No-WPT-Author: kozyatinskiy@chromium.org
+commit 6d4ff09053af834ff69b03372e83ac2dcc6e9e57
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoint-manager-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoint-manager.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoints-in-ui-source-frame-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoints-in-ui-source-frame.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/no-pause-on-disabled-breakpoint-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/no-pause-on-disabled-breakpoint.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/resources/a.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/source-frame-breakpoint-decorations-expected.txt
+third_party/WebKit/Source/devtools/front_end/sources/JavaScriptSourceFrame.js
+third_party/WebKit/Source/devtools/front_end/sources_test_runner/DebuggerTestRunner.js
+
+Author: ikilpatrick@chromium.org
+WPT-Author: ikilpatrick@chromium.org
+commit 179582f6479b46c304fe6c78d31d88d131a50fa8
+third_party/WebKit/LayoutTests/external/wpt/worklets/layout-worklet-credentials.https.html
+third_party/WebKit/LayoutTests/external/wpt/worklets/layout-worklet-csp.https.html
+third_party/WebKit/LayoutTests/external/wpt/worklets/layout-worklet-import.https.html
+third_party/WebKit/LayoutTests/external/wpt/worklets/layout-worklet-referrer.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/worklets/layout-worklet-referrer.https.html
+third_party/WebKit/LayoutTests/external/wpt/worklets/layout-worklet-service-worker-interception.https.html
+third_party/WebKit/LayoutTests/external/wpt/worklets/resources/worklet-test-utils.js
+third_party/WebKit/LayoutTests/http/tests/worklet/import-on-insecure-context.html
+third_party/WebKit/LayoutTests/http/tests/worklet/layout-worklet-csp-eval-expected.txt
+third_party/WebKit/LayoutTests/http/tests/worklet/layout-worklet-csp-eval.html
+third_party/WebKit/LayoutTests/http/tests/worklet/resources/worklet-test-utils.js
+third_party/WebKit/Source/bindings/core/v8/V8Initializer.cpp
+third_party/WebKit/Source/bindings/scripts/v8_utilities.py
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/dom/ExecutionContext.h
+third_party/WebKit/Source/core/layout/BUILD.gn
+third_party/WebKit/Source/core/layout/custom/LayoutWorklet.cpp
+third_party/WebKit/Source/core/layout/custom/LayoutWorkletGlobalScope.cpp
+third_party/WebKit/Source/core/layout/custom/LayoutWorkletGlobalScope.h
+third_party/WebKit/Source/core/layout/custom/LayoutWorkletGlobalScope.idl
+third_party/WebKit/Source/core/layout/custom/LayoutWorkletGlobalScopeProxy.cpp
+third_party/WebKit/Source/core/layout/custom/LayoutWorkletGlobalScopeProxy.h
+third_party/WebKit/Source/core/loader/modulescript/ModuleScriptLoaderTest.cpp
+third_party/WebKit/Source/core/workers/MainThreadWorkletGlobalScope.cpp
+third_party/WebKit/Source/core/workers/MainThreadWorkletGlobalScope.h
+third_party/WebKit/Source/core/workers/MainThreadWorkletTest.cpp
+third_party/WebKit/Source/modules/csspaint/PaintWorkletGlobalScope.cpp
+third_party/WebKit/Source/modules/csspaint/PaintWorkletGlobalScope.h
+third_party/WebKit/Source/modules/csspaint/PaintWorkletGlobalScopeProxy.cpp
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 24db13984135fc72c9dfd67f636f4afcf5ac0775
+third_party/WebKit/LayoutTests/FlagExpectations/enable-slimming-paint-v175
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/fast/multicol/multicol-svg-expected.html
+third_party/WebKit/LayoutTests/fast/multicol/multicol-svg.html
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/svg/custom/foreign-object-skew-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/svg/overflow/overflow-on-foreignObject-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/svg/overflow/overflow-on-foreignObject-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/svg/zoom/page/zoom-foreignObject-expected.png
+third_party/WebKit/LayoutTests/paint/invalidation/svg/paintorder-filtered-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/svg/repaint-paintorder-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/svg/inner-svg-change-viewPort-relative-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/svg/text-rescale-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/foreignObject/fO-parent-display-changes-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/006-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/011-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/011-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/svg/inner-svg-change-viewPort-relative-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/foreignObject/fO-parent-display-changes-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/006-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/011-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/011-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/svg/text-rescale-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/foreignObject/fO-parent-display-changes-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/006-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/011-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/011-expected.txt
+third_party/WebKit/LayoutTests/svg/foreignObject/fO-parent-display-changes.svg
+third_party/WebKit/LayoutTests/svg/hixie/mixed/006.xml
+third_party/WebKit/LayoutTests/svg/hixie/mixed/011.xml
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/svg/foreign-object-repaint-expected.png
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/svg/zoom-foreignObject-expected.png
+third_party/WebKit/Source/core/layout/svg/LayoutSVGBlock.cpp
+third_party/WebKit/Source/core/paint/BlockPainter.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilderTest.cpp
+third_party/WebKit/Source/core/paint/SVGContainerPainter.cpp
+third_party/WebKit/Source/core/paint/SVGForeignObjectPainter.cpp
+
+Author: tkent@chromium.org
+WPT-Author: tkent@chromium.org
+commit ea34d5887b9a78a94846321883f8fb537651aa06
+third_party/WebKit/LayoutTests/external/wpt/html/infrastructure/common-dom-interfaces/collections/htmloptionscollection-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/html-collections-named-getter-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/html-collections-named-getter.html
+third_party/WebKit/LayoutTests/fast/forms/select/named-options-expected.txt
+third_party/WebKit/LayoutTests/fast/forms/select/named-options.html
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/html/forms/HTMLOptionsCollection.cpp
+third_party/WebKit/Source/core/html/forms/HTMLOptionsCollection.h
+third_party/WebKit/Source/core/html/forms/HTMLOptionsCollection.idl
+third_party/WebKit/public/platform/web_feature.mojom
+
+Author: einbinder@chromium.org
+No-WPT-Author: einbinder@chromium.org
+commit ae1c64349a0830d20d0ad1e2ae92c747dd16ed51
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/show-all-properties-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/show-all-properties.js
+third_party/WebKit/Source/devtools/front_end/elements/StylesSidebarPane.js
+third_party/WebKit/Source/devtools/front_end/elements/stylesSidebarPane.css
+third_party/WebKit/Source/devtools/front_end/elements_test_runner/ElementsTestRunner.js
+
+Author: kojii@chromium.org
+No-WPT-Author: kojii@chromium.org
+commit 029769170f4a879fee9014782ad4e72987bddd4d
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/css/non-standard-checkbox-size-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/forms/checkbox/checkbox-appearance-basic-expected.txt
+third_party/WebKit/Source/core/layout/ng/ng_box_fragment.cc
+
+Author: mek@chromium.org
+No-WPT-Author: mek@chromium.org
+commit 144e2c98f3ff7585f2719c1bf4d7e17afb209002
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/FlagExpectations/enable-features=NetworkService
+third_party/WebKit/LayoutTests/VirtualTestSuites
+third_party/WebKit/LayoutTests/virtual/mojo-blobs/external/wpt/FileAPI/README.txt
+third_party/WebKit/LayoutTests/virtual/mojo-blobs/external/wpt/FileAPI/blob/Blob-XHR-revoke-expected.txt
+third_party/WebKit/LayoutTests/virtual/mojo-blobs/external/wpt/IndexedDB/README.txt
+third_party/WebKit/LayoutTests/virtual/mojo-blobs/external/wpt/fetch/README.txt
+third_party/WebKit/LayoutTests/virtual/mojo-blobs/external/wpt/service-workers/README.txt
+third_party/WebKit/LayoutTests/virtual/mojo-blobs/external/wpt/webmessaging/README.txt
+third_party/WebKit/LayoutTests/virtual/mojo-blobs/fast/files/README.txt
+third_party/WebKit/Source/core/fileapi/FileReaderLoader.cpp
+third_party/WebKit/Source/core/messaging/BlinkCloneableMessageStructTraits.cpp
+third_party/WebKit/Source/platform/blob/BlobData.cpp
+third_party/WebKit/Source/platform/blob/BlobDataTest.cpp
+third_party/WebKit/Source/platform/blob/BlobRegistry.cpp
+third_party/WebKit/Source/platform/blob/BlobRegistry.h
+third_party/WebKit/Source/platform/exported/WebRuntimeFeatures.cpp
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+third_party/WebKit/public/platform/WebBlobRegistry.h
+third_party/WebKit/public/platform/WebRuntimeFeatures.h
+
+Author: maxlg@chromium.org
+No-WPT-Author: maxlg@chromium.org
+commit 669cfa8ae078544b76ca9e4b04c0e7dab8dae63c
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/VirtualTestSuites
+third_party/WebKit/LayoutTests/http/tests/performance-timing/custom-user-timing/performanceobservers.js
+third_party/WebKit/LayoutTests/http/tests/performance-timing/custom-user-timing/po-customusertiming-mark.html
+third_party/WebKit/LayoutTests/virtual/custom-user-timing/http/tests/performance-timing/custom-user-timing/README.txt
+third_party/WebKit/LayoutTests/virtual/custom-user-timing/http/tests/performance-timing/custom-user-timing/po-customusertiming-mark-expected.txt
+third_party/WebKit/Source/bindings/core/v8/BUILD.gn
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/timing/BUILD.gn
+third_party/WebKit/Source/core/timing/Performance.idl
+third_party/WebKit/Source/core/timing/PerformanceBase.cpp
+third_party/WebKit/Source/core/timing/PerformanceBase.h
+third_party/WebKit/Source/core/timing/PerformanceMark.cpp
+third_party/WebKit/Source/core/timing/PerformanceMark.h
+third_party/WebKit/Source/core/timing/PerformanceMark.idl
+third_party/WebKit/Source/core/timing/PerformanceMarkOptions.idl
+third_party/WebKit/Source/core/timing/PerformanceObserverTest.cpp
+third_party/WebKit/Source/core/timing/PerformanceTest.cpp
+third_party/WebKit/Source/core/timing/PerformanceUserTiming.cpp
+third_party/WebKit/Source/core/timing/PerformanceUserTiming.h
+third_party/WebKit/Source/core/timing/WorkerPerformance.idl
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: offenwanger@chromium.org
+No-WPT-Author: offenwanger@chromium.org
+commit 21f29d77496b921551528702f3a424161815ab18
+third_party/WebKit/LayoutTests/xr/navigator_xr_blocks_getVRDisplays.html
+third_party/WebKit/LayoutTests/xr/requestDevice_always_resolves.html
+third_party/WebKit/LayoutTests/xr/requestDevice_zero_devices.html
+third_party/WebKit/Source/modules/xr/XR.cpp
+
+Author: iclelland@google.com
+WPT-Author: iclelland@google.com
+commit 0f5df3401108eac38bb63d99372195b342493428
+third_party/WebKit/LayoutTests/external/wpt/xhr/xmlhttprequest-sync-default-feature-policy.sub-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/xhr/xmlhttprequest-sync-default-feature-policy.sub.html
+third_party/WebKit/Source/core/xmlhttprequest/XMLHttpRequest.cpp
+third_party/WebKit/Source/platform/feature_policy/FeaturePolicy.cpp
+
+Author: bajones@chromium.org
+No-WPT-Author: bajones@chromium.org
+commit 675f9b65f39389b24bf52b369e36f673d4e076bf
+third_party/WebKit/LayoutTests/xr/xrWebGLLayer_constructor.html
+third_party/WebKit/Source/modules/webgl/WebGLRenderingContextBase.h
+third_party/WebKit/Source/modules/xr/BUILD.gn
+third_party/WebKit/Source/modules/xr/XRSession.cpp
+third_party/WebKit/Source/modules/xr/XRSession.h
+third_party/WebKit/Source/modules/xr/XRWebGLDrawingBuffer.cpp
+third_party/WebKit/Source/modules/xr/XRWebGLDrawingBuffer.h
+third_party/WebKit/Source/modules/xr/XRWebGLLayer.cpp
+third_party/WebKit/Source/modules/xr/XRWebGLLayer.h
+third_party/WebKit/Source/modules/xr/XRWebGLLayer.idl
+third_party/WebKit/Source/platform/BUILD.gn
+third_party/WebKit/Source/platform/graphics/gpu/DrawingBuffer.cpp
+third_party/WebKit/Source/platform/graphics/gpu/DrawingBuffer.h
+third_party/WebKit/Source/platform/graphics/gpu/XRWebGLDrawingBuffer.cpp
+third_party/WebKit/Source/platform/graphics/gpu/XRWebGLDrawingBuffer.h
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 748ddf68e127277f7247207deeea8f47fc6686e5
+third_party/WebKit/LayoutTests/FlagExpectations/enable-slimming-paint-v175
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/http/tests/devtools/layers/layer-canvas-log-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/http/tests/devtools/tracing/timeline-paint/timeline-paint-with-layout-invalidations-on-deleted-node-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/tracing/timeline-paint/timeline-paint-with-layout-invalidations-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/tracing/timeline-paint/timeline-paint-with-layout-invalidations-on-deleted-node.js
+third_party/WebKit/LayoutTests/http/tests/devtools/tracing/timeline-paint/timeline-paint-with-style-recalc-invalidations-expected.txt
+third_party/WebKit/Source/core/inspector/InspectorTraceEvents.cpp
+third_party/WebKit/Source/core/inspector/InspectorTraceEvents.h
+third_party/WebKit/Source/core/paint/ObjectPaintInvalidator.cpp
+third_party/WebKit/Source/platform/graphics/GraphicsLayer.cpp
+
+Author: arthursonzogni@chromium.org
+WPT-Author: arthursonzogni@chromium.org
+commit 4b62a5cb43c43dcc9a76d8aa2409c1467513412d
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade.sub.https.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/basic-link-no-upgrade.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/basic-link-no-upgrade.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/basic-link-upgrade.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/basic-link-upgrade.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-link-upgrade.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-link-upgrade.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-top-navigation-no-upgrade-1.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-top-navigation-no-upgrade-1.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-top-navigation-no-upgrade-2.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-top-navigation-upgrade-1.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-top-navigation-upgrade-1.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-top-navigation-upgrade-2.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-top-navigation-upgrade-2.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/iframe-top-navigation-upgrade-meta.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/resources/click-on-link.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/resources/dummy.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/resources/navigate-top-frame-upgrade.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/resources/navigate-top-frame-upgrade.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/resources/navigate-top-frame.sub.html
+third_party/WebKit/LayoutTests/external/wpt/upgrade-insecure-requests/link-upgrade/resources/post-message-to-opener.sub.html
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/dom/Document.h
+third_party/WebKit/Source/core/dom/SecurityContext.cpp
+third_party/WebKit/Source/core/dom/SecurityContext.h
+third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
+third_party/WebKit/Source/core/exported/LocalFrameClientImpl.h
+third_party/WebKit/Source/core/exported/WebFrame.cpp
+third_party/WebKit/Source/core/exported/WebRemoteFrameImpl.cpp
+third_party/WebKit/Source/core/exported/WebRemoteFrameImpl.h
+third_party/WebKit/Source/core/frame/LocalFrameClient.h
+third_party/WebKit/Source/core/frame/RemoteFrame.cpp
+third_party/WebKit/Source/core/frame/csp/ContentSecurityPolicy.cpp
+third_party/WebKit/Source/core/loader/FrameFetchContextTest.cpp
+third_party/WebKit/Source/core/loader/FrameLoader.cpp
+third_party/WebKit/Source/core/loader/FrameLoader.h
+third_party/WebKit/public/web/WebFrame.h
+third_party/WebKit/public/web/WebFrameClient.h
+third_party/WebKit/public/web/WebRemoteFrame.h
+
+Author: junho0924.seo@lge.com
+No-WPT-Author: junho0924.seo@lge.com
+commit 69520020e34d2c98ebcc342f852ccda11ebd2f74
+third_party/WebKit/LayoutTests/fast/spatial-navigation/snav-iframe-with-outside-focusable-element-expected.txt
+third_party/WebKit/LayoutTests/fast/spatial-navigation/snav-iframe-with-outside-focusable-element.html
+third_party/WebKit/Source/core/page/FocusController.cpp
+
+Author: cathiechen@tencent.com
+No-WPT-Author: cathiechen@tencent.com
+commit ec023d845855e5a30e2eea79bde3a15d7723ee79
+third_party/WebKit/LayoutTests/fast/lists/list-marker-and-layout-tree-change-expected.html
+third_party/WebKit/LayoutTests/fast/lists/list-marker-and-layout-tree-change.html
+third_party/WebKit/Source/core/layout/LayoutListItem.cpp
+
+Author: hbos@chromium.org
+No-WPT-Author: hbos@chromium.org
+commit e8d9770457106a0c02c5d450b2f11914b6e393c9
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/modules/peerconnection/RTCRtpSender.idl
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: rlanday@chromium.org
+No-WPT-Author: rlanday@chromium.org
+commit 852ab8bfa27da53f0790a230bbabeac5f4175729
+third_party/WebKit/LayoutTests/fast/events/inputevents/inputevent-ime.html
+third_party/WebKit/Source/core/editing/ime/InputMethodController.cpp
+third_party/WebKit/Source/core/editing/ime/InputMethodController.h
+
+Author: rlanday@chromium.org
+No-WPT-Author: rlanday@chromium.org
+commit 500c8d1d245355c5b982b00d13d6747965f51cd8
+third_party/WebKit/LayoutTests/fast/events/inputevents/inputevent-ime.html
+third_party/WebKit/Source/core/editing/ime/InputMethodController.cpp
+third_party/WebKit/Source/core/editing/ime/InputMethodControllerTest.cpp
+
+Author: sunyunjia@chromium.org
+No-WPT-Author: sunyunjia@chromium.org
+commit 7c1ceb980b168072487f7bd0a2c83194b195fccc
+third_party/WebKit/LayoutTests/fast/scrolling/scroll-into-view-ignores-invisible-selection.html
+third_party/WebKit/Source/core/editing/FrameSelection.cpp
+
+Author: kojii@chromium.org
+No-WPT-Author: kojii@chromium.org
+commit 872e5350eaeb7ce754da4894770359d4617e43e5
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/block/float/shrink-to-avoid-float-complexity-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/block/float/shrink-to-avoid-float-complexity-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/block/margin-collapse/001-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/block/margin-collapse/block-inside-inline/001-expected.png
+third_party/WebKit/Source/core/paint/BUILD.gn
+third_party/WebKit/Source/core/paint/BoxClipper.cpp
+third_party/WebKit/Source/core/paint/BoxClipper.h
+third_party/WebKit/Source/core/paint/BoxClipperBase.cpp
+third_party/WebKit/Source/core/paint/BoxClipperBase.h
+third_party/WebKit/Source/core/paint/ng/ng_box_clipper.cc
+third_party/WebKit/Source/core/paint/ng/ng_box_clipper.h
+third_party/WebKit/Source/core/paint/ng/ng_box_fragment_painter.cc
+third_party/WebKit/Source/core/paint/ng/ng_text_fragment_painter_test.cc
+
+Author: luoe@chromium.org
+No-WPT-Author: luoe@chromium.org
+commit 28f1a1eacc3d88986bf5b92d1acdc17983891834
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-preserve-scroll-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-preserve-scroll.js
+third_party/WebKit/Source/devtools/front_end/console/ConsoleView.js
+third_party/WebKit/Source/devtools/front_end/console/consoleView.css
+third_party/WebKit/Source/devtools/front_end/ui/SplitWidget.js
+
+Author: caseq@chromium.org
+No-WPT-Author: caseq@chromium.org
+commit 2c7c1f3f6cdd3926f1074ad69b23537402daeef4
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/disabled-cache-navigation-expected.txt
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/disabled-cache-navigation.js
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/resources/cached.php
+third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
+third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.cpp
+third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.h
+third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
+third_party/WebKit/public/web/WebFrameClient.h
+
+Author: xidachen@chromium.org
+No-WPT-Author: xidachen@chromium.org
+commit 9df518ea41271fef3a3b4b9b85164b632092c5db
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: ikilpatrick@chromium.org
+No-WPT-Author: ikilpatrick@chromium.org
+commit 613c12bf670cbe0577064f1474314d171c4dbd65
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/layout/BUILD.gn
+third_party/WebKit/Source/core/layout/custom/CSSLayoutWorklet.cpp
+third_party/WebKit/Source/core/layout/custom/CSSLayoutWorklet.h
+third_party/WebKit/Source/core/layout/custom/CSSLayoutWorklet.idl
+third_party/WebKit/Source/core/layout/custom/LayoutWorklet.cpp
+third_party/WebKit/Source/core/layout/custom/LayoutWorklet.h
+third_party/WebKit/Source/core/layout/custom/OWNERS
+third_party/WebKit/Source/core/layout/custom/README.md
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: hichris123@gmail.com
+No-WPT-Author: hichris123@gmail.com
+commit d3d57746f0d78270efb24194f5ec930adc3b5e72
+third_party/WebKit/LayoutTests/fast/css/first-letter-punctuation-expected.html
+third_party/WebKit/LayoutTests/fast/css/first-letter-punctuation.html
+third_party/WebKit/Source/core/dom/FirstLetterPseudoElement.cpp
+third_party/WebKit/Source/core/dom/FirstLetterPseudoElementTest.cpp
+third_party/WebKit/Source/platform/text/TextBreakIterator.cpp
+third_party/WebKit/Source/platform/text/TextBreakIterator.h
+third_party/WebKit/Source/platform/text/TextBreakIteratorTest.cpp
+
+Author: bhagirathi.s@samsung.com
+WPT-Author: bhagirathi.s@samsung.com
+commit 1bcf633afa439ca0aee8b955156593c352b340f3
+third_party/WebKit/LayoutTests/external/wpt/html/dom/usvstring-reflection.html
+third_party/WebKit/Source/bindings/core/v8/BUILD.gn
+third_party/WebKit/Source/core/dom/trustedtypes/TrustedURL.idl
+third_party/WebKit/Source/core/frame/Location.cpp
+third_party/WebKit/Source/core/frame/Location.h
+third_party/WebKit/Source/core/frame/Location.idl
+
+Author: kozyatinskiy@chromium.org
+No-WPT-Author: kozyatinskiy@chromium.org
+commit b0ddfc583958e08bd4af396dc206fbc12fed2a91
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/continue-to-location-markers-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/continue-to-location-markers.js
+third_party/WebKit/Source/devtools/front_end/sources/JavaScriptSourceFrame.js
+
+Author: steimel@chromium.org
+No-WPT-Author: steimel@chromium.org
+commit b3f54f7930bf20f8211fa8c696ca14d85af8b834
+third_party/WebKit/LayoutTests/media/controls/modern/singletap-on-overlay-closes-overflow-menu.html
+third_party/WebKit/Source/modules/media_controls/MediaControlsWindowEventListener.cpp
+
+Author: scheib@chromium.org
+WPT-Author: scheib@chromium.org
+commit d7a73f42eb50c8a583df2063d6c5c7eacd398b69
+third_party/WebKit/LayoutTests/external/wpt/bluetooth/OWNERS
+third_party/WebKit/Source/modules/bluetooth/OWNERS
+third_party/WebKit/public/platform/modules/bluetooth/OWNERS
+
+Author: jonross@chromium.org
+No-WPT-Author: jonross@chromium.org
+commit a98df58d846735bfc7f05fbfb3b03fb32bce1f6a
+third_party/WebKit/LayoutTests/media/media-controls-grey-scrubber-expected.png
+third_party/WebKit/LayoutTests/media/media-controls-grey-scrubber-expected.txt
+third_party/WebKit/LayoutTests/media/media-controls-grey-scrubber.html
+third_party/WebKit/LayoutTests/platform/mac/media/media-controls-grey-scrubber-expected.png
+third_party/WebKit/LayoutTests/platform/mac/media/media-controls-grey-scrubber-expected.txt
+third_party/WebKit/LayoutTests/platform/win7/media/media-controls-grey-scrubber-expected.png
+third_party/WebKit/Source/modules/media_controls/resources/default_100_percent/legacy/mediaplayer_slider_thumb_grey.png
+third_party/WebKit/Source/modules/media_controls/resources/legacyMediaControls.css
+
+Author: kottackal.george@gmail.com
+No-WPT-Author: kottackal.george@gmail.com
+commit 8409a370efd2e617f9738e592bdbe7907e0671c8
+third_party/WebKit/LayoutTests/media/media-controls-grey-scrubber-expected.png
+third_party/WebKit/LayoutTests/media/media-controls-grey-scrubber-expected.txt
+third_party/WebKit/LayoutTests/media/media-controls-grey-scrubber.html
+third_party/WebKit/LayoutTests/platform/mac/media/media-controls-grey-scrubber-expected.png
+third_party/WebKit/LayoutTests/platform/mac/media/media-controls-grey-scrubber-expected.txt
+third_party/WebKit/LayoutTests/platform/win7/media/media-controls-grey-scrubber-expected.png
+third_party/WebKit/Source/modules/media_controls/resources/default_100_percent/legacy/mediaplayer_slider_thumb_grey.png
+third_party/WebKit/Source/modules/media_controls/resources/legacyMediaControls.css
+
+Author: eirage@chromium.org
+No-WPT-Author: eirage@chromium.org
+commit b3b1612a3591e4f8309af0aeaeb95f98112bddce
+third_party/WebKit/LayoutTests/touchadjustment/zoom-basic.html
+third_party/WebKit/LayoutTests/touchadjustment/zoom-fatfinger.html
+third_party/WebKit/Source/core/input/EventHandler.cpp
+third_party/WebKit/Source/core/input/EventHandler.h
+third_party/WebKit/Source/core/page/TouchAdjustment.cpp
+third_party/WebKit/Source/core/page/TouchAdjustment.h
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/testing/Internals.h
+third_party/WebKit/Source/core/testing/Internals.idl
+
+Author: kojii@chromium.org
+No-WPT-Author: kojii@chromium.org
+commit d07c8108fef0e401ddb7212a3d1ae43d4df92b28
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/basic/containment-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/basic/id_as_selector-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/acid_test-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_color_inline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_style-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_style_inline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/clear_float-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/float_margin-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/margin-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/margin_left-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/classification/list_style_type-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/color_and_background/background_attachment-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/color_and_background/background_color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/formatting_model/height_of_lines-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/pseudo/firstline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/pseudo/pseudo_elements_in_selectors-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/units/length_units-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/inline-table-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-horizontal-alignment-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-optional-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-optional-002-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-height-algorithm-023-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-height-algorithm-024-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0402-c71-fwd-parsing-02-f-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0505-c16-descendant-01-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t050803-c14-classes-00-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0509-c15-ids-01-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t051103-dom-hover-02-c-io-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5516-brdr-c-00-a-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5517-brdr-s-00-c-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5517-ibrdr-s-00-a-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5522-brdr-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t09-c5526c-display-00-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltcont-00-d-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltwidth-00-c-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltwrap-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t090501-c414-flt-00-d-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t090501-c414-flt-01-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1205-c563-list-type-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1402-c45-bg-canvas-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t140201-c535-bg-fixd-00-b-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t140201-c537-bgfxps-00-c-ag-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1506-c525-font-wt-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1602-c546-txt-align-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/css/text-align-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dom/Element/class-attribute-whitespace-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dynamic/create-renderer-for-whitespace-only-text-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dynamic/float-in-trailing-whitespace-after-last-line-break-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/forms/select/option-strip-whitespace-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/layers/inline-dirty-z-order-lists-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/layers/normal-flow-hit-test-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-outline-color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-outline-color-explicitly-inherited-from-map-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-zero-outline-width-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-zoom-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-overflowing-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-overflowing-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-outline-color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-outline-color-explicitly-inherited-from-map-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-zero-outline-width-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-zoom-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-overflowing-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-overflowing-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/Source/core/layout/LayoutText.cpp
+third_party/WebKit/Source/core/layout/LayoutTreeAsText.cpp
+
+Author: fs@opera.com
+No-WPT-Author: fs@opera.com
+commit 5c58e8edcd5bd47c926b59b541d644a49d6a03c5
+third_party/WebKit/LayoutTests/fast/backgrounds/background-clip-text-multiline-expected.html
+third_party/WebKit/LayoutTests/fast/backgrounds/background-clip-text-multiline.html
+third_party/WebKit/Source/core/paint/BoxModelObjectPainter.cpp
+
+Author: jonross@chromium.org
+No-WPT-Author: jonross@chromium.org
+commit fdc875b654b6e7932271024cf59c714ecc428f4c
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/basic/containment-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/basic/id_as_selector-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/acid_test-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_color_inline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_style-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_style_inline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/clear_float-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/float_margin-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/margin-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/margin_left-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/classification/list_style_type-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/color_and_background/background_attachment-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/color_and_background/background_color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/formatting_model/height_of_lines-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/pseudo/firstline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/pseudo/pseudo_elements_in_selectors-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/units/length_units-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/inline-table-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-horizontal-alignment-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-optional-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-optional-002-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-height-algorithm-023-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-height-algorithm-024-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0402-c71-fwd-parsing-02-f-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0505-c16-descendant-01-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t050803-c14-classes-00-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0509-c15-ids-01-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t051103-dom-hover-02-c-io-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5516-brdr-c-00-a-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5517-brdr-s-00-c-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5517-ibrdr-s-00-a-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5522-brdr-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t09-c5526c-display-00-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltcont-00-d-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltwidth-00-c-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltwrap-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t090501-c414-flt-00-d-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t090501-c414-flt-01-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1205-c563-list-type-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1402-c45-bg-canvas-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t140201-c535-bg-fixd-00-b-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t140201-c537-bgfxps-00-c-ag-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1506-c525-font-wt-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1602-c546-txt-align-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/css/text-align-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dom/Element/class-attribute-whitespace-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dynamic/create-renderer-for-whitespace-only-text-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dynamic/float-in-trailing-whitespace-after-last-line-break-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/forms/select/option-strip-whitespace-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/layers/inline-dirty-z-order-lists-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/layers/normal-flow-hit-test-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-outline-color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-outline-color-explicitly-inherited-from-map-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-zero-outline-width-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-zoom-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-overflowing-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-overflowing-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-outline-color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-outline-color-explicitly-inherited-from-map-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-zero-outline-width-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-zoom-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-overflowing-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-overflowing-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/Source/core/layout/LayoutText.cpp
+third_party/WebKit/Source/core/layout/LayoutTreeAsText.cpp
+
+Author: mkwst@chromium.org
+WPT-Author: mkwst@chromium.org
+commit b5fc5f55067deff21fba79fcb49d6740483ecbf0
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/prefetch-src/prefetch-allowed.html
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/prefetch-src/prefetch-blocked.html
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/prefetch-src/prefetch-header-allowed.html
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/prefetch-src/prefetch-header-allowed.html.headers
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/prefetch-src/prefetch-header-blocked.html
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/support/prefetch-helper.js
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/support/prefetch-subresource.css
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/support/prefetch-subresource.css.headers
+third_party/WebKit/Source/core/frame/csp/CSPDirectiveList.cpp
+third_party/WebKit/Source/core/frame/csp/CSPDirectiveList.h
+third_party/WebKit/Source/core/frame/csp/ContentSecurityPolicy.cpp
+third_party/WebKit/Source/core/frame/csp/ContentSecurityPolicy.h
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit 2ce1fe0f2b58d9eeb7d2bf78d988f618b56d31e9
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/fast/dom/shadow/drag-and-drop-in-user-agent-shadow.html
+third_party/WebKit/Source/core/testing/Internals.cpp
+
+Author: futhark@chromium.org
+WPT-Author: futhark@chromium.org
+commit a92875903e6b8be2b25d7bf38189e0ec6c117329
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/VirtualTestSuites
+third_party/WebKit/LayoutTests/external/wpt/css/css-scoping/css-scoping-shadow-nested-slot-display-override.html
+third_party/WebKit/LayoutTests/virtual/incremental-shadow-dom/external/wpt/css/css-scoping/README.txt
+third_party/WebKit/Source/core/dom/Element.cpp
+third_party/WebKit/Source/core/dom/Element.h
+third_party/WebKit/Source/core/dom/FirstLetterPseudoElement.cpp
+third_party/WebKit/Source/core/dom/FirstLetterPseudoElement.h
+third_party/WebKit/Source/core/dom/Node.cpp
+third_party/WebKit/Source/core/dom/PseudoElement.cpp
+third_party/WebKit/Source/core/dom/PseudoElement.h
+third_party/WebKit/Source/core/html/HTMLSlotElement.cpp
+third_party/WebKit/Source/core/html/HTMLSlotElement.h
+third_party/WebKit/Source/core/html/forms/HTMLFormControlElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLFormControlElement.h
+third_party/WebKit/Source/core/html/forms/HTMLSelectElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLSelectElement.h
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.cpp
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.h
+third_party/WebKit/Source/core/svg/SVGStopElement.cpp
+third_party/WebKit/Source/core/svg/SVGStopElement.h
+
+Author: kojii@chromium.org
+No-WPT-Author: kojii@chromium.org
+commit 76361c1aa7af1296ec50b72d6b853561d6f30c66
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/basic/containment-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/basic/id_as_selector-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/acid_test-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_color_inline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_style-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/border_style_inline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/clear_float-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/float_margin-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/margin-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/box_properties/margin_left-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/classification/list_style_type-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/color_and_background/background_attachment-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/color_and_background/background_color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/formatting_model/height_of_lines-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/pseudo/firstline-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/pseudo/pseudo_elements_in_selectors-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/units/length_units-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/inline-table-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-horizontal-alignment-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-optional-001-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-caption-optional-002-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-height-algorithm-023-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/20110323/table-height-algorithm-024-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0402-c71-fwd-parsing-02-f-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0505-c16-descendant-01-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t050803-c14-classes-00-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0509-c15-ids-01-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t051103-dom-hover-02-c-io-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5516-brdr-c-00-a-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5517-brdr-s-00-c-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5517-ibrdr-s-00-a-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0805-c5522-brdr-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t09-c5526c-display-00-e-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltcont-00-d-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltwidth-00-c-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t0905-c5525-fltwrap-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t090501-c414-flt-00-d-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t090501-c414-flt-01-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1205-c563-list-type-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1402-c45-bg-canvas-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t140201-c535-bg-fixd-00-b-g-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t140201-c537-bgfxps-00-c-ag-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1506-c525-font-wt-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1602-c546-txt-align-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/css/text-align-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dom/Element/class-attribute-whitespace-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dynamic/create-renderer-for-whitespace-only-text-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/dynamic/float-in-trailing-whitespace-after-last-line-break-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/forms/select/option-strip-whitespace-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/layers/inline-dirty-z-order-lists-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/layers/normal-flow-hit-test-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-outline-color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-outline-color-explicitly-inherited-from-map-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-zero-outline-width-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-focus-ring-zoom-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-overflowing-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-overflowing-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/images/imagemap-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-outline-color-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-outline-color-explicitly-inherited-from-map-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-zero-outline-width-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-focus-ring-zoom-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-overflowing-circle-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-overflowing-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/virtual/gpu-rasterization/images/imagemap-polygon-focus-ring-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/001-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/002-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/25277-2-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/25277-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/inline-padding-disables-text-quirk-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/inline-text-quirk-bpm-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/long-wrapped-line-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/nested-top-alignment-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/percentage-margins-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/vertical-align-text-bottom-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/fast/inline/vertical-align-with-fallback-fonts-expected.txt
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/overflow/overflow-transform-perspective-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/layout_ng/overflow/overflow-transform-perspective-expected.txt
+third_party/WebKit/Source/core/layout/LayoutText.cpp
+third_party/WebKit/Source/core/layout/LayoutTreeAsText.cpp
+
+Author: shend@chromium.org
+No-WPT-Author: shend@chromium.org
+commit 7dd8a09447e4862994179dc8243a2bbd8980d419
+third_party/WebKit/LayoutTests/typedcssom/inlinestyle/unsupported-properties.html
+third_party/WebKit/Source/build/scripts/core/css/templates/CSSOMTypes.cpp.tmpl
+third_party/WebKit/Source/core/css/cssom/CSSUnsupportedStyleValue.h
+third_party/WebKit/Source/core/css/cssom/StyleValueFactory.cpp
+
+Author: shend@chromium.org
+No-WPT-Author: shend@chromium.org
+commit e527494d5a4cedbba17847106560c71204176dce
+third_party/WebKit/LayoutTests/typedcssom/stylevalue-subclasses/numeric-objects/arithmetic.html
+third_party/WebKit/Source/core/css/cssom/CSSNumericValue.cpp
+third_party/WebKit/Source/core/css/cssom/CSSUnitValue.cpp
+third_party/WebKit/Source/core/css/cssom/CSSUnitValue.h
+
+Author: xidachen@chromium.org
+WPT-Author: xidachen@chromium.org
+commit be3c4fa186f814d57d6497465c6b14a9e5033a7d
+third_party/WebKit/LayoutTests/external/wpt/css/css-paint-api/paint2d-image-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-paint-api/paint2d-image.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-paint-api/resources/html5.png
+third_party/WebKit/Source/modules/csspaint/PaintRenderingContext2D.h
+
+Author: jfernandez@igalia.com
+No-WPT-Author: jfernandez@igalia.com
+commit 10d561d9f269ad31d0c7ffa7635cf8e7d57f3078
+third_party/WebKit/LayoutTests/editing/style/block-style-005.html
+third_party/WebKit/LayoutTests/editing/style/preserve-selection-direction.html
+third_party/WebKit/Source/core/editing/commands/ApplyStyleCommand.cpp
+
+Author: smcgruer@chromium.org
+WPT-Author: smcgruer@chromium.org
+commit a0cd4c1a05a431022f5ecc9ec29d505b5c216caf
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/copy-constructor-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/idlharness-expected.txt
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnly.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffect.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.idl
+third_party/WebKit/Source/core/animation/KeyframeEffectModel.h
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.h
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.idl
+
+Author: bhagirathi.s@samsung.com
+WPT-Author: bhagirathi.s@samsung.com
+commit 73978ca7f782a3ddde8c31bcc6cc3ea45eea0ee9
+third_party/WebKit/LayoutTests/external/wpt/html/infrastructure/common-dom-interfaces/collections/htmlallcollection-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-format-collections-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/startup/console/console-format-startup-expected.txt
+third_party/WebKit/Source/bindings/core/v8/BUILD.gn
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/dom/Document.h
+third_party/WebKit/Source/core/html/BUILD.gn
+third_party/WebKit/Source/core/html/CollectionType.h
+third_party/WebKit/Source/core/html/DocumentAllNameCollection.cpp
+third_party/WebKit/Source/core/html/DocumentAllNameCollection.h
+third_party/WebKit/Source/core/html/HTMLAllCollection.cpp
+third_party/WebKit/Source/core/html/HTMLAllCollection.h
+third_party/WebKit/Source/core/html/HTMLAllCollection.idl
+third_party/WebKit/Source/core/html/HTMLCollection.cpp
+
+Author: smcgruer@chromium.org
+WPT-Author: smcgruer@chromium.org
+commit a87f09f58dea41514e17b6b05c5dde42895fc96a
+third_party/WebKit/LayoutTests/animations/web-animations/keyframe-exceptions.html
+third_party/WebKit/LayoutTests/external/wpt/web-animations/animation-model/combining-effects/effect-composition-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/Animatable/animate-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/constructor-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/processing-a-keyframes-argument-001-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/processing-a-keyframes-argument-002-expected.txt
+third_party/WebKit/Source/core/animation/BaseKeyframe.idl
+third_party/WebKit/Source/core/animation/EffectInput.cpp
+third_party/WebKit/Source/core/animation/EffectInput.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.cpp
+third_party/WebKit/Source/core/core_idl_files.gni
+
 Author: fs@opera.com
 WPT-Author: fs@opera.com
 commit 5bc544493e96018f011162c09186d317a558674f
@@ -1819,4 +3120,4 @@ third_party/WebKit/Source/core/css/cssom/CSSTranslation.cpp
 third_party/WebKit/Source/core/css/cssom/CSSUnitValue.cpp
 third_party/WebKit/Source/core/css/cssom/CSSUnitValue.h
 
-126 source+test changes, 30 in wpt
+202 source+test changes, 53 in wpt
