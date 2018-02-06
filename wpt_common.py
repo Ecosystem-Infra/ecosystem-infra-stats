@@ -12,7 +12,7 @@ import subprocess
 # started to stablize around this time. Earlier results are inaccurate.
 CUTOFF = '2017-07-01T00:00:00Z'
 # Change this when it is a new quarter.
-QUARTER_START = '2017-10-01T00:00:00Z'
+QUARTER_START = '2018-01-01T00:00:00Z'
 
 # Read tokens from env vars.
 GH_USER = os.environ.get('GH_USER')
