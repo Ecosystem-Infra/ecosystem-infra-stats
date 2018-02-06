@@ -16,7 +16,6 @@ Missing TEAM: mediacapture-streams
 Missing TEAM: media-source
 Missing COMPONENT: media-source
 Missing OWNERS: mimesniff
-Missing OWNERS: navigator
 Missing TEAM: page-visibility
 Missing COMPONENT: page-visibility
 Missing TEAM: quirks

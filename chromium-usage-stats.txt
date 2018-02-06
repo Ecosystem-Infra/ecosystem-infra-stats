@@ -1,3 +1,2472 @@
+Author: futhark@chromium.org
+WPT-Author: futhark@chromium.org
+commit 277af9187ad3574d0946f08de078e86971f54fee
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/css/css-flexbox/anonymous-flex-item-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-flexbox/anonymous-flex-item-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-flexbox/anonymous-flex-item-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-flexbox/anonymous-flex-item-split-ref.html
+third_party/WebKit/Source/core/layout/LayoutFlexibleBox.cpp
+
+Author: einbinder@chromium.org
+No-WPT-Author: einbinder@chromium.org
+commit 05119243befcd73ac7e9a47b25ceb95a9fca876f
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-choose-preview-view-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-choose-preview-view.js
+third_party/WebKit/LayoutTests/http/tests/devtools/network/preview-searchable.js
+third_party/WebKit/LayoutTests/http/tests/devtools/unit/source-frame-pretty-print-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/unit/source-frame-pretty-print.js
+third_party/WebKit/Source/devtools/BUILD.gn
+third_party/WebKit/Source/devtools/front_end/source_frame/PreviewFactory.js
+third_party/WebKit/Source/devtools/front_end/source_frame/ResourceSourceFrame.js
+third_party/WebKit/Source/devtools/front_end/source_frame/SourceFrame.js
+third_party/WebKit/Source/devtools/front_end/source_frame/module.json
+third_party/WebKit/Source/devtools/front_end/source_frame/resourceSourceFrame.css
+third_party/WebKit/Source/devtools/scripts/compile_frontend.py
+
+Author: steimel@chromium.org
+No-WPT-Author: steimel@chromium.org
+commit 9f1fa9c053e29a586ccbd52c1f58d16e6de3318b
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/http/tests/media/media-src-suspend-after-have-future-data.html
+third_party/WebKit/LayoutTests/http/tests/media/media-src-suspend-after-have-metadata.html
+third_party/WebKit/LayoutTests/http/tests/media/media-src-suspend-before-have-metadata.html
+third_party/WebKit/LayoutTests/http/tests/media/video-throttled-load.cgi
+third_party/WebKit/LayoutTests/media/media-src-suspend-after-have-enough-data.html
+third_party/WebKit/LayoutTests/media/suspend-util.js
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/testing/Internals.h
+third_party/WebKit/Source/core/testing/Internals.idl
+third_party/WebKit/public/platform/WebMediaPlayer.h
+
+Author: vmpstr@chromium.org
+No-WPT-Author: vmpstr@chromium.org
+commit 1e108dcc39d6ee6e4fc16b9135a25dc26149ba00
+third_party/WebKit/LayoutTests/FlagExpectations/site-per-process
+third_party/WebKit/LayoutTests/http/tests/images/image-decode-in-frame-expected.html
+third_party/WebKit/LayoutTests/http/tests/images/image-decode-in-frame.html
+third_party/WebKit/LayoutTests/http/tests/images/resources/image-decode-local.html
+third_party/WebKit/Source/core/exported/WebViewImpl.cpp
+third_party/WebKit/Source/core/exported/WebViewImpl.h
+third_party/WebKit/Source/core/frame/WebFrameWidgetBase.cpp
+
+Author: dalecurtis@chromium.org
+No-WPT-Author: dalecurtis@chromium.org
+commit 82662e2171c9437e4141aeafd03c0841b96d2bc8
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/http/tests/media/media-src-suspend-after-have-future-data.html
+third_party/WebKit/LayoutTests/http/tests/media/media-src-suspend-after-have-metadata.html
+third_party/WebKit/LayoutTests/http/tests/media/media-src-suspend-before-have-metadata.html
+third_party/WebKit/LayoutTests/http/tests/media/video-throttled-load.cgi
+third_party/WebKit/LayoutTests/media/media-src-suspend-after-have-enough-data.html
+third_party/WebKit/LayoutTests/media/suspend-util.js
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/testing/Internals.h
+third_party/WebKit/Source/core/testing/Internals.idl
+third_party/WebKit/public/platform/WebMediaPlayer.h
+
+Author: elawrence@chromium.org
+No-WPT-Author: elawrence@chromium.org
+commit cc2d336ed7196d3351484a4e06a83208d5ec5ca6
+third_party/WebKit/LayoutTests/http/tests/security/xssAuditor/report-script-tag-cross-origin-https-expected.txt
+third_party/WebKit/LayoutTests/http/tests/security/xssAuditor/report-script-tag-cross-origin-https.html
+third_party/WebKit/Source/core/html/parser/XSSAuditor.cpp
+
+Author: vmpstr@chromium.org
+No-WPT-Author: vmpstr@chromium.org
+commit 1b860735f6a25bcf074228e51e749c1e4b38551c
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/tables/table-transform-absolute-position-child-expected.png
+third_party/WebKit/Source/core/layout/LayoutBoxModelObject.cpp
+third_party/WebKit/Source/core/layout/LayoutObject.cpp
+third_party/WebKit/Source/core/layout/LayoutTableBoxComponent.cpp
+third_party/WebKit/Source/core/layout/LayoutTableBoxComponent.h
+
+Author: mek@chromium.org
+WPT-Author: mek@chromium.org
+commit b7591fb63d6d4cd7f30792256ac31e18c636e49c
+third_party/WebKit/LayoutTests/external/wpt/FileAPI/url/url-with-xhr.any-expected.txt
+third_party/WebKit/LayoutTests/fast/files/apply-blob-url-to-xhr-expected.txt
+third_party/WebKit/LayoutTests/fast/files/workers/worker-apply-blob-url-to-xhr-expected.txt
+third_party/WebKit/LayoutTests/http/tests/xmlhttprequest/xhr-to-blob-in-isolated-world-expected.txt
+third_party/WebKit/LayoutTests/http/tests/xmlhttprequest/xhr-to-blob-in-isolated-world.html
+third_party/WebKit/Source/core/fetch/FetchManager.cpp
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit 8ac9a286c61c4f5492217f7dd09efb68ec96f63f
+third_party/WebKit/LayoutTests/webaudio/BiquadFilter/no-dezippering.html
+third_party/WebKit/Source/modules/webaudio/BiquadDSPKernel.cpp
+third_party/WebKit/Source/modules/webaudio/BiquadProcessor.cpp
+third_party/WebKit/Source/platform/audio/Biquad.cpp
+
+Author: beaufort.francois@gmail.com
+WPT-Author: beaufort.francois@gmail.com
+commit e40637e20e3c86dfc072ddccac480476d119ac59
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/picture-in-picture-allowed-by-feature-policy-attribute-redirect-on-load.https.sub.html
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/picture-in-picture-allowed-by-feature-policy-attribute.https.sub.html
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/picture-in-picture-allowed-by-feature-policy.https.sub.html
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/picture-in-picture-allowed-by-feature-policy.https.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/picture-in-picture-default-feature-policy.https.sub.html
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/picture-in-picture-disabled-by-feature-policy.https.sub.html
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/picture-in-picture-disabled-by-feature-policy.https.sub.html.headers
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/resources/feature-policy-picture-in-picture.html
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/resources/picture-in-picture.js
+third_party/WebKit/LayoutTests/media/picture-in-picture/not-processing-user-gesture.html
+third_party/WebKit/LayoutTests/media/picture-in-picture/request-picture-in-picture.html
+third_party/WebKit/LayoutTests/media/picture-in-picture/resources/picture-in-picture-helpers.js
+third_party/WebKit/LayoutTests/webexposed/element-instance-property-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/modules/BUILD.gn
+third_party/WebKit/Source/modules/modules_idl_files.gni
+third_party/WebKit/Source/modules/picture_in_picture/BUILD.gn
+third_party/WebKit/Source/modules/picture_in_picture/DEPS
+third_party/WebKit/Source/modules/picture_in_picture/DocumentPictureInPicture.cpp
+third_party/WebKit/Source/modules/picture_in_picture/DocumentPictureInPicture.h
+third_party/WebKit/Source/modules/picture_in_picture/DocumentPictureInPicture.idl
+third_party/WebKit/Source/modules/picture_in_picture/HTMLVideoElementPictureInPicture.cpp
+third_party/WebKit/Source/modules/picture_in_picture/HTMLVideoElementPictureInPicture.h
+third_party/WebKit/Source/modules/picture_in_picture/HTMLVideoElementPictureInPicture.idl
+third_party/WebKit/Source/modules/picture_in_picture/OWNERS
+third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureController.cpp
+third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureController.h
+third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureTest.cpp
+third_party/WebKit/Source/platform/feature_policy/FeaturePolicy.cpp
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+third_party/WebKit/common/feature_policy/README.md
+third_party/WebKit/common/feature_policy/feature_policy.cc
+third_party/WebKit/common/feature_policy/feature_policy.mojom
+third_party/WebKit/common/feature_policy/feature_policy_feature.h
+third_party/WebKit/common/feature_policy/feature_policy_struct_traits.h
+
+Author: nainar@chromium.org
+No-WPT-Author: nainar@chromium.org
+commit a80c2c32c0914b77b190c2c2ce7501be8b9d41ac
+third_party/WebKit/LayoutTests/css3/fonts/font-feature-settings-parsing-prefixed-expected.txt
+third_party/WebKit/LayoutTests/css3/fonts/font-feature-settings-parsing-prefixed.html
+third_party/WebKit/LayoutTests/fast/css/css-font-face-src-value-uri.html
+third_party/WebKit/LayoutTests/fast/css/font-face-src-escaped-parsing.html
+third_party/WebKit/LayoutTests/fast/css/font-face-src-parsing-expected.txt
+third_party/WebKit/LayoutTests/fast/css/font-face-src-parsing.html
+third_party/WebKit/LayoutTests/fast/css/font-face-style-attribute.html
+third_party/WebKit/LayoutTests/fast/css/fontface-cssText.html
+third_party/WebKit/LayoutTests/fast/css/invalid-font-face-crash.html
+third_party/WebKit/Source/build/scripts/core/css/parser/make_atrule_names.py
+third_party/WebKit/Source/build/scripts/core/css/parser/templates/AtRuleDescriptors.cpp.tmpl
+third_party/WebKit/Source/build/scripts/core/css/parser/templates/AtRuleDescriptors.h.tmpl
+third_party/WebKit/Source/core/css/AbstractPropertySetCSSStyleDeclaration.h
+third_party/WebKit/Source/core/css/AtRuleCSSStyleDeclaration.cpp
+third_party/WebKit/Source/core/css/AtRuleCSSStyleDeclaration.h
+third_party/WebKit/Source/core/css/AtRuleDescriptorSerializer.cpp
+third_party/WebKit/Source/core/css/AtRuleDescriptorSerializer.h
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/CSSFontFaceRule.cpp
+third_party/WebKit/Source/core/css/CSSFontFaceRule.h
+third_party/WebKit/Source/core/css/CSSStyleDeclaration.h
+third_party/WebKit/Source/core/css/FontFace.cpp
+third_party/WebKit/Source/core/css/FontFace.h
+third_party/WebKit/Source/core/css/FontFaceCacheTest.cpp
+third_party/WebKit/Source/core/css/StyleAttributeMutationScope.cpp
+third_party/WebKit/Source/core/css/StyleAttributeMutationScope.h
+third_party/WebKit/Source/core/css/StyleRule.cpp
+third_party/WebKit/Source/core/css/StyleRule.h
+third_party/WebKit/Source/core/css/StyleSheetContents.cpp
+third_party/WebKit/Source/core/css/parser/AtRuleDescriptorParser.cpp
+third_party/WebKit/Source/core/css/parser/AtRuleDescriptorParser.h
+third_party/WebKit/Source/core/css/parser/AtRuleDescriptorValueSet.cpp
+third_party/WebKit/Source/core/css/parser/AtRuleDescriptorValueSet.h
+third_party/WebKit/Source/core/css/parser/CSSParserImpl.cpp
+third_party/WebKit/Source/core/frame/FrameSerializer.cpp
+third_party/WebKit/Source/core/frame/FrameSerializer.h
+
+Author: tkent@chromium.org
+WPT-Author: tkent@chromium.org
+commit 6caa63215648ab1badc196718394d53089647f4d
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/builtin-coverage-expected.txt
+third_party/WebKit/Source/core/html/HTMLEmbedElement.idl
+third_party/WebKit/Source/core/html/HTMLObjectElement.idl
+third_party/WebKit/Source/core/html/custom/CustomElementDefinition.cpp
+third_party/WebKit/Source/core/html/forms/HTMLFormElement.idl
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 13efd5834b02a618dac8d52f107e823f53c0cb9b
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssVariableReferenceValue-interface.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssVariableReferenceValue-invalid.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssVariableReferenceValue.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssVariableReferenceValue.tentative-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssVariableReferenceValue.tentative.html
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/cssom/CSSStyleVariableReferenceValue.cpp
+third_party/WebKit/Source/core/css/cssom/CSSStyleVariableReferenceValue.h
+third_party/WebKit/Source/core/css/cssom/CSSVariableReferenceValue.idl
+third_party/WebKit/Source/core/css/cssom/CSSVariableReferenceValueTest.cpp
+
+Author: tkent@chromium.org
+WPT-Author: tkent@chromium.org
+commit 91707a70383a6714ad5dc1b8a4096ee83755a5b5
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/Document-createElement-svg.svg
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/html/custom/CustomElement.cpp
+third_party/WebKit/Source/core/html/custom/CustomElement.h
+
+Author: aleventhal@chromium.org
+No-WPT-Author: aleventhal@chromium.org
+commit 112c7d585aab4bffd99773897731d3df996cab4e
+third_party/WebKit/LayoutTests/accessibility/presentation-owned-elements-expected.txt
+third_party/WebKit/LayoutTests/accessibility/role-change.html
+third_party/WebKit/LayoutTests/accessibility/table-with-presentation-role.html
+third_party/WebKit/Source/modules/accessibility/AXNodeObject.cpp
+
+Author: einbinder@chromium.org
+No-WPT-Author: einbinder@chromium.org
+commit 122462a51786b78b732e684cdf7aaf8fb8a34320
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-correct-suggestions-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-correct-suggestions.js
+third_party/WebKit/Source/devtools/front_end/object_ui/JavaScriptAutocomplete.js
+
+Author: aleventhal@chromium.org
+No-WPT-Author: aleventhal@chromium.org
+commit 7686e185bd779c1fdd8ea7e76bb84f88b941ce24
+third_party/WebKit/LayoutTests/accessibility/name-calc-visibility.html
+third_party/WebKit/LayoutTests/accessibility/non-data-table-cell-title-ui-element.html
+third_party/WebKit/LayoutTests/accessibility/table-detection-expected.txt
+third_party/WebKit/LayoutTests/accessibility/table-one-cell-expected.txt
+third_party/WebKit/LayoutTests/accessibility/table-with-rules-expected.txt
+third_party/WebKit/LayoutTests/accessibility/table-with-rules.html
+third_party/WebKit/LayoutTests/inspector-protocol/accessibility/accessibility-nameSources-visiblity.js
+third_party/WebKit/Source/modules/accessibility/AXARIAGrid.h
+third_party/WebKit/Source/modules/accessibility/AXEnums.cpp
+third_party/WebKit/Source/modules/accessibility/AXEnums.h
+third_party/WebKit/Source/modules/accessibility/AXLayoutObject.cpp
+third_party/WebKit/Source/modules/accessibility/AXObject.cpp
+third_party/WebKit/Source/modules/accessibility/AXTable.cpp
+third_party/WebKit/Source/modules/accessibility/AXTable.h
+third_party/WebKit/Source/modules/accessibility/AXTableCell.cpp
+third_party/WebKit/Source/modules/accessibility/AXTableColumn.cpp
+third_party/WebKit/Source/modules/accessibility/AXTableColumn.h
+third_party/WebKit/Source/modules/accessibility/AXTableRow.cpp
+third_party/WebKit/public/web/WebAXEnums.h
+
+Author: ericwilligers@chromium.org
+No-WPT-Author: ericwilligers@chromium.org
+commit fb5abac2b437721fbac4e09cf5eb10afe8306850
+third_party/WebKit/LayoutTests/fast/css/deprecated-three-value-position-expected.txt
+third_party/WebKit/LayoutTests/fast/css/deprecated-three-value-position.html
+third_party/WebKit/LayoutTests/fast/css/parsing-object-position-expected.txt
+third_party/WebKit/LayoutTests/fast/css/parsing-object-position.html
+third_party/WebKit/LayoutTests/fast/shapes/parsing/parsing-shape-outside-expected.txt
+third_party/WebKit/Source/core/css/parser/CSSPropertyParserHelpers.cpp
+third_party/WebKit/Source/core/frame/Deprecation.cpp
+
+Author: dgozman@chromium.org
+No-WPT-Author: dgozman@chromium.org
+commit b37cae9024754d1cad99be6f3fd1628e71d410b4
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/oopif-no-discovery.js
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger.js
+third_party/WebKit/Source/core/inspector/InspectorWorkerAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorWorkerAgent.h
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+third_party/WebKit/Source/core/inspector/inspector_protocol_config.json
+third_party/WebKit/Source/devtools/front_end/sdk/TargetManager.js
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit f4f8b21412f49d28290744cc66f4a743f18ddacb
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/resources/testhelper.js
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/declared/declared.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/declared/test.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/interface-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/interface.html
+third_party/WebKit/LayoutTests/typedcssom/resources/testhelper.js
+third_party/WebKit/LayoutTests/typedcssom/the-stylepropertymap/declared/delete-rule-crash.html
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/css/CSSStyleRule.cpp
+third_party/WebKit/Source/core/css/CSSStyleRule.h
+third_party/WebKit/Source/core/css/CSSStyleRule.idl
+third_party/WebKit/Source/core/css/cssom/DeclaredStylePropertyMap.h
+
+Author: smcgruer@chromium.org
+No-WPT-Author: smcgruer@chromium.org
+commit 477a9c21852a80e1e2b54e2e6ca9b23012ffbce7
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-item-display.html
+third_party/WebKit/LayoutTests/fast/css/import-style-update.html
+third_party/WebKit/LayoutTests/fast/css/link-disabled-attr.html
+third_party/WebKit/LayoutTests/fast/css/stylesheet-parentStyleSheet.html
+third_party/WebKit/LayoutTests/fast/dom/domListEnumeration.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/alternate-stylesheets.html
+third_party/WebKit/LayoutTests/fast/loader/data-url-encoding-html.html
+third_party/WebKit/LayoutTests/fast/loader/data-url-encoding-svg.html
+third_party/WebKit/LayoutTests/fast/spatial-navigation/resources/iframe.html
+third_party/WebKit/LayoutTests/fast/spatial-navigation/snav-iframe-with-outside-focusable-element.html
+third_party/WebKit/LayoutTests/html/document_metadata/link-rel-stylesheet.html
+third_party/WebKit/LayoutTests/svg/canvas/canvas-draw-image-globalalpha.html
+third_party/WebKit/Source/core/xml/DocumentXMLTreeViewer.css
+third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/report-styles.css
+third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/templates.html
+
+Author: chrishtr@chromium.org
+No-WPT-Author: chrishtr@chromium.org
+commit 2e73b09365377c77713d6ee29b6cc9f076ab6144
+third_party/WebKit/LayoutTests/css3/flexbox/flexbox-width-with-overflow-auto.html
+third_party/WebKit/Source/core/layout/LayoutFlexibleBox.cpp
+
+Author: eirage@chromium.org
+No-WPT-Author: eirage@chromium.org
+commit d76ed3e7c6cc58f8ce0a19bcc60c51bac345b0f6
+third_party/WebKit/LayoutTests/fast/events/hit-test-counts-expected.txt
+third_party/WebKit/Source/core/input/EventHandler.cpp
+third_party/WebKit/Source/platform/exported/WebRuntimeFeatures.cpp
+third_party/WebKit/public/platform/WebRuntimeFeatures.h
+
+Author: japhet@chromium.org
+No-WPT-Author: japhet@chromium.org
+commit fd506b0ac6c7846ae45b5034044fe85c28ee68ac
+third_party/WebKit/LayoutTests/fast/loader/document-open-iframe-then-detach-expected.txt
+third_party/WebKit/LayoutTests/fast/loader/document-open-iframe-then-detach.html
+third_party/WebKit/Source/core/loader/DocumentLoader.cpp
+third_party/WebKit/Source/core/loader/DocumentLoader.h
+third_party/WebKit/Source/core/loader/FrameLoader.cpp
+
+Author: huangs@chromium.org
+No-WPT-Author: huangs@chromium.org
+commit ff1eda6702d107c98148aded80cb263211e2fa4e
+third_party/WebKit/LayoutTests/webaudio/BiquadFilter/no-dezippering.html
+third_party/WebKit/Source/modules/webaudio/BiquadDSPKernel.cpp
+third_party/WebKit/Source/modules/webaudio/BiquadProcessor.cpp
+third_party/WebKit/Source/platform/audio/Biquad.cpp
+
+Author: apacible@chromium.org
+No-WPT-Author: apacible@chromium.org
+commit f38cfe3c3534c294e76977a13298b8491ba034a8
+third_party/WebKit/LayoutTests/media/media-controls.js
+third_party/WebKit/Source/core/html/media/MediaRemotingInterstitial.cpp
+third_party/WebKit/Source/core/html/media/PictureInPictureInterstitial.cpp
+third_party/WebKit/Source/modules/media_controls/MediaControlsResourceLoader.cpp
+third_party/WebKit/Source/modules/media_controls/MediaControlsResourceLoader.h
+third_party/WebKit/Source/modules/media_controls/resources/legacyMediaControls.css
+third_party/WebKit/Source/modules/media_controls/resources/mediaInterstitials.css
+third_party/WebKit/Source/modules/media_controls/resources/media_controls_resources.grd
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit 53b1b7dad08d9b5e60157f47f2dc195c0d73d4dc
+third_party/WebKit/LayoutTests/webaudio/BiquadFilter/no-dezippering.html
+third_party/WebKit/Source/modules/webaudio/BiquadDSPKernel.cpp
+third_party/WebKit/Source/modules/webaudio/BiquadProcessor.cpp
+third_party/WebKit/Source/platform/audio/Biquad.cpp
+
+Author: rob.buis@samsung.com
+No-WPT-Author: rob.buis@samsung.com
+commit 07d632dc072f014f41ba395cccbcebad9a0f4eb1
+third_party/WebKit/LayoutTests/fast/innerHTML/806705-crash.html
+third_party/WebKit/Source/core/editing/serializers/MarkupFormatter.cpp
+
+Author: andypaicu@chromium.org
+WPT-Author: andypaicu@chromium.org
+commit d24ee10c883627002d6c5d8067cf51f02803083f
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/embedded-enforcement/required_csp-header.html
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/reporting-api/reporting-api-works-on-frame-src.https.sub.html
+third_party/WebKit/LayoutTests/external/wpt/content-security-policy/reporting-api/reporting-api-works-on-frame-src.https.sub.html.sub.headers
+third_party/WebKit/LayoutTests/virtual/reporting-api/external/wpt/content-security-policy/reporting-api/README.txt
+third_party/WebKit/Source/core/frame/WebLocalFrameImpl.cpp
+third_party/WebKit/Source/core/frame/csp/CSPDirectiveList.cpp
+third_party/WebKit/Source/core/frame/csp/ContentSecurityPolicy.cpp
+third_party/WebKit/Source/core/frame/csp/ContentSecurityPolicyTest.cpp
+third_party/WebKit/public/platform/WebContentSecurityPolicyStruct.h
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit 2a5105eac40616209395cf87fce685d51b6a84f2
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/resources/testhelper.js
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-normalization/transformvalue-normalization.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-serialization/cssTransformValue.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssRotate.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssRotation.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssTransformValue.tentative.html
+third_party/WebKit/LayoutTests/http/tests/worklet/webexposed/global-interface-listing-paint-worklet-expected.txt
+third_party/WebKit/LayoutTests/typedcssom/cssRotate.html
+third_party/WebKit/LayoutTests/typedcssom/cssRotation.html
+third_party/WebKit/LayoutTests/typedcssom/inlinestyle/properties/transform.html
+third_party/WebKit/LayoutTests/typedcssom/resources/testhelper.js
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/cssom/CSSRotate.cpp
+third_party/WebKit/Source/core/css/cssom/CSSRotate.h
+third_party/WebKit/Source/core/css/cssom/CSSRotate.idl
+third_party/WebKit/Source/core/css/cssom/CSSRotation.cpp
+third_party/WebKit/Source/core/css/cssom/CSSRotation.h
+third_party/WebKit/Source/core/css/cssom/CSSRotation.idl
+third_party/WebKit/Source/core/css/cssom/CSSTransformComponent.cpp
+
+Author: mlamouri@chromium.org
+No-WPT-Author: mlamouri@chromium.org
+commit ef28e2a3c5bceaeff46da187529966bdeb194394
+third_party/WebKit/LayoutTests/media/autoplay/muted-change-src.html
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.cpp
+
+Author: tkent@chromium.org
+WPT-Author: tkent@chromium.org
+commit 18ac0a07d07f8687258809c8b98c678167e6ae7c
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/Document-createElementNS-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/Document-createElementNS.html
+third_party/WebKit/Source/bindings/core/v8/ScriptCustomElementDefinition.cpp
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/html/custom/CustomElement.cpp
+third_party/WebKit/Source/core/html/custom/CustomElementDefinition.cpp
+
+Author: bhagirathi.s@samsung.com
+WPT-Author: bhagirathi.s@samsung.com
+commit 3a4ee0f0aeef1c6e03d8772a52efbf9684310826
+third_party/WebKit/LayoutTests/external/wpt/css/cssom/MediaList.html
+third_party/WebKit/Source/core/css/MediaList.idl
+
+Author: shanmuga.m@samsung.com
+WPT-Author: shanmuga.m@samsung.com
+commit ffc086c7b6f3e4a2c456ded513045bae48a6d2e8
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/forms/the-input-element/radio-expected.txt
+third_party/WebKit/LayoutTests/fast/forms/file/file-user-selection.html
+third_party/WebKit/LayoutTests/fast/forms/radio/radio-keyboard-event.html
+third_party/WebKit/Source/core/html/forms/FileInputType.cpp
+third_party/WebKit/Source/core/html/forms/RadioInputType.cpp
+
+Author: ke.he@intel.com
+WPT-Author: ke.he@intel.com
+commit 31534c861804a7de0951f9014905995bdf5fcbe0
+third_party/WebKit/LayoutTests/external/wpt/screen-orientation/resources/sandboxed-iframe-locking.html
+third_party/WebKit/Source/modules/BUILD.gn
+third_party/WebKit/Source/modules/ModulesInitializer.cpp
+third_party/WebKit/Source/modules/media_controls/DEPS
+third_party/WebKit/Source/modules/media_controls/MediaControlsOrientationLockDelegateTest.cpp
+third_party/WebKit/Source/modules/media_controls/MediaControlsRotateToFullscreenDelegateTest.cpp
+third_party/WebKit/Source/modules/screen_orientation/BUILD.gn
+third_party/WebKit/Source/modules/screen_orientation/DEPS
+third_party/WebKit/Source/modules/screen_orientation/ScreenOrientationControllerImpl.cpp
+third_party/WebKit/Source/modules/screen_orientation/ScreenOrientationControllerImpl.h
+third_party/WebKit/Source/modules/screen_orientation/ScreenOrientationDelegate.cpp
+third_party/WebKit/Source/modules/screen_orientation/ScreenOrientationDelegate.h
+third_party/WebKit/Source/modules/screen_orientation/ScreenOrientationDelegateTest.cpp
+third_party/WebKit/public/BUILD.gn
+third_party/WebKit/public/platform/modules/screen_orientation/WebScreenOrientationClient.h
+third_party/WebKit/public/web/WebFrameClient.h
+
+Author: tkent@chromium.org
+WPT-Author: tkent@chromium.org
+commit 968b4a0fd847a365d51a80c502791674b974d06a
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/Document-createElementNS-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/Document-createElementNS.html
+third_party/WebKit/Source/core/dom/Document.cpp
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit 55ea47701684535110ffcf2ffac1cde9cb28b871
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/resources/testhelper.js
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-normalization/transformvalue-normalization.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-serialization/cssTransformValue.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssTransformValue.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssTranslate.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssTranslation.tentative.html
+third_party/WebKit/LayoutTests/http/tests/worklet/webexposed/global-interface-listing-paint-worklet-expected.txt
+third_party/WebKit/LayoutTests/typedcssom/cssTranslate.html
+third_party/WebKit/LayoutTests/typedcssom/cssTranslation.html
+third_party/WebKit/LayoutTests/typedcssom/inlinestyle/properties/transform.html
+third_party/WebKit/LayoutTests/typedcssom/resources/testhelper.js
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/cssom/CSSTransformComponent.cpp
+third_party/WebKit/Source/core/css/cssom/CSSTranslate.cpp
+third_party/WebKit/Source/core/css/cssom/CSSTranslate.h
+third_party/WebKit/Source/core/css/cssom/CSSTranslate.idl
+third_party/WebKit/Source/core/css/cssom/CSSTranslation.cpp
+third_party/WebKit/Source/core/css/cssom/CSSTranslation.h
+third_party/WebKit/Source/core/css/cssom/CSSTranslation.idl
+
+Author: bajones@chromium.org
+WPT-Author: bajones@chromium.org
+commit 149cd5b88770d785b63b5ebb27386cdf0b71a0e4
+third_party/WebKit/LayoutTests/external/wpt/webxr/interfaces.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/webxr/resources/webxr_util.js
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/bindings/IDLUnionTypes.md
+third_party/WebKit/Source/bindings/scripts/utilities.py
+third_party/WebKit/Source/core/html/canvas/CanvasRenderingContext.cpp
+third_party/WebKit/Source/core/html/canvas/CanvasRenderingContext.h
+third_party/WebKit/Source/core/html/canvas/HTMLCanvasElement.cpp
+third_party/WebKit/Source/core/html/canvas/HTMLCanvasElement.h
+third_party/WebKit/Source/modules/ModulesInitializer.cpp
+third_party/WebKit/Source/modules/canvas/BUILD.gn
+third_party/WebKit/Source/modules/canvas/htmlcanvas/HTMLCanvasElementModule.idl
+third_party/WebKit/Source/modules/canvas/imagebitmap/ImageBitmapRenderingContext.cpp
+third_party/WebKit/Source/modules/canvas/imagebitmap/ImageBitmapRenderingContext.h
+third_party/WebKit/Source/modules/canvas/imagebitmap/ImageBitmapRenderingContextBase.cpp
+third_party/WebKit/Source/modules/canvas/imagebitmap/ImageBitmapRenderingContextBase.h
+third_party/WebKit/Source/modules/modules_idl_files.gni
+third_party/WebKit/Source/modules/xr/BUILD.gn
+third_party/WebKit/Source/modules/xr/XRPresentationContext.cpp
+third_party/WebKit/Source/modules/xr/XRPresentationContext.h
+third_party/WebKit/Source/modules/xr/XRPresentationContext.idl
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit b74ffcfbbfc7b788d36aba2ee32850650fa2fe64
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/fixed-scroll-simple-expected.txt
+third_party/WebKit/Source/core/paint/ObjectPaintProperties.h
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.cpp
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit 6b19149b9403735a7429f39159c4e1418cc6ceeb
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/numeric-objects/cssMathValue.tentative.html
+third_party/WebKit/LayoutTests/http/tests/worklet/webexposed/global-interface-listing-paint-worklet-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/css/cssom/CSSMathInvert.h
+third_party/WebKit/Source/core/css/cssom/CSSMathInvert.idl
+third_party/WebKit/Source/core/css/cssom/CSSMathNegate.h
+third_party/WebKit/Source/core/css/cssom/CSSMathNegate.idl
+
+Author: kozyatinskiy@chromium.org
+No-WPT-Author: kozyatinskiy@chromium.org
+commit b18dd354bbdc16d51e4ff12b0b2a75c7f5cb3eef
+third_party/WebKit/LayoutTests/http/tests/devtools/components/parsed-url-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/components/parsed-url.js
+third_party/WebKit/Source/devtools/front_end/common/ParsedURL.js
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit f18e6ccde3332cd54f6c1f276102966bc709b82f
+third_party/WebKit/LayoutTests/webaudio/Delay/no-dezippering.html
+third_party/WebKit/Source/modules/webaudio/DelayDSPKernel.cpp
+third_party/WebKit/Source/platform/audio/AudioDelayDSPKernel.cpp
+third_party/WebKit/Source/platform/audio/AudioDelayDSPKernel.h
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit 96bea082bf639b77ca3d952f06f9c86ed81ac234
+third_party/WebKit/LayoutTests/webaudio/Oscillator/no-dezippering.html
+third_party/WebKit/Source/modules/webaudio/OscillatorNode.cpp
+
+Author: sunyunjia@chromium.org
+WPT-Author: sunyunjia@chromium.org
+commit 7f9b9c152595c29f78d1f502d221f056f1ff6b82
+third_party/WebKit/LayoutTests/external/wpt/css/cssom-view/scrollIntoView-scrollPadding.html
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/frame/LocalFrameView.cpp
+third_party/WebKit/Source/core/frame/LocalFrameView.h
+third_party/WebKit/Source/core/frame/RootFrameViewport.cpp
+third_party/WebKit/Source/core/frame/RootFrameViewport.h
+third_party/WebKit/Source/core/page/scrolling/ScrollIntoViewTest.cpp
+third_party/WebKit/Source/core/page/scrolling/SmoothScrollTest.cpp
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.h
+third_party/WebKit/Source/platform/scroll/ScrollAlignment.cpp
+third_party/WebKit/Source/platform/scroll/ScrollAlignment.h
+third_party/WebKit/Source/platform/scroll/ScrollableArea.h
+
+Author: trchen@chromium.org
+No-WPT-Author: trchen@chromium.org
+commit f89ae106e06d15200d783cb6950961ba999edebe
+third_party/WebKit/LayoutTests/FlagExpectations/enable-slimming-paint-v175
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/compositing/images/direct-image-clip-path-expected.png
+third_party/WebKit/LayoutTests/compositing/images/direct-image-dynamic-clip-path-expected.png
+third_party/WebKit/LayoutTests/compositing/masks/mask-layer-size-expected.txt
+third_party/WebKit/LayoutTests/compositing/overflow/accelerated-scrolling-with-clip-path-expected.png
+third_party/WebKit/LayoutTests/paint/clipath/clip-path-with-background-and-box-behind-expected.png
+third_party/WebKit/LayoutTests/paint/invalidation/clip/clip-path-constant-repaint-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/compositing/masks/mask-layer-size-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/compositing/masks/multiple-masks-expected.png
+third_party/WebKit/LayoutTests/platform/mac/compositing/masks/simple-composited-mask-expected.png
+third_party/WebKit/LayoutTests/platform/mac/paint/clipath/clip-path-with-background-and-box-behind-expected.png
+third_party/WebKit/LayoutTests/platform/win/paint/clipath/clip-path-with-background-and-box-behind-expected.png
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/layout/LayoutBox.cpp
+third_party/WebKit/Source/core/layout/LayoutInline.cpp
+third_party/WebKit/Source/core/layout/LayoutObject.cpp
+third_party/WebKit/Source/core/layout/LayoutObject.h
+third_party/WebKit/Source/core/layout/LayoutTableRow.h
+third_party/WebKit/Source/core/paint/BUILD.gn
+third_party/WebKit/Source/core/paint/CSSMaskPainter.cpp
+third_party/WebKit/Source/core/paint/CSSMaskPainter.h
+third_party/WebKit/Source/core/paint/CSSMaskPainterTest.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.cpp
+third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
+third_party/WebKit/Source/core/paint/PaintLayerPaintingInfo.h
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.cpp
+third_party/WebKit/Source/core/paint/compositing/CompositedLayerMapping.cpp
+third_party/WebKit/Source/core/paint/compositing/CompositedLayerMapping.h
+third_party/WebKit/Source/core/paint/compositing/CompositingReasonFinder.cpp
+
+Author: sunyunjia@chromium.org
+WPT-Author: sunyunjia@chromium.org
+commit af66ebcd045e4ea75e4cb09de214dee9cab73563
+third_party/WebKit/LayoutTests/external/wpt/css/cssom-view/scrollIntoView-scrollMargin.html
+third_party/WebKit/Source/core/dom/ContainerNode.cpp
+third_party/WebKit/Source/core/dom/ContainerNode.h
+third_party/WebKit/Source/core/dom/Element.cpp
+third_party/WebKit/Source/core/dom/Node.cpp
+third_party/WebKit/Source/core/dom/Node.h
+third_party/WebKit/Source/core/exported/WebViewImpl.cpp
+third_party/WebKit/Source/core/frame/LocalFrameView.cpp
+third_party/WebKit/Source/core/html/forms/HTMLInputElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLSelectElement.cpp
+third_party/WebKit/Source/core/layout/LayoutObject.cpp
+third_party/WebKit/Source/core/layout/LayoutObject.h
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit faf1e5f751eb1b9005d05ad8fdfcaacb3fbd0e33
+third_party/WebKit/LayoutTests/webaudio/AudioContext/audiocontext-max-contexts.html
+third_party/WebKit/Source/modules/webaudio/AudioContext.cpp
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit 23f7ac0ae187feb62913b7dc793a8721a0d37e07
+third_party/WebKit/LayoutTests/webaudio/StereoPanner/no-dezippering.html
+third_party/WebKit/LayoutTests/webaudio/StereoPanner/stereopannernode-no-glitch.html
+third_party/WebKit/Source/platform/audio/StereoPanner.cpp
+third_party/WebKit/Source/platform/audio/StereoPanner.h
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit cb3a1243e1bcfa29c984e19dba252dc06f073d72
+third_party/WebKit/LayoutTests/webaudio/Gain/no-dezippering.html
+third_party/WebKit/LayoutTests/webaudio/resources/distance-model-testing.js
+third_party/WebKit/Source/modules/webaudio/GainNode.cpp
+third_party/WebKit/Source/modules/webaudio/GainNode.h
+third_party/WebKit/Source/modules/webaudio/PannerNode.cpp
+third_party/WebKit/Source/modules/webaudio/PannerNode.h
+third_party/WebKit/Source/platform/audio/AudioBus.cpp
+third_party/WebKit/Source/platform/audio/AudioBus.h
+
+Author: loonybear@chromium.org
+WPT-Author: loonybear@chromium.org
+commit d4291f6edd8424f23dd840d4531a25c40221b84a
+third_party/WebKit/LayoutTests/VirtualTestSuites
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/experimental-features/resources/feature-policy-image.html
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/experimental-features/resources/image.jpg
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/experimental-features/resources/image.png
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/experimental-features/resources/image.svg
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/experimental-features/resources/video.ogv
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/experimental-features/unsized-image.tentative.https.sub-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/experimental-features/unsized-image.tentative.https.sub.html
+third_party/WebKit/LayoutTests/external/wpt/feature-policy/experimental-features/unsized-image.tentative.https.sub.html.headers
+third_party/WebKit/LayoutTests/virtual/feature-policy-experimental-features/external/wpt/feature-policy/experimental-features/README.txt
+third_party/WebKit/LayoutTests/virtual/feature-policy-experimental-features/external/wpt/feature-policy/experimental-features/unsized-image.tentative.https.sub-expected.txt
+third_party/WebKit/Source/core/css/resolver/StyleAdjuster.cpp
+third_party/WebKit/Source/platform/feature_policy/FeaturePolicy.cpp
+third_party/WebKit/common/feature_policy/feature_policy.cc
+third_party/WebKit/common/feature_policy/feature_policy.mojom
+third_party/WebKit/common/feature_policy/feature_policy_feature.h
+
+Author: peter@chromium.org
+No-WPT-Author: peter@chromium.org
+commit 1be5b5e3d1866879e4d49e2ab34d4a89e3e2657a
+third_party/WebKit/LayoutTests/http/tests/push_messaging/push-subscription-stringification.html
+third_party/WebKit/Source/modules/BUILD.gn
+third_party/WebKit/Source/modules/push_messaging/PushSubscription.cpp
+third_party/WebKit/Source/modules/push_messaging/PushSubscription.h
+third_party/WebKit/Source/modules/push_messaging/PushSubscriptionTest.cpp
+
+Author: ikilpatrick@chromium.org
+WPT-Author: ikilpatrick@chromium.org
+commit 9ec8b31a581d2ef56a93e0869246b4708816c597
+third_party/WebKit/LayoutTests/external/wpt/css/css-paint-api/parse-input-arguments-011.https.html
+third_party/WebKit/Source/bindings/bindings.gni
+third_party/WebKit/Source/bindings/core/v8/V8ObjectParser.cpp
+third_party/WebKit/Source/bindings/core/v8/V8ObjectParser.h
+third_party/WebKit/Source/core/layout/custom/LayoutWorkletGlobalScope.cpp
+third_party/WebKit/Source/modules/animationworklet/AnimationWorkletGlobalScope.cpp
+third_party/WebKit/Source/modules/csspaint/PaintWorkletGlobalScope.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScope.cpp
+
+Author: jfernandez@igalia.com
+WPT-Author: jfernandez@igalia.com
+commit 948b8dee181da1bd431f91229f05e73e3b423490
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/place-content-shorthand-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/place-content-shorthand-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/place-content-shorthand-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/place-content-shorthand-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/place-items-shorthand-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/place-items-shorthand-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/place-items-shorthand-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/place-items-shorthand-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/resources/alignment-parsing-utils.js
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/place-self-shorthand-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/place-self-shorthand-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/place-self-shorthand-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/place-self-shorthand-006.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-align-content.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-justify-content.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-place-content.html
+third_party/WebKit/Source/core/css/properties/CSSParsingUtils.cpp
+third_party/WebKit/Source/core/css/properties/longhands/JustifyContentCustom.cpp
+
+Author: bhagirathi.s@samsung.com
+WPT-Author: bhagirathi.s@samsung.com
+commit 89ebb687359e59ccab76edb1079dd5b7d7d13bb5
+third_party/WebKit/LayoutTests/external/wpt/css/cssom/MediaList.html
+third_party/WebKit/LayoutTests/external/wpt/css/cssom/interfaces-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/domListEnumeration-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/domListEnumeration.html
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/css/MediaList.idl
+
+Author: yosin@chromium.org
+WPT-Author: yosin@chromium.org
+commit fa5541a1e6531fdf299672c64590198b97d6ed11
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/builtin-coverage-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/reactions/HTMLInputElement-expected.txt
+third_party/WebKit/Source/core/html/HTMLIFrameElement.idl
+third_party/WebKit/Source/core/html/canvas/HTMLCanvasElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLInputElement.idl
+third_party/WebKit/Source/core/html/media/HTMLVideoElement.idl
+
+Author: tanvir.rizvi@samsung.com
+WPT-Author: tanvir.rizvi@samsung.com
+commit 9d10de025e23ced790a9b6714a1e1a02647ea9e7
+third_party/WebKit/LayoutTests/editing/execCommand/insert-ordered-list-create-correct-selection.html
+third_party/WebKit/LayoutTests/external/wpt/editing/run/formatblock-expected.txt
+third_party/WebKit/Source/core/editing/EditingUtilities.cpp
+third_party/WebKit/Source/core/editing/PlainTextRange.cpp
+third_party/WebKit/Source/core/editing/PlainTextRange.h
+
+Author: hs1217.lee@samsung.com
+No-WPT-Author: hs1217.lee@samsung.com
+commit 37c5e5e604744c9efd4fa5a3abaca7e6b651054c
+third_party/WebKit/LayoutTests/http/tests/worklet/webexposed/global-interface-listing-paint-worklet-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/css/cssom/CSSMathMax.idl
+third_party/WebKit/Source/core/css/cssom/CSSMathMin.idl
+third_party/WebKit/Source/core/css/cssom/CSSMathProduct.idl
+third_party/WebKit/Source/core/css/cssom/CSSMathSum.idl
+third_party/WebKit/Source/core/css/cssom/CSSMathVariadic.h
+
+Author: futhark@chromium.org
+WPT-Author: futhark@chromium.org
+commit 716357ace42ce5b9fd5936bf2b37a0750f8dbff9
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/css/css-scoping/slotted-slot.html
+third_party/WebKit/Source/core/css/SelectorChecker.cpp
+
+Author: ikilpatrick@chromium.org
+WPT-Author: ikilpatrick@chromium.org
+commit c5a138319fc1ffded673514d98562ef356ec6a08
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/OWNERS
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/at-supports-rule.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/computed-style-layout-function.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/inline-style-layout-function.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/supports.https.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/at-supports-rule-insecure-context.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/at-supports-rule-secure-context.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/computed-style-inline-layout-function.https.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/dynamic-parse-insecure-context.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/dynamic-parse-secure-context.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/inline-style-inline-layout-function.https.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/parse-insecure-context.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/parse-secure-context.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/supports-insecure-context.html
+third_party/WebKit/LayoutTests/http/tests/csslayout/supports-secure-context.html
+third_party/WebKit/Source/build/scripts/core/css/properties/templates/CSSProperty.h.tmpl
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/CSSLayoutFunctionValue.cpp
+third_party/WebKit/Source/core/css/CSSLayoutFunctionValue.h
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/CSSValue.cpp
+third_party/WebKit/Source/core/css/CSSValue.h
+third_party/WebKit/Source/core/css/CSSValueIDMappings.h
+third_party/WebKit/Source/core/css/CSSValueKeywords.json5
+third_party/WebKit/Source/core/css/ComputedStyleExtraFields.json5
+third_party/WebKit/Source/core/css/parser/CSSParserFastPaths.cpp
+third_party/WebKit/Source/core/css/parser/CSSParserFastPaths.h
+third_party/WebKit/Source/core/css/parser/CSSPropertyParserHelpers.cpp
+third_party/WebKit/Source/core/css/properties/longhands/DisplayCustom.cpp
+third_party/WebKit/Source/core/css/resolver/StyleAdjuster.cpp
+third_party/WebKit/Source/core/css/resolver/StyleBuilderCustom.cpp
+third_party/WebKit/Source/core/html/HTMLSummaryElement.cpp
+third_party/WebKit/Source/core/layout/LayoutObject.cpp
+third_party/WebKit/Source/core/style/ComputedStyle.h
+third_party/WebKit/Source/modules/exported/WebAXObject.cpp
+
+Author: tkent@chromium.org
+WPT-Author: tkent@chromium.org
+commit 1c6d493beeda1b183a95c41598160f6ff51fbaf3
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/builtin-coverage-expected.txt
+third_party/WebKit/Source/build/scripts/templates/element_factory.cc.tmpl
+third_party/WebKit/Source/build/scripts/templates/element_factory.h.tmpl
+third_party/WebKit/Source/core/html/custom/CustomElement.cpp
+third_party/WebKit/Source/core/html/custom/CustomElement.h
+third_party/WebKit/Source/core/html/custom/CustomElementDefinition.cpp
+third_party/WebKit/Source/core/html/custom/CustomElementDefinition.h
+third_party/WebKit/Source/core/html/parser/HTMLConstructionSite.cpp
+
+Author: meredithl@google.com
+No-WPT-Author: meredithl@google.com
+commit fa3af1aaf0b0a78c859fd11eae5e386b50560b47
+third_party/WebKit/LayoutTests/accessibility/aom-computed-int-properties.html
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/dom/ComputedAccessibleNode.cpp
+third_party/WebKit/Source/core/dom/ComputedAccessibleNode.h
+third_party/WebKit/Source/core/dom/ComputedAccessibleNode.idl
+third_party/WebKit/public/platform/WebComputedAXTree.h
+
+Author: ericwilligers@chromium.org
+No-WPT-Author: ericwilligers@chromium.org
+commit 803a72fbbd1de809be962eb7c8ec81f02924c690
+third_party/WebKit/LayoutTests/animations/responsive/animations-responsive-rotate.html
+third_party/WebKit/Source/core/animation/CSSRotateInterpolationType.cpp
+
+Author: rob.buis@samsung.com
+WPT-Author: rob.buis@samsung.com
+commit aa8ca297c5f87cc3362524bae9f18a8972f80900
+third_party/WebKit/LayoutTests/external/wpt/html/syntax/serializing-html-fragments/serializing-expected.txt
+third_party/WebKit/Source/core/editing/serializers/MarkupFormatter.cpp
+
+Author: cnardi@chromium.org
+WPT-Author: cnardi@chromium.org
+commit e484a3cc686a4c54870e178e4e170ccc43879855
+third_party/WebKit/LayoutTests/css3/font-feature-settings-parsing-expected.txt
+third_party/WebKit/LayoutTests/css3/font-feature-settings-parsing.html
+third_party/WebKit/LayoutTests/css3/fonts/font-feature-settings-parsing-prefixed.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-fonts/font-feature-settings-serialization-001.html
+third_party/WebKit/LayoutTests/fast/css/fontface-properties-expected.txt
+third_party/WebKit/LayoutTests/fast/css/fontface-properties.html
+third_party/WebKit/LayoutTests/fast/css/inherited-properties-rare-text-expected.txt
+third_party/WebKit/Source/core/css/CSSFontFeatureValue.cpp
+
+Author: yosin@chromium.org
+WPT-Author: yosin@chromium.org
+commit ce8bf10a5bef91198c0c36b653562eb97b03468b
+third_party/WebKit/LayoutTests/external/wpt/custom-elements/builtin-coverage-expected.txt
+third_party/WebKit/Source/core/html/HTMLAnchorElement.idl
+third_party/WebKit/Source/core/html/HTMLAreaElement.idl
+third_party/WebKit/Source/core/html/HTMLBRElement.idl
+third_party/WebKit/Source/core/html/HTMLBaseElement.idl
+third_party/WebKit/Source/core/html/HTMLBodyElement.idl
+third_party/WebKit/Source/core/html/HTMLDListElement.idl
+third_party/WebKit/Source/core/html/HTMLDetailsElement.idl
+third_party/WebKit/Source/core/html/HTMLDialogElement.idl
+third_party/WebKit/Source/core/html/HTMLDirectoryElement.idl
+third_party/WebKit/Source/core/html/HTMLFontElement.idl
+third_party/WebKit/Source/core/html/HTMLFrameElement.idl
+third_party/WebKit/Source/core/html/HTMLFrameSetElement.idl
+third_party/WebKit/Source/core/html/HTMLHRElement.idl
+third_party/WebKit/Source/core/html/HTMLHeadElement.idl
+third_party/WebKit/Source/core/html/HTMLHeadingElement.idl
+third_party/WebKit/Source/core/html/HTMLHtmlElement.idl
+third_party/WebKit/Source/core/html/HTMLImageElement.idl
+third_party/WebKit/Source/core/html/HTMLLIElement.idl
+third_party/WebKit/Source/core/html/HTMLLinkElement.idl
+third_party/WebKit/Source/core/html/HTMLMapElement.idl
+third_party/WebKit/Source/core/html/HTMLMarqueeElement.idl
+third_party/WebKit/Source/core/html/HTMLMenuElement.idl
+third_party/WebKit/Source/core/html/HTMLMetaElement.idl
+third_party/WebKit/Source/core/html/HTMLMeterElement.idl
+third_party/WebKit/Source/core/html/HTMLModElement.idl
+third_party/WebKit/Source/core/html/HTMLOListElement.idl
+third_party/WebKit/Source/core/html/HTMLParamElement.idl
+third_party/WebKit/Source/core/html/HTMLPictureElement.idl
+third_party/WebKit/Source/core/html/HTMLPreElement.idl
+third_party/WebKit/Source/core/html/HTMLProgressElement.idl
+third_party/WebKit/Source/core/html/HTMLQuoteElement.idl
+third_party/WebKit/Source/core/html/HTMLScriptElement.idl
+third_party/WebKit/Source/core/html/HTMLSlotElement.idl
+third_party/WebKit/Source/core/html/HTMLSourceElement.idl
+third_party/WebKit/Source/core/html/HTMLSpanElement.idl
+third_party/WebKit/Source/core/html/HTMLStyleElement.idl
+third_party/WebKit/Source/core/html/HTMLTableCaptionElement.idl
+third_party/WebKit/Source/core/html/HTMLTableCellElement.idl
+third_party/WebKit/Source/core/html/HTMLTableColElement.idl
+third_party/WebKit/Source/core/html/HTMLTableElement.idl
+third_party/WebKit/Source/core/html/HTMLTableRowElement.idl
+third_party/WebKit/Source/core/html/HTMLTableSectionElement.idl
+third_party/WebKit/Source/core/html/HTMLTemplateElement.idl
+third_party/WebKit/Source/core/html/HTMLTitleElement.idl
+third_party/WebKit/Source/core/html/HTMLUListElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLButtonElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLDataListElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLFieldSetElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLLabelElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLLegendElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLOptGroupElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLOptionElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLOutputElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLSelectElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLTextAreaElement.idl
+third_party/WebKit/Source/core/html/media/HTMLAudioElement.idl
+third_party/WebKit/Source/core/html/track/HTMLTrackElement.idl
+
+Author: cnardi@chromium.org
+No-WPT-Author: cnardi@chromium.org
+commit 451314ba731d48d5adc39e5a3876729533581c4f
+third_party/WebKit/LayoutTests/css3/calc/cross-fade-calc.html
+third_party/WebKit/LayoutTests/css3/calc/webkit-gradient-calc.html
+third_party/WebKit/Source/core/css/parser/CSSPropertyParserHelpers.cpp
+
+Author: alph@chromium.org
+No-WPT-Author: alph@chromium.org
+commit 0ed5a808697b9b36ef56bd53c0f0f210c0f3f2f3
+third_party/WebKit/LayoutTests/ASANExpectations
+third_party/WebKit/LayoutTests/MSANExpectations
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/VirtualTestSuites
+third_party/WebKit/LayoutTests/inspector-protocol/memory/sampling-native-snapshot-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/memory/sampling-native-snapshot.js
+third_party/WebKit/LayoutTests/virtual/sampling-heap-profiler/inspector-protocol/memory/README.txt
+third_party/WebKit/LayoutTests/virtual/sampling-heap-profiler/inspector-protocol/memory/sampling-native-snapshot-expected.txt
+third_party/WebKit/Source/core/inspector/InspectorMemoryAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorMemoryAgent.h
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+third_party/WebKit/Source/core/inspector/inspector_protocol_config.json
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit 1b00af88cdc1535ea809c07ef2a2eba010caf796
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssVariableReferenceValue.tentative-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/cssVariableReferenceValue.tentative.html
+third_party/WebKit/LayoutTests/http/tests/worklet/webexposed/global-interface-listing-paint-worklet-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/css/cssom/CSSStyleVariableReferenceValue.h
+third_party/WebKit/Source/core/css/cssom/CSSVariableReferenceValue.idl
+
+Author: pfeldman@chromium.org
+No-WPT-Author: pfeldman@chromium.org
+commit 600fe4d45b97cc9334095a45f571e89e79cebaf7
+third_party/WebKit/LayoutTests/http/tests/devtools/help/release-note-unit.js
+third_party/WebKit/LayoutTests/http/tests/devtools/help/release-note.js
+third_party/WebKit/LayoutTests/http/tests/devtools/modules-load-initial-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/modules-load-network-expected.txt
+third_party/WebKit/Source/devtools/BUILD.gn
+third_party/WebKit/Source/devtools/front_end/common/ModuleExtensionInterfaces.js
+third_party/WebKit/Source/devtools/front_end/help/Help.js
+third_party/WebKit/Source/devtools/front_end/help/module.json
+third_party/WebKit/Source/devtools/front_end/inspector.json
+third_party/WebKit/Source/devtools/front_end/integration_test_runner.json
+third_party/WebKit/Source/devtools/front_end/main/Main.js
+third_party/WebKit/Source/devtools/front_end/main/module.json
+third_party/WebKit/Source/devtools/front_end/ndb.html
+third_party/WebKit/Source/devtools/front_end/ndb.js
+third_party/WebKit/Source/devtools/front_end/ndb.json
+third_party/WebKit/Source/devtools/front_end/network/NetworkDataGridNode.js
+third_party/WebKit/Source/devtools/front_end/network/NetworkLogView.js
+third_party/WebKit/Source/devtools/front_end/network/module.json
+third_party/WebKit/Source/devtools/front_end/network_log/NetworkLog.js
+third_party/WebKit/Source/devtools/front_end/network_priorities/NetworkPriorities.js
+third_party/WebKit/Source/devtools/front_end/network_priorities/module.json
+third_party/WebKit/Source/devtools/front_end/perf_ui/NetworkPriorities.js
+third_party/WebKit/Source/devtools/front_end/perf_ui/module.json
+third_party/WebKit/Source/devtools/front_end/settings/module.json
+third_party/WebKit/Source/devtools/front_end/timeline/TimelineFlameChartNetworkDataProvider.js
+third_party/WebKit/Source/devtools/front_end/timeline/TimelineUIUtils.js
+third_party/WebKit/Source/devtools/front_end/timeline/module.json
+third_party/WebKit/Source/devtools/front_end/ui/ContextMenu.js
+third_party/WebKit/Source/devtools/scripts/build/generate_devtools_grd.py
+
+Author: cnardi@chromium.org
+WPT-Author: cnardi@chromium.org
+commit b48350391c918e1695104c6c6f85d9e5c4945905
+third_party/WebKit/LayoutTests/external/wpt/css/css-values/calc-in-font-feature-settings.html
+third_party/WebKit/Source/core/css/properties/CSSParsingUtils.cpp
+
+Author: pfeldman@chromium.org
+No-WPT-Author: pfeldman@chromium.org
+commit 029bd2f8fe39b021e6bbba942622bccb0fc9fa02
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/resources/iframe.html
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/resources/site_per_process_main.html
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/oopif-no-discovery-expected.txt
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/oopif-no-discovery.js
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+
+Author: pfeldman@chromium.org
+No-WPT-Author: pfeldman@chromium.org
+commit ee32d835ded06b736f888d6179b03b38a1ed507d
+third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-elements-navigate-in-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-elements-navigate-in.js
+third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-elements-navigate-out-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-elements-navigate-out.js
+third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-elements-nesting-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-elements-nesting.js
+third_party/WebKit/LayoutTests/http/tests/devtools/oopif/resources/page-in.html
+third_party/WebKit/LayoutTests/http/tests/devtools/oopif/resources/page-out.html
+third_party/WebKit/Source/core/exported/WebFrame.cpp
+third_party/WebKit/Source/core/html/HTMLFrameOwnerElement.cpp
+third_party/WebKit/Source/core/inspector/InspectorDOMAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorDOMAgent.h
+third_party/WebKit/Source/core/probe/CoreProbes.json5
+third_party/WebKit/Source/core/probe/CoreProbes.pidl
+third_party/WebKit/Source/devtools/front_end/elements/ElementsPanel.js
+third_party/WebKit/Source/devtools/front_end/elements/ElementsTreeOutline.js
+third_party/WebKit/Source/devtools/front_end/elements_test_runner/ElementsTestRunner.js
+third_party/WebKit/Source/devtools/front_end/main/Main.js
+third_party/WebKit/Source/devtools/front_end/sdk/DOMModel.js
+third_party/WebKit/Source/devtools/front_end/sdk/ResourceTreeModel.js
+
+Author: trchen@chromium.org
+No-WPT-Author: trchen@chromium.org
+commit 1937401660f05dc109a53deb96b10b2735d69656
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/flag-specific/root-layer-scrolls/paint/invalidation/body-background-not-propagated-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/background/viewport-gradient-background-html-move-overflow-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/background/viewport-gradient-background-html-resize-overflow-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/body-background-not-propagated-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/body-background-not-propagated.html
+third_party/WebKit/LayoutTests/paint/invalidation/compositing/iframe-inside-squashed-layer-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/scrolled-iframe-scrollbar-change-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/svg/absolute-sized-document-no-scrollbars-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/svg/relative-sized-document-scrollbars-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/scroll/overflow-scroll-body-appear-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/background/body-background-image-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/background/viewport-gradient-background-html-move-overflow-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/background/viewport-gradient-background-html-resize-overflow-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/body-background-not-propagated-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/compositing/iframe-inside-squashed-layer-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/scroll/overflow-scroll-body-appear-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/scroll/scrolled-iframe-scrollbar-change-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/svg/absolute-sized-document-no-scrollbars-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/svg/relative-sized-document-scrollbars-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/background/body-background-image-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/scroll/overflow-scroll-body-appear-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/background/body-background-image-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/compositing/iframe-inside-squashed-layer-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/scroll/overflow-scroll-body-appear-expected.txt
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/dom/Document.h
+third_party/WebKit/Source/core/layout/LayoutBox.cpp
+third_party/WebKit/Source/core/layout/LayoutView.cpp
+third_party/WebKit/Source/core/layout/LayoutView.h
+
+Author: rob.buis@samsung.com
+WPT-Author: rob.buis@samsung.com
+commit 36b8d7099c38848cbab2371e9f3b6ecadd9b0aa8
+third_party/WebKit/LayoutTests/external/wpt/html/syntax/serializing-html-fragments/serializing-expected.txt
+third_party/WebKit/Source/core/editing/serializers/MarkupFormatter.cpp
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 48ddecea041796cb98eeff54fd37f1fca4372d18
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/compositing/fixed-pos-inside-composited-intermediate-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/compositing/fixed-pos-with-abs-pos-child-scroll-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/compositing/fixed-scroll-in-empty-root-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/fixed-img-src-change-after-scroll-expected.txt
+third_party/WebKit/Source/platform/graphics/GraphicsLayer.cpp
+third_party/WebKit/Source/platform/graphics/compositing/CompositedLayerRasterInvalidator.cpp
+third_party/WebKit/Source/platform/graphics/compositing/CompositedLayerRasterInvalidator.h
+
+Author: cnardi@chromium.org
+WPT-Author: cnardi@chromium.org
+commit f8e89bb9a450bca698c8c522aded1030ea1cd681
+third_party/WebKit/LayoutTests/NeverFixTests
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/css3/calc/color-rgb-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/2dcontext/fill-and-stroke-styles/2d.fillStyle.parse.css-color-4-rgb-1-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/2dcontext/fill-and-stroke-styles/2d.fillStyle.parse.css-color-4-rgba-1-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgb-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgb-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgb-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgb-008.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgb-rounding-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgba-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgba-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgba-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-color/rgba-008.html
+third_party/WebKit/LayoutTests/external/wpt/offscreen-canvas/fill-and-stroke-styles/2d.fillStyle.parse.css-color-4-rgb-1-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/offscreen-canvas/fill-and-stroke-styles/2d.fillStyle.parse.css-color-4-rgba-1-expected.txt
+third_party/WebKit/LayoutTests/fast/canvas/rgba-parsing.html
+third_party/WebKit/LayoutTests/fast/css/rgb-float-expected.png
+third_party/WebKit/LayoutTests/fast/css/rgb-float-expected.txt
+third_party/WebKit/LayoutTests/fast/css/rgb-float.html
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-3/spectrum-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-3/spectrum.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-4/styles-invalid-color-values-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-4/styles-invalid-color-values.js
+third_party/WebKit/LayoutTests/platform/linux/css2.1/t040306-syntax-01-f-expected.png
+third_party/WebKit/LayoutTests/platform/linux/css2.1/t040306-syntax-01-f-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/fast/css/rgb-float-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/gradients/conic-gradient-out-of-range-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/perf/007-expected.png
+third_party/WebKit/LayoutTests/platform/mac/css2.1/t040306-syntax-01-f-expected.png
+third_party/WebKit/LayoutTests/platform/mac/css2.1/t040306-syntax-01-f-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/fast/css/rgb-float-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/css/rgb-float-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/fast/gradients/conic-gradient-out-of-range-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/perf/007-expected.png
+third_party/WebKit/LayoutTests/platform/win/css2.1/t040306-syntax-01-f-expected.png
+third_party/WebKit/LayoutTests/platform/win/css2.1/t040306-syntax-01-f-expected.txt
+third_party/WebKit/LayoutTests/platform/win/fast/css/rgb-float-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/css/rgb-float-expected.txt
+third_party/WebKit/LayoutTests/platform/win/fast/gradients/conic-gradient-out-of-range-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/perf/007-expected.png
+third_party/WebKit/LayoutTests/svg/custom/mask-colorspace-expected.png
+third_party/WebKit/LayoutTests/svg/custom/mask-colorspace-expected.txt
+third_party/WebKit/Source/core/css/parser/CSSParserFastPaths.cpp
+third_party/WebKit/Source/core/css/parser/CSSParserFastPathsTest.cpp
+third_party/WebKit/Source/core/css/parser/CSSPropertyParserHelpers.cpp
+third_party/WebKit/Source/devtools/front_end/common/Color.js
+
+Author: rlanday@chromium.org
+WPT-Author: rlanday@chromium.org
+commit 9e57ef9c21fefb9621289678ecc4ae1aacc82994
+third_party/WebKit/LayoutTests/external/wpt/html/editing/editing-0/autocapitalization/autocapitalize.html
+third_party/WebKit/LayoutTests/fast/forms/autocapitalize.html
+third_party/WebKit/Source/core/editing/ime/InputMethodControllerTest.cpp
+third_party/WebKit/Source/core/html/forms/HTMLFormControlElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLFormControlElement.h
+
+Author: lushnikov@chromium.org
+No-WPT-Author: lushnikov@chromium.org
+commit 4859b2d9fa524b29e1aa61b5303fc37b33132c07
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-sync-content-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-sync-content-nodejs-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-tabbed-editor-opens-filesystem-uisourcecode-expected.txt
+third_party/WebKit/LayoutTests/platform/win/http/tests/devtools/persistence/persistence-tabbed-editor-keeps-selected-tab-expected.txt
+third_party/WebKit/Source/devtools/front_end/bindings_test_runner/PersistenceTestRunner.js
+third_party/WebKit/Source/devtools/front_end/persistence/Automapping.js
+third_party/WebKit/Source/devtools/front_end/persistence/NetworkPersistenceManager.js
+third_party/WebKit/Source/devtools/front_end/persistence/Persistence.js
+
+Author: rakina@chromium.org
+WPT-Author: rakina@chromium.org
+commit bb3517a95aa758711ac11927e8f8ebf44f6a272b
+third_party/WebKit/LayoutTests/external/wpt/shadow-dom/DocumentOrShadowRoot-prototype-elementFromPoint.html
+third_party/WebKit/LayoutTests/fast/dom/elementsFromPoint/elementsFromPoint-shadowroot-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/elementsFromPoint/elementsFromPoint-shadowroot.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/elementfrompoint-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/shadow/elementfrompoint.html
+third_party/WebKit/Source/core/dom/TreeScope.cpp
+third_party/WebKit/Source/core/dom/TreeScope.h
+third_party/WebKit/Source/devtools/front_end/devtools_compatibility.js
+third_party/WebKit/Source/devtools/front_end/dom_extension/DOMExtension.js
+
+Author: cnardi@chromium.org
+WPT-Author: cnardi@chromium.org
+commit 5e7c6952c431e507a56c7fbd9484571ff81ea4e3
+third_party/WebKit/LayoutTests/NeverFixTests
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/css/mediaqueries/test_media_queries.html
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/embedded-content/the-img-element/sizes/parse-a-sizes-attribute-expected.txt
+third_party/WebKit/Source/core/css/MediaQueryEvaluatorTest.cpp
+third_party/WebKit/Source/core/css/MediaQueryExp.cpp
+third_party/WebKit/Source/core/css/MediaQueryExp.h
+third_party/WebKit/Source/core/css/parser/MediaQueryParser.cpp
+third_party/WebKit/Source/core/css/parser/MediaQueryParser.h
+
+Author: alancutter@chromium.org
+No-WPT-Author: alancutter@chromium.org
+commit df884f79de135d1fae253c28da6b96413294106e
+third_party/WebKit/LayoutTests/animations/stacked-neutral-keyframe-expected.html
+third_party/WebKit/LayoutTests/animations/stacked-neutral-keyframe.html
+third_party/WebKit/Source/core/animation/CompositorAnimations.cpp
+third_party/WebKit/Source/core/animation/EffectModel.h
+third_party/WebKit/Source/core/animation/KeyframeEffectModel.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffectModel.h
+
+Author: einbinder@chromium.org
+No-WPT-Author: einbinder@chromium.org
+commit 5a990a0da81efba4c662d64f16865ca785321ed5
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-1/add-new-rule-with-style-after-body.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-1/edit-name-with-trimmed-value.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-3/styles-commit-editing.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/cancel-upon-invalid-property.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/undo-after-cancelled-editing.js
+third_party/WebKit/Source/devtools/front_end/elements/StylesSidebarPane.js
+third_party/WebKit/Source/devtools/front_end/elements_test_runner/ElementsTestRunner.js
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit af3f076ab039f478e0e82a6317832ef27e440345
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/numeric-objects/add-two-types.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/numeric-objects/create-a-type.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/numeric-objects/cssMathInvert-type.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/numeric-objects/cssMathNegate-type.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/numeric-objects/cssnumericvalue-multiply-two-types.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/numeric-objects/numeric-typing.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-subclasses/numeric-objects/resources/testhelper.js
+third_party/WebKit/LayoutTests/http/tests/worklet/webexposed/global-interface-listing-paint-worklet-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/css/cssom/CSSNumericType.idl
+third_party/WebKit/Source/core/css/cssom/CSSNumericValue.cpp
+third_party/WebKit/Source/core/css/cssom/CSSNumericValue.h
+third_party/WebKit/Source/core/css/cssom/CSSNumericValue.idl
+third_party/WebKit/Source/core/css/cssom/CSSNumericValueType.cpp
+third_party/WebKit/Source/core/css/cssom/CSSNumericValueType.h
+third_party/WebKit/Source/core/css/cssom/CSSNumericValueTypeTest.cpp
+third_party/WebKit/Source/core/css/cssom/CSSUnitValueTest.cpp
+
+Author: lushnikov@chromium.org
+No-WPT-Author: lushnikov@chromium.org
+commit 0855c056446d796fb6090a7b934826ba91b924c7
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/automapping-do-not-bind-dirty-sourcecode-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/automapping-do-not-bind-dirty-sourcecode.js
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-do-not-bind-dirty-sourcecode-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-do-not-bind-dirty-sourcecode.js
+third_party/WebKit/Source/devtools/front_end/bindings_test_runner/AutomappingTestRunner.js
+third_party/WebKit/Source/devtools/front_end/bindings_test_runner/PersistenceTestRunner.js
+third_party/WebKit/Source/devtools/front_end/persistence/Automapping.js
+third_party/WebKit/Source/devtools/front_end/persistence/Persistence.js
+
+Author: meredithl@google.com
+No-WPT-Author: meredithl@google.com
+commit 4947b2d764814108eda25896c10a3d7e767a4023
+third_party/WebKit/LayoutTests/accessibility/aom-computed-accessible-node.html
+third_party/WebKit/Source/core/dom/AXObjectCache.h
+third_party/WebKit/Source/core/dom/ComputedAccessibleNode.cpp
+third_party/WebKit/Source/core/dom/ComputedAccessibleNode.h
+third_party/WebKit/Source/core/dom/Element.cpp
+third_party/WebKit/Source/core/dom/ElementRareData.cpp
+third_party/WebKit/Source/core/dom/ElementRareData.h
+third_party/WebKit/Source/core/frame/LocalDOMWindow.cpp
+third_party/WebKit/Source/modules/accessibility/AXObjectCacheImpl.cpp
+third_party/WebKit/Source/modules/accessibility/AXObjectCacheImpl.h
+third_party/WebKit/public/BUILD.gn
+third_party/WebKit/public/platform/WebComputedAXTree.h
+third_party/WebKit/public/web/WebFrameClient.h
+
+Author: sebsg@chromium.org
+No-WPT-Author: sebsg@chromium.org
+commit 778c4369e0f70c9902b2cd7e43c63d2baf935b08
+third_party/WebKit/LayoutTests/fast/forms/autofill-respects-maxlength.html
+third_party/WebKit/LayoutTests/fast/forms/text/input-appearance-autocomplete-suggestion-maxlength-expected.html
+third_party/WebKit/LayoutTests/fast/forms/text/input-appearance-autocomplete-suggestion-maxlength.html
+third_party/WebKit/LayoutTests/fast/forms/text/textarea-appearance-autocomplete-suggestion-maxlength-expected.html
+third_party/WebKit/LayoutTests/fast/forms/text/textarea-appearance-autocomplete-suggestion-maxlength.html
+third_party/WebKit/Source/core/exported/WebFormControlElement.cpp
+third_party/WebKit/Source/core/html/forms/TextControlElement.cpp
+third_party/WebKit/Source/core/html/forms/TextControlElement.h
+third_party/WebKit/Source/core/testing/Internals.cpp
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit ba83a547d7eb5390680e99bf03b0906e6f4e85dc
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/paint/tables/table-row-mask-crash.html
+third_party/WebKit/LayoutTests/virtual/spv175/fast/borders/inline-mask-overlay-image-outset-expected.png
+third_party/WebKit/Source/core/paint/BoxPainter.cpp
+third_party/WebKit/Source/core/paint/InlineFlowBoxPainter.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.h
+third_party/WebKit/Source/core/paint/TableRowPainter.cpp
+third_party/WebKit/Source/core/paint/TableSectionPainter.cpp
+
+Author: jstenback@chromium.org
+WPT-Author: jstenback@chromium.org
+commit 94fdbc134800b2f8401d155f42aa44b1e035a5f7
+third_party/WebKit/LayoutTests/external/wpt/html/browsers/the-window-object/apis-for-creating-and-navigating-browsing-contexts-by-name/open-features-tokenization-noopener-expected.txt
+third_party/WebKit/Source/core/page/CreateWindow.cpp
+third_party/WebKit/public/web/WebWindowFeatures.h
+
+Author: chrishtr@chromium.org
+No-WPT-Author: chrishtr@chromium.org
+commit d7ab99b0c2c29cd08bcddd328bedea2b5d69151f
+third_party/WebKit/LayoutTests/http/tests/svg/as-object/intrinsic-size-change-embedded-object.html
+third_party/WebKit/LayoutTests/http/tests/svg/as-object/resources/objectcontents.svg
+third_party/WebKit/Source/core/DEPS
+third_party/WebKit/Source/core/exported/WebRemoteFrameImpl.cpp
+third_party/WebKit/Source/core/exported/WebRemoteFrameImpl.h
+third_party/WebKit/Source/core/frame/BUILD.gn
+third_party/WebKit/Source/core/frame/EmbeddedContentView.h
+third_party/WebKit/Source/core/frame/FrameOwner.h
+third_party/WebKit/Source/core/frame/FrameView.h
+third_party/WebKit/Source/core/frame/IntrinsicSizingInfo.h
+third_party/WebKit/Source/core/frame/LocalFrame.cpp
+third_party/WebKit/Source/core/frame/LocalFrame.h
+third_party/WebKit/Source/core/frame/LocalFrameView.h
+third_party/WebKit/Source/core/frame/RemoteFrameOwner.h
+third_party/WebKit/Source/core/frame/RemoteFrameView.cpp
+third_party/WebKit/Source/core/frame/RemoteFrameView.h
+third_party/WebKit/Source/core/frame/WebFrameWidgetBase.h
+third_party/WebKit/Source/core/frame/WebFrameWidgetImpl.cpp
+third_party/WebKit/Source/core/frame/WebFrameWidgetImpl.h
+third_party/WebKit/Source/core/html/HTMLFrameOwnerElement.h
+third_party/WebKit/Source/core/html/HTMLPlugInElement.cpp
+third_party/WebKit/Source/core/html/HTMLPlugInElement.h
+third_party/WebKit/Source/core/input/EventHandlingUtil.cpp
+third_party/WebKit/Source/core/input/ScrollManager.cpp
+third_party/WebKit/Source/core/inspector/InspectorLayerTreeAgent.cpp
+third_party/WebKit/Source/core/layout/LayoutEmbeddedContent.cpp
+third_party/WebKit/Source/core/layout/LayoutEmbeddedContent.h
+third_party/WebKit/Source/core/layout/LayoutEmbeddedObject.cpp
+third_party/WebKit/Source/core/layout/LayoutReplaced.cpp
+third_party/WebKit/Source/core/layout/LayoutReplaced.h
+third_party/WebKit/Source/core/layout/LayoutTreeAsText.cpp
+third_party/WebKit/Source/core/layout/svg/LayoutSVGRoot.cpp
+third_party/WebKit/Source/core/layout/svg/LayoutSVGRoot.h
+third_party/WebKit/Source/core/page/scrolling/ScrollingCoordinatorTest.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreePrinter.cpp
+third_party/WebKit/Source/core/paint/PrePaintTreeWalk.cpp
+third_party/WebKit/Source/core/svg/SVGSVGElement.cpp
+third_party/WebKit/public/BUILD.gn
+third_party/WebKit/public/platform/WebIntrinsicSizingInfo.h
+third_party/WebKit/public/web/WebRemoteFrame.h
+third_party/WebKit/public/web/WebWidgetClient.h
+
+Author: contact@yannic-bonenberger.com
+WPT-Author: contact@yannic-bonenberger.com
+commit 2e1f3c3724269c16527397f488530cd68003bf16
+third_party/WebKit/LayoutTests/external/wpt/service-workers/service-worker/fetch-response-taint.https-expected.txt
+third_party/WebKit/LayoutTests/http/tests/serviceworker/chromium.respond-to-same-origin-request-with-cross-origin-response.html
+third_party/WebKit/LayoutTests/http/tests/serviceworker/chromium.respond-to-same-origin-request-with-redirected-cross-origin-response.html
+third_party/WebKit/Source/modules/payments/PaymentHandlerUtils.cpp
+third_party/WebKit/Source/modules/serviceworkers/FetchRespondWithObserver.cpp
+third_party/WebKit/common/service_worker/service_worker_error_type.mojom
+third_party/WebKit/public/platform/web_feature.mojom
+
+Author: malcolmwhite@google.com
+No-WPT-Author: malcolmwhite@google.com
+commit 7bbf3496898be9fb8a345f1df70d4a1e92edb3d7
+third_party/WebKit/LayoutTests/FlagExpectations/site-per-process
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/VirtualTestSuites
+third_party/WebKit/LayoutTests/virtual/sharedarraybuffer/external/wpt/html/infrastructure/safe-passing-of-structured-data/shared-array-buffers/README.txt
+third_party/WebKit/Source/bindings/core/v8/serialization/SerializedScriptValue.cpp
+third_party/WebKit/Source/bindings/core/v8/serialization/SerializedScriptValue.h
+third_party/WebKit/Source/bindings/core/v8/serialization/V8ScriptValueDeserializer.cpp
+third_party/WebKit/Source/bindings/core/v8/serialization/V8ScriptValueDeserializer.h
+third_party/WebKit/Source/bindings/core/v8/serialization/V8ScriptValueSerializer.cpp
+third_party/WebKit/Source/bindings/core/v8/serialization/V8ScriptValueSerializer.h
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 3b21a2f22aff789ca26cb3bc559a2ab43e3e90de
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/virtual/spv175/fast/borders/inline-mask-overlay-image-outset-expected.png
+third_party/WebKit/Source/core/paint/BoxPainter.cpp
+third_party/WebKit/Source/core/paint/InlineFlowBoxPainter.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.h
+
+Author: xlai@chromium.org
+No-WPT-Author: xlai@chromium.org
+commit 6c505104ef0e63f885b3ff712cb3a7701f47e787
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/fast/canvas-api/OffscreenCanvas-convertToBlob-failures.html
+third_party/WebKit/LayoutTests/fast/canvas/OffscreenCanvas-zero-size-readback.html
+third_party/WebKit/Source/core/html/canvas/CanvasAsyncBlobCreator.cpp
+third_party/WebKit/Source/core/offscreencanvas/OffscreenCanvas.cpp
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit 05ff48169805c9e44bd64868baf78934418e6bae
+third_party/WebKit/LayoutTests/editing/selection/stay-in-textarea.html
+third_party/WebKit/LayoutTests/editing/text-iterator/basic-iteration-shadowdom-expected.txt
+third_party/WebKit/LayoutTests/editing/text-iterator/basic-iteration-shadowdom.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/drag-and-drop-in-user-agent-shadow.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/offset-parent-does-not-leak-ua-shadow.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/resources/shadow-dom.js
+third_party/WebKit/LayoutTests/fast/forms/calendar-picker/calendar-picker-should-not-change-datetimelocal-time.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-clearbutton-preventdefault-mousecapture-status.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-multiple-fields-focus-expected.txt
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-multiple-fields-focus.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/datetimelocal-multiple-fields/datetimelocal-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/datetimelocal-multiple-fields/datetimelocal-multiple-fields-mouse-events.html
+third_party/WebKit/LayoutTests/fast/forms/datetimelocal-multiple-fields/datetimelocal-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/fast/forms/datetimelocal-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/month-multiple-fields/month-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/month-multiple-fields/month-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/fast/forms/month-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/resources/common-clearbutton-change-and-input-events.js
+third_party/WebKit/LayoutTests/fast/forms/resources/common-spinbutton-change-and-input-events.js
+third_party/WebKit/LayoutTests/fast/forms/resources/common-spinbutton-click-in-iframe.js
+third_party/WebKit/LayoutTests/fast/forms/resources/common.js
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-focus-style.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-focus.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-keyboard-events.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-narrow-width-scroll.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-stepup-stepdown-from-renderer-hour.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-tabindex.html
+third_party/WebKit/LayoutTests/fast/forms/week-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/week-multiple-fields/week-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/week-multiple-fields/week-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/media/media-controls.js
+third_party/WebKit/LayoutTests/shadow-dom/resources/focus-utils.js
+third_party/WebKit/LayoutTests/shadow-dom/v0/closed-mode-deep-combinator-and-shadow-pseudo-expected.txt
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/testing/Internals.h
+third_party/WebKit/Source/core/testing/Internals.idl
+
+Author: shanmuga.m@samsung.com
+WPT-Author: shanmuga.m@samsung.com
+commit e1c977ab2790547a3bab3aca362e137ab976e885
+third_party/WebKit/LayoutTests/external/wpt/html/dom/reflection-forms-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/element-instance-property-listing-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/element-instance-property-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/html/forms/HTMLSelectElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLTextAreaElement.idl
+
+Author: kochi@chromium.org
+WPT-Author: kochi@chromium.org
+commit 4decd94510c3ddd502c939edd8dc5a04ceb9658f
+third_party/WebKit/LayoutTests/external/wpt/html/browsers/browsing-the-web/read-media/pageload-image-in-popup.html
+third_party/WebKit/LayoutTests/http/tests/security/contentSecurityPolicy/image-document-default-src-none-expected.txt
+third_party/WebKit/Source/core/html/ImageDocument.cpp
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit 0b95262849c3c386d4216f5fc08816970911c256
+third_party/WebKit/LayoutTests/editing/selection/stay-in-textarea.html
+third_party/WebKit/LayoutTests/editing/text-iterator/basic-iteration-shadowdom-expected.txt
+third_party/WebKit/LayoutTests/editing/text-iterator/basic-iteration-shadowdom.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/drag-and-drop-in-user-agent-shadow.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/offset-parent-does-not-leak-ua-shadow.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/resources/shadow-dom.js
+third_party/WebKit/LayoutTests/fast/forms/calendar-picker/calendar-picker-should-not-change-datetimelocal-time.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-clearbutton-preventdefault-mousecapture-status.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-multiple-fields-focus-expected.txt
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-multiple-fields-focus.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/date-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/fast/forms/date-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/datetimelocal-multiple-fields/datetimelocal-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/datetimelocal-multiple-fields/datetimelocal-multiple-fields-mouse-events.html
+third_party/WebKit/LayoutTests/fast/forms/datetimelocal-multiple-fields/datetimelocal-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/fast/forms/datetimelocal-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/month-multiple-fields/month-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/month-multiple-fields/month-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/fast/forms/month-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/resources/common-clearbutton-change-and-input-events.js
+third_party/WebKit/LayoutTests/fast/forms/resources/common-spinbutton-change-and-input-events.js
+third_party/WebKit/LayoutTests/fast/forms/resources/common-spinbutton-click-in-iframe.js
+third_party/WebKit/LayoutTests/fast/forms/resources/common.js
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-focus-style.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-focus.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-keyboard-events.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-narrow-width-scroll.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-stepup-stepdown-from-renderer-hour.html
+third_party/WebKit/LayoutTests/fast/forms/time-multiple-fields/time-multiple-fields-tabindex.html
+third_party/WebKit/LayoutTests/fast/forms/week-multiple-fields/resources/preserve-value-after-history-back-frame.html
+third_party/WebKit/LayoutTests/fast/forms/week-multiple-fields/week-multiple-fields-fallback-format.html
+third_party/WebKit/LayoutTests/fast/forms/week-multiple-fields/week-multiple-fields-readonly-subfield.html
+third_party/WebKit/LayoutTests/media/media-controls.js
+third_party/WebKit/LayoutTests/shadow-dom/resources/focus-utils.js
+third_party/WebKit/LayoutTests/shadow-dom/v0/closed-mode-deep-combinator-and-shadow-pseudo-expected.txt
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/testing/Internals.h
+third_party/WebKit/Source/core/testing/Internals.idl
+
+Author: szager@chromium.org
+No-WPT-Author: szager@chromium.org
+commit 4780a98f38a8cc7db1812e6164f4fd89f873b541
+third_party/WebKit/LayoutTests/FlagExpectations/enable-slimming-paint-v175
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/paint/invalidation/compositing/fixed-pos-inside-composited-intermediate-layer-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/compositing/fixed-scroll-in-empty-root-layer-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/filters/filter-on-html-element-with-fixed-position-child-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/reflection/scroll-absolute-layer-with-reflection-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/reflection/scroll-fixed-layer-with-reflection-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/fixed-img-src-change-after-scroll-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/fixed-scroll-simple-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/overflow-auto-in-overflow-auto-scrolled-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/overflow-hidden-in-overflow-hidden-scrolled-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/overflow-hidden-yet-scrolled-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/overflow-hidden-yet-scrolled-with-custom-scrollbar-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/overflow-scroll-composited-non-stacking-child-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/overflow-scroll-in-overflow-scroll-scrolled-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/scroll-fixed-layer-with-no-visible-content-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/scroll-fixed-layer-with-transformed-parent-layer-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/scroll-in-clipped-layer-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/scroll-in-fixed-layer-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/scroll-stacking-context-backface-visiblity-leaves-traces-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/scroll/scroll-with-transformed-parent-layer-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/table/scroll-inside-table-cell-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/table/scroll-relative-table-inside-table-cell-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/table/table-overflow-auto-in-overflow-auto-scrolled-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/table/table-overflow-scroll-in-overflow-scroll-scrolled-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/compositing/fixed-pos-with-abs-pos-child-scroll-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/window-resize/window-resize-vertical-writing-mode-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/compositing/fixed-pos-with-abs-pos-child-scroll-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/scroll/scroll-stacking-context-backface-visiblity-leaves-traces-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/window-resize/window-resize-vertical-writing-mode-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/compositing/fixed-pos-with-abs-pos-child-scroll-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/scroll/scroll-stacking-context-backface-visiblity-leaves-traces-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/window-resize/window-resize-vertical-writing-mode-expected.txt
+third_party/WebKit/LayoutTests/platform/win7/paint/invalidation/window-resize/window-resize-vertical-writing-mode-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/compositing/fixed-pos-inside-composited-intermediate-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/compositing/fixed-pos-with-abs-pos-child-scroll-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/compositing/fixed-scroll-in-empty-root-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/filters/filter-on-html-element-with-fixed-position-child-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/reflection/scroll-absolute-layer-with-reflection-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/reflection/scroll-fixed-layer-with-reflection-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/fixed-img-src-change-after-scroll-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/fixed-scroll-simple-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/iframe-scroll-repaint-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/overflow-auto-in-overflow-auto-scrolled-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/overflow-hidden-in-overflow-hidden-scrolled-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/overflow-hidden-yet-scrolled-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/overflow-hidden-yet-scrolled-with-custom-scrollbar-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/overflow-scroll-composited-non-stacking-child-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/overflow-scroll-in-overflow-scroll-scrolled-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/repaint-during-scroll-with-zoom-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/scroll-fixed-layer-with-no-visible-content-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/scroll-fixed-layer-with-transformed-parent-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/scroll-in-clipped-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/scroll-in-fixed-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/scroll-in-transformed-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/scroll-stacking-context-backface-visiblity-leaves-traces-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/scroll/scroll-with-transformed-parent-layer-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/table/scroll-inside-table-cell-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/table/scroll-relative-table-inside-table-cell-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/table/table-overflow-auto-in-overflow-auto-scrolled-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/table/table-overflow-scroll-in-overflow-scroll-scrolled-expected.txt
+third_party/WebKit/Source/core/frame/LocalFrameView.cpp
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 05f80f7a4125ae48603ae5fbda1fe1b64a059673
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/virtual/spv175/fast/borders/inline-mask-overlay-image-outset-expected.png
+third_party/WebKit/Source/core/paint/BoxPainter.cpp
+third_party/WebKit/Source/core/paint/InlineFlowBoxPainter.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.h
+
+Author: lushnikov@chromium.org
+No-WPT-Author: lushnikov@chromium.org
+commit 2e6a86dc0fe38ca58339cd3570df3292d7497a8d
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/nodejs-set-breakpoint.js
+third_party/WebKit/Source/devtools/front_end/sdk/DebuggerModel.js
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit c7f9604b49d394f189fde0bf9689cf5c28815a0f
+third_party/WebKit/LayoutTests/http/tests/security/contentSecurityPolicy/image-document-default-src-none-expected.txt
+third_party/WebKit/Source/core/html/ImageDocument.cpp
+
+Author: pfeldman@chromium.org
+No-WPT-Author: pfeldman@chromium.org
+commit 862205e268c77eefa884c9677b6b74a8f58cb06e
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/dom-search-crash.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/elements-panel-search.js
+third_party/WebKit/Source/devtools/front_end/elements/ElementsPanel.js
+third_party/WebKit/Source/devtools/front_end/elements/ElementsTreeOutline.js
+third_party/WebKit/Source/devtools/front_end/elements_test_runner/ElementsTestRunner.js
+third_party/WebKit/Source/devtools/front_end/sdk/DOMDebuggerModel.js
+third_party/WebKit/Source/devtools/front_end/sdk/DOMModel.js
+third_party/WebKit/Source/devtools/front_end/sdk/OverlayModel.js
+
+Author: rego@igalia.com
+WPT-Author: rego@igalia.com
+commit 0eb06307382a59b1d66afa66703cdc95a2b7ca2e
+third_party/WebKit/LayoutTests/external/wpt/css/css-multicol/multicol-gap-percentage-001.html
+third_party/WebKit/Source/build/scripts/core/css/properties/make_css_property_subclasses.py
+third_party/WebKit/Source/build/scripts/make_computed_style_base.py
+third_party/WebKit/Source/build/scripts/make_style_builder.py
+third_party/WebKit/Source/core/animation/LengthPropertyFunctions.cpp
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/ComputedStyleDiffFunctions.json5
+third_party/WebKit/Source/core/css/ComputedStyleExtraFields.json5
+third_party/WebKit/Source/core/css/properties/longhands/ColumnGapCustom.cpp
+third_party/WebKit/Source/core/css/resolver/StyleBuilderConverter.cpp
+third_party/WebKit/Source/core/css/resolver/StyleBuilderConverter.h
+third_party/WebKit/Source/core/dom/Document.cpp
+third_party/WebKit/Source/core/layout/LayoutMultiColumnFlowThread.cpp
+third_party/WebKit/Source/core/layout/LayoutMultiColumnFlowThread.h
+third_party/WebKit/Source/core/layout/LayoutMultiColumnSet.cpp
+third_party/WebKit/Source/core/layout/ng/ng_column_layout_algorithm.cc
+third_party/WebKit/Source/core/layout/ng/ng_length_utils.cc
+third_party/WebKit/Source/core/layout/ng/ng_length_utils.h
+third_party/WebKit/Source/core/style/BUILD.gn
+third_party/WebKit/Source/core/style/ComputedStyle.cpp
+third_party/WebKit/Source/core/style/ComputedStyle.h
+third_party/WebKit/Source/core/style/GapLength.h
+
+Author: japhet@chromium.org
+No-WPT-Author: japhet@chromium.org
+commit 4dbf9074bf278f34ec10239ee2a0102b5760e855
+third_party/WebKit/LayoutTests/http/tests/navigation/image-css-load-in-subframe-unload-handler-expected.txt
+third_party/WebKit/LayoutTests/http/tests/navigation/image-css-load-in-subframe-unload-handler.html
+third_party/WebKit/LayoutTests/http/tests/navigation/resources/image-css-load-in-subframe-unload-handler-helper.html
+third_party/WebKit/Source/core/css/CSSImageSetValue.cpp
+third_party/WebKit/Source/core/css/CSSImageValue.cpp
+third_party/WebKit/Source/core/svg/SVGFEImageElement.cpp
+
+Author: rlanday@chromium.org
+No-WPT-Author: rlanday@chromium.org
+commit d972d2026da8bdd08ff27bf16a7223987ba53f2f
+third_party/WebKit/LayoutTests/fast/forms/autocapitalize.html
+third_party/WebKit/Source/core/editing/ime/InputMethodController.cpp
+third_party/WebKit/Source/core/html/HTMLElement.cpp
+
+Author: kozyatinskiy@chromium.org
+No-WPT-Author: kozyatinskiy@chromium.org
+commit eb285d38cee06746e129bd0a661093ace2ed921a
+third_party/WebKit/LayoutTests/inspector-protocol/debugger/domdebugger-webgl-breakpoint-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/debugger/domdebugger-webgl-breakpoint.js
+third_party/WebKit/Source/core/inspector/InspectorDOMDebuggerAgent.cpp
+
+Author: hugoh@vewd.com
+No-WPT-Author: hugoh@vewd.com
+commit 511906d0604cdd92df8aa077b82c51aa1a298525
+third_party/WebKit/LayoutTests/fast/spatial-navigation/snav-ignore-offscreen-focused-imagemap.html
+third_party/WebKit/Source/core/page/FocusController.cpp
+third_party/WebKit/Source/core/page/SpatialNavigation.cpp
+third_party/WebKit/Source/core/page/SpatialNavigation.h
+
+Author: bokan@chromium.org
+No-WPT-Author: bokan@chromium.org
+commit 2989927f799a4e51f8b9bd08202fbd8e832b1190
+third_party/WebKit/LayoutTests/fast/scrolling/empty-anchor.html
+third_party/WebKit/Source/core/dom/ContainerNode.cpp
+third_party/WebKit/Source/core/editing/finder/TextFinder.cpp
+third_party/WebKit/Source/core/editing/finder/TextFinder.h
+third_party/WebKit/Source/core/editing/finder/TextFinderTest.cpp
+third_party/WebKit/Source/core/exported/WebViewImpl.cpp
+third_party/WebKit/Source/core/frame/LocalFrameView.h
+third_party/WebKit/Source/core/frame/WebLocalFrameImpl.cpp
+third_party/WebKit/Source/core/frame/WebLocalFrameImpl.h
+third_party/WebKit/public/web/WebLocalFrame.h
+
+Author: schenney@chromium.org
+No-WPT-Author: schenney@chromium.org
+commit 09de059a05b979f96e4c4b436fe6e51e52f0834b
+third_party/WebKit/LayoutTests/fast/canvas-api/canvas-createimagebitmap-resize-to-zero.html
+third_party/WebKit/Source/core/imagebitmap/ImageBitmap.cpp
+
+Author: rhalavati@chromium.org
+No-WPT-Author: rhalavati@chromium.org
+commit e7a9977f4d7072cd809992208d875a8ecd6ef5e8
+third_party/WebKit/LayoutTests/fast/layers/scrollable-area-removed-on-scroll-crash-expected.txt
+third_party/WebKit/LayoutTests/fast/layers/scrollable-area-removed-on-scroll-crash.html
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.h
+third_party/WebKit/Source/platform/scroll/ScrollableArea.cpp
+third_party/WebKit/Source/platform/scroll/ScrollableArea.h
+
+Author: bhagirathi.s@samsung.com
+WPT-Author: bhagirathi.s@samsung.com
+commit 2520f3a39ec7bd39b97b0e3e211fadc3c22d598d
+third_party/WebKit/LayoutTests/external/wpt/webmessaging/MessageEvent.html
+third_party/WebKit/Source/bindings/core/v8/custom/V8MessageEventCustom.cpp
+third_party/WebKit/Source/core/events/MessageEvent.idl
+
+Author: trchen@chromium.org
+No-WPT-Author: trchen@chromium.org
+commit f7e9b915ec017f24bf25d3fed8c0eef4e85ecc8f
+third_party/WebKit/LayoutTests/fast/sub-pixel/save-layer-bounds-should-snap-expected.html
+third_party/WebKit/LayoutTests/fast/sub-pixel/save-layer-bounds-should-snap.html
+third_party/WebKit/LayoutTests/platform/linux/fast/reflections/opacity-reflection-transform-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/reflections/opacity-reflection-transform-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/reflections/opacity-reflection-transform-expected.png
+third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
+
+Author: nikhil.sahni@samsung.com
+No-WPT-Author: nikhil.sahni@samsung.com
+commit 6b736772949f7be5a12b46a5f2ff6c06b8ea8659
+third_party/WebKit/LayoutTests/http/tests/worklet/webexposed/global-interface-listing-paint-worklet-expected.txt
+third_party/WebKit/Source/core/css/cssom/StylePropertyMap.idl
+
+Author: tasak@google.com
+WPT-Author: tasak@google.com
+commit 708d660d1ceac6bb5aeeb70e318f03c92bac8693
+third_party/WebKit/LayoutTests/external/wpt/shadow-dom/DocumentOrShadowRoot-prototype-elementFromPoint.html
+third_party/WebKit/LayoutTests/fast/dom/elementsFromPoint/elementsFromPoint-shadowroot-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/elementsFromPoint/elementsFromPoint-shadowroot.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/elementfrompoint-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/shadow/elementfrompoint.html
+third_party/WebKit/Source/core/dom/TreeScope.cpp
+third_party/WebKit/Source/core/dom/TreeScope.h
+third_party/WebKit/Source/devtools/front_end/devtools_compatibility.js
+third_party/WebKit/Source/devtools/front_end/dom_extension/DOMExtension.js
+
+Author: flackr@chromium.org
+No-WPT-Author: flackr@chromium.org
+commit 3a5a63076cf74c07b7cd0b167ecb6d92fe67e67c
+third_party/WebKit/LayoutTests/fast/layers/scrollable-area-removed-on-scroll-crash-expected.txt
+third_party/WebKit/LayoutTests/fast/layers/scrollable-area-removed-on-scroll-crash.html
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.h
+third_party/WebKit/Source/platform/scroll/ScrollableArea.cpp
+third_party/WebKit/Source/platform/scroll/ScrollableArea.h
+
+Author: luoe@chromium.org
+No-WPT-Author: luoe@chromium.org
+commit cc06068f6874167d45fa01c59330c98b4216208c
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-control-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-control.js
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-indices-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-indices.js
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-selection-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-selection.js
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-stick-to-bottom-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-stick-to-bottom.js
+third_party/WebKit/Source/devtools/front_end/console_test_runner/ConsoleTestRunner.js
+
+Author: ekaramad@chromium.org
+No-WPT-Author: ekaramad@chromium.org
+commit b73779e3acc3f6d94976e9fef9954e03987e623b
+third_party/WebKit/LayoutTests/virtual/scroll_customization/fast/scroll-behavior/scroll-customization/scroll-customization-property.html
+third_party/WebKit/Source/core/page/scrolling/ScrollState.h
+
+Author: bhagirathi.s@samsung.com
+WPT-Author: bhagirathi.s@samsung.com
+commit c8b61881673f30d7428164e0f240b4dedadca64f
+third_party/WebKit/LayoutTests/external/wpt/html/infrastructure/common-dom-interfaces/collections/htmlallcollection-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/collection-null-like-arguments-expected.txt
+third_party/WebKit/Source/bindings/core/v8/custom/V8HTMLAllCollectionCustom.cpp
+third_party/WebKit/Source/core/html/HTMLAllCollection.idl
+
+Author: rakina@chromium.org
+WPT-Author: rakina@chromium.org
+commit dd944882a245a5117b50cb417138d92f32d931d6
+third_party/WebKit/LayoutTests/external/wpt/shadow-dom/DocumentOrShadowRoot-prototype-elementFromPoint.html
+third_party/WebKit/LayoutTests/fast/dom/elementsFromPoint/elementsFromPoint-shadowroot-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/elementsFromPoint/elementsFromPoint-shadowroot.html
+third_party/WebKit/LayoutTests/fast/dom/shadow/elementfrompoint-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/shadow/elementfrompoint.html
+third_party/WebKit/Source/core/dom/TreeScope.cpp
+third_party/WebKit/Source/core/dom/TreeScope.h
+third_party/WebKit/Source/devtools/front_end/devtools_compatibility.js
+third_party/WebKit/Source/devtools/front_end/dom_extension/DOMExtension.js
+
+Author: luoe@chromium.org
+No-WPT-Author: luoe@chromium.org
+commit cc7ddcb128b5ed469bf44edf34790804066871ce
+third_party/WebKit/LayoutTests/http/tests/devtools/device-mode/device-mode-switching-devices-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/device-mode/device-mode-switching-devices.js
+third_party/WebKit/Source/devtools/front_end/emulation/DeviceModeToolbar.js
+
+Author: trchen@chromium.org
+No-WPT-Author: trchen@chromium.org
+commit 6689b3106a060b5464397144503d19da2ddad78d
+third_party/WebKit/LayoutTests/compositing/overflow/scrolling-content-layer-should-not-be-clipped-expected.html
+third_party/WebKit/LayoutTests/compositing/overflow/scrolling-content-layer-should-not-be-clipped.html
+third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
+
+Author: eirage@chromium.org
+No-WPT-Author: eirage@chromium.org
+commit 89324f19f9d7ac0e36ad56791a3b9bdb9d4acf2a
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/fast/events/hit-test-counts-expected.txt
+third_party/WebKit/LayoutTests/fast/events/hit-test-counts.html
+third_party/WebKit/LayoutTests/fast/events/pointerevents/pointerevent_touch-adjustment_click_target.html
+third_party/WebKit/LayoutTests/touchadjustment/touch-links-active.html
+third_party/WebKit/LayoutTests/touchadjustment/touch-links-longpress.html
+third_party/WebKit/LayoutTests/touchadjustment/touch-links-two-finger-tap.html
+third_party/WebKit/Source/core/events/PointerEventFactory.cpp
+third_party/WebKit/Source/core/events/PointerEventFactory.h
+third_party/WebKit/Source/core/input/EventHandler.cpp
+third_party/WebKit/Source/core/input/EventHandler.h
+third_party/WebKit/Source/core/input/PointerEventManager.cpp
+third_party/WebKit/Source/core/input/PointerEventManager.h
+third_party/WebKit/Source/core/page/TouchAdjustment.h
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+third_party/WebKit/public/platform/WebMouseEvent.h
+third_party/WebKit/public/platform/WebPointerProperties.h
+third_party/WebKit/public/platform/WebTouchPoint.h
+
+Author: jfernandez@igalia.com
+WPT-Author: jfernandez@igalia.com
+commit 841ce846af10f5855f09fa7db77dd53e680080bf
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-align-content-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/parse-justify-content-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/place-content-shorthand-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/place-content-shorthand-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/place-content-shorthand-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/content-distribution/place-content-shorthand-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-align-items-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/parse-justify-items-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/place-items-shorthand-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/place-items-shorthand-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/place-items-shorthand-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/default-alignment/place-items-shorthand-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/resources/alignment-parsing-utils.js
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-align-self-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/parse-justify-self-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/place-self-shorthand-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/place-self-shorthand-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/place-self-shorthand-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/self-alignment/place-self-shorthand-006.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-align-content.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-align-items.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-align-self-expected.txt
+third_party/WebKit/LayoutTests/fast/alignment/parse-align-self.html
+third_party/WebKit/LayoutTests/fast/alignment/parse-alignment-of-root-elements.html
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-align-justify-margin-border-padding-expected.txt
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-align-justify-margin-border-padding-vertical-lr-expected.txt
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-align-justify-margin-border-padding-vertical-lr.html
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-align-justify-margin-border-padding-vertical-rl-expected.txt
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-align-justify-margin-border-padding-vertical-rl.html
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-align-justify-margin-border-padding.html
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-item-auto-sized-align-justify-margin-border-padding-expected.txt
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-item-auto-sized-align-justify-margin-border-padding.html
+third_party/WebKit/LayoutTests/fast/css-grid-layout/grid-item-change-alignment-from-stretch.html
+third_party/WebKit/LayoutTests/fast/css-grid-layout/resources/grid-alignment.css
+third_party/WebKit/Source/core/css/properties/CSSParsingUtils.cpp
+third_party/WebKit/Source/core/css/properties/CSSParsingUtils.h
+third_party/WebKit/Source/core/css/properties/longhands/AlignContentCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/AlignItemsCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/AlignSelfCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/JustifyContentCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/JustifyItemsCustom.cpp
+third_party/WebKit/Source/core/css/properties/longhands/JustifySelfCustom.cpp
+third_party/WebKit/Source/core/layout/LayoutGrid.cpp
+
+Author: japhet@chromium.org
+No-WPT-Author: japhet@chromium.org
+commit 266b4fe6f8a70199444b98207a32cffb8e8fd39a
+third_party/WebKit/LayoutTests/fast/workers/chromium/worker-crash-with-invalid-location-expected.txt
+third_party/WebKit/LayoutTests/http/tests/navigation/ping-cross-origin-from-https-expected.txt
+third_party/WebKit/LayoutTests/mhtml/resource_not_found_in_archive-expected.html
+third_party/WebKit/LayoutTests/mhtml/resource_not_found_in_archive.mht
+third_party/WebKit/Source/core/css/CSSFontFaceSrcValue.cpp
+third_party/WebKit/Source/core/css/CSSFontFaceSrcValue.h
+third_party/WebKit/Source/core/css/CSSImageSetValue.cpp
+third_party/WebKit/Source/core/css/CSSImageValue.cpp
+third_party/WebKit/Source/core/css/FontFace.cpp
+third_party/WebKit/Source/core/css/StyleRuleImport.cpp
+third_party/WebKit/Source/core/dom/ProcessingInstruction.cpp
+third_party/WebKit/Source/core/frame/FrameSerializer.cpp
+third_party/WebKit/Source/core/frame/FrameSerializer.h
+third_party/WebKit/Source/core/html/imports/HTMLImportsController.cpp
+third_party/WebKit/Source/core/html/parser/CSSPreloadScannerTest.cpp
+third_party/WebKit/Source/core/inspector/InspectorResourceContentLoader.cpp
+third_party/WebKit/Source/core/loader/DocumentLoader.cpp
+third_party/WebKit/Source/core/loader/DocumentThreadableLoader.cpp
+third_party/WebKit/Source/core/loader/ImageLoader.cpp
+third_party/WebKit/Source/core/loader/PingLoader.cpp
+third_party/WebKit/Source/core/loader/modulescript/DocumentModuleScriptFetcher.cpp
+third_party/WebKit/Source/core/loader/resource/FontResourceTest.cpp
+third_party/WebKit/Source/core/loader/resource/XSLStyleSheetResource.cpp
+third_party/WebKit/Source/core/script/ClassicPendingScript.cpp
+third_party/WebKit/Source/core/script/ScriptLoader.cpp
+third_party/WebKit/Source/core/script/ScriptLoader.h
+third_party/WebKit/Source/core/svg/SVGFEImageElement.cpp
+third_party/WebKit/Source/core/xml/XSLStyleSheetLibxslt.cpp
+third_party/WebKit/Source/core/xml/XSLTProcessorLibxslt.cpp
+third_party/WebKit/Source/core/xml/parser/XMLDocumentParser.cpp
+third_party/WebKit/Source/platform/loader/fetch/MemoryCache.cpp
+third_party/WebKit/Source/platform/loader/fetch/MemoryCacheCorrectnessTest.cpp
+third_party/WebKit/Source/platform/loader/fetch/ResourceFetcher.cpp
+third_party/WebKit/Source/platform/loader/fetch/ResourceFetcher.h
+third_party/WebKit/Source/platform/loader/fetch/ResourceFetcherTest.cpp
+
+Author: tbansal@chromium.org
+No-WPT-Author: tbansal@chromium.org
+commit 65a2abd48ff21a19d3394c1200b9a632a642cdb7
+third_party/WebKit/LayoutTests/SlowTests
+third_party/WebKit/LayoutTests/http/tests/doc-write-intervention/doc-write-async-third-party-script.html
+third_party/WebKit/LayoutTests/http/tests/doc-write-intervention/doc-write-sync-third-party-script-block-all-conn-types.html
+third_party/WebKit/LayoutTests/http/tests/doc-write-intervention/doc-write-sync-third-party-script-block-effectively-2g-expected.txt
+third_party/WebKit/LayoutTests/http/tests/doc-write-intervention/doc-write-sync-third-party-script-block-effectively-2g.html
+third_party/WebKit/LayoutTests/http/tests/doc-write-intervention/doc-write-sync-third-party-script-block.html
+third_party/WebKit/LayoutTests/http/tests/doc-write-intervention/doc-write-sync-third-party-script-conn-type.html
+third_party/WebKit/LayoutTests/http/tests/doc-write-intervention/doc-write-sync-third-party-script-reload.html
+third_party/WebKit/LayoutTests/http/tests/media/preload-conditions.html
+third_party/WebKit/LayoutTests/http/tests/webfont/font-display-intervention.html
+third_party/WebKit/LayoutTests/media/autoplay-muted-conditions.html
+third_party/WebKit/LayoutTests/netinfo/basic-operation.html
+third_party/WebKit/LayoutTests/netinfo/connection-types.html
+third_party/WebKit/LayoutTests/netinfo/estimate-basic-operation-expected.txt
+third_party/WebKit/LayoutTests/netinfo/estimate-basic-operation.html
+third_party/WebKit/LayoutTests/netinfo/estimate-multiple-frames.html
+third_party/WebKit/LayoutTests/netinfo/estimate-web-worker.html
+third_party/WebKit/LayoutTests/netinfo/multiple-frames.html
+third_party/WebKit/LayoutTests/netinfo/network-quality.html
+third_party/WebKit/LayoutTests/netinfo/resources/netinfo_common.js
+third_party/WebKit/LayoutTests/netinfo/type-change-no-listener-expected.txt
+third_party/WebKit/LayoutTests/netinfo/type-change-no-listener.html
+third_party/WebKit/LayoutTests/netinfo/unregister-during-event.html
+third_party/WebKit/LayoutTests/netinfo/web-worker.html
+third_party/WebKit/Source/core/html/media/HTMLMediaElementTest.cpp
+third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
+third_party/WebKit/Source/core/loader/FrameFetchContextTest.cpp
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/testing/Internals.h
+third_party/WebKit/Source/core/testing/Internals.idl
+third_party/WebKit/Source/devtools/front_end/Tests.js
+third_party/WebKit/Source/platform/network/DEPS
+third_party/WebKit/Source/platform/network/NetworkStateNotifier.cpp
+third_party/WebKit/Source/platform/network/NetworkStateNotifier.h
+third_party/WebKit/Source/platform/network/NetworkStateNotifierTest.cpp
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 301e497be6b24a5175823913f7ac38d572ce064f
+third_party/WebKit/LayoutTests/FlagExpectations/enable-slimming-paint-v175
+third_party/WebKit/LayoutTests/platform/linux/plugins/webview-plugin-border-radius-expected.png
+third_party/WebKit/LayoutTests/platform/mac/plugins/webview-plugin-border-radius-expected.png
+third_party/WebKit/LayoutTests/platform/mac/plugins/webview-plugin-border-radius-expected.txt
+third_party/WebKit/LayoutTests/platform/win/plugins/webview-plugin-border-radius-expected.png
+third_party/WebKit/LayoutTests/plugins/webview-plugin-border-radius-expected.txt
+third_party/WebKit/LayoutTests/plugins/webview-plugin-border-radius.html
+third_party/WebKit/Source/core/paint/EmbeddedContentPainter.cpp
+third_party/WebKit/Source/core/paint/PaintInvalidator.cpp
+
+Author: japhet@chromium.org
+No-WPT-Author: japhet@chromium.org
+commit 382324a81729fd999dcdda3a2413a418abdbdb2f
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/resources/iframe-that-performs-top-navigation-without-user-gesture.html
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/xss-DENIED-top-navigation-user-gesture-in-parent-expected.txt
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/xss-DENIED-top-navigation-without-user-gesture-expected.txt
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: robdodson@chromium.org
+No-WPT-Author: robdodson@chromium.org
+commit 9f0388a6f32a6ed295549043735181c8f021fa0c
+third_party/WebKit/LayoutTests/accessibility/appearance-affects-role.html
+third_party/WebKit/Source/modules/accessibility/AXLayoutObject.cpp
+third_party/WebKit/Source/modules/accessibility/AXNodeObject.cpp
+
+Author: japhet@chromium.org
+No-WPT-Author: japhet@chromium.org
+commit 3eef8b926bd46f329e372fb674dd6f2d5ad0844d
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/resources/iframe-that-performs-same-origin-top-navigation-without-user-gesture.html
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/xss-ALLOWED-same-origin-top-navigation-without-user-gesture-expected.txt
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/xss-ALLOWED-same-origin-top-navigation-without-user-gesture.html
+third_party/WebKit/Source/core/frame/LocalFrame.cpp
+
+Author: lushnikov@chromium.org
+No-WPT-Author: lushnikov@chromium.org
+commit 26814c4b59a440949b0a0a588f3c2cfd0d391bc3
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/jssourcemap-bindings-overlapping-sources-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/jssourcemap-bindings-overlapping-sources.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/jssourcemap-navigator-overlapping-sources-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/jssourcemap-navigator-overlapping-sources.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/common.ts
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/frame1.html
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/frame2.html
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/script1.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/script1.js.map
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/script2.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/script2.js.map
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/unique1.ts
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/jssourcemaps-with-overlapping-sources/unique2.ts
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/sourcemap-hot-reload-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/sourcemap-hot-reload.js
+third_party/WebKit/Source/devtools/front_end/bindings/CompilerScriptMapping.js
+third_party/WebKit/Source/devtools/front_end/bindings/NetworkProject.js
+
+Author: eostroukhov@chromium.org
+No-WPT-Author: eostroukhov@chromium.org
+commit 5a76526deb87e96bfbedbad2b27d11eadf5c9da4
+third_party/WebKit/LayoutTests/http/tests/devtools/curl-command.js
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-cookies-pane.js
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-fetch-post-payload.js
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-filter-updated-requests.js
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-update-calculator-for-all-requests.js
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xhr-post-payload.js
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xhr-redirect-body.js
+third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xhr-replay.js
+third_party/WebKit/LayoutTests/http/tests/devtools/resource-har-conversion.js
+third_party/WebKit/LayoutTests/http/tests/devtools/resource-har-headers.js
+third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
+third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters.js
+third_party/WebKit/Source/devtools/front_end/extensions/ExtensionServer.js
+third_party/WebKit/Source/devtools/front_end/har_importer/HARImporter.js
+third_party/WebKit/Source/devtools/front_end/network/HARWriter.js
+third_party/WebKit/Source/devtools/front_end/network/NetworkLogView.js
+third_party/WebKit/Source/devtools/front_end/network/RequestHeadersView.js
+third_party/WebKit/Source/devtools/front_end/network_log/HAREntry.js
+third_party/WebKit/Source/devtools/front_end/sdk/NetworkManager.js
+third_party/WebKit/Source/devtools/front_end/sdk/NetworkRequest.js
+
+Author: mikhail.pozdnyakov@intel.com
+WPT-Author: mikhail.pozdnyakov@intel.com
+commit 8ca57e0668cdb054b7e30afd18f9246729764c47
+third_party/WebKit/LayoutTests/external/wpt/generic-sensor/generic-sensor-tests.js
+third_party/WebKit/LayoutTests/sensor/resources/generic-sensor-tests.js
+third_party/WebKit/LayoutTests/sensor/resources/sensor-helpers.js
+third_party/WebKit/Source/modules/sensor/SensorProxy.cpp
+third_party/WebKit/Source/modules/sensor/SensorProxy.h
+
+Author: alph@chromium.org
+No-WPT-Author: alph@chromium.org
+commit 3d5de298cfa4064dd48cbc2c7d4172f960c69ecb
+third_party/WebKit/LayoutTests/ASANExpectations
+third_party/WebKit/LayoutTests/MSANExpectations
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/inspector-protocol/memory/sampling-native-profile-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/memory/sampling-native-profile.js
+third_party/WebKit/Source/core/inspector/InspectorMemoryAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorMemoryAgent.h
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+third_party/WebKit/Source/core/inspector/inspector_protocol_config.json
+third_party/WebKit/Source/platform/BUILD.gn
+third_party/WebKit/Source/platform/memory_profiler/DEPS
+third_party/WebKit/Source/platform/memory_profiler/OWNERS
+third_party/WebKit/Source/platform/memory_profiler/SamplingNativeHeapProfiler.cpp
+third_party/WebKit/Source/platform/memory_profiler/SamplingNativeHeapProfiler.h
+
+Author: dproy@chromium.org
+No-WPT-Author: dproy@chromium.org
+commit 5ba3218966ea7d7063bbc00577778952b53c463a
+third_party/WebKit/LayoutTests/inspector-protocol/input/emulateTouchFromMouseEvent-defaultTimestamp-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/input/emulateTouchFromMouseEvent-defaultTimestamp.js
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+third_party/WebKit/Source/devtools/front_end/screencast/InputModel.js
+
+Author: sunyunjia@chromium.org
+No-WPT-Author: sunyunjia@chromium.org
+commit 2f5c9207b8832b4d8fbd1bbb51eae50ebc8090ac
+third_party/WebKit/LayoutTests/fast/events/drag-on-removed-slider-does-not-crash.html
+third_party/WebKit/Source/core/html/forms/SliderThumbElement.cpp
+
+Author: steimel@chromium.org
+No-WPT-Author: steimel@chromium.org
+commit aa16c8210abdb783cbb1a10727534d633c41012e
+third_party/WebKit/LayoutTests/media/controls/toggle-class-with-preload-metadata.html
+third_party/WebKit/LayoutTests/media/controls/toggle-class-with-preload-none.html
+third_party/WebKit/LayoutTests/media/controls/toggle-class-without-poster.html
+third_party/WebKit/Source/modules/media_controls/MediaControlsImpl.cpp
+
+Author: fs@opera.com
+No-WPT-Author: fs@opera.com
+commit c36508a349b4bff18c73f2e2e2b46805ad091598
+third_party/WebKit/LayoutTests/paint/invalidation/svg/js-late-marker-and-object-creation-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/svg/js-late-marker-creation-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/svg/js-late-mask-and-object-creation-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/svg/js-late-mask-creation-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/svg/js-late-clipPath-and-object-creation-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/svg/js-late-clipPath-creation-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/svg/js-late-gradient-creation-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/svg/js-late-pattern-creation-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/svg/js-late-clipPath-and-object-creation-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/svg/js-late-clipPath-creation-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/svg/js-late-gradient-creation-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/svg/js-late-pattern-creation-expected.txt
+third_party/WebKit/LayoutTests/svg/custom/duplicate-ids-remove-first-expected.html
+third_party/WebKit/LayoutTests/svg/custom/duplicate-ids-remove-first.html
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/svg/js-late-gradient-creation-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/svg/js-late-marker-and-object-creation-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/svg/js-late-marker-creation-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/svg/js-late-mask-and-object-creation-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/svg/js-late-mask-creation-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/svg/js-late-pattern-creation-expected.txt
+third_party/WebKit/Source/core/dom/Element.cpp
+third_party/WebKit/Source/core/dom/IdTargetObserver.h
+third_party/WebKit/Source/core/layout/svg/LayoutSVGResourceContainer.cpp
+third_party/WebKit/Source/core/layout/svg/LayoutSVGResourceContainer.h
+third_party/WebKit/Source/core/layout/svg/SVGResources.cpp
+third_party/WebKit/Source/core/layout/svg/SVGResources.h
+third_party/WebKit/Source/core/layout/svg/SVGResourcesCache.cpp
+third_party/WebKit/Source/core/layout/svg/SVGResourcesCache.h
+third_party/WebKit/Source/core/svg/SVGClipPathElement.h
+third_party/WebKit/Source/core/svg/SVGElement.cpp
+third_party/WebKit/Source/core/svg/SVGElement.h
+third_party/WebKit/Source/core/svg/SVGFilterElement.h
+third_party/WebKit/Source/core/svg/SVGGradientElement.h
+third_party/WebKit/Source/core/svg/SVGMarkerElement.h
+third_party/WebKit/Source/core/svg/SVGMaskElement.h
+third_party/WebKit/Source/core/svg/SVGPatternElement.h
+third_party/WebKit/Source/core/svg/SVGTreeScopeResources.cpp
+third_party/WebKit/Source/core/svg/SVGTreeScopeResources.h
+
+Author: bokan@chromium.org
+No-WPT-Author: bokan@chromium.org
+commit e9aa1ff150cc50a295227f280d50a7b023938cbd
+third_party/WebKit/LayoutTests/compositing/overflow/scrollbars-with-clipped-owner.html
+third_party/WebKit/LayoutTests/paint/invalidation/resize-iframe-text.html
+third_party/WebKit/Source/core/layout/LayoutBlock.cpp
+third_party/WebKit/Source/core/layout/LayoutBox.cpp
+third_party/WebKit/Source/core/layout/LayoutIFrame.cpp
+third_party/WebKit/Source/core/layout/LayoutIFrame.h
+third_party/WebKit/Source/core/page/scrolling/RootScrollerController.cpp
+third_party/WebKit/Source/core/page/scrolling/RootScrollerController.h
+third_party/WebKit/Source/core/page/scrolling/RootScrollerTest.cpp
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: ekaramad@chromium.org
+No-WPT-Author: ekaramad@chromium.org
+commit 04c9db95de540d4ead1d8297e7b4023a310b7a34
+third_party/WebKit/LayoutTests/LeakExpectations
+third_party/WebKit/LayoutTests/SlowTests
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/fast/scroll-behavior/scroll-customization/scrollstate-distribute-to-scroll-chain-descendant.html
+third_party/WebKit/LayoutTests/fast/scroll-behavior/scroll-customization/touch-scroll-customization.html
+third_party/WebKit/LayoutTests/virtual/scroll_customization/fast/scroll-behavior/scroll-customization/scroll-customization-property.html
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/CSSComputedStyleDeclaration.cpp
+third_party/WebKit/Source/core/css/CSSPrimitiveValueMappings.h
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/CSSValueKeywords.json5
+third_party/WebKit/Source/core/css/parser/CSSPropertyParserTest.cpp
+third_party/WebKit/Source/core/css/properties/ComputedStyleUtils.cpp
+third_party/WebKit/Source/core/css/properties/ComputedStyleUtils.h
+third_party/WebKit/Source/core/css/properties/longhands/ScrollCustomizationCustom.cpp
+third_party/WebKit/Source/core/dom/Element.cpp
+third_party/WebKit/Source/core/dom/Element.h
+third_party/WebKit/Source/core/frame/UseCounter.cpp
+third_party/WebKit/Source/core/input/ScrollManager.cpp
+third_party/WebKit/Source/core/input/ScrollManager.h
+third_party/WebKit/Source/core/page/scrolling/RootScrollerUtil.cpp
+third_party/WebKit/Source/core/page/scrolling/RootScrollerUtil.h
+third_party/WebKit/Source/core/page/scrolling/ScrollCustomizationCallbacks.cpp
+third_party/WebKit/Source/core/page/scrolling/ScrollCustomizationCallbacks.h
+third_party/WebKit/Source/core/page/scrolling/ScrollState.h
+third_party/WebKit/Source/devtools/front_end/sdk/CSSMetadata.js
+third_party/WebKit/Source/platform/BUILD.gn
+third_party/WebKit/Source/platform/scroll/ScrollCustomization.cpp
+third_party/WebKit/Source/platform/scroll/ScrollCustomization.h
+
+Author: mythria@chromium.org
+No-WPT-Author: mythria@chromium.org
+commit 76067d1c63e1e6b2ba456059c78532a748f8f41a
+third_party/WebKit/LayoutTests/http/tests/devtools/service-workers/service-worker-v8-cache-expected.txt
+third_party/WebKit/Source/bindings/core/v8/ScriptController.cpp
+third_party/WebKit/Source/bindings/core/v8/ScriptStreamerTest.cpp
+third_party/WebKit/Source/bindings/core/v8/V8ScriptRunner.cpp
+third_party/WebKit/Source/bindings/core/v8/V8ScriptRunner.h
+third_party/WebKit/Source/bindings/core/v8/V8ScriptRunnerTest.cpp
+third_party/WebKit/Source/bindings/core/v8/WorkerOrWorkletScriptController.cpp
+third_party/WebKit/Source/core/inspector/InspectorTraceEvents.cpp
+
+Author: bokan@chromium.org
+No-WPT-Author: bokan@chromium.org
+commit 9624739f0ef77cff687240e322d0e3d43d7cf0cf
+third_party/WebKit/LayoutTests/rootscroller/rootscroller-during-fullscreen.html
+third_party/WebKit/Source/core/page/scrolling/RootScrollerController.cpp
+
+Author: bokan@chromium.org
+No-WPT-Author: bokan@chromium.org
+commit 3f0b9946f52dc4e146e90e7377974e12a76404b5
+third_party/WebKit/LayoutTests/rootscroller/set-rootscroller-before-load-expected.html
+third_party/WebKit/LayoutTests/rootscroller/set-rootscroller-before-load.html
+third_party/WebKit/LayoutTests/virtual/android/rootscroller/nested-rootscroller-browser-controls-bounds-hidden.html
+third_party/WebKit/LayoutTests/virtual/android/rootscroller/nested-rootscroller-browser-controls-bounds-shown.html
+third_party/WebKit/Source/core/html/HTMLFrameOwnerElement.cpp
+third_party/WebKit/Source/core/page/scrolling/RootScrollerController.cpp
+third_party/WebKit/Source/core/page/scrolling/RootScrollerController.h
+third_party/WebKit/Source/core/page/scrolling/TopDocumentRootScrollerController.cpp
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/testing/Internals.h
+third_party/WebKit/Source/core/testing/Internals.idl
+
+Author: orphis@chromium.org
+No-WPT-Author: orphis@chromium.org
+commit 7e16825899d0362f71ff8d7585f54985d2d4c4ef
+third_party/WebKit/LayoutTests/fast/mediacapturefromelement/CanvasCaptureMediaStream-2d-events.html
+third_party/WebKit/LayoutTests/fast/mediacapturefromelement/CanvasCaptureMediaStream-request-frame-events.html
+third_party/WebKit/LayoutTests/fast/mediacapturefromelement/CanvasCaptureMediaStream-webgl-events.html
+third_party/WebKit/Source/core/frame/Deprecation.cpp
+third_party/WebKit/Source/modules/mediastream/URLMediaStream.cpp
+
+Author: bhagirathi.s@samsung.com
+WPT-Author: bhagirathi.s@samsung.com
+commit 656e6c9b224b3545200ffbd06828befc3f41b809
+third_party/WebKit/LayoutTests/external/wpt/html/dom/interfaces-expected.txt
+third_party/WebKit/Source/core/events/MessageEvent.idl
+
+Author: mastiz@chromium.org
+No-WPT-Author: mastiz@chromium.org
+commit cb6090e4fb1211fc252941dec186096e937010fb
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/inspector-protocol/memory/sampling-native-profile-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/memory/sampling-native-profile.js
+third_party/WebKit/Source/core/inspector/InspectorMemoryAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorMemoryAgent.h
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+third_party/WebKit/Source/core/inspector/inspector_protocol_config.json
+third_party/WebKit/Source/platform/BUILD.gn
+third_party/WebKit/Source/platform/memory_profiler/DEPS
+third_party/WebKit/Source/platform/memory_profiler/OWNERS
+third_party/WebKit/Source/platform/memory_profiler/SamplingNativeHeapProfiler.cpp
+third_party/WebKit/Source/platform/memory_profiler/SamplingNativeHeapProfiler.h
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 79228b03444ea7a864eb341ea929047021ed900b
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-serialization/cssMathValue.tentative-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/stylevalue-serialization/cssMathValue.tentative.html
+third_party/WebKit/Source/core/css/cssom/CSSStyleValue.cpp
+third_party/WebKit/Source/core/css/cssom/CSSStyleValue.h
+third_party/WebKit/Source/core/css/cssom/CSSStyleValue.idl
+
+Author: alancutter@chromium.org
+WPT-Author: alancutter@chromium.org
+commit f47ee41e97e952ffd539acd2faded2e08cbea696
+third_party/WebKit/LayoutTests/animations/OWNERS
+third_party/WebKit/LayoutTests/compositing/animation/OWNERS
+third_party/WebKit/LayoutTests/external/wpt/web-animations/OWNERS
+third_party/WebKit/Source/core/animation/OWNERS
+third_party/WebKit/Source/platform/animation/OWNERS
+
+Author: rlanday@chromium.org
+No-WPT-Author: rlanday@chromium.org
+commit 1de83967752e0cf4f36f3a013b4f1ab687b88e11
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/element-instance-property-listing-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/element-instance-property-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/editing/ime/InputMethodController.cpp
+third_party/WebKit/Source/core/editing/ime/InputMethodControllerTest.cpp
+third_party/WebKit/Source/core/html/HTMLElement.cpp
+third_party/WebKit/Source/core/html/HTMLElement.h
+third_party/WebKit/Source/core/html/HTMLElement.idl
+third_party/WebKit/Source/core/html/forms/BaseTextInputType.cpp
+third_party/WebKit/Source/core/html/forms/BaseTextInputType.h
+third_party/WebKit/Source/core/html/forms/HTMLInputElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLInputElement.h
+third_party/WebKit/Source/core/html/forms/HTMLInputElement.idl
+third_party/WebKit/Source/core/html/forms/HTMLTextAreaElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLTextAreaElement.h
+third_party/WebKit/Source/core/html/forms/HTMLTextAreaElement.idl
+third_party/WebKit/Source/core/html/forms/InputType.cpp
+third_party/WebKit/Source/core/html/forms/InputType.h
+third_party/WebKit/Source/core/html/forms/SearchInputType.cpp
+third_party/WebKit/Source/core/html/forms/SearchInputType.h
+third_party/WebKit/Source/core/html/forms/TextControlElement.cpp
+third_party/WebKit/Source/core/html/forms/TextControlElement.h
+third_party/WebKit/Source/core/html/forms/TextInputType.cpp
+third_party/WebKit/Source/core/html/forms/TextInputType.h
+third_party/WebKit/public/platform/web_feature.mojom
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 2b63d92e98cfdb984a8aab368c4586e2ac122aa9
+third_party/WebKit/LayoutTests/external/wpt/css/css-paint-api/style-background-image.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-paint-api/style-before-pseudo.https.html
+third_party/WebKit/Source/core/css/CSSVariableData.h
+third_party/WebKit/Source/core/css/cssom/CSSUnparsedValue.cpp
+third_party/WebKit/Source/core/css/cssom/CSSUnparsedValue.h
+third_party/WebKit/Source/core/css/cssom/FilteredComputedStylePropertyMap.cpp
+third_party/WebKit/Source/core/css/cssom/FilteredComputedStylePropertyMapTest.cpp
+
+Author: alph@chromium.org
+No-WPT-Author: alph@chromium.org
+commit 958e86caee516974831b1471b1a4cb79248220b3
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/inspector-protocol/memory/sampling-native-profile-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/memory/sampling-native-profile.js
+third_party/WebKit/Source/core/inspector/InspectorMemoryAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorMemoryAgent.h
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+third_party/WebKit/Source/core/inspector/inspector_protocol_config.json
+third_party/WebKit/Source/platform/BUILD.gn
+third_party/WebKit/Source/platform/memory_profiler/DEPS
+third_party/WebKit/Source/platform/memory_profiler/OWNERS
+third_party/WebKit/Source/platform/memory_profiler/SamplingNativeHeapProfiler.cpp
+third_party/WebKit/Source/platform/memory_profiler/SamplingNativeHeapProfiler.h
+
+Author: pfeldman@chromium.org
+No-WPT-Author: pfeldman@chromium.org
+commit 64059ff3638365ea0b9dbf2ba8b1fa576aa446a6
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/dom/dom-getFrameOwner-expected.txt
+third_party/WebKit/LayoutTests/http/tests/inspector-protocol/dom/dom-getFrameOwner.js
+third_party/WebKit/Source/core/inspector/InspectorDOMAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorDOMAgent.h
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit e6a9a5cd13938196684fde7eec0e312a0c7e8d21
+third_party/WebKit/LayoutTests/FlagExpectations/enable-slimming-paint-v175
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/svg/hixie/mixed/006-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/svg/hixie/mixed/011-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v175/svg/hixie/mixed/011-expected.txt
+third_party/WebKit/LayoutTests/virtual/spv175/paint/invalidation/filters/effect-reference-repaint-lighting-expected.txt
+third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
+third_party/WebKit/Source/core/paint/PaintLayerPainter.h
+third_party/WebKit/Source/platform/graphics/LoggingCanvas.cpp
+third_party/WebKit/Source/platform/graphics/compositing/PaintChunksToCcLayer.cpp
+third_party/WebKit/Source/platform/graphics/paint/DisplayItem.cpp
+third_party/WebKit/Source/platform/graphics/paint/DisplayItem.h
+
+Author: kochi@chromium.org
+No-WPT-Author: kochi@chromium.org
+commit c773e5725d02c7a1cf9291a33360a5fb0a17cbe2
+third_party/WebKit/LayoutTests/shadow-dom/css-cascade-upgrade-from-v0-to-v1.html
+third_party/WebKit/Source/core/dom/TreeScopeAdopter.cpp
+
+Author: caseq@chromium.org
+No-WPT-Author: caseq@chromium.org
+commit d615826c138147c0e249e95339860a227420933f
+third_party/WebKit/LayoutTests/http/tests/devtools/network/oopif-content-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/network/oopif-content.js
+third_party/WebKit/Source/devtools/front_end/sdk/NetworkManager.js
+
+Author: cvazac@akamai.com
+WPT-Author: cvazac@akamai.com
+commit 2cd5223064b2dd0a4800f7b59da932246cd6fb18
+third_party/WebKit/LayoutTests/external/wpt/server-timing/cross_origin.html
+third_party/WebKit/Source/core/timing/Performance.cpp
+third_party/WebKit/Source/core/timing/PerformanceBase.cpp
+third_party/WebKit/Source/core/timing/PerformanceServerTiming.cpp
+third_party/WebKit/Source/core/timing/PerformanceServerTiming.h
+
+Author: japhet@chromium.org
+No-WPT-Author: japhet@chromium.org
+commit 45582a715b2d4f41efc510d6196e6a232126f4fc
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/resources/iframe-that-performs-top-navigation-without-user-gesture.html
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/xss-DENIED-top-navigation-user-gesture-in-parent-expected.txt
+third_party/WebKit/LayoutTests/http/tests/security/frameNavigation/xss-DENIED-top-navigation-without-user-gesture-expected.txt
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: alexclarke@chromium.org
+No-WPT-Author: alexclarke@chromium.org
+commit c57c03afc8a05754deb00f6a76631a82d644f155
+third_party/WebKit/LayoutTests/inspector-protocol/dom-snapshot/dom-snapshot-getSnapshot-expected.txt
+third_party/WebKit/LayoutTests/inspector-protocol/dom-snapshot/dom-snapshot-getSnapshot.js
+third_party/WebKit/LayoutTests/inspector-protocol/resources/1x.png
+third_party/WebKit/LayoutTests/inspector-protocol/resources/2x.png
+third_party/WebKit/LayoutTests/inspector-protocol/resources/dom-snapshot.html
+third_party/WebKit/Source/core/inspector/InspectorDOMSnapshotAgent.cpp
+third_party/WebKit/Source/core/inspector/browser_protocol.json
+third_party/WebKit/Source/core/inspector/browser_protocol.pdl
+
+Author: lushnikov@chromium.org
+No-WPT-Author: lushnikov@chromium.org
+commit 1d4add3aa8f51a16548d6dc1a07de21c3163ef11
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/dynamic-navigator-frame-attach-detach.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/navigator-frame-attach-detach.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/navigator-frame-navigate.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/navigator-main-frame-navigated.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/navigator-multiple-frames.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/shadowdom-navigator.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/sourcemap-navigator-multiple-frames.js
+third_party/WebKit/LayoutTests/http/tests/devtools/bindings/suspendtarget-navigator.js
+third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles/styles-do-not-add-inline-stylesheets-in-navigator.js
+third_party/WebKit/LayoutTests/http/tests/devtools/file-system-mapping-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/file-system-mapping.js
+third_party/WebKit/LayoutTests/http/tests/devtools/file-system-project.js
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/navigator-create-file-copy.js
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-do-not-bind-dirty-sourcecode.js
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-navigator-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-navigator-unique-names.js
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-navigator.js
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-rename-mapped-file-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-rename-mapped-file.js
+third_party/WebKit/LayoutTests/http/tests/devtools/persistence/persistence-tabbed-editor-tabs-order.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/css-sourcemaps-toggle-enabled.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/scripts-panel.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/scripts-sorting.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/navigator-view.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/js-sourcemaps-toggle-enabled.js
+third_party/WebKit/LayoutTests/http/tests/devtools/sources/navigator-view-content-scripts.js
+third_party/WebKit/Source/devtools/BUILD.gn
+third_party/WebKit/Source/devtools/front_end/application_test_runner/ResourceTreeTestRunner.js
+third_party/WebKit/Source/devtools/front_end/bindings_test_runner/IsolatedFilesystemTestRunner.js
+third_party/WebKit/Source/devtools/front_end/bindings_test_runner/PersistenceTestRunner.js
+third_party/WebKit/Source/devtools/front_end/main/Main.js
+third_party/WebKit/Source/devtools/front_end/persistence/DefaultMapping.js
+third_party/WebKit/Source/devtools/front_end/persistence/EditFileSystemView.js
+third_party/WebKit/Source/devtools/front_end/persistence/FileSystemMapping.js
+third_party/WebKit/Source/devtools/front_end/persistence/Persistence.js
+third_party/WebKit/Source/devtools/front_end/persistence/PersistenceUtils.js
+third_party/WebKit/Source/devtools/front_end/persistence/WorkspaceSettingsTab.js
+third_party/WebKit/Source/devtools/front_end/persistence/editFileSystemView.css
+third_party/WebKit/Source/devtools/front_end/persistence/module.json
+third_party/WebKit/Source/devtools/front_end/sources/NavigatorView.js
+third_party/WebKit/Source/devtools/front_end/sources/OpenFileQuickOpen.js
+third_party/WebKit/Source/devtools/front_end/sources/SourcesNavigator.js
+third_party/WebKit/Source/devtools/front_end/sources/SourcesPanel.js
+third_party/WebKit/Source/devtools/front_end/sources/SourcesView.js
+third_party/WebKit/Source/devtools/front_end/sources/WorkspaceMappingTip.js
+third_party/WebKit/Source/devtools/front_end/sources/module.json
+third_party/WebKit/Source/devtools/front_end/sources_test_runner/SourcesTestRunner.js
+
+Author: apacible@chromium.org
+No-WPT-Author: apacible@chromium.org
+commit 3f0489100bdc8ee85dfe5145233b0da969c45379
+third_party/WebKit/LayoutTests/media/controls/picture-in-picture-button.html
+third_party/WebKit/LayoutTests/media/controls/picture-in-picture-interstitial.html
+third_party/WebKit/LayoutTests/media/controls/picture-in-picture.js
+third_party/WebKit/LayoutTests/media/media-controls.js
+third_party/WebKit/Source/core/dom/Node.h
+third_party/WebKit/Source/core/html/BUILD.gn
+third_party/WebKit/Source/core/html/media/HTMLAudioElement.h
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.cpp
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.h
+third_party/WebKit/Source/core/html/media/HTMLVideoElement.cpp
+third_party/WebKit/Source/core/html/media/HTMLVideoElement.h
+third_party/WebKit/Source/core/html/media/PictureInPictureInterstitial.cpp
+third_party/WebKit/Source/core/html/media/PictureInPictureInterstitial.h
+third_party/WebKit/Source/core/layout/LayoutMedia.cpp
+third_party/WebKit/Source/modules/media_controls/elements/MediaControlPictureInPictureButtonElement.cpp
+third_party/WebKit/Source/modules/media_controls/resources/legacyMediaControls.css
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+third_party/WebKit/Source/platform/testing/EmptyWebMediaPlayer.h
+third_party/WebKit/public/platform/WebLocalizedString.h
+third_party/WebKit/public/platform/WebMediaPlayer.h
+third_party/WebKit/public/platform/WebMediaPlayerClient.h
+
+Author: khushalsagar@chromium.org
+No-WPT-Author: khushalsagar@chromium.org
+commit 60916ba1169d9207e048e2eca290c946ba37fcad
+third_party/WebKit/LayoutTests/fast/canvas/canvas-createImageBitmap-blob-in-workers.html
+third_party/WebKit/LayoutTests/fast/canvas/canvas-createImageBitmap-drawImage-video.html
+third_party/WebKit/LayoutTests/fast/canvas/canvas-createImageBitmap-from-canvas-toBlob.html
+third_party/WebKit/LayoutTests/fast/canvas/canvas-createImageBitmap-video-resize.html
+third_party/WebKit/LayoutTests/fast/canvas/downsample-quality.html
+third_party/WebKit/LayoutTests/platform/linux/virtual/gpu/fast/canvas/canvas-drawImage-video-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/gpu/fast/canvas/downsample-quality-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/gpu/fast/canvas/canvas-drawImage-video-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/gpu/fast/canvas/downsample-quality-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/gpu/fast/canvas/yuv-video-on-accelerated-canvas-expected.png
+third_party/WebKit/LayoutTests/virtual/gpu/fast/canvas/canvas-drawImage-video-expected.png
+third_party/WebKit/LayoutTests/virtual/gpu/fast/canvas/yuv-video-on-accelerated-canvas-expected.png
+third_party/WebKit/Source/platform/graphics/Canvas2DLayerBridgeTest.cpp
+third_party/WebKit/Source/platform/graphics/CanvasResourceProvider.cpp
+third_party/WebKit/Source/platform/graphics/CanvasResourceProvider.h
+third_party/WebKit/Source/platform/graphics/VideoFrameSubmitterTest.cpp
+third_party/WebKit/Source/platform/graphics/gpu/DrawingBufferTestHelpers.h
+third_party/WebKit/Source/platform/graphics/gpu/SharedGpuContext.cpp
+third_party/WebKit/Source/platform/graphics/test/FakeWebGraphicsContext3DProvider.h
+third_party/WebKit/public/platform/Platform.h
+third_party/WebKit/public/platform/WebGraphicsContext3DProvider.h
+
+Author: caseq@chromium.org
+No-WPT-Author: caseq@chromium.org
+commit 5b971e8b071e3a7988af9037e28812ede48b4065
+third_party/WebKit/LayoutTests/http/tests/devtools/tracing/timeline-network/timeline-network-resource-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/tracing/timeline-network/timeline-network-resource.js
+third_party/WebKit/Source/core/inspector/InspectorTraceEvents.cpp
+
 Author: djmix.kim@samsung.com
 No-WPT-Author: djmix.kim@samsung.com
 commit ac79e3ee399c4985e6d078757e9e6fe665841634
@@ -3120,4 +5589,4 @@ third_party/WebKit/Source/core/css/cssom/CSSTranslation.cpp
 third_party/WebKit/Source/core/css/cssom/CSSUnitValue.cpp
 third_party/WebKit/Source/core/css/cssom/CSSUnitValue.h
 
-202 source+test changes, 53 in wpt
+363 source+test changes, 108 in wpt
