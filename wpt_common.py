@@ -2,11 +2,15 @@
 Python 6 (2 and 3 compatible) please.
 """
 
+# Requirements: python-dateutil, requests
+
 from __future__ import print_function
+import dateutil.parser
+import json
 import os
 import requests
-import sys
 import subprocess
+import sys
 
 # Only PRs after this time (UTC) will be processed. Our 2-way sync really
 # started to stablize around this time. Earlier results are inaccurate.
@@ -22,8 +26,7 @@ if GH_AUTH is None:
     print('Warning: Provide GH_USER and GH_TOKEN to get full results')
 
 # GitHub cache. Delete the file to fetch PRs again.
-CHROMIUM_PRS_FILE = 'prs-chromium.json'
-NON_CHROMIUM_PRS_FILE = 'prs-others.json'
+PRS_FILE = 'wpt-prs.json'
 
 try:
     CHROMIUM_DIR = sys.argv[1]
@@ -55,3 +58,61 @@ def github_request(url):
     base_url = 'https://api.github.com'
     res = requests.get(base_url + url, auth=GH_AUTH)
     return res.json()
+
+
+def fetch_all_prs():
+    try:
+        with open(PRS_FILE) as f:
+            all_prs = json.load(f)
+            print('Read', len(all_prs), 'PRs from', PRS_FILE)
+            return all_prs
+    except (IOError, ValueError):
+        pass
+
+    print('Fetching all PRs')
+
+    # Sorting by merged date is not supported, so we sort by created date
+    # instead, which is good enough because a PR cannot be merged before
+    # being created.
+    base_url = ('/repos/w3c/web-platform-tests/pulls?'
+                'sort=created&direction=desc&state=closed')
+    prs = []
+
+    cutoff = dateutil.parser.parse(CUTOFF)
+    # 5000 is the rate limit. We'll break early.
+    for page in range(1, 5000):
+        print('Fetching page', page)
+        url = base_url + '&page={}'.format(page)
+        data = github_request(url)
+        if not data:
+            print('No items in page {}. Probably reached rate limit. Stopping.'
+                  .format(page))
+            break
+
+        finished = False
+        for pr in data:
+            if not pr.get('merged_at'):
+                continue
+            if dateutil.parser.parse(pr['merged_at']) < cutoff:
+                print('Reached cutoff point. Stop fetching more PRs.')
+                finished = True
+                break
+            prs.append(pr)
+        if finished:
+            break
+
+    print('Fetched {} PRs created and merged after {}'
+          .format(len(prs), CUTOFF))
+
+    print('Writing file', PRS_FILE)
+    with open(PRS_FILE, 'w') as f:
+        json.dump(prs, f, indent=2)
+    return prs
+
+
+def is_export_pr(pr):
+    labels = [label['name'] for label in pr['labels']]
+    has_export_label = 'chromium-export' in labels
+    if pr['user']['login'] == 'chromium-wpt-export-bot':
+        assert has_export_label, '{} is missing the chromium-export label'.format(pr['html_url'])
+    return has_export_label

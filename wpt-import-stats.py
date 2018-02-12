@@ -1,82 +1,27 @@
 #!/usr/bin/env python
 # History: https://gist.github.com/Hexcles/ec48b4f674ad66c6d34cf279c262a4de
-# Requirements: python-dateutil, numpy & requests
+# Requirements: python-dateutil, numpy
 
 from __future__ import print_function
 from collections import defaultdict, namedtuple
 import csv
 import dateutil.parser
 import json
-import re
 import numpy
+import re
 import subprocess
 
-# FIXME: I know this is bad...
-from wpt_common import *
+from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr, wpt_git
 
 
 # Target SLA (in minutes).
 SLA = 12*60
-# Cache file.
-PRS_FILE = 'prs-others.json'
 # Result files.
 MINS_FILE = 'import-mins.json'
 CSV_FILE = 'import-latencies.csv'
 
 
 Import = namedtuple('Import', 'cr_sha, wpt_sha, date')
-
-
-def fetch_all_prs():
-    try:
-        with open(PRS_FILE) as f:
-            all_prs = json.load(f)
-            print('Read', len(all_prs), 'PRs from', PRS_FILE)
-            return all_prs
-    except (IOError, ValueError):
-        pass
-
-    print('Fetching all PRs')
-
-    # Sorting by merged date is not supported, so we sort by created date
-    # instead, which is good enough because a PR cannot be merged before
-    # being created.
-    base_url = ('/repos/w3c/web-platform-tests/pulls?'
-                'sort=created&direction=desc&state=closed')
-    prs = []
-
-    cutoff = dateutil.parser.parse(CUTOFF)
-    # 5000 is the rate limit. We'll break early.
-    for page in range(1, 5000):
-        print('Fetching page', page)
-        url = base_url + '&page={}'.format(page)
-        data = github_request(url)
-        if not data:
-            print('No items in page {}. Probably reached rate limit. Stopping.'
-                  .format(page))
-            break
-
-        finished = False
-        for pr in data:
-            if pr['user']['login'] == 'chromium-wpt-export-bot':
-                continue
-            if not pr.get('merged_at'):
-                continue
-            if dateutil.parser.parse(pr['merged_at']) < cutoff:
-                print('Reached cutoff point. Stop fetching more PRs.')
-                finished = True
-                break
-            prs.append(pr)
-        if finished:
-            break
-
-    print('Fetched {} PRs without the chromium-export label merged after {}'
-          .format(len(prs), CUTOFF))
-
-    print('Writing file', PRS_FILE)
-    with open(PRS_FILE, 'w') as f:
-        json.dump(prs, f, indent=2)
-    return prs
 
 
 def list_imports():
@@ -126,7 +71,7 @@ def binary_search_import(wpt_commit, imports):
     return left
 
 
-def get_latencies(imports, all_prs):
+def get_latencies(imports, prs):
     try:
         with open(MINS_FILE) as f:
             latencies = json.load(f)
@@ -136,8 +81,8 @@ def get_latencies(imports, all_prs):
         pass
 
     latencies = {}
-    total_prs = len(all_prs)
-    for index, pr in enumerate(all_prs):
+    total_prs = len(prs)
+    for index, pr in enumerate(prs):
         print("[{}/{}] PR: {}".format(index + 1, total_prs, pr['html_url']))
         merge_commit = pr['merge_commit_sha']
         merged_at = pr['merged_at']
@@ -231,8 +176,9 @@ def analyze(latencies):
 
 def main():
     all_prs = fetch_all_prs()
+    non_export_prs = [pr for pr in all_prs if not is_export_pr(pr)]
     imports = list_imports()
-    latencies = get_latencies(imports, all_prs)
+    latencies = get_latencies(imports, non_export_prs)
     analyze(latencies)
 
 
