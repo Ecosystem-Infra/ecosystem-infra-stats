@@ -1,5 +1,4 @@
 Missing TEAM: WebCryptoAPI
-Missing OWNERS: XMLHttpRequest
 Missing OWNERS: acid
 Missing COMPONENT: battery-status
 Missing TEAM: clipboard-apis
