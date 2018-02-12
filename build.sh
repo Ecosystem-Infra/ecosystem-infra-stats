@@ -8,8 +8,8 @@ WPT_DIR="$HOME/web-platform-tests"
 
 rm -rf out; mkdir out
 
-echo "upstream wpt stats..."
-./wpt-stats.sh "$WPT_DIR" > out/wpt-commits.csv
+echo "upstream wpt commit stats..."
+./wpt-commits.sh "$WPT_DIR" > out/wpt-commits.csv
 echo
 
 echo "chromium import stats..."
