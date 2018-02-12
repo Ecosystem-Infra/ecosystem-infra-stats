@@ -4,6 +4,7 @@ const GITHUB_GREEN = '#2CBE4E'; // color of the "Changes approved" checkmark
 const CHROME_BLUE = '#4285F4'; // https://github.com/alrra/browser-logos/blob/master/src/chrome/chrome.svg (also the Google blue)
 const FIREFOX_ORANGE = '#E66000'; // https://www.mozilla.org/en-US/styleguide/identity/firefox/color/
 const FIREFOX_YELLOW = '#FFCB00'; // ditto
+const WEBKIT_PURPLE = '#8E56B1'; // https://github.com/w3c/web-platform-tests/pull/8986#issuecomment-356979677
 
 function colorFromHeader(header) {
   if (header.includes('Chromium'))
@@ -12,6 +13,8 @@ function colorFromHeader(header) {
     return FIREFOX_ORANGE;
   if (header.includes('Servo'))
     return FIREFOX_YELLOW;
+  if (header.includes('WebKit'))
+    return WEBKIT_PURPLE;
   return 'gray';
 }
 
