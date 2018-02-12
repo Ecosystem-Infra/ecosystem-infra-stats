@@ -144,7 +144,8 @@ def get_latencies(imports, all_prs):
         try:
             wpt_git(['cat-file', '-t', merge_commit])
         except subprocess.CalledProcessError:
-            print('Merge commit {} does not exist. SKIPPING!'.format(merged_at))
+            print('Merge commit {} does not exist. SKIPPING!'
+                  .format(merge_commit))
             continue
         if _compare_commits(merge_commit, imports[-1].wpt_sha) > 0:
             print('Merge point {} after last import point {}. SKIPPING!'
