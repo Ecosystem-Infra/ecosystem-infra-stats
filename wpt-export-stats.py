@@ -72,7 +72,7 @@ def fetch_all_prs():
 
     print('Writing file', PRS_FILE)
     with open(PRS_FILE, 'w') as f:
-        json.dump(prs, f)
+        json.dump(prs, f, indent=2)
     return prs
 
 
@@ -162,7 +162,7 @@ def calculate_pr_delays(prs):
 
     print('Writing file', MINS_FILE)
     with open(MINS_FILE, 'w') as f:
-        json.dump(min_differences, f)
+        json.dump(min_differences, f, indent=2)
 
     return min_differences
 

@@ -75,7 +75,7 @@ def fetch_all_prs():
 
     print('Writing file', PRS_FILE)
     with open(PRS_FILE, 'w') as f:
-        json.dump(prs, f)
+        json.dump(prs, f, indent=2)
     return prs
 
 
@@ -183,7 +183,7 @@ def get_latencies(imports, all_prs):
 
     print('Writing file', MINS_FILE)
     with open(MINS_FILE, 'w') as f:
-        json.dump(latencies, f)
+        json.dump(latencies, f, indent=2)
 
     return latencies
 
