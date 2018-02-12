@@ -7,7 +7,7 @@ WPT_DIR="$1"
 cd "$WPT_DIR"
 
 echo "Month,Total commits,Chromium exports,Gecko exports,Servo exports,WebKit exports"
-for month in {2015,2016,2017}-{01,02,03,04,05,06,07,08,09,10,11,12}; do
+for month in {2015,2016,2017,2018}-{01,02,03,04,05,06,07,08,09,10,11,12}; do
     # GNU date
     nextmonth=`date +%Y-%m -d "$month-01 +1 month"`
     # BSD date
