@@ -7,17 +7,24 @@ from webkitpy.common.host import Host
 from webkitpy.w3c.chromium_finder import absolute_chromium_dir
 
 import os.path
+import re
 import sys
 
-# Note: Rename to LayoutTests/external/ was on Jan 17, in commit
+# Note: Rename to LayoutTests/external/ was on 2017-01-17, in commit
 # 6506b8b80db745936336bb88855cd078c083691e.
 
-NO_TEST_DIRS = [
-    'third_party/WebKit/LayoutTests',
-    'third_party/WebKit/LayoutTests/FlagExpectations',
-    'third_party/WebKit/LayoutTests/external',
-    'third_party/WebKit/LayoutTests/external/wpt',
+# File name patterns not considered tests
+NOT_TEST_PATTERNS = [
+    '.*/devtools/',
+    '.*/inspector-protocol/',
+    'third_party/WebKit/LayoutTests/FlagExpectations/',
+    'third_party/WebKit/LayoutTests/[^/]*$', # TestExpectations, etc.
+    'third_party/WebKit/LayoutTests/external/[^/]*$', # WPT_BASE_MANIFEST.json, etc.
+    'third_party/WebKit/LayoutTests/external/wpt/[^/]*$', # lint.whitelist, etc.
 ]
+
+
+NOT_TEST_EXPRS = [re.compile(p) for p in NOT_TEST_PATTERNS]
 
 
 def is_source(path):
@@ -27,10 +34,9 @@ def is_source(path):
 def is_test(path):
     if not path.startswith('third_party/WebKit/LayoutTests/'):
         return False
-    dirname = os.path.dirname(path)
-    # TestExpectations, MANIFEST.json, etc.
-    if dirname in NO_TEST_DIRS:
-        return False
+    for expr in NOT_TEST_EXPRS:
+        if expr.match(path):
+            return False
     return True
 
 
