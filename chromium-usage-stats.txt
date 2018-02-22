@@ -139,13 +139,6 @@ third_party/WebKit/Source/core/inspector/InspectorAnimationAgent.cpp
 third_party/WebKit/Source/core/inspector/InspectorTraceEvents.cpp
 third_party/WebKit/Source/modules/animationworklet/WorkletAnimation.cpp
 
-Author: einbinder@chromium.org
-No-WPT-Author: einbinder@chromium.org
-commit 5b223cb3b46291bac307c268fe568ff409963919
-third_party/WebKit/LayoutTests/http/tests/devtools/unit/object-events-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/unit/object-events.js
-third_party/WebKit/Source/devtools/front_end/common/Object.js
-
 Author: wangxianzhu@chromium.org
 No-WPT-Author: wangxianzhu@chromium.org
 commit 8963c97a0ac52219f178625509f9d92f1a8c2494
@@ -196,13 +189,6 @@ commit 39d6307683c0e17c74026d2c2d20c33a4ffab383
 third_party/WebKit/LayoutTests/external/wpt/custom-elements/parser/serializing-html-fragments-expected.txt
 third_party/WebKit/Source/core/dom/AttributeCollection.h
 third_party/WebKit/Source/core/editing/serializers/MarkupAccumulator.cpp
-
-Author: eostroukhov@chromium.org
-No-WPT-Author: eostroukhov@chromium.org
-commit c9a324bf2fb731f1f9ef94dc4068cdc77140a5d6
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/get-request-post-data-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/get-request-post-data.js
-third_party/WebKit/Source/core/inspector/NetworkResourcesData.cpp
 
 Author: mstensho@chromium.org
 WPT-Author: mstensho@chromium.org
@@ -6497,104 +6483,6 @@ third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertyma
 third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/z-index.html
 third_party/WebKit/Source/core/css/CSSProperties.json5
 
-Author: pfeldman@chromium.org
-No-WPT-Author: pfeldman@chromium.org
-commit 848d697da0766cc108c5f869f38128b8ff52df94
-third_party/WebKit/LayoutTests/http/tests/devtools/console-fetch-logging-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/console-fetch-logging.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console-resource-errors.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console-xhr-logging-async.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-uncaught-promise-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/elements/event-listeners-framework-with-service-worker.js
-third_party/WebKit/LayoutTests/http/tests/devtools/modules-load-initial-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/network/download.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-datareceived.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-initiator-chain.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-status-non-http.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xhr-data-received-async-response-type-blob.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xhr-replay.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xsl-content.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/script-as-text-loading-long-url-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/network/script-as-text-loading-long-url.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/script-as-text-loading-with-caret-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/network/script-as-text-loading-with-caret.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/warning-for-long-cookie-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/network/warning-for-long-cookie.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-har-conversion.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-har-headers.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters.js
-third_party/WebKit/LayoutTests/http/tests/devtools/reveal-objects.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/dom-breakpoints.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/async-callstack-network-initiator-image.js
-third_party/WebKit/Source/core/inspector/browser_protocol.json
-third_party/WebKit/Source/devtools/BUILD.gn
-third_party/WebKit/Source/devtools/front_end/Runtime.js
-third_party/WebKit/Source/devtools/front_end/browser_components/ImagePreview.js
-third_party/WebKit/Source/devtools/front_end/browser_components/imagePreview.css
-third_party/WebKit/Source/devtools/front_end/browser_components/module.json
-third_party/WebKit/Source/devtools/front_end/browser_console/BrowserConsole.js
-third_party/WebKit/Source/devtools/front_end/browser_console/module.json
-third_party/WebKit/Source/devtools/front_end/browser_debugger/DOMBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/browser_debugger/EventListenerBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/browser_debugger/ObjectEventListenersSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/browser_debugger/XHRBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/browser_debugger/domBreakpointsSidebarPane.css
-third_party/WebKit/Source/devtools/front_end/browser_debugger/eventListenerBreakpoints.css
-third_party/WebKit/Source/devtools/front_end/browser_debugger/module.json
-third_party/WebKit/Source/devtools/front_end/browser_debugger/xhrBreakpointsSidebarPane.css
-third_party/WebKit/Source/devtools/front_end/browser_sdk/HAREntry.js
-third_party/WebKit/Source/devtools/front_end/browser_sdk/LogManager.js
-third_party/WebKit/Source/devtools/front_end/browser_sdk/NetworkLog.js
-third_party/WebKit/Source/devtools/front_end/browser_sdk/module.json
-third_party/WebKit/Source/devtools/front_end/common/ModuleExtensionInterfaces.js
-third_party/WebKit/Source/devtools/front_end/components/DOMPresentationUtils.js
-third_party/WebKit/Source/devtools/front_end/components/JSPresentationUtils.js
-third_party/WebKit/Source/devtools/front_end/components/domUtils.css
-third_party/WebKit/Source/devtools/front_end/components/imagePreview.css
-third_party/WebKit/Source/devtools/front_end/components/jsUtils.css
-third_party/WebKit/Source/devtools/front_end/components/module.json
-third_party/WebKit/Source/devtools/front_end/console/ConsoleView.js
-third_party/WebKit/Source/devtools/front_end/console/ConsoleViewMessage.js
-third_party/WebKit/Source/devtools/front_end/console/module.json
-third_party/WebKit/Source/devtools/front_end/console_test_runner/ConsoleTestRunner.js
-third_party/WebKit/Source/devtools/front_end/devtools_app.json
-third_party/WebKit/Source/devtools/front_end/dom_debugger/DOMBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/EventListenerBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/ObjectEventListenersSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/XHRBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/domBreakpointsSidebarPane.css
-third_party/WebKit/Source/devtools/front_end/dom_debugger/eventListenerBreakpoints.css
-third_party/WebKit/Source/devtools/front_end/dom_debugger/module.json
-third_party/WebKit/Source/devtools/front_end/dom_debugger/xhrBreakpointsSidebarPane.css
-third_party/WebKit/Source/devtools/front_end/elements/ElementsPanel.js
-third_party/WebKit/Source/devtools/front_end/elements/ElementsTreeOutline.js
-third_party/WebKit/Source/devtools/front_end/elements/module.json
-third_party/WebKit/Source/devtools/front_end/extensions/ExtensionServer.js
-third_party/WebKit/Source/devtools/front_end/extensions/module.json
-third_party/WebKit/Source/devtools/front_end/har_importer/HARImporter.js
-third_party/WebKit/Source/devtools/front_end/har_importer/module.json
-third_party/WebKit/Source/devtools/front_end/network/HARWriter.js
-third_party/WebKit/Source/devtools/front_end/network/NetworkDataGridNode.js
-third_party/WebKit/Source/devtools/front_end/network/NetworkLogView.js
-third_party/WebKit/Source/devtools/front_end/network/NetworkLogViewColumns.js
-third_party/WebKit/Source/devtools/front_end/network/NetworkPanel.js
-third_party/WebKit/Source/devtools/front_end/network/module.json
-third_party/WebKit/Source/devtools/front_end/network_test_runner/NetworkTestRunner.js
-third_party/WebKit/Source/devtools/front_end/object_ui/ObjectPropertiesSection.js
-third_party/WebKit/Source/devtools/front_end/sdk_browser/HAREntry.js
-third_party/WebKit/Source/devtools/front_end/sdk_browser/LogManager.js
-third_party/WebKit/Source/devtools/front_end/sdk_browser/NetworkLog.js
-third_party/WebKit/Source/devtools/front_end/sdk_browser/module.json
-third_party/WebKit/Source/devtools/front_end/shell.json
-third_party/WebKit/Source/devtools/front_end/sources_test_runner/DebuggerTestRunner.js
-third_party/WebKit/Source/devtools/front_end/sources_test_runner/module.json
-third_party/WebKit/Source/devtools/front_end/timeline/TimelineUIUtils.js
-third_party/WebKit/Source/devtools/front_end/timeline/module.json
-third_party/WebKit/Source/devtools/front_end/worker_app.json
-third_party/WebKit/Source/devtools/scripts/extract_module/extract_module.js
-third_party/WebKit/Source/devtools/scripts/special_case_namespaces.json
-
 Author: wangxianzhu@chromium.org
 No-WPT-Author: wangxianzhu@chromium.org
 commit 5844f7146bca1e7c91e8f03de044ab408850d611
@@ -6804,71 +6692,6 @@ third_party/WebKit/Source/core/dom/ComputedAccessibleNode.h
 third_party/WebKit/Source/core/dom/ComputedAccessibleNode.idl
 third_party/WebKit/public/platform/WebComputedAXTree.h
 
-Author: pfeldman@chromium.org
-No-WPT-Author: pfeldman@chromium.org
-commit a74a3fc00f9c427ca849d7c99ee9fb7da7ce1d77
-third_party/WebKit/LayoutTests/http/tests/devtools/elements/elements-css-path.js
-third_party/WebKit/LayoutTests/http/tests/devtools/elements/move-node.js
-third_party/WebKit/LayoutTests/http/tests/devtools/elements/node-xpath.js
-third_party/WebKit/LayoutTests/http/tests/devtools/elements/shadow/inspect-deep-shadow-element.js
-third_party/WebKit/LayoutTests/http/tests/devtools/elements/styles-3/simple-selector.js
-third_party/WebKit/LayoutTests/http/tests/devtools/inspect-element.js
-third_party/WebKit/LayoutTests/http/tests/devtools/layers/layer-compositing-reasons.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/anonymous-script-with-source-map-breakpoint-expected.txt
-third_party/WebKit/Source/devtools/BUILD.gn
-third_party/WebKit/Source/devtools/front_end/accessibility/AccessibilityNodeView.js
-third_party/WebKit/Source/devtools/front_end/animation/AnimationTimeline.js
-third_party/WebKit/Source/devtools/front_end/audits2/Audits2Panel.js
-third_party/WebKit/Source/devtools/front_end/common/ModuleExtensionInterfaces.js
-third_party/WebKit/Source/devtools/front_end/components/DOMPresentationUtils.js
-third_party/WebKit/Source/devtools/front_end/components/domUtils.css
-third_party/WebKit/Source/devtools/front_end/components/module.json
-third_party/WebKit/Source/devtools/front_end/console/ConsoleViewMessage.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/DOMBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/module.json
-third_party/WebKit/Source/devtools/front_end/elements/DOMLinkifier.js
-third_party/WebKit/Source/devtools/front_end/elements/DOMPath.js
-third_party/WebKit/Source/devtools/front_end/elements/ElementsBreadcrumbs.js
-third_party/WebKit/Source/devtools/front_end/elements/ElementsPanel.js
-third_party/WebKit/Source/devtools/front_end/elements/ElementsTreeElement.js
-third_party/WebKit/Source/devtools/front_end/elements/ElementsTreeOutline.js
-third_party/WebKit/Source/devtools/front_end/elements/MarkerDecorator.js
-third_party/WebKit/Source/devtools/front_end/elements/StylesSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/elements/domLinkifier.css
-third_party/WebKit/Source/devtools/front_end/elements/module.json
-third_party/WebKit/Source/devtools/front_end/elements_test_runner/ElementsTestRunner.js
-third_party/WebKit/Source/devtools/front_end/extensions/ExtensionPanel.js
-third_party/WebKit/Source/devtools/front_end/layer_viewer/LayerDetailsView.js
-third_party/WebKit/Source/devtools/front_end/layer_viewer/LayerTreeOutline.js
-third_party/WebKit/Source/devtools/front_end/layers_test_runner/LayersTestRunner.js
-third_party/WebKit/Source/devtools/front_end/layers_test_runner/module.json
-third_party/WebKit/Source/devtools/front_end/object_ui/ObjectPropertiesSection.js
-third_party/WebKit/Source/devtools/front_end/object_ui/RemoteObjectPreviewFormatter.js
-third_party/WebKit/Source/devtools/front_end/sdk/DOMModel.js
-third_party/WebKit/Source/devtools/front_end/sources/DebuggerPausedMessage.js
-third_party/WebKit/Source/devtools/front_end/sources/SourcesPanel.js
-third_party/WebKit/Source/devtools/front_end/sources_test_runner/DebuggerTestRunner.js
-third_party/WebKit/Source/devtools/front_end/timeline/TimelineUIUtils.js
-third_party/WebKit/Source/devtools/front_end/worker_app.json
-
-Author: caseq@chromium.org
-No-WPT-Author: caseq@chromium.org
-commit 86a31915e7840f51cd52ac33486dc05b835ffb2f
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/resources/inspector-protocol-test.js
-third_party/WebKit/LayoutTests/inspector-protocol/page/frameAttachedDetached-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/page/frameAttachedDetached.js
-third_party/WebKit/Source/core/inspector/InspectorPageAgent.cpp
-
-Author: kozyatinskiy@chromium.org
-No-WPT-Author: kozyatinskiy@chromium.org
-commit 2dbbea436cb9d75ede0f40cc790b591ff0ad7371
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoints-ui-in-multiple-workers-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoints-ui-in-multiple-workers.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/breakpoints-ui-restored-breakpoint-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/resources/worker.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/source-frame-breakpoint-decorations.js
-third_party/WebKit/Source/devtools/front_end/bindings/BreakpointManager.js
-
 Author: shend@chromium.org
 WPT-Author: shend@chromium.org
 commit 66bf68ee6840ca2049151a2a1daf203cd628017a
@@ -6977,154 +6800,11 @@ third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureWindow.cpp
 third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureWindow.h
 third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureWindow.idl
 
-Author: pfeldman@chromium.org
-No-WPT-Author: pfeldman@chromium.org
-commit 4edb83fe12031c0e517fa3da9082ccd879b3c9d2
-third_party/WebKit/LayoutTests/http/tests/devtools/console-xhr-logging.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-eval-throw.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-filter-test.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-group-similar.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-links-on-messages-before-inspection.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-preserve-log.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-revoke-error-in-worker.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-revoke-error.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-timestamp.js
-third_party/WebKit/LayoutTests/http/tests/devtools/extensions/extensions-panel.js
-third_party/WebKit/LayoutTests/http/tests/devtools/input-event-warning.js
-third_party/WebKit/LayoutTests/http/tests/devtools/modules-load-initial-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/network/download.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-datareceived.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-initiator-chain.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-status-non-http.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xhr-data-received-async-response-type-blob.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xhr-replay.js
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xsl-content.js
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-presentation-console-messages.js
-third_party/WebKit/LayoutTests/http/tests/devtools/profiler/heap-snapshot-loader.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-har-conversion.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-har-headers.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters.js
-third_party/WebKit/LayoutTests/http/tests/devtools/reveal-objects.js
-third_party/WebKit/LayoutTests/http/tests/devtools/service-workers/user-agent-override.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/monitor-console-command.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/async-callstack-network-initiator-image.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/dynamic-script-tag.js
-third_party/WebKit/LayoutTests/http/tests/devtools/startup/console-clear-arguments-on-frame-navigation.js
-third_party/WebKit/LayoutTests/http/tests/devtools/startup/console-clear-arguments-on-frame-remove.js
-third_party/WebKit/LayoutTests/http/tests/devtools/startup/console-exception-while-no-inspector.js
-third_party/WebKit/LayoutTests/http/tests/devtools/startup/console-log-before-frame-navigation.js
-third_party/WebKit/Source/devtools/BUILD.gn
-third_party/WebKit/Source/devtools/front_end/Runtime.js
-third_party/WebKit/Source/devtools/front_end/Tests.js
-third_party/WebKit/Source/devtools/front_end/bindings/PresentationConsoleMessageHelper.js
-third_party/WebKit/Source/devtools/front_end/bindings/module.json
-third_party/WebKit/Source/devtools/front_end/console/ConsoleFilter.js
-third_party/WebKit/Source/devtools/front_end/console/ConsolePrompt.js
-third_party/WebKit/Source/devtools/front_end/console/ConsoleSidebar.js
-third_party/WebKit/Source/devtools/front_end/console/ConsoleView.js
-third_party/WebKit/Source/devtools/front_end/console/ConsoleViewMessage.js
-third_party/WebKit/Source/devtools/front_end/console/module.json
-third_party/WebKit/Source/devtools/front_end/console_counters/WarningErrorCounter.js
-third_party/WebKit/Source/devtools/front_end/console_counters/module.json
-third_party/WebKit/Source/devtools/front_end/console_model/ConsoleModel.js
-third_party/WebKit/Source/devtools/front_end/console_model/module.json
-third_party/WebKit/Source/devtools/front_end/console_test_runner/ConsoleTestRunner.js
-third_party/WebKit/Source/devtools/front_end/console_test_runner/module.json
-third_party/WebKit/Source/devtools/front_end/extensions/ExtensionServer.js
-third_party/WebKit/Source/devtools/front_end/extensions/module.json
-third_party/WebKit/Source/devtools/front_end/har_importer/HARImporter.js
-third_party/WebKit/Source/devtools/front_end/har_importer/module.json
-third_party/WebKit/Source/devtools/front_end/main/Main.js
-third_party/WebKit/Source/devtools/front_end/main/module.json
-third_party/WebKit/Source/devtools/front_end/network/HARWriter.js
-third_party/WebKit/Source/devtools/front_end/network/NetworkDataGridNode.js
-third_party/WebKit/Source/devtools/front_end/network/NetworkLogView.js
-third_party/WebKit/Source/devtools/front_end/network/NetworkPanel.js
-third_party/WebKit/Source/devtools/front_end/network/module.json
-third_party/WebKit/Source/devtools/front_end/network_log/HAREntry.js
-third_party/WebKit/Source/devtools/front_end/network_log/NetworkLog.js
-third_party/WebKit/Source/devtools/front_end/network_log/module.json
-third_party/WebKit/Source/devtools/front_end/network_test_runner/NetworkTestRunner.js
-third_party/WebKit/Source/devtools/front_end/object_ui/JavaScriptAutocomplete.js
-third_party/WebKit/Source/devtools/front_end/sdk/ConsoleModel.js
-third_party/WebKit/Source/devtools/front_end/sdk/LogModel.js
-third_party/WebKit/Source/devtools/front_end/sdk/module.json
-third_party/WebKit/Source/devtools/front_end/sdk_browser/HAREntry.js
-third_party/WebKit/Source/devtools/front_end/sdk_browser/LogManager.js
-third_party/WebKit/Source/devtools/front_end/sdk_browser/NetworkLog.js
-third_party/WebKit/Source/devtools/front_end/sdk_browser/module.json
-third_party/WebKit/Source/devtools/front_end/shell.json
-third_party/WebKit/Source/devtools/front_end/snippets/ScriptSnippetModel.js
-third_party/WebKit/Source/devtools/front_end/sources/SourcesPanel.js
-third_party/WebKit/Source/devtools/scripts/extract_module/extract_module.js
-third_party/WebKit/Source/devtools/scripts/special_case_namespaces.json
-
 Author: nektar@chromium.org
 No-WPT-Author: nektar@chromium.org
 commit b3051fc65687ffb51c95ce85c8f355ac23dfb046
 third_party/WebKit/LayoutTests/accessibility/native-select-activedescendant.html
 third_party/WebKit/Source/modules/accessibility/AXMenuListPopup.cpp
-
-Author: pfeldman@chromium.org
-No-WPT-Author: pfeldman@chromium.org
-commit 1897e4b854cd22ca76c3e0418de923a3bcac79f6
-third_party/WebKit/LayoutTests/http/tests/devtools/application-panel/resources-panel-resource-preview.js
-third_party/WebKit/LayoutTests/http/tests/devtools/command-line-api-inspect.js
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-link-to-snippet.js
-third_party/WebKit/LayoutTests/http/tests/devtools/elements/shadow/breadcrumb-shadow-roots.js
-third_party/WebKit/LayoutTests/http/tests/devtools/jump-to-previous-editing-location.js
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-presentation-console-messages.js
-third_party/WebKit/LayoutTests/http/tests/devtools/reveal-objects.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/css-outline-dialog.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-console/debugger-command-line-api.js
-third_party/WebKit/Source/devtools/front_end/common/Console.js
-third_party/WebKit/Source/devtools/front_end/common/ModuleExtensionInterfaces.js
-third_party/WebKit/Source/devtools/front_end/components/DOMPresentationUtils.js
-third_party/WebKit/Source/devtools/front_end/components/Linkifier.js
-third_party/WebKit/Source/devtools/front_end/components/module.json
-third_party/WebKit/Source/devtools/front_end/elements/ElementsTreeElement.js
-third_party/WebKit/Source/devtools/front_end/elements/module.json
-third_party/WebKit/Source/devtools/front_end/elements_test_runner/ElementsTestRunner.js
-third_party/WebKit/Source/devtools/front_end/network/module.json
-third_party/WebKit/Source/devtools/front_end/object_ui/ObjectPropertiesSection.js
-third_party/WebKit/Source/devtools/front_end/resources/module.json
-third_party/WebKit/Source/devtools/front_end/sdk/RuntimeModel.js
-third_party/WebKit/Source/devtools/front_end/sources/module.json
-
-Author: kozyatinskiy@chromium.org
-No-WPT-Author: kozyatinskiy@chromium.org
-commit 29e9b753d74f3c045a7b03ce01100d2d0207d3c7
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/dynamic-scripts-breakpoints.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/click-gutter-breakpoint.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/script-formatter-breakpoints-2.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/script-formatter-breakpoints-3.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/live-edit-breakpoints.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/source-frame-breakpoint-decorations.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/source-frame-inline-breakpoint-decorations.js
-third_party/WebKit/LayoutTests/http/tests/devtools/startup/sources/debugger/script-formatter-breakpoints-1.js
-third_party/WebKit/LayoutTests/http/tests/devtools/startup/sources/debugger/script-formatter-breakpoints-4.js
-third_party/WebKit/Source/devtools/front_end/bindings/BreakpointManager.js
-third_party/WebKit/Source/devtools/front_end/main/Main.js
-
-Author: caseq@chromium.org
-No-WPT-Author: caseq@chromium.org
-commit 30f8822a37972aabd4b76d4559d1062d6799c9cb
-third_party/WebKit/LayoutTests/TestExpectations
-third_party/WebKit/LayoutTests/http/tests/devtools/network/ping.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/navigation-long-async-stack-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/navigation-long-async-stack.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/request-interception-on-response.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/response-interception-with-data-url.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger.js
-third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.h
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
-third_party/WebKit/public/web/WebFrameClient.h
 
 Author: steimel@chromium.org
 No-WPT-Author: steimel@chromium.org
@@ -7153,15 +6833,6 @@ commit a5203964c7dd8d4ff8bf69554ccfae8e2ad147ad
 third_party/WebKit/LayoutTests/compositing/masks/clip-path-with-no-fragment-should-not-crash-expected.txt
 third_party/WebKit/LayoutTests/compositing/masks/clip-path-with-no-fragment-should-not-crash.html
 third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
-
-Author: dgozman@chromium.org
-No-WPT-Author: dgozman@chromium.org
-commit 8936121054d9ccfceed16e3b9a01e403cb672d02
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-navigator-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-navigator.js
-third_party/WebKit/Source/core/inspector/InspectorPageAgent.cpp
-third_party/WebKit/Source/devtools/front_end/sdk/ResourceTreeModel.js
-third_party/WebKit/Source/devtools/front_end/sources/NavigatorView.js
 
 Author: futhark@chromium.org
 WPT-Author: futhark@chromium.org
@@ -7200,28 +6871,6 @@ third_party/WebKit/LayoutTests/external/wpt/custom-elements/builtin-coverage.htm
 third_party/WebKit/Source/core/dom/Element.cpp
 third_party/WebKit/Source/core/html/HTMLScriptElement.cpp
 third_party/WebKit/Source/core/svg/SVGScriptElement.cpp
-
-Author: lushnikov@chromium.org
-No-WPT-Author: lushnikov@chromium.org
-commit a6d24617851cac672cf1730c678fa0c27daf1122
-third_party/WebKit/LayoutTests/http/tests/devtools/extensions/extensions-resources.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/scripts-panel.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/scripts-sorting.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-ui/scripts-with-same-source-url-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/navigator-view.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger/network-uisourcecode-provider.js
-third_party/WebKit/Source/devtools/front_end/bindings/ContentProviderBasedProject.js
-third_party/WebKit/Source/devtools/front_end/bindings/DebuggerWorkspaceBinding.js
-third_party/WebKit/Source/devtools/front_end/bindings/NetworkProject.js
-third_party/WebKit/Source/devtools/front_end/bindings/ResourceScriptMapping.js
-third_party/WebKit/Source/devtools/front_end/main/Main.js
-third_party/WebKit/Source/devtools/front_end/workspace/Workspace.js
-
-Author: lushnikov@chromium.org
-No-WPT-Author: lushnikov@chromium.org
-commit 2140ffeadf3e081e2e0821fc8e1ee040373b205d
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/nodejs-set-breakpoint.js
-third_party/WebKit/Source/devtools/front_end/sdk/DebuggerModel.js
 
 Author: raphael.kubo.da.costa@intel.com
 No-WPT-Author: raphael.kubo.da.costa@intel.com
@@ -7526,19 +7175,6 @@ third_party/WebKit/LayoutTests/platform/win/virtual/exotic-color-space/images/co
 third_party/WebKit/LayoutTests/platform/win/virtual/gpu-rasterization/images/color-profile-background-image-cover-expected.png
 third_party/WebKit/Source/core/paint/BackgroundImageGeometry.cpp
 third_party/WebKit/Source/core/paint/BackgroundImageGeometry.h
-
-Author: dgozman@chromium.org
-No-WPT-Author: dgozman@chromium.org
-commit 4e44555895b1c2fb682e33ffdaf9860dbe33ea45
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-console-preserves-log-on-frame-navigation-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-console-preserves-log-on-frame-navigation.js
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-presentation-console-messages-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/oopif-presentation-console-messages.js
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/resources/empty.html
-third_party/WebKit/LayoutTests/http/tests/devtools/oopif/resources/error.html
-third_party/WebKit/Source/devtools/front_end/bindings/PresentationConsoleMessageHelper.js
-third_party/WebKit/Source/devtools/front_end/console_model/ConsoleModel.js
-third_party/WebKit/Source/devtools/front_end/main/Main.js
 
 Author: ikilpatrick@chromium.org
 WPT-Author: ikilpatrick@chromium.org
@@ -7907,38 +7543,6 @@ third_party/WebKit/Source/core/dom/ElementRareData.cpp
 third_party/WebKit/Source/core/dom/ElementRareData.h
 third_party/WebKit/Source/core/frame/LocalDOMWindow.cpp
 
-Author: pfeldman@chromium.org
-No-WPT-Author: pfeldman@chromium.org
-commit 0a1701e88dd9e71eb2f14c6f6653854ba97ca2f2
-third_party/WebKit/LayoutTests/http/tests/devtools/elements/event-listeners-framework-with-service-worker.js
-third_party/WebKit/LayoutTests/http/tests/devtools/sources/debugger-breakpoints/dom-breakpoints.js
-third_party/WebKit/Source/devtools/BUILD.gn
-third_party/WebKit/Source/devtools/front_end/Runtime.js
-third_party/WebKit/Source/devtools/front_end/components/DOMBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/components/DOMPresentationUtils.js
-third_party/WebKit/Source/devtools/front_end/components/domBreakpointsSidebarPane.css
-third_party/WebKit/Source/devtools/front_end/components/module.json
-third_party/WebKit/Source/devtools/front_end/devtools_app.json
-third_party/WebKit/Source/devtools/front_end/dom_debugger/DOMBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/EventListenerBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/ObjectEventListenersSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/XHRBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/dom_debugger/domBreakpointsSidebarPane.css
-third_party/WebKit/Source/devtools/front_end/dom_debugger/eventListenerBreakpoints.css
-third_party/WebKit/Source/devtools/front_end/dom_debugger/module.json
-third_party/WebKit/Source/devtools/front_end/dom_debugger/xhrBreakpointsSidebarPane.css
-third_party/WebKit/Source/devtools/front_end/sources/DebuggerPausedMessage.js
-third_party/WebKit/Source/devtools/front_end/sources/EventListenerBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/sources/ObjectEventListenersSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/sources/XHRBreakpointsSidebarPane.js
-third_party/WebKit/Source/devtools/front_end/sources/eventListenerBreakpoints.css
-third_party/WebKit/Source/devtools/front_end/sources/module.json
-third_party/WebKit/Source/devtools/front_end/sources/xhrBreakpointsSidebarPane.css
-third_party/WebKit/Source/devtools/front_end/sources_test_runner/DebuggerTestRunner.js
-third_party/WebKit/Source/devtools/front_end/sources_test_runner/module.json
-third_party/WebKit/Source/devtools/front_end/worker_app.json
-third_party/WebKit/Source/devtools/scripts/special_case_namespaces.json
-
 Author: tkent@chromium.org
 WPT-Author: tkent@chromium.org
 commit db2a27ac69114ede5b7afdf77174a4bf2be2adf1
@@ -8090,24 +7694,6 @@ third_party/WebKit/Source/core/layout/LayoutFlexibleBox.cpp
 third_party/WebKit/Source/core/layout/LayoutGrid.cpp
 third_party/WebKit/Source/core/style/ComputedStyle.cpp
 third_party/WebKit/Source/core/style/ComputedStyleConstants.h
-
-Author: eostroukhov@chromium.org
-No-WPT-Author: eostroukhov@chromium.org
-commit 95f7d22cfff65db8271ee240486238f7d204586b
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/get-request-blob-data-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/get-request-blob-data.js
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
-third_party/WebKit/Source/core/inspector/NetworkResourcesData.cpp
-third_party/WebKit/Source/core/inspector/NetworkResourcesData.h
-third_party/WebKit/Source/core/inspector/inspector_protocol_config.json
-
-Author: luoe@chromium.org
-No-WPT-Author: luoe@chromium.org
-commit 60c81ca7fbd73c42c303d4ce65730f802575636c
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-stick-to-bottom-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-viewport-stick-to-bottom.js
-third_party/WebKit/Source/devtools/front_end/console/ConsoleView.js
 
 Author: skobes@chromium.org
 No-WPT-Author: skobes@chromium.org
@@ -8270,33 +7856,6 @@ third_party/WebKit/Source/core/html/forms/HTMLFormElement.cpp
 third_party/WebKit/Source/core/html/forms/HTMLFormElement.h
 third_party/WebKit/Source/core/html/forms/HTMLFormElement.idl
 
-Author: einbinder@chromium.org
-No-WPT-Author: einbinder@chromium.org
-commit 2b1ed42636a877e752a23c7c0a48304fc447d995
-third_party/WebKit/LayoutTests/http/tests/devtools/bindings/inline-styles-binding-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/bindings/inline-styles-binding.js
-third_party/WebKit/LayoutTests/http/tests/devtools/bindings/resources/inline-style.html
-third_party/WebKit/Source/devtools/front_end/bindings/ResourceMapping.js
-third_party/WebKit/Source/devtools/front_end/sdk/CSSModel.js
-third_party/WebKit/Source/devtools/front_end/text_utils/TextRange.js
-
-Author: caseq@chromium.org
-No-WPT-Author: caseq@chromium.org
-commit 30c1392370b396d7642208c6bcbc0c76fd918cd9
-third_party/WebKit/LayoutTests/TestExpectations
-third_party/WebKit/LayoutTests/http/tests/devtools/network/ping.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/request-interception-on-response.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/response-interception-with-data-url.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger.js
-third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.h
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
-third_party/WebKit/public/web/WebFrameClient.h
-
 Author: jsbell@chromium.org
 No-WPT-Author: jsbell@chromium.org
 commit e3fb52cc8901b50d703983e251597d75904dd441
@@ -8353,40 +7912,6 @@ third_party/WebKit/Source/core/loader/resource/ScriptResource.h
 third_party/WebKit/Source/core/script/ClassicPendingScript.cpp
 third_party/WebKit/Source/platform/loader/fetch/Resource.cpp
 third_party/WebKit/Source/platform/loader/fetch/Resource.h
-
-Author: thomasanderson@chromium.org
-No-WPT-Author: thomasanderson@chromium.org
-commit 618456e7d8be03dc76e6a7b74b8fd1a5eff3508a
-third_party/WebKit/LayoutTests/TestExpectations
-third_party/WebKit/LayoutTests/http/tests/devtools/network/ping.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/request-interception-on-response.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/response-interception-with-data-url.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger.js
-third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.h
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
-third_party/WebKit/public/web/WebFrameClient.h
-
-Author: thomasanderson@chromium.org
-No-WPT-Author: thomasanderson@chromium.org
-commit e41fd2de99e467fcc9c9b57cdb96f2b6430233ff
-third_party/WebKit/LayoutTests/TestExpectations
-third_party/WebKit/LayoutTests/http/tests/devtools/network/ping.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/request-interception-on-response.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/response-interception-with-data-url.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger.js
-third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.h
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
-third_party/WebKit/public/web/WebFrameClient.h
 
 Author: zakerinasab@chromium.org
 WPT-Author: zakerinasab@chromium.org
@@ -8482,23 +8007,6 @@ commit 93f209d5e8adbdce5a229385752eec2570cc4713
 third_party/WebKit/LayoutTests/media/controls/modern/quirks-mode-timeline-is-not-hidden.html
 third_party/WebKit/Source/modules/media_controls/resources/modernMediaControls.css
 
-Author: caseq@chromium.org
-No-WPT-Author: caseq@chromium.org
-commit 84e18366aa62b0adf17ccc9f2a88642915dfd711
-third_party/WebKit/LayoutTests/TestExpectations
-third_party/WebKit/LayoutTests/http/tests/devtools/network/ping.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/request-interception-on-response.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/response-interception-with-data-url.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger.js
-third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.h
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
-third_party/WebKit/public/web/WebFrameClient.h
-
 Author: npm@chromium.org
 No-WPT-Author: npm@chromium.org
 commit d89fecbdfff2310ea84a85327cb09c8650c4646d
@@ -8548,23 +8056,6 @@ third_party/WebKit/Source/modules/sensor/SensorReadingRemapper.cpp
 third_party/WebKit/Source/modules/sensor/SensorReadingRemapper.h
 third_party/WebKit/Source/modules/sensor/SpatialSensorOptions.idl
 
-Author: guidou@chromium.org
-No-WPT-Author: guidou@chromium.org
-commit 0fc61e04e77774f06ddc82d7bd3885bbd7f2cdb1
-third_party/WebKit/LayoutTests/TestExpectations
-third_party/WebKit/LayoutTests/http/tests/devtools/network/ping.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/request-interception-on-response.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/response-interception-with-data-url.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger.js
-third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.h
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
-third_party/WebKit/public/web/WebFrameClient.h
-
 Author: tkent@chromium.org
 WPT-Author: tkent@chromium.org
 commit e90821a3528e187a9c395750093947f9fb49dde8
@@ -8597,23 +8088,6 @@ third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertyma
 third_party/WebKit/Source/core/css/cssom/CSSUnparsedValue.cpp
 third_party/WebKit/Source/core/css/cssom/CSSUnparsedValue.h
 third_party/WebKit/Source/core/css/cssom/CSSUnparsedValue.idl
-
-Author: caseq@chromium.org
-No-WPT-Author: caseq@chromium.org
-commit 37608a0ee146d87f2a1d897e28fc3044e9aa25f0
-third_party/WebKit/LayoutTests/TestExpectations
-third_party/WebKit/LayoutTests/http/tests/devtools/network/ping.js
-third_party/WebKit/LayoutTests/http/tests/devtools/resource-parameters-ipv6.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/request-interception-on-response.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/network/response-interception-with-data-url.js
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger-expected.txt
-third_party/WebKit/LayoutTests/http/tests/inspector-protocol/target/wait-for-debugger.js
-third_party/WebKit/Source/core/exported/LocalFrameClientImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.cpp
-third_party/WebKit/Source/core/exported/WebDevToolsAgentImpl.h
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.cpp
-third_party/WebKit/Source/core/inspector/InspectorNetworkAgent.h
-third_party/WebKit/public/web/WebFrameClient.h
 
 Author: lethalantidote@chromium.org
 No-WPT-Author: lethalantidote@chromium.org
@@ -8945,49 +8419,6 @@ third_party/WebKit/LayoutTests/custom-elements/spec/selectors/pseudo-class-defin
 third_party/WebKit/LayoutTests/external/wpt/custom-elements/pseudo-class-defined.html
 third_party/WebKit/Source/core/html/custom/CustomElementRegistry.cpp
 third_party/WebKit/Source/core/html/parser/HTMLConstructionSite.cpp
-
-Author: pfeldman@chromium.org
-No-WPT-Author: pfeldman@chromium.org
-commit 054856e6d33a1fd7b18b9c2154569ed07f666f5e
-third_party/WebKit/LayoutTests/http/tests/devtools/extensions/extensions-panel.js
-third_party/WebKit/LayoutTests/http/tests/devtools/modules-load-initial-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/profiler/agents-disabled-check-expected.txt
-third_party/WebKit/Source/devtools/BUILD.gn
-third_party/WebKit/Source/devtools/front_end/audits2/Audits2ProtocolService.js
-third_party/WebKit/Source/devtools/front_end/audits2/module.json
-third_party/WebKit/Source/devtools/front_end/inspector.json
-third_party/WebKit/Source/devtools/front_end/inspector_main/InspectorMain.js
-third_party/WebKit/Source/devtools/front_end/inspector_main/RenderingOptions.js
-third_party/WebKit/Source/devtools/front_end/inspector_main/RequestAppBannerActionDelegate.js
-third_party/WebKit/Source/devtools/front_end/inspector_main/module.json
-third_party/WebKit/Source/devtools/front_end/inspector_main/nodeIcon.css
-third_party/WebKit/Source/devtools/front_end/inspector_main/remoteDebuggingTerminatedScreen.css
-third_party/WebKit/Source/devtools/front_end/inspector_main/renderingOptions.css
-third_party/WebKit/Source/devtools/front_end/inspector_main/targetCrashedScreen.css
-third_party/WebKit/Source/devtools/front_end/main/GCActionDelegate.js
-third_party/WebKit/Source/devtools/front_end/main/Main.js
-third_party/WebKit/Source/devtools/front_end/main/RenderingOptions.js
-third_party/WebKit/Source/devtools/front_end/main/RequestAppBannerActionDelegate.js
-third_party/WebKit/Source/devtools/front_end/main/module.json
-third_party/WebKit/Source/devtools/front_end/main/nodeIcon.css
-third_party/WebKit/Source/devtools/front_end/main/remoteDebuggingTerminatedScreen.css
-third_party/WebKit/Source/devtools/front_end/main/renderingOptions.css
-third_party/WebKit/Source/devtools/front_end/main/targetCrashedScreen.css
-third_party/WebKit/Source/devtools/front_end/network/NetworkLogView.js
-third_party/WebKit/Source/devtools/front_end/network/NetworkPanel.js
-third_party/WebKit/Source/devtools/front_end/perf_ui/GCActionDelegate.js
-third_party/WebKit/Source/devtools/front_end/perf_ui/module.json
-third_party/WebKit/Source/devtools/front_end/sdk/TargetManager.js
-third_party/WebKit/Source/devtools/front_end/sdk/module.json
-
-Author: pfeldman@chromium.org
-No-WPT-Author: pfeldman@chromium.org
-commit f7ba8a52e2dd3e32b9a49e39237f7f7b38713343
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-xhr-same-url-as-main-resource.js
-third_party/WebKit/Source/devtools/front_end/main/Main.js
-third_party/WebKit/Source/devtools/front_end/sdk/Connections.js
-third_party/WebKit/Source/devtools/front_end/sdk/TargetManager.js
-third_party/WebKit/Source/devtools/front_end/sources/SourcesPanel.js
 
 Author: fmalita@chromium.org
 No-WPT-Author: fmalita@chromium.org
@@ -9505,14 +8936,6 @@ third_party/WebKit/LayoutTests/http/tests/worklet/webexposed/global-interface-li
 third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
 third_party/WebKit/Source/core/css/cssom/CSSNumericArray.idl
 
-Author: dgozman@chromium.org
-No-WPT-Author: dgozman@chromium.org
-commit d1f7fd6dbc409516769a0c4ad1bbac2d1fd4669e
-third_party/WebKit/LayoutTests/http/tests/devtools/indexeddb/resources-panel-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/indexeddb/resources-panel.js
-third_party/WebKit/LayoutTests/http/tests/devtools/indexeddb/resources/with-indexed-db.html
-third_party/WebKit/Source/devtools/front_end/application_test_runner/IndexedDBTestRunner.js
-
 Author: jfernandez@igalia.com
 WPT-Author: jfernandez@igalia.com
 commit a123787c6df637b7e7b33fef67e15a587978110f
@@ -9597,14 +9020,6 @@ third_party/WebKit/LayoutTests/external/wpt/html/semantics/forms/the-input-eleme
 third_party/WebKit/LayoutTests/fast/forms/image/input-image-submit-expected.txt
 third_party/WebKit/Source/core/frame/Deprecation.cpp
 third_party/WebKit/Source/core/html/forms/ImageInputType.cpp
-
-Author: luoe@chromium.org
-No-WPT-Author: luoe@chromium.org
-commit df24ae6906f83b6b3b7c5eda48b20710b246d5de
-third_party/WebKit/LayoutTests/TestExpectations
-third_party/WebKit/LayoutTests/http/tests/devtools/console/console-focus.js
-third_party/WebKit/Source/devtools/front_end/console/ConsoleView.js
-third_party/WebKit/Source/devtools/front_end/console_test_runner/ConsoleTestRunner.js
 
 Author: victoriaytsu@google.com
 WPT-Author: victoriaytsu@google.com
@@ -9707,61 +9122,12 @@ third_party/WebKit/Source/core/dom/ComputedAccessibleNode.h
 third_party/WebKit/Source/core/dom/ComputedAccessibleNode.idl
 third_party/WebKit/public/platform/WebComputedAXTree.h
 
-Author: dgozman@chromium.org
-No-WPT-Author: dgozman@chromium.org
-commit 05b4333d24ccbe5aeb4a87f08d93c61ab345ade9
-third_party/WebKit/LayoutTests/http/tests/devtools/console-xhr-logging-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/console-xhr-logging.js
-third_party/WebKit/Source/devtools/front_end/network_test_runner/NetworkTestRunner.js
-
-Author: ulan@chromium.org
-No-WPT-Author: ulan@chromium.org
-commit b38855a87e13685eeb64c54e0781903a69b41724
-third_party/WebKit/LayoutTests/MSANExpectations
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-active-dom-object-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-active-dom-object.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-detached-dom-tree-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-detached-dom-tree.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-event-listener-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-event-listener.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-multiple-retainers-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-multiple-retainers.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/resources/heap-snapshot-common.js
-third_party/WebKit/Source/bindings/bindings.gni
-third_party/WebKit/Source/bindings/core/v8/V8EmbedderGraphBuilder.cpp
-third_party/WebKit/Source/bindings/core/v8/V8EmbedderGraphBuilder.h
-third_party/WebKit/Source/bindings/core/v8/V8Initializer.cpp
-third_party/WebKit/Source/platform/bindings/ScriptWrappableVisitor.h
-third_party/WebKit/Source/platform/heap/TraceTraits.h
-
 Author: futhark@chromium.org
 WPT-Author: futhark@chromium.org
 commit 36dde5a6c1998b823bf8cda836ba27979db0e725
 third_party/WebKit/LayoutTests/TestExpectations
 third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/anonymous-grid-item-001.html
 third_party/WebKit/Source/core/layout/LayoutBlock.cpp
-
-Author: steimel@chromium.org
-No-WPT-Author: steimel@chromium.org
-commit 0c2648420c80bff20154a6abd2d267a9a53cc6ad
-third_party/WebKit/LayoutTests/MSANExpectations
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-active-dom-object-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-active-dom-object.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-detached-dom-tree-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-detached-dom-tree.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-event-listener-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-event-listener.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-iframe-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-iframe.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-multiple-retainers-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-multiple-retainers.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/resources/heap-snapshot-common.js
-third_party/WebKit/Source/bindings/bindings.gni
-third_party/WebKit/Source/bindings/core/v8/V8EmbedderGraphBuilder.cpp
-third_party/WebKit/Source/bindings/core/v8/V8EmbedderGraphBuilder.h
-third_party/WebKit/Source/bindings/core/v8/V8Initializer.cpp
-third_party/WebKit/Source/platform/bindings/ScriptWrappableVisitor.h
-third_party/WebKit/Source/platform/heap/TraceTraits.h
 
 Author: fs@opera.com
 WPT-Author: fs@opera.com
@@ -9776,16 +9142,6 @@ third_party/WebKit/Source/core/layout/svg/LayoutSVGTextPath.h
 third_party/WebKit/Source/core/layout/svg/SVGTextLayoutEngine.cpp
 third_party/WebKit/Source/core/svg/SVGGeometryElement.cpp
 third_party/WebKit/Source/core/svg/SVGGeometryElement.h
-
-Author: eostroukhov@chromium.org
-No-WPT-Author: eostroukhov@chromium.org
-commit 0a9c4fe31451a99109ffb695fcb4085fd8e7e72f
-third_party/WebKit/LayoutTests/http/tests/devtools/network/network-choose-preview-view-expected.txt
-third_party/WebKit/LayoutTests/http/tests/devtools/network/preview-searchable-expected.txt
-third_party/WebKit/Source/devtools/front_end/network/RequestPreviewView.js
-third_party/WebKit/Source/devtools/front_end/network/ResourceWebSocketFrameView.js
-third_party/WebKit/Source/devtools/front_end/source_frame/JSONView.js
-third_party/WebKit/Source/devtools/front_end/source_frame/PreviewFactory.js
 
 Author: szager@chromium.org
 No-WPT-Author: szager@chromium.org
@@ -13992,28 +13348,6 @@ third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureController.
 third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureController.h
 third_party/WebKit/public/platform/web_feature.mojom
 
-Author: ulan@chromium.org
-No-WPT-Author: ulan@chromium.org
-commit 75edf20e769f39825d6e17fab52e16589350e7f2
-third_party/WebKit/LayoutTests/MSANExpectations
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-active-dom-object-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-active-dom-object.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-detached-dom-tree-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-detached-dom-tree.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-event-listener-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-event-listener.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-iframe-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-iframe.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-multiple-retainers-expected.txt
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/heap-snapshot-with-multiple-retainers.js
-third_party/WebKit/LayoutTests/inspector-protocol/heap-profiler/resources/heap-snapshot-common.js
-third_party/WebKit/Source/bindings/bindings.gni
-third_party/WebKit/Source/bindings/core/v8/V8EmbedderGraphBuilder.cpp
-third_party/WebKit/Source/bindings/core/v8/V8EmbedderGraphBuilder.h
-third_party/WebKit/Source/bindings/core/v8/V8Initializer.cpp
-third_party/WebKit/Source/platform/bindings/ScriptWrappableVisitor.h
-third_party/WebKit/Source/platform/heap/TraceTraits.h
-
 Author: tkent@chromium.org
 WPT-Author: tkent@chromium.org
 commit ae25beae260de5f2560003a65c46710eb296570f
@@ -14361,4 +13695,4 @@ third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.h
 third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.idl
 third_party/WebKit/Source/modules/webaudio/AudioWorkletNodeOptions.idl
 
-268 source+test changes, 112 in wpt
+235 source+test changes, 112 in wpt
