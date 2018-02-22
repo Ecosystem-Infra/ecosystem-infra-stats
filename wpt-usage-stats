@@ -17,6 +17,7 @@ import sys
 NOT_TEST_PATTERNS = [
     '.*/devtools/',
     '.*/inspector-protocol/',
+    '.*/inspector/', # moved in crbug.com/667560
     'third_party/WebKit/LayoutTests/FlagExpectations/',
     'third_party/WebKit/LayoutTests/[^/]*$', # TestExpectations, etc.
     'third_party/WebKit/LayoutTests/external/[^/]*$', # WPT_BASE_MANIFEST.json, etc.
