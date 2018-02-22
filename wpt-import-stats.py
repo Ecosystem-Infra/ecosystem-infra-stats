@@ -171,7 +171,7 @@ def analyze(latencies):
     print('Quarter 90th percentile', numpy.percentile(np_this_quarter, 90))
     print('{} / {} PRs out of {} min SLA ({})'.format(
         out_of_sla, quarter_total, SLA, out_of_sla / float(quarter_total)))
-    print('KR: in_sla =', (quarter_total - out_of_sla) / float(quarter_total))
+    print('KR:', (quarter_total - out_of_sla) / float(quarter_total))
 
 
 def main():
