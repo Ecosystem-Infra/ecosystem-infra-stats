@@ -31,6 +31,7 @@ Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing TEAM: webmessaging
 Missing TEAM: webrtc
+Missing OWNERS: css/css-animations
 Missing OWNERS: css/css-contain
 Missing OWNERS: css/css-content
 Missing OWNERS: css/css-fill-stroke
