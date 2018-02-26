@@ -25,6 +25,7 @@ echo
 echo "chromium usage stats..."
 cp wpt-usage-stats "$CHROMIUM_DIR/third_party/WebKit/Tools/Scripts/"
 python "$CHROMIUM_DIR/third_party/WebKit/Tools/Scripts/wpt-usage-stats" 2018-02-01 2018-03-01 > out/chromium-usage-stats.txt
+rm "$CHROMIUM_DIR/third_party/WebKit/Tools/Scripts/wpt-usage-stats"
 echo
 
 echo "chromium OWNERS check..."
