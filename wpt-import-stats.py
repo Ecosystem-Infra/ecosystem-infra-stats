@@ -48,11 +48,12 @@ def list_imports():
 def _compare_commits(sha1, sha2):
     if sha1 == sha2:
         return 0
-    count = wpt_git(['rev-list', '--count', '{}..{}'.format(sha1, sha2)])
-    if int(count) > 0:
-        # SHA1 is before SHA2
+    try:
+        wpt_git(['merge-base', '--is-ancestor', sha1, sha2])
+        # SHA1 is an ancestor of SHA2
         return -1
-    else:
+    except subprocess.CalledProcessError:
+        # The exception is raised when the return code is non-zero.
         return 1
 
 
