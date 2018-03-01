@@ -1,3 +1,568 @@
+Author: ikilpatrick@chromium.org
+WPT-Author: ikilpatrick@chromium.org
+commit 1f9508a413a9234e7aa3504edbae538081200532
+third_party/WebKit/LayoutTests/external/wpt/common/arrays.js
+third_party/WebKit/LayoutTests/external/wpt/common/worklet-reftest.js
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/box-tree-registered.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/layout-child-absolute.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/layout-child-before-after.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/layout-child-fixed.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/layout-child-float.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/layout-child-inflow.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/layout-child-inlines.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/layout-child-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/layout-child-text.https.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-layout-api/support/layout-child-worklet.js
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/css/ComputedStyleExtraFields.json5
+third_party/WebKit/Source/core/css/resolver/StyleAdjuster.cpp
+third_party/WebKit/Source/core/layout/BUILD.gn
+third_party/WebKit/Source/core/layout/LayoutBox.cpp
+third_party/WebKit/Source/core/layout/LayoutBox.h
+third_party/WebKit/Source/core/layout/custom/CSSLayoutDefinition.cpp
+third_party/WebKit/Source/core/layout/custom/CustomLayoutChild.cpp
+third_party/WebKit/Source/core/layout/custom/CustomLayoutChild.h
+third_party/WebKit/Source/core/layout/custom/LayoutChild.idl
+third_party/WebKit/Source/core/layout/custom/LayoutCustom.cpp
+third_party/WebKit/Source/core/layout/custom/LayoutCustom.h
+third_party/WebKit/Source/core/style/ComputedStyle.cpp
+third_party/WebKit/Source/core/style/ComputedStyle.h
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit a3c8a81f604a306174a02e8f2d574fced6a11256
+third_party/WebKit/LayoutTests/webaudio/AudioParam/audioparam-setTargetAtTime-limit.html
+third_party/WebKit/LayoutTests/webaudio/AudioParam/audioparam-setTargetAtTime.html
+third_party/WebKit/Source/modules/webaudio/AudioParamTimeline.cpp
+third_party/WebKit/Source/modules/webaudio/AudioParamTimeline.h
+
+Author: kpaulhamus@chromium.org
+WPT-Author: kpaulhamus@chromium.org
+commit a76be1d6b5131df66515e011c40f640cb28daede
+third_party/WebKit/LayoutTests/external/wpt/webauthn/interfaces.https-expected.txt
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/publickeycredential-basics.html
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredential.cpp
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredential.h
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredential.idl
+
+Author: vmpstr@chromium.org
+No-WPT-Author: vmpstr@chromium.org
+commit 857b89fe4bb8843f8f8074a8545e5a51b22a9166
+third_party/WebKit/LayoutTests/compositing/scroll-with-inner-clip-expected.png
+third_party/WebKit/LayoutTests/compositing/scroll-with-inner-clip-expected.txt
+third_party/WebKit/LayoutTests/compositing/scroll-with-inner-clip.html
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/compositing/scroll-with-inner-clip-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/compositing/scroll-with-inner-clip-expected.png
+third_party/WebKit/LayoutTests/virtual/disable-spv175/compositing/scroll-with-inner-clip-expected.png
+third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
+
+Author: agl@chromium.org
+WPT-Author: agl@chromium.org
+commit dc639a910dd43a1c1ff88715f092669e5f57878a
+third_party/WebKit/LayoutTests/external/wpt/webauthn/createcredential-extensions.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/webauthn/createcredential-extensions.https.html
+third_party/WebKit/LayoutTests/external/wpt/webauthn/getcredential-extensions.https.html
+third_party/WebKit/LayoutTests/platform/win/external/wpt/webauthn/createcredential-extensions.https-expected.txt
+third_party/WebKit/Source/modules/credentialmanager/AuthenticationExtensionsClientInputs.idl
+third_party/WebKit/Source/modules/credentialmanager/CredentialManagerTypeConverters.cpp
+third_party/WebKit/Source/modules/credentialmanager/CredentialsContainer.cpp
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredentialCreationOptions.idl
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredentialRequestOptions.idl
+third_party/WebKit/Source/modules/modules_idl_files.gni
+third_party/WebKit/public/platform/modules/webauth/authenticator.mojom
+
+Author: kojii@chromium.org
+No-WPT-Author: kojii@chromium.org
+commit 4429e98dc0c93c876be7992f00938b9229b3f60c
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/classification/list_style_position-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/font_properties/font_variant-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1505-c524-font-var-00-b-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1505-c524-font-var-00-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1602-c546-txt-align-00-b-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/html/css3-modsel-41-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/html/css3-modsel-41a-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/xhtml/css3-modsel-41-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/xhtml/css3-modsel-41a-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/xml/css3-modsel-41-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/xml/css3-modsel-41a-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/text/atomic-inline-before-ellipsis-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/tables/mozilla/bugs/bug8411-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/block/float/021-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/block/margin-collapse/101-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/block/margin-collapse/102-expected.png
+third_party/WebKit/Source/core/layout/ng/inline/ng_inline_node_test.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_line_breaker.cc
+third_party/WebKit/Source/platform/fonts/shaping/HarfBuzzShaperTest.cpp
+third_party/WebKit/Source/platform/fonts/shaping/ShapeResult.cpp
+third_party/WebKit/Source/platform/fonts/shaping/ShapingLineBreaker.cpp
+third_party/WebKit/Source/platform/fonts/shaping/ShapingLineBreaker.h
+
+Author: fs@opera.com
+No-WPT-Author: fs@opera.com
+commit d891e5fb83542be7eb8e23d4ff99d28541985260
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/paint/invalidation/multicol/multicol-with-overflowing-block-rl-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/table/single-line-cells-repeating-thead-break-inside-on-thead-only-expected.txt
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/paint/invalidation/multicol/multicol-with-overflowing-block-rl-expected.txt
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/paint/invalidation/table/single-line-cells-repeating-thead-break-inside-on-thead-only-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/multicol/multicol-with-overflowing-block-rl-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/table/single-line-cells-repeating-thead-break-inside-on-thead-only-expected.txt
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilderTest.cpp
+
+Author: chrishtr@chromium.org
+No-WPT-Author: chrishtr@chromium.org
+commit 09358ab1c1dd96c4a8bf516e90a927b0d98c014c
+third_party/WebKit/LayoutTests/svg/masking/mask-of-root-expected.html
+third_party/WebKit/LayoutTests/svg/masking/mask-of-root.html
+third_party/WebKit/Source/core/layout/svg/LayoutSVGRoot.cpp
+third_party/WebKit/Source/core/layout/svg/LayoutSVGRoot.h
+third_party/WebKit/Source/core/layout/svg/LayoutSVGRootTest.cpp
+third_party/WebKit/Source/core/paint/CSSMaskPainter.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilderTest.cpp
+
+Author: fs@opera.com
+No-WPT-Author: fs@opera.com
+commit 5d6af5e82fb1b59cb7bc257241375a30f1963074
+third_party/WebKit/LayoutTests/svg/stroke/pathlength-mutation-with-rect-expected.html
+third_party/WebKit/LayoutTests/svg/stroke/pathlength-mutation-with-rect.html
+third_party/WebKit/Source/core/svg/SVGGeometryElement.cpp
+third_party/WebKit/Source/core/svg/SVGGeometryElement.h
+third_party/WebKit/Source/core/svg/SVGPathElement.cpp
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit a2f6e294710de95febce102e645c7f4f7633b0b6
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/resources/testsuite.js
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/transform-expected.txt
+third_party/WebKit/Source/core/css/cssom/ComputedStylePropertyMap.cpp
+third_party/WebKit/Source/platform/transforms/Matrix3DTransformOperation.h
+third_party/WebKit/Source/platform/transforms/MatrixTransformOperation.h
+third_party/WebKit/Source/platform/transforms/PerspectiveTransformOperation.h
+third_party/WebKit/Source/platform/transforms/SkewTransformOperation.h
+
+Author: c.padhi@samsung.com
+WPT-Author: c.padhi@samsung.com
+commit b2d7c2e28ac266e5adfcfad9f38268a4f774bf91
+third_party/WebKit/LayoutTests/external/wpt/mediacapture-streams/MediaStreamTrack-getCapabilities.https.html
+third_party/WebKit/LayoutTests/fast/mediastream/MediaStreamTrack-getCapabilities.html
+third_party/WebKit/Source/modules/mediastream/MediaStreamTrack.cpp
+
+Author: tkent@chromium.org
+WPT-Author: tkent@chromium.org
+commit 1e8cf988bac408513d01e37a10b8cc1d55f567ad
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/forms/the-fieldset-element/disabled-001.html
+third_party/WebKit/Source/core/html/forms/HTMLFormControlElement.cpp
+
+Author: hta@chromium.org
+No-WPT-Author: hta@chromium.org
+commit c82da000ab66e7291ef79c2ab0afc954b0bcb5f9
+third_party/WebKit/LayoutTests/fast/peerconnection/RTCPeerConnection-createDTMFSender.html
+third_party/WebKit/Source/modules/peerconnection/RTCDTMFSender.cpp
+third_party/WebKit/Source/modules/peerconnection/RTCDTMFSender.h
+third_party/WebKit/Source/modules/peerconnection/RTCPeerConnection.cpp
+third_party/WebKit/Source/modules/peerconnection/RTCRtpSender.cpp
+third_party/WebKit/Source/modules/peerconnection/RTCRtpSender.h
+third_party/WebKit/Source/platform/testing/TestingPlatformSupportWithWebRTC.cpp
+third_party/WebKit/Source/platform/testing/TestingPlatformSupportWithWebRTC.h
+third_party/WebKit/public/platform/WebRTCPeerConnectionHandler.h
+third_party/WebKit/public/platform/WebRTCRtpSender.h
+
+Author: hongchan@chromium.org
+No-WPT-Author: hongchan@chromium.org
+commit df8a43ce8e32a77d676a4a2c1326a51559819c06
+third_party/WebKit/LayoutTests/http/tests/webaudio/audio-worklet/audio-worklet-node-onerror.html
+third_party/WebKit/LayoutTests/http/tests/webaudio/audio-worklet/audio-worklet-processor-state.html
+third_party/WebKit/LayoutTests/http/tests/webaudio/audio-worklet/error-processor.js
+third_party/WebKit/LayoutTests/http/tests/webaudio/audio-worklet/state-processor.js
+third_party/WebKit/Source/core/events/event_type_names.json5
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScope.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.h
+third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.idl
+third_party/WebKit/Source/modules/webaudio/AudioWorkletProcessor.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletProcessor.h
+third_party/WebKit/Source/modules/webaudio/AudioWorkletProcessorErrorState.h
+third_party/WebKit/Source/modules/webaudio/BUILD.gn
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 05d57e23ec078e098b99e1f6d74676d16658102b
+third_party/WebKit/LayoutTests/paint/background/scrolling-contents-background-clip-layer-crash.html
+third_party/WebKit/Source/core/paint/BoxPainter.cpp
+
+Author: garykac@chromium.org
+No-WPT-Author: garykac@chromium.org
+commit f0e17300c0a7428e954261ac30895e237a9984ee
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/modules/clipboard/Clipboard.idl
+third_party/WebKit/Source/modules/clipboard/NavigatorClipboard.idl
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 854a2f3135e02597cee6b211c25b9402976dd727
+third_party/WebKit/LayoutTests/paint/invalidation/absolute-with-transform-move-expected.html
+third_party/WebKit/LayoutTests/paint/invalidation/absolute-with-transform-move.html
+third_party/WebKit/Source/core/frame/LocalFrameView.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.h
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilderTest.cpp
+third_party/WebKit/Source/core/paint/PrePaintTreeWalk.cpp
+third_party/WebKit/Source/core/paint/compositing/CompositedLayerMapping.cpp
+third_party/WebKit/Source/core/paint/compositing/CompositedLayerMapping.h
+third_party/WebKit/Source/platform/graphics/GraphicsLayer.cpp
+third_party/WebKit/Source/platform/graphics/GraphicsLayer.h
+
+Author: xiaochengh@chromium.org
+No-WPT-Author: xiaochengh@chromium.org
+commit b452077848d6498b0556a36ab7114d0696c736e0
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/fast/dom/Document/CaretRangeFromPoint/hittest-empty-line.html
+third_party/WebKit/Source/core/layout/LayoutInline.cpp
+third_party/WebKit/Source/core/layout/LayoutText.cpp
+third_party/WebKit/Source/core/layout/ng/inline/ng_physical_line_box_fragment.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_physical_line_box_fragment.h
+third_party/WebKit/Source/core/layout/ng/inline/ng_physical_text_fragment.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_physical_text_fragment.h
+third_party/WebKit/Source/core/layout/ng/layout_ng_mixin.cc
+third_party/WebKit/Source/core/layout/ng/layout_ng_mixin.h
+third_party/WebKit/Source/core/layout/ng/ng_physical_box_fragment.cc
+third_party/WebKit/Source/core/layout/ng/ng_physical_box_fragment.h
+third_party/WebKit/Source/core/layout/ng/ng_physical_container_fragment.cc
+third_party/WebKit/Source/core/layout/ng/ng_physical_container_fragment.h
+third_party/WebKit/Source/core/layout/ng/ng_physical_fragment.h
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 41f6273211e9c08770594af70f25594ec242c6eb
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/computed/get-shorthand.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/computed/getAll-shorthand.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/computed/has.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/declared/get-shorthand.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/declared/getAll-shorthand.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/declared/has.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/inline/get-shorthand.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/inline/getAll-shorthand.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/inline/has.tentative.html
+third_party/WebKit/Source/core/css/cssom/CSSStyleValue.h
+third_party/WebKit/Source/core/css/cssom/CSSUnsupportedShorthandValue.h
+third_party/WebKit/Source/core/css/cssom/StylePropertyMapReadOnly.cpp
+third_party/WebKit/Source/core/css/cssom/StylePropertyMapReadOnly.h
+
+Author: agl@chromium.org
+WPT-Author: agl@chromium.org
+commit 7df8cfae4fb4949f4949d7c3ad9411fbb50b0175
+third_party/WebKit/LayoutTests/external/wpt/webauthn/createcredential-extensions.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/webauthn/createcredential-extensions.https.html
+third_party/WebKit/LayoutTests/external/wpt/webauthn/getcredential-extensions.https.html
+third_party/WebKit/LayoutTests/platform/win/external/wpt/webauthn/createcredential-extensions.https-expected.txt
+third_party/WebKit/Source/modules/credentialmanager/AuthenticationExtensionsClientInputs.idl
+third_party/WebKit/Source/modules/credentialmanager/CredentialManagerTypeConverters.cpp
+third_party/WebKit/Source/modules/credentialmanager/CredentialsContainer.cpp
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredentialCreationOptions.idl
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredentialRequestOptions.idl
+third_party/WebKit/Source/modules/modules_idl_files.gni
+third_party/WebKit/public/platform/modules/webauth/authenticator.mojom
+
+Author: agl@chromium.org
+WPT-Author: agl@chromium.org
+commit 831be59aae45ff279e0eac88f736be2c2b033a2f
+third_party/WebKit/LayoutTests/external/wpt/webauthn/createcredential-extensions.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/webauthn/createcredential-extensions.https.html
+third_party/WebKit/LayoutTests/external/wpt/webauthn/getcredential-extensions.https.html
+third_party/WebKit/LayoutTests/platform/win/external/wpt/webauthn/createcredential-extensions.https-expected.txt
+third_party/WebKit/Source/modules/credentialmanager/AuthenticationExtensionsClientInputs.idl
+third_party/WebKit/Source/modules/credentialmanager/CredentialManagerTypeConverters.cpp
+third_party/WebKit/Source/modules/credentialmanager/CredentialsContainer.cpp
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredentialCreationOptions.idl
+third_party/WebKit/Source/modules/credentialmanager/PublicKeyCredentialRequestOptions.idl
+third_party/WebKit/Source/modules/modules_idl_files.gni
+third_party/WebKit/public/platform/modules/webauth/authenticator.mojom
+
+Author: smcgruer@chromium.org
+WPT-Author: smcgruer@chromium.org
+commit 2a4de97d98d814d010155ca0a9ee5fad035eaec4
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/web-animations/animation-model/animation-types/accumulation-per-property-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/animation-model/animation-types/addition-per-property-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/animation-model/animation-types/interpolation-per-property-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/processing-a-keyframes-argument-001-expected.txt
+third_party/WebKit/Source/core/animation/AnimationInputHelpers.cpp
+third_party/WebKit/Source/core/animation/AnimationInputHelpers.h
+third_party/WebKit/Source/core/animation/EffectInput.cpp
+third_party/WebKit/Source/core/animation/EffectInput.h
+
+Author: jinho.bang@samsung.com
+No-WPT-Author: jinho.bang@samsung.com
+commit 22de3a912e038237d792e1a559af8ade475f7a80
+third_party/WebKit/LayoutTests/http/tests/payments/payment-instruments.html
+third_party/WebKit/LayoutTests/http/tests/resources/permissions-helper.js
+third_party/WebKit/Source/modules/payments/PaymentInstruments.cpp
+third_party/WebKit/Source/modules/payments/PaymentInstruments.h
+third_party/WebKit/Source/modules/permissions/PermissionDescriptor.idl
+third_party/WebKit/Source/modules/permissions/Permissions.cpp
+third_party/WebKit/public/platform/modules/permissions/permission.mojom
+
+Author: ricea@chromium.org
+No-WPT-Author: ricea@chromium.org
+commit 05bb153bfe24a48041462affa45c1c71783185d1
+third_party/WebKit/LayoutTests/http/tests/fetch/chromium/no-inherit-type.html
+third_party/WebKit/Source/core/streams/UnderlyingSourceBase.cpp
+third_party/WebKit/Source/core/streams/UnderlyingSourceBase.h
+third_party/WebKit/Source/core/streams/UnderlyingSourceBase.idl
+
+Author: bashi@chromium.org
+No-WPT-Author: bashi@chromium.org
+commit adccb79dd7f8545f9bec45e3e7bb54f30372f2bf
+third_party/WebKit/LayoutTests/http/tests/serviceworker/chromium.csp-fetch-from-installed-service-worker-connect.html
+third_party/WebKit/LayoutTests/http/tests/serviceworker/chromium.csp-fetch-from-installed-service-worker-default.html
+third_party/WebKit/LayoutTests/http/tests/serviceworker/chromium.csp-fetch-from-installed-service-worker-script.html
+third_party/WebKit/LayoutTests/http/tests/serviceworker/chromium/resources/slow-fetch-and-stop-worker-iframe.html
+third_party/WebKit/LayoutTests/http/tests/serviceworker/chromium/usecounter.html
+third_party/WebKit/Source/modules/serviceworkers/ServiceWorker.cpp
+third_party/WebKit/Source/modules/serviceworkers/ServiceWorker.h
+third_party/WebKit/Source/modules/serviceworkers/testing/InternalsServiceWorker.cpp
+third_party/WebKit/Source/modules/serviceworkers/testing/InternalsServiceWorker.h
+third_party/WebKit/Source/modules/serviceworkers/testing/InternalsServiceWorker.idl
+third_party/WebKit/public/mojom/service_worker/service_worker_object.mojom
+third_party/WebKit/public/platform/modules/serviceworker/WebServiceWorker.h
+
+Author: hongchan@chromium.org
+No-WPT-Author: hongchan@chromium.org
+commit d8b32f76e74dee52d7742500d647a032c6828ed9
+third_party/WebKit/LayoutTests/http/tests/webaudio/audio-worklet/timing-info-processor.js
+third_party/WebKit/LayoutTests/http/tests/webaudio/audio-worklet/timing-info.html
+third_party/WebKit/Source/modules/webaudio/AudioDestinationNode.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorklet.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorklet.h
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScope.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScope.h
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScope.idl
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScopeTest.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletMessagingProxy.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletMessagingProxy.h
+third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletProcessor.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletProcessor.h
+third_party/WebKit/Source/modules/webaudio/BaseAudioContext.cpp
+third_party/WebKit/Source/modules/webaudio/BaseAudioContext.h
+third_party/WebKit/Source/modules/webaudio/OfflineAudioDestinationNode.cpp
+
+Author: majidvp@chromium.org
+No-WPT-Author: majidvp@chromium.org
+commit 384c9d450f2d0301fbfa138d79dce8bdd5eac6c8
+third_party/WebKit/LayoutTests/http/tests/origin_trials/webexposed/animationworklet-origin-trial-interfaces.html
+third_party/WebKit/Source/core/animation/ScrollTimeline.cpp
+third_party/WebKit/Source/core/animation/ScrollTimeline.idl
+third_party/WebKit/Source/core/testing/InternalSettings.cpp
+third_party/WebKit/Source/core/testing/InternalSettings.h
+third_party/WebKit/Source/modules/animationworklet/AnimationWorkletGlobalScope.idl
+third_party/WebKit/Source/modules/animationworklet/EffectProxy.idl
+third_party/WebKit/Source/modules/animationworklet/WindowAnimationWorklet.idl
+third_party/WebKit/Source/modules/animationworklet/WorkletAnimation.idl
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: hongchan@chromium.org
+No-WPT-Author: hongchan@chromium.org
+commit 70d15d5da08beb4ba6a6ab374fad4b2276108aa9
+third_party/WebKit/LayoutTests/http/tests/webaudio/audio-worklet/global-sample-rate.html
+third_party/WebKit/LayoutTests/http/tests/webaudio/audio-worklet/one-pole-processor.js
+third_party/WebKit/Source/modules/webaudio/AudioWorklet.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorklet.h
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScope.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScope.h
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScopeTest.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletMessagingProxy.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletMessagingProxy.h
+third_party/WebKit/Source/modules/webaudio/AudioWorkletObjectProxy.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletObjectProxy.h
+
+Author: vmpstr@chromium.org
+No-WPT-Author: vmpstr@chromium.org
+commit 276d2aa768f8ef1082a4a543dfbe509d9a819f71
+third_party/WebKit/LayoutTests/compositing/composited-tall-layer-fully-renders-expected.html
+third_party/WebKit/LayoutTests/compositing/composited-tall-layer-fully-renders.html
+third_party/WebKit/Source/core/paint/compositing/CompositedLayerMapping.cpp
+third_party/WebKit/Source/core/paint/compositing/CompositedLayerMappingTest.cpp
+
+Author: khushalsagar@chromium.org
+No-WPT-Author: khushalsagar@chromium.org
+commit 644b058c04c5a38e758f07832323f104c12443ad
+third_party/WebKit/LayoutTests/images/resources/three-frames_loop-three-times.gif
+third_party/WebKit/Source/platform/graphics/BitmapImage.cpp
+third_party/WebKit/Source/platform/graphics/BitmapImageTest.cpp
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 4417ec92ac1c638d6d746308f90b6aee34f05917
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/box-sizing.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/clear.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/float.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-style-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-style.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/line-height-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/line-height.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/list-style-position.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/outline-style-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/outline-style.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/overflow-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/overflow.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/text-decoration-style.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/text-transform-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/text-transform.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/visibility.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/whitespace.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
+Author: smcgruer@chromium.org
+WPT-Author: smcgruer@chromium.org
+commit 93761025e47b61ff2e36987fbb295e8d2682dc00
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/idlharness-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/setKeyframes-expected.txt
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/external/wpt/web-animations/interfaces/KeyframeEffect/idlharness-expected.txt
+third_party/WebKit/LayoutTests/platform/win/external/wpt/web-animations/interfaces/KeyframeEffect/idlharness-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/web-animations-api/partial-keyframes-unsupported.html
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/animation/EffectInput.cpp
+third_party/WebKit/Source/core/animation/EffectInput.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffect.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.idl
+third_party/WebKit/Source/core/animation/KeyframeEffectModel.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffectModel.h
+third_party/WebKit/Source/core/animation/KeyframeEffectTest.cpp
+
+Author: mlamouri@chromium.org
+WPT-Author: mlamouri@chromium.org
+commit 0d23cbfab31479d700140aa5d26d70d857f7be48
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/embedded-content/media-elements/user-interface/muted.html
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.cpp
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.h
+
+Author: mstensho@chromium.org
+WPT-Author: mstensho@chromium.org
+commit 5d16b8a5ac508bbf045f4cf168bee3dc05ca8262
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/css/CSS2/floats/floated-table-wider-than-specified.html
+third_party/WebKit/LayoutTests/platform/mac/virtual/layout_ng/fast/block/float/float-avoidance-expected.png
+third_party/WebKit/Source/core/layout/ng/ng_floats_utils.cc
+
+Author: kojii@chromium.org
+No-WPT-Author: kojii@chromium.org
+commit 0bc9ce1ed6a9efe9c22007d3f92f51c52b0b363b
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/cascade/cascade_order-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/lists/002-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/lists/007-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/lists/008-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/lists/alpha-boundary-values-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/lists/alpha-list-wrap-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/lists/dynamic-marker-crash-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/lists/ordered-list-with-no-ol-tag-expected.png
+third_party/WebKit/Source/core/layout/LayoutBlockFlow.cpp
+third_party/WebKit/Source/core/layout/ng/inline/ng_inline_layout_algorithm.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_line_box_fragment_builder.cc
+third_party/WebKit/Source/core/layout/ng/list/ng_list_layout_algorithm.cc
+third_party/WebKit/Source/core/layout/ng/list/ng_list_layout_algorithm.h
+third_party/WebKit/Source/core/layout/ng/ng_block_layout_algorithm.cc
+third_party/WebKit/Source/core/layout/ng/ng_block_layout_algorithm.h
+third_party/WebKit/Source/core/layout/ng/ng_block_node.cc
+third_party/WebKit/Source/core/layout/ng/ng_container_fragment_builder.cc
+third_party/WebKit/Source/core/layout/ng/ng_container_fragment_builder.h
+third_party/WebKit/Source/core/layout/ng/ng_fragment_builder.cc
+third_party/WebKit/Source/core/layout/ng/ng_layout_input_node.cc
+third_party/WebKit/Source/core/layout/ng/ng_layout_input_node.h
+third_party/WebKit/Source/core/layout/ng/ng_layout_result.cc
+third_party/WebKit/Source/core/layout/ng/ng_layout_result.h
+third_party/WebKit/Source/core/layout/ng/ng_physical_fragment.cc
+third_party/WebKit/Source/core/layout/ng/ng_physical_fragment.h
+third_party/WebKit/Source/core/paint/ng/ng_box_fragment_painter.cc
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit fb2bb69420bb6fc3b3a767ce3120915634f5de4c
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/border-image-source.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/mask-image-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/mask-image.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/shape-outside-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/shape-outside.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 18fc5e4a9542da288a5ac90f7a5d1d9a780deeda
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-weight-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-weight.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/cssom/CSSUnitValue.cpp
+
+Author: rakina@chromium.org
+WPT-Author: rakina@chromium.org
+commit dd4d74b8571682848ceb9c61af00e91a780a81a3
+third_party/WebKit/LayoutTests/external/wpt/css/cssom/interfaces-expected.txt
+third_party/WebKit/LayoutTests/fast/css/CSSStyleSheet-constructable.html
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/external/wpt/css/cssom/interfaces-expected.txt
+third_party/WebKit/LayoutTests/platform/win/external/wpt/css/cssom/interfaces-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/css/CSSStyleSheet.cpp
+third_party/WebKit/Source/core/css/CSSStyleSheet.h
+third_party/WebKit/Source/core/css/CSSStyleSheetTest.cpp
+third_party/WebKit/Source/core/css/DocumentStyleSheetCollection.cpp
+third_party/WebKit/Source/core/css/ShadowTreeStyleSheetCollection.cpp
+third_party/WebKit/Source/core/css/StyleEngine.cpp
+third_party/WebKit/Source/core/css/StyleEngine.h
+third_party/WebKit/Source/core/css/StyleSheetCandidate.cpp
+third_party/WebKit/Source/core/css/StyleSheetList.cpp
+third_party/WebKit/Source/core/css/StyleSheetList.h
+third_party/WebKit/Source/core/css/StyleSheetList.idl
+third_party/WebKit/Source/core/css/StyleSheetListTest.cpp
+third_party/WebKit/Source/core/css/resolver/ScopedStyleResolver.cpp
+third_party/WebKit/Source/core/dom/DocumentOrShadowRoot.h
+third_party/WebKit/Source/core/dom/DocumentOrShadowRoot.idl
+third_party/WebKit/Source/core/dom/TreeScope.cpp
+third_party/WebKit/Source/core/dom/TreeScope.h
+
+Author: gyuyoung.kim@lge.com
+WPT-Author: gyuyoung.kim@lge.com
+commit 7b761842aab4a59c63b6e125e56c88eb1de55932
+third_party/WebKit/LayoutTests/external/wpt/html/dom/usvstring-reflection.html
+third_party/WebKit/Source/core/dom/Document.idl
+
+Author: yosin@chromium.org
+No-WPT-Author: yosin@chromium.org
+commit d980aea43dc5e5ef38d5cb0ed255087fa1d21ae7
+third_party/WebKit/LayoutTests/editing/assert_selection.html
+third_party/WebKit/LayoutTests/editing/assert_selection.js
+third_party/WebKit/LayoutTests/fast/dom/shadow/selection-in-nested-shadow.html
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/core/testing/Internals.h
+third_party/WebKit/Source/core/testing/Internals.idl
+third_party/WebKit/Source/core/testing/StaticSelection.cpp
+third_party/WebKit/Source/core/testing/StaticSelection.h
+third_party/WebKit/Source/core/testing/StaticSelection.idl
+
+Author: beaufort.francois@gmail.com
+No-WPT-Author: beaufort.francois@gmail.com
+commit 0acc4d7a6eaaa3dfb6a1233ba30940085d7391dc
+third_party/WebKit/LayoutTests/media/picture-in-picture-enabled.html
+third_party/WebKit/Source/core/exported/WebSettingsImpl.cpp
+third_party/WebKit/Source/core/exported/WebSettingsImpl.h
+third_party/WebKit/Source/core/frame/Settings.json5
+third_party/WebKit/Source/modules/BUILD.gn
+third_party/WebKit/Source/modules/picture_in_picture/DEPS
+third_party/WebKit/Source/modules/picture_in_picture/HTMLVideoElementPictureInPicture.h
+third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureController.cpp
+third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureController.h
+third_party/WebKit/Source/modules/picture_in_picture/PictureInPictureTest.cpp
+third_party/WebKit/public/web/WebSettings.h
+
 Author: tkent@chromium.org
 WPT-Author: tkent@chromium.org
 commit 5c2a3b92d5704c57ec3ce115dfb7b9c43bad8eb0
@@ -16960,4 +17525,4 @@ third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.h
 third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.idl
 third_party/WebKit/Source/modules/webaudio/AudioWorkletNodeOptions.idl
 
-272 source+test changes, 128 in wpt
+313 source+test changes, 146 in wpt
