@@ -5,20 +5,21 @@
 from __future__ import print_function
 from collections import defaultdict, namedtuple
 import csv
-import dateutil.parser
-import json
-import numpy
 import re
 import subprocess
 
+import dateutil.parser
+import numpy
+
+from csv_database import ImportLatencyDB, ImportLatencyStatDB
 from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr, wpt_git
 
 
 # Target SLA (in minutes).
 SLA = 12*60
 # Result files.
-MINS_FILE = 'import-mins.json'
-CSV_FILE = 'import-latencies.csv'
+LATENCIES_CSV = 'import-latencies.csv'
+STATS_CSV = 'import-latency-stats.csv'
 
 
 Import = namedtuple('Import', 'cr_sha, wpt_sha, date')
@@ -74,17 +75,22 @@ def binary_search_import(wpt_commit, imports):
 
 def get_latencies(imports, prs):
     try:
-        with open(MINS_FILE) as f:
-            latencies = json.load(f)
-            print('Read', len(latencies), 'results from', MINS_FILE)
-            return latencies
-    except (IOError, ValueError):
-        pass
+        latencies = ImportLatencyDB(LATENCIES_CSV)
+        latencies.read()
+        print('Read', len(latencies), 'latency entries from', LATENCIES_CSV)
+        print('Processing new PRs')
+    except (IOError, AssertionError):
+        latencies = ImportLatencyDB(LATENCIES_CSV)
 
-    latencies = {}
+    skipped = []
     total_prs = len(prs)
     for index, pr in enumerate(prs):
-        print("[{}/{}] PR: {}".format(index + 1, total_prs, pr['html_url']))
+        pr_number = pr['PR']
+        print("[{}/{}] PR: https://github.com/w3c/web-platform-tests/pull/{}"
+              .format(index + 1, total_prs, pr_number))
+        if latencies.get(pr_number):
+            continue
+
         merge_commit = pr['merge_commit_sha']
         merged_at = pr['merged_at']
         try:
@@ -92,14 +98,17 @@ def get_latencies(imports, prs):
         except subprocess.CalledProcessError:
             print('Merge commit {} does not exist. SKIPPING!'
                   .format(merge_commit))
+            skipped.append(pr_number)
             continue
         if _compare_commits(merge_commit, imports[-1].wpt_sha) > 0:
             print('Merge point {} after last import point {}. SKIPPING!'
                   .format(merge_commit, imports[-1].wpt_sha))
+            skipped.append(pr_number)
             continue
         if _compare_commits(merge_commit, imports[0].wpt_sha) < 0:
             print('Merge point {} before first import point {}. SKIPPING!'
                   .format(merge_commit, imports[0].wpt_sha))
+            skipped.append(pr_number)
             continue
 
         index_found = binary_search_import(merge_commit, imports)
@@ -121,63 +130,61 @@ def get_latencies(imports, prs):
         print('Chromium import {} at {}'.format(
             import_found.cr_sha, import_found.date))
         print('Delay (mins):', delay)
-        latencies[merge_commit] = {
+        latencies.add({
+            'PR': pr_number,
             'import_sha': import_found.cr_sha,
             'import_time': import_found.date,
             'latency': delay,
-        }
+        })
 
-    print('Writing file', MINS_FILE)
-    with open(MINS_FILE, 'w') as f:
-        json.dump(latencies, f, indent=2)
+    if skipped:
+        print('Skipped PRs:', skipped)
 
+    print('Writing file', LATENCIES_CSV)
+    latencies.write()
     return latencies
 
 
 def analyze(latencies):
-    latency_by_month = defaultdict(list)
+    latency_by_week = defaultdict(list)
     this_quarter = []
     quarter_cutoff = dateutil.parser.parse(QUARTER_START)
     for datapoint in latencies.values():
         import_time = dateutil.parser.parse(datapoint['import_time'])
-        import_month = import_time.strftime('%Y-%m')
-        latency_by_month[import_month].append(datapoint['latency'])
+        import_week = import_time.strftime('%Y-%UW')
+        latency = float(datapoint['latency'])
+        latency_by_week[import_week].append(latency)
         if import_time >= quarter_cutoff:
-            this_quarter.append(datapoint['latency'])
+            this_quarter.append(latency)
 
-    sla_field = '% meeting SLA ({} mins)'.format(SLA)
-    with open(CSV_FILE, 'w') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=[
-            'Month', '50th percentile', '90th percentile', 'Average', 'PRs', sla_field])
-        writer.writeheader()
-        for month in sorted(latency_by_month.keys()):
-            narr = numpy.asarray(latency_by_month[month])
-            month_stat = {
-                'Month': month,
-                '50th percentile': numpy.percentile(narr, 50),
-                '90th percentile': numpy.percentile(narr, 90),
-                'Average': numpy.average(narr),
-                'PRs': len(narr),
-                sla_field: (narr < SLA).sum() / float(len(narr)),
-            }
-            writer.writerow(month_stat)
+    stats = ImportLatencyStatDB(STATS_CSV)
+    for week, values in latency_by_week.iteritems():
+        narr = numpy.asarray(values)
+        stats.add({
+            'Week': week,
+            'PRs': len(narr),
+            '50%': numpy.percentile(narr, 50),
+            '90%': numpy.percentile(narr, 90),
+            'Mean': numpy.average(narr),
+            'Meeting SLA': (narr < SLA).sum() / float(len(narr)),
+        })
+    stats.write(order='asc')
 
     quarter_total = len(this_quarter)
     np_this_quarter = numpy.asarray(this_quarter)
-    average = numpy.average(np_this_quarter)
     out_of_sla = (np_this_quarter > SLA).sum()
-    print('This quarter since', QUARTER_START, '(PR merge time):')
-    print('Average CL committed to PR merged latency:', average, 'minutes')
-    print('Quarter 50th percentile', numpy.percentile(np_this_quarter, 50))
-    print('Quarter 90th percentile', numpy.percentile(np_this_quarter, 90))
+    print('This quarter since', QUARTER_START, '(import time):')
+    print('Average latency (mins):', numpy.average(np_this_quarter))
+    print('Quarter 50th percentile (mins):', numpy.percentile(np_this_quarter, 50))
+    print('Quarter 90th percentile (mins):', numpy.percentile(np_this_quarter, 90))
     print('{} / {} PRs out of {} min SLA ({})'.format(
         out_of_sla, quarter_total, SLA, out_of_sla / float(quarter_total)))
     print('KR:', (quarter_total - out_of_sla) / float(quarter_total))
 
 
 def main():
-    all_prs = fetch_all_prs()
-    non_export_prs = [pr for pr in all_prs if not is_export_pr(pr)]
+    pr_db = fetch_all_prs()
+    non_export_prs = [pr for pr in pr_db.values() if not is_export_pr(pr)]
     imports = list_imports()
     latencies = get_latencies(imports, non_export_prs)
     analyze(latencies)
