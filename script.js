@@ -19,7 +19,7 @@ function colorFromHeader(header) {
 }
 
 function colorFromIndex(index) {
-  const palette = ['#885053', '#fe5f55', '#8f73b5', '#94c9a9', '#c6ecae'];
+  const palette = ['#e9c00a', '#af1315', '#0873dd', '#04a35b', '#e26f1d'];
   return palette[index % palette.length];
 }
 
