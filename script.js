@@ -78,7 +78,7 @@ fetch('wpt-commits.csv')
   .then(response => response.text())
   .then(text => {
     const table = parseCSV(text);
-    // drop the end of the data set (current month).
+    // Drop the end of the data set (current month).
     table.rows = table.rows.slice(0, table.rows.length - 1);
 
     const data = {
@@ -104,7 +104,7 @@ fetch('import-latency-stats.csv')
   .then(response => response.text())
   .then(text => {
     const table = parseCSV(text);
-    // drop the end of the data set (current month).
+    // Drop the end of the data set (current month).
     table.rows = table.rows.slice(0, table.rows.length - 1);
 
     const data = {
@@ -131,8 +131,9 @@ fetch('export-latency-stats.csv')
   .then(response => response.text())
   .then(text => {
     const table = parseCSV(text);
+    // Drop the first couple months when we didn't have stable exports;
     // drop the end of the data set (current month).
-    table.rows = table.rows.slice(0, table.rows.length - 1);
+    table.rows = table.rows.slice(4, table.rows.length - 1);
 
     const data = {
       labels: table.rows.map(row => row[0]),
