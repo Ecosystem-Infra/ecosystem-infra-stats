@@ -18,6 +18,11 @@ function colorFromHeader(header) {
   return 'gray';
 }
 
+function colorFromIndex(index) {
+  const palette = ['#e9c00a', '#af1315', '#0873dd', '#04a35b', '#e26f1d'];
+  return palette[index % palette.length];
+}
+
 function parseCSV(csv) {
   const lines = csv.match(/[^\r\n]+/g);
   const rows = lines.map(line => line.split(','));
@@ -35,11 +40,45 @@ function parseCSV(csv) {
   return table;
 }
 
+function configDataPoint(label, color, data) {
+  return {
+    label: label,
+    data: data,
+    lineTension: 0,
+    borderColor: color,
+    pointRadius: 0,
+    pointHitRadius: 10,
+    //backgroundColor: 'rgb(100, 200, 30, 0.9)',
+  }
+}
+
+function drawChart(canvas, title, data) {
+  new Chart(canvas, {
+    type: 'line',
+    data: data,
+    options: {
+      title: {
+        display: true,
+        fontSize: 18,
+        text: [title],
+      },
+      legend: {
+        reverse: true,
+      },
+      scales: {
+        yAxes: [{
+          ticks: { beginAtZero: true },
+        }],
+      },
+    },
+  });
+}
+
 fetch('wpt-commits.csv')
   .then(response => response.text())
   .then(text => {
     const table = parseCSV(text);
-    // drop the end of the data set (current month).
+    // Drop the end of the data set (current month).
     table.rows = table.rows.slice(0, table.rows.length - 1);
 
     const data = {
@@ -50,36 +89,68 @@ fetch('wpt-commits.csv')
     for (let i = 1; i < table.headers.length; i++) {
       const header = table.headers[i];
       const color = colorFromHeader(header);
-      data.datasets.push({
-        label: header,
-        data: table.rows.map(row => +row[i]),
-        lineTension: 0,
-        borderColor: color,
-        pointRadius: 0,
-        pointHitRadius: 10,
-        //backgroundColor: 'rgb(100, 200, 30, 0.9)',
-      });
+      data.datasets.push(configDataPoint(header, color,
+            table.rows.map(row => +row[i])));
     }
 
     data.datasets.reverse();
+    drawChart(
+        document.querySelector('#wpt-commits canvas'),
+        'web-platform-tests commits',
+        data);
+  });
 
-    new Chart(document.querySelector('#wpt-commits canvas'), {
-      type: 'line',
-      data: data,
-      options: {
-        title: {
-          display: true,
-          fontSize: 18,
-          text: ['web-platform-tests commits'],
-        },
-        legend: {
-          reverse: true,
-        },
-        scales: {
-          yAxes: [{
-            ticks: { beginAtZero: true },
-          }],
-        },
-      },
-    });
+fetch('import-latency-stats.csv')
+  .then(response => response.text())
+  .then(text => {
+    const table = parseCSV(text);
+    // Drop the end of the data set (current month).
+    table.rows = table.rows.slice(0, table.rows.length - 1);
+
+    const data = {
+      labels: table.rows.map(row => row[0]),
+      datasets: [],
+    };
+
+    // 50%, 90%, Mean
+    for (let i = 2; i <= 4; i++) {
+      const header = table.headers[i];
+      const color = colorFromIndex(i);
+      data.datasets.push(configDataPoint(header, color,
+            table.rows.map(row => +row[i])));
+    }
+
+    data.datasets.reverse();
+    drawChart(
+        document.querySelector('#wpt-imports canvas'),
+        'WPT => Chromium import latency',
+        data);
+  });
+
+fetch('export-latency-stats.csv')
+  .then(response => response.text())
+  .then(text => {
+    const table = parseCSV(text);
+    // Drop the first couple months when we didn't have stable exports;
+    // drop the end of the data set (current month).
+    table.rows = table.rows.slice(4, table.rows.length - 1);
+
+    const data = {
+      labels: table.rows.map(row => row[0]),
+      datasets: [],
+    };
+
+    // 50%, 90%, Mean
+    for (let i = 2; i <= 4; i++) {
+      const header = table.headers[i];
+      const color = colorFromIndex(i);
+      data.datasets.push(configDataPoint(header, color,
+            table.rows.map(row => +row[i])));
+    }
+
+    data.datasets.reverse();
+    drawChart(
+        document.querySelector('#wpt-exports canvas'),
+        'Chromium => WPT export latency',
+        data);
   });
