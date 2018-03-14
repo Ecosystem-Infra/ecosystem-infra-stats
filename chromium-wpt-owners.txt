@@ -11,6 +11,7 @@ Missing COMPONENT: console
 Missing TEAM: domparsing
 Missing TEAM: domxpath
 Missing TEAM: encrypted-media
+Orphaned OWNERS: generic-sensor
 Missing OWNERS: geolocation-sensor
 Missing OWNERS: graphics-aam
 Missing TEAM: keyboard-lock
@@ -27,6 +28,7 @@ Missing COMPONENT: quirks
 Missing TEAM: resources
 Missing COMPONENT: resources
 Missing TEAM: screen-orientation
+Missing OWNERS: sensors
 Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing TEAM: webmessaging
