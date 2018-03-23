@@ -11,7 +11,6 @@ Missing COMPONENT: console
 Missing TEAM: domparsing
 Missing TEAM: domxpath
 Missing TEAM: encrypted-media
-Orphaned OWNERS: generic-sensor
 Missing OWNERS: geolocation-sensor
 Missing OWNERS: graphics-aam
 Missing TEAM: keyboard-lock
@@ -28,7 +27,7 @@ Missing COMPONENT: quirks
 Missing TEAM: resources
 Missing COMPONENT: resources
 Missing TEAM: screen-orientation
-Missing OWNERS: sensors
+Orphaned OWNERS: staticrange
 Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing TEAM: webmessaging
@@ -38,7 +37,10 @@ Missing OWNERS: css/css-contain
 Missing OWNERS: css/css-content
 Missing OWNERS: css/css-fill-stroke
 Missing OWNERS: css/css-images
+Missing OWNERS: css/css-lists
 Missing OWNERS: css/css-overflow
+Missing OWNERS: css/css-properties-values-api
 Missing OWNERS: css/css-pseudo
 Missing OWNERS: css/css-scroll-snap
 Missing OWNERS: css/css-style-attr
+Missing OWNERS: css/css-transitions

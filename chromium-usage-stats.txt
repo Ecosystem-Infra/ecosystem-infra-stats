@@ -1,3 +1,1241 @@
+Author: wangxianzhu@chromium.org
+WPT-Author: wangxianzhu@chromium.org
+commit 80a959a1273c3f91bed6c9a1696312456f6a5b07
+third_party/WebKit/LayoutTests/external/wpt/css/css-tables/height-distribution/td-different-subpixel-padding-in-same-row-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-tables/height-distribution/td-different-subpixel-padding-in-same-row-vertical-rl-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-tables/height-distribution/td-different-subpixel-padding-in-same-row-vertical-rl.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-tables/height-distribution/td-different-subpixel-padding-in-same-row.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-tables/width-distribution/td-with-subpixel-padding-vertical-rl.html
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-img-preserveAspectRatio-support-1-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-img-preserveAspectRatio-support-1-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-svg-through-object-with-absolute-size-2-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-svg-through-object-with-absolute-size-2-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-svg-through-object-with-absolute-size-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-svg-through-object-with-absolute-size-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-svg-through-object-with-percentage-size-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-svg-through-object-with-percentage-size-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/transforms/bounding-rect-zoom-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-img-preserveAspectRatio-support-1-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-img-preserveAspectRatio-support-1-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-svg-through-object-with-absolute-size-2-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-svg-through-object-with-absolute-size-2-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-svg-through-object-with-absolute-size-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-svg-through-object-with-absolute-size-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-svg-through-object-with-percentage-size-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-svg-through-object-with-percentage-size-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/transforms/bounding-rect-zoom-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-img-preserveAspectRatio-support-1-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-img-preserveAspectRatio-support-1-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-svg-through-object-with-absolute-size-2-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-svg-through-object-with-absolute-size-2-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-svg-through-object-with-absolute-size-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-svg-through-object-with-absolute-size-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-svg-through-object-with-percentage-size-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-svg-through-object-with-percentage-size-expected.txt
+third_party/WebKit/LayoutTests/platform/win/transforms/bounding-rect-zoom-expected.txt
+third_party/WebKit/Source/core/layout/LayoutTableCell.cpp
+
+Author: hta@chromium.org
+WPT-Author: hta@chromium.org
+commit f4237031b1cd4e7b5007964b082fe3e33863fc51
+third_party/WebKit/LayoutTests/external/wpt/webrtc/RTCPeerConnection-setLocalDescription-answer-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/webrtc/RTCPeerConnection-setLocalDescription-offer-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/webrtc/RTCPeerConnection-setLocalDescription-offer.html
+third_party/WebKit/LayoutTests/external/wpt/webrtc/RTCPeerConnection-setLocalDescription-pranswer-expected.txt
+third_party/WebKit/Source/modules/peerconnection/RTCPeerConnection.cpp
+third_party/WebKit/Source/modules/peerconnection/RTCPeerConnection.h
+third_party/WebKit/Source/modules/peerconnection/RTCSessionDescription.cpp
+third_party/WebKit/Source/modules/peerconnection/RTCSessionDescription.h
+third_party/WebKit/Source/modules/peerconnection/RTCSessionDescriptionRequestImpl.cpp
+third_party/WebKit/Source/modules/peerconnection/RTCSessionDescriptionRequestPromiseImpl.cpp
+third_party/WebKit/public/platform/web_feature.mojom
+
+Author: steimel@chromium.org
+No-WPT-Author: steimel@chromium.org
+commit 0b22949e7898505dc848f3b1478e01773c62c477
+third_party/WebKit/LayoutTests/media/controls/modern/video-preload-none-has-disabled-controls.html
+third_party/WebKit/LayoutTests/media/media-controls.js
+third_party/WebKit/Source/modules/media_controls/MediaControlsImpl.cpp
+third_party/WebKit/Source/modules/media_controls/MediaControlsImpl.h
+third_party/WebKit/Source/modules/media_controls/resources/modernMediaControls.css
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 1e9c8e2414c49117333d059fb50df596c1cf0ce1
+third_party/WebKit/LayoutTests/FlagExpectations/enable-slimming-paint-v2
+third_party/WebKit/LayoutTests/fast/backgrounds/svg-as-mask-expected.png
+third_party/WebKit/LayoutTests/fast/dynamic/anonymous-block-layer-lost-expected.png
+third_party/WebKit/LayoutTests/fast/layers/opacity-stacking-expected.png
+third_party/WebKit/LayoutTests/fast/sub-pixel/save-layer-bounds-should-snap-expected.html
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/compositing/sibling-positioning-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/clip/nestedTransparencyClip-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/clip/nestedTransparencyClip-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/css/ZeroOpacityLayers-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/css/ZeroOpacityLayers2-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/dynamic/anonymous-block-layer-lost-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/layers/opacity-stacking-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/table/multiple-captions-display-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/table/multiple-captions-display-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/text/complex-text-opacity-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/compositing/sibling-positioning-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/clip/nestedTransparencyClip-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/css/ZeroOpacityLayers-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/css/ZeroOpacityLayers2-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/layers/remove-layer-with-nested-stacking-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/multicol/composited-with-child-layer-in-next-column-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/table/multiple-captions-display-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/as-background-image/svg-as-background-6-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/batik/text/textFeatures-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/text-image-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/linux/transforms/2d/hindi-rotated-expected.png
+third_party/WebKit/LayoutTests/platform/linux/transforms/transform-on-inline-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.10/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.10/transforms/2d/hindi-rotated-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/svg/as-background-image/svg-as-background-6-expected.png
+third_party/WebKit/LayoutTests/platform/mac/compositing/sibling-positioning-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/css/ZeroOpacityLayers-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/css/ZeroOpacityLayers2-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/layers/remove-layer-with-nested-stacking-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/table/multiple-captions-display-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/as-background-image/svg-as-background-6-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/batik/text/textFeatures-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/text-image-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/mac/transforms/2d/hindi-rotated-expected.png
+third_party/WebKit/LayoutTests/platform/mac/transforms/transform-on-inline-expected.png
+third_party/WebKit/LayoutTests/platform/win/compositing/sibling-positioning-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/css/ZeroOpacityLayers-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/css/ZeroOpacityLayers2-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/layers/remove-layer-with-nested-stacking-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/table/multiple-captions-display-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/as-background-image/svg-as-background-6-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/batik/text/textFeatures-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/custom/text-image-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/win/transforms/2d/hindi-rotated-expected.png
+third_party/WebKit/LayoutTests/platform/win/transforms/transform-on-inline-expected.png
+third_party/WebKit/LayoutTests/platform/win7/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-dom-height-attr-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-dom-maskContentUnits-attr-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-dom-maskUnits-attr-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-dom-width-attr-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-dom-x-attr-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-dom-y-attr-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-svgdom-height-prop-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-svgdom-maskContentUnits-prop-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-svgdom-maskUnits-prop-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-svgdom-width-prop-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-svgdom-x-prop-expected.png
+third_party/WebKit/LayoutTests/svg/dynamic-updates/SVGMaskElement-svgdom-y-prop-expected.png
+third_party/WebKit/LayoutTests/svg/foreignObject/clip-expected.png
+third_party/WebKit/Source/platform/graphics/compositing/PaintChunksToCcLayer.cpp
+third_party/WebKit/Source/platform/graphics/compositing/PaintChunksToCcLayerTest.cpp
+
+Author: bokan@chromium.org
+No-WPT-Author: bokan@chromium.org
+commit dd2d35013214ba71b0c5fdefbc6a74a17b75dbfa
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll-expected.txt
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll-frameset-expected.txt
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll-frameset.html
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll-inner-frame-expected.txt
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll-inner-frame.html
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll-mainframe-expected.txt
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll-mainframe.html
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll-use-count.html
+third_party/WebKit/LayoutTests/fast/events/drag-and-drop-autoscroll.html
+third_party/WebKit/LayoutTests/fast/events/resources/drag-and-drop-autoscroll-frame.html
+third_party/WebKit/LayoutTests/fast/events/resources/drag-and-drop-autoscroll-frame.js
+third_party/WebKit/Source/core/layout/LayoutBox.cpp
+
+Author: c.padhi@samsung.com
+No-WPT-Author: c.padhi@samsung.com
+commit 457331359e46f16a5b8b45c308d99b8b448e028a
+third_party/WebKit/LayoutTests/fast/mediastream/MediaStreamTrack-applyConstraints.html
+third_party/WebKit/LayoutTests/fast/mediastream/MediaStreamTrack-getConstraints.html
+third_party/WebKit/LayoutTests/fast/mediastream/getusermedia-constraints.html
+third_party/WebKit/Source/modules/mediastream/MediaConstraintsImpl.cpp
+third_party/WebKit/Source/modules/mediastream/MediaTrackConstraintSet.idl
+
+Author: ricea@chromium.org
+WPT-Author: ricea@chromium.org
+commit e33ce4dfdbe1aec5d6eb85ac553c0e3f45d205e7
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/errors-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/errors.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/errors.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/errors.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/properties-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/properties.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/properties.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/properties.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/reentrant-strategies-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/reentrant-strategies.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/reentrant-strategies.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/reentrant-strategies.sharedworker-expected.txt
+third_party/WebKit/Source/core/streams/CommonOperations.js
+third_party/WebKit/Source/core/streams/TransformStream.js
+
+Author: beaufort.francois@gmail.com
+No-WPT-Author: beaufort.francois@gmail.com
+commit c9b0a873676eae273e5c167e3b3a933dd2733683
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/modules/media_capabilities/MediaCapabilities.idl
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: hayato@chromium.org
+WPT-Author: hayato@chromium.org
+commit 979a7404b634defac35233dc5c396f50b065a6bd
+third_party/WebKit/LayoutTests/external/wpt/shadow-dom/Element-interface-attachShadow-custom-element.html
+third_party/WebKit/Source/core/dom/Element.cpp
+third_party/WebKit/Source/core/dom/Node.h
+
+Author: yuhong.sha@samsung.com
+WPT-Author: yuhong.sha@samsung.com
+commit 2de5a77d724dc3185e39ae7d4adfc2d976ded95c
+third_party/WebKit/LayoutTests/external/wpt/dom/nodes/Element-classlist-expected.txt
+third_party/WebKit/Source/core/dom/DOMTokenList.cpp
+third_party/WebKit/Source/core/dom/DOMTokenList.h
+third_party/WebKit/Source/core/dom/DOMTokenList.idl
+
+Author: joedow@chromium.org
+WPT-Author: joedow@chromium.org
+commit c790e5d1f9a37cdd519b17c39b46313c8162ecdf
+third_party/WebKit/LayoutTests/external/wpt/interfaces/keyboard-lock.idl
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/idlharness.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/idlharness.https.html
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboard-lock-two-parallel-requests.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboard-lock-two-parallel-requests.https.html
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboard-lock-two-sequential-requests.https.html
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboard-lock.https.html
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboard-unlock.https.html
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboardLock-two-parallel-requests.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboardLock-two-parallel-requests.https.html
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboardLock-two-sequential-requests.https.html
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboardLock.https.html
+third_party/WebKit/LayoutTests/external/wpt/keyboard-lock/navigator-keyboardUnlock.https.html
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/modules/BUILD.gn
+third_party/WebKit/Source/modules/keyboard/BUILD.gn
+third_party/WebKit/Source/modules/keyboard/Keyboard.cpp
+third_party/WebKit/Source/modules/keyboard/Keyboard.h
+third_party/WebKit/Source/modules/keyboard/Keyboard.idl
+third_party/WebKit/Source/modules/keyboard/KeyboardLock.cpp
+third_party/WebKit/Source/modules/keyboard/KeyboardLock.h
+third_party/WebKit/Source/modules/keyboard/NavigatorKeyboard.cpp
+third_party/WebKit/Source/modules/keyboard/NavigatorKeyboard.h
+third_party/WebKit/Source/modules/keyboard/NavigatorKeyboard.idl
+third_party/WebKit/Source/modules/keyboard/OWNERS
+third_party/WebKit/Source/modules/keyboard_lock/BUILD.gn
+third_party/WebKit/Source/modules/keyboard_lock/NavigatorKeyboardLock.cpp
+third_party/WebKit/Source/modules/keyboard_lock/NavigatorKeyboardLock.h
+third_party/WebKit/Source/modules/keyboard_lock/NavigatorKeyboardLock.idl
+third_party/WebKit/Source/modules/modules_idl_files.gni
+third_party/WebKit/public/platform/modules/keyboard_lock/keyboard_lock.mojom
+
+Author: nhiroki@chromium.org
+WPT-Author: nhiroki@chromium.org
+commit 03594010f2c5ab22f4408198222e1bb615a439d4
+third_party/WebKit/LayoutTests/external/wpt/workers/modules/dedicated-worker-options-type.html
+third_party/WebKit/LayoutTests/external/wpt/workers/modules/dedicated-worker-static-import.html
+third_party/WebKit/LayoutTests/external/wpt/workers/modules/resources/nested-static-import-worker.js
+third_party/WebKit/LayoutTests/external/wpt/workers/modules/resources/post-message-on-load-worker.js
+third_party/WebKit/LayoutTests/external/wpt/workers/modules/resources/static-import-worker.js
+third_party/WebKit/Source/core/workers/DedicatedWorker.cpp
+third_party/WebKit/Source/core/workers/DedicatedWorker.h
+third_party/WebKit/Source/core/workers/Worker.idl
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: yosin@chromium.org
+WPT-Author: yosin@chromium.org
+commit 1c4a06aee9492d3e4e2483e7204439a7e732be96
+third_party/WebKit/LayoutTests/external/wpt/dom/ranges/Range-intersectsNode-2.html
+third_party/WebKit/Source/core/dom/Range.cpp
+third_party/WebKit/Source/core/dom/RangeTest.cpp
+
+Author: futhark@chromium.org
+WPT-Author: futhark@chromium.org
+commit 2274191769bd36f891c693d12d47f218f2c1fe11
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/column-span.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
+Author: lucmult@chromium.org
+No-WPT-Author: lucmult@chromium.org
+commit 626c99e870b04e474408a5b35e97f260b9d787ba
+third_party/WebKit/LayoutTests/http/tests/cachestorage/detached-context.html
+third_party/WebKit/LayoutTests/http/tests/cachestorage/resources/self-detach-iframe.html
+third_party/WebKit/Source/modules/cachestorage/GlobalCacheStorage.cpp
+third_party/WebKit/Source/modules/cachestorage/InspectorCacheStorageAgent.cpp
+third_party/WebKit/Source/modules/cachestorage/InspectorCacheStorageAgent.h
+third_party/WebKit/Source/platform/exported/Platform.cpp
+third_party/WebKit/public/platform/Platform.h
+third_party/WebKit/public/platform/modules/cache_storage/cache_storage.mojom
+third_party/WebKit/public/platform/modules/serviceworker/WebServiceWorkerCacheStorage.h
+
+Author: mek@chromium.org
+WPT-Author: mek@chromium.org
+commit 5e1a7bf4a307bfe47dbb19773d58c6f5985fc9c5
+third_party/WebKit/LayoutTests/external/wpt/fetch/api/response/response-consume.html
+third_party/WebKit/Source/core/fetch/FetchDataLoader.cpp
+
+Author: sunyunjia@chromium.org
+WPT-Author: sunyunjia@chromium.org
+commit b3f07f124135e81072377bd9da56d19a4976c3df
+third_party/WebKit/LayoutTests/external/wpt/css/css-scroll-snap/scroll-snap-type-proximity.html
+third_party/WebKit/Source/core/page/scrolling/SnapCoordinator.cpp
+third_party/WebKit/Source/core/page/scrolling/SnapCoordinator.h
+third_party/WebKit/Source/core/page/scrolling/SnapCoordinatorTest.cpp
+
+Author: chrishtr@chromium.org
+WPT-Author: chrishtr@chromium.org
+commit 2a94373409feaf9794c2489ba9563fe67a8eabbd
+third_party/WebKit/LayoutTests/css3/blending/svg-blend-color-expected.txt
+third_party/WebKit/LayoutTests/css3/blending/svg-blend-hue-expected.txt
+third_party/WebKit/LayoutTests/css3/blending/svg-blend-luminosity-expected.txt
+third_party/WebKit/LayoutTests/css3/blending/svg-blend-multiply-alpha-expected.txt
+third_party/WebKit/LayoutTests/css3/blending/svg-blend-saturation-expected.txt
+third_party/WebKit/LayoutTests/css3/blending/svg-isolation-foreign-isolation-expected.html
+third_party/WebKit/LayoutTests/css3/blending/svg-isolation-foreign-isolation.html
+third_party/WebKit/LayoutTests/css3/blending/svg-isolation-foreign-no-isolation-expected.html
+third_party/WebKit/LayoutTests/css3/blending/svg-isolation-foreign-no-isolation.html
+third_party/WebKit/LayoutTests/css3/filters/effect-reference-subregion-nested-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/svg/extensibility/foreignObject/containing-block.html
+third_party/WebKit/LayoutTests/external/wpt/svg/extensibility/foreignObject/stacking-context-expected.html
+third_party/WebKit/LayoutTests/external/wpt/svg/extensibility/foreignObject/stacking-context.html
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/paint/invalidation/svg/transform-foreign-object-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/svg/repaint-svg-after-style-change-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/svg/transform-foreign-object-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/svg/text-rescale-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/svg/zoom-foreignObject-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/dominant-baseline-hanging-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/foreign-object-skew-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-disallowed-foreign-object-1-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-disallowed-foreign-object-2-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-disallowed-foreign-object-3-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-disallowed-foreign-object-4-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-disallowed-foreign-object-5-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-disallowed-foreign-object-6-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-non-svg-namespaced-element-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/foreignObject/no-crash-with-svg-content-in-html-document-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/foreignObject/svg-document-as-direct-child-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/foreignObject/svg-document-in-html-document-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/004-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/005-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/006-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/008-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/009-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/hixie/mixed/011-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-auto-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-defaults-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-hidden-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-scroll-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-visible-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/text/foreignObject-repaint-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/text/foreignObject-text-clipping-bug-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-foreignObject-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/page/zoom-hixie-mixed-009-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/text/zoom-hixie-mixed-008-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/svg/zoom/text/zoom-hixie-mixed-009-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/disable-spv175/paint/invalidation/svg/foreign-object-repaint-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/disable-spv175/paint/invalidation/svg/zoom-foreignObject-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/spv175/paint/invalidation/svg/transform-foreign-object-expected.txt
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/virtual/prefer_compositing_to_lcd_text/compositing/overflow/accelerated-scrolling-with-clip-path-text-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/css3/filters/effect-reference-subregion-nested-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/svg/text-rescale-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/svg/zoom-foreignObject-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/as-object/svg-embedded-in-html-in-iframe-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/dominant-baseline-hanging-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/filter-css-transform-resolution-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/foreign-object-skew-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-disallowed-foreign-object-1-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-disallowed-foreign-object-2-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-disallowed-foreign-object-3-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-disallowed-foreign-object-4-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-disallowed-foreign-object-5-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-disallowed-foreign-object-6-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-non-svg-namespaced-element-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/filters/feBlend-all-modes-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/foreignObject/fO-parent-display-changes-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/foreignObject/no-crash-with-svg-content-in-html-document-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/foreignObject/svg-document-as-direct-child-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/foreignObject/svg-document-in-html-document-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/004-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/005-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/006-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/007-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/008-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/009-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/hixie/mixed/011-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/stroke/empty-path-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/text/foreignObject-repaint-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/text/foreignObject-text-clipping-bug-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-foreignObject-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-foreignObject-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-hixie-mixed-008-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/page/zoom-hixie-mixed-009-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/text/zoom-hixie-mixed-008-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/svg/zoom/text/zoom-hixie-mixed-009-expected.txt
+third_party/WebKit/LayoutTests/platform/win/css3/blending/svg-blend-color-expected.txt
+third_party/WebKit/LayoutTests/platform/win/css3/blending/svg-blend-hue-expected.txt
+third_party/WebKit/LayoutTests/platform/win/css3/blending/svg-blend-luminosity-expected.txt
+third_party/WebKit/LayoutTests/platform/win/css3/blending/svg-blend-multiply-alpha-expected.txt
+third_party/WebKit/LayoutTests/platform/win/css3/blending/svg-blend-saturation-expected.txt
+third_party/WebKit/LayoutTests/platform/win/css3/filters/effect-reference-subregion-nested-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/svg/repaint-svg-after-style-change-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/svg/text-rescale-expected.txt
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/svg/zoom-foreignObject-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/as-object/svg-embedded-in-html-in-iframe-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/dominant-baseline-hanging-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/filter-css-transform-resolution-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/foreign-object-skew-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-disallowed-foreign-object-1-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-disallowed-foreign-object-2-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-disallowed-foreign-object-3-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-disallowed-foreign-object-4-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-disallowed-foreign-object-5-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-disallowed-foreign-object-6-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-non-svg-namespaced-element-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/filters/feBlend-all-modes-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/foreignObject/fO-parent-display-changes-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/foreignObject/no-crash-with-svg-content-in-html-document-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/foreignObject/svg-document-as-direct-child-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/foreignObject/svg-document-in-html-document-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/004-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/005-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/006-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/007-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/008-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/009-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/hixie/mixed/011-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-auto-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-defaults-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-hidden-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-scroll-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-visible-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/stroke/empty-path-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/text/foreignObject-repaint-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/text/foreignObject-text-clipping-bug-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-clip-path-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-foreignObject-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-hixie-mixed-008-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/page/zoom-hixie-mixed-009-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/text/zoom-hixie-mixed-008-expected.txt
+third_party/WebKit/LayoutTests/platform/win/svg/zoom/text/zoom-hixie-mixed-009-expected.txt
+third_party/WebKit/LayoutTests/svg/as-object/svg-embedded-in-html-in-iframe-expected.txt
+third_party/WebKit/LayoutTests/svg/custom/display-table-caption-foreignObject-expected.txt
+third_party/WebKit/LayoutTests/svg/custom/display-table-caption-inherit-foreignObject-expected.txt
+third_party/WebKit/LayoutTests/svg/custom/filter-css-transform-resolution-expected.txt
+third_party/WebKit/LayoutTests/svg/custom/foreign-object-skew.svg
+third_party/WebKit/LayoutTests/svg/custom/use-on-use-with-child-expected.txt
+third_party/WebKit/LayoutTests/svg/dom/SVGScriptElement/script-async-attr-expected.txt
+third_party/WebKit/LayoutTests/svg/dom/SVGScriptElement/script-reexecution-expected.txt
+third_party/WebKit/LayoutTests/svg/dom/SVGScriptElement/script-set-href-expected.txt
+third_party/WebKit/LayoutTests/svg/dom/SVGScriptElement/script-type-attribute-expected.txt
+third_party/WebKit/LayoutTests/svg/dom/smil-methods-expected.txt
+third_party/WebKit/LayoutTests/svg/filters/feBlend-all-modes-expected.txt
+third_party/WebKit/LayoutTests/svg/foreignObject/background-render-phase-expected.txt
+third_party/WebKit/LayoutTests/svg/foreignObject/body-background-expected.txt
+third_party/WebKit/LayoutTests/svg/foreignObject/clip-expected.txt
+third_party/WebKit/LayoutTests/svg/foreignObject/disallowed-svg-nodes-as-direct-children-expected.txt
+third_party/WebKit/LayoutTests/svg/foreignObject/filter-expected.txt
+third_party/WebKit/LayoutTests/svg/foreignObject/mask-expected.txt
+third_party/WebKit/LayoutTests/svg/foreignObject/multiple-foreign-objects-expected.txt
+third_party/WebKit/LayoutTests/svg/hixie/mixed/004-expected.txt
+third_party/WebKit/LayoutTests/svg/hixie/mixed/005-expected.txt
+third_party/WebKit/LayoutTests/svg/overflow/overflow-on-foreignObject-expected.txt
+third_party/WebKit/LayoutTests/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-auto-expected.txt
+third_party/WebKit/LayoutTests/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-defaults-expected.txt
+third_party/WebKit/LayoutTests/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-hidden-expected.txt
+third_party/WebKit/LayoutTests/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-scroll-expected.txt
+third_party/WebKit/LayoutTests/svg/overflow/overflow-on-outermost-svg-element-in-xhtml-visible-expected.txt
+third_party/WebKit/LayoutTests/svg/stroke/empty-path-expected.txt
+third_party/WebKit/LayoutTests/svg/zoom/page/zoom-clip-path-expected.txt
+third_party/WebKit/LayoutTests/svg/zoom/page/zoom-foreign-content-expected.png
+third_party/WebKit/LayoutTests/svg/zoom/page/zoom-foreign-content-expected.txt
+third_party/WebKit/LayoutTests/svg/zoom/page/zoom-foreign-content.svg
+third_party/WebKit/Source/core/dom/Element.cpp
+third_party/WebKit/Source/core/layout/svg/LayoutSVGBlock.cpp
+third_party/WebKit/Source/core/layout/svg/LayoutSVGBlock.h
+third_party/WebKit/Source/core/layout/svg/LayoutSVGForeignObject.cpp
+third_party/WebKit/Source/core/layout/svg/LayoutSVGForeignObject.h
+third_party/WebKit/Source/core/layout/svg/LayoutSVGText.h
+third_party/WebKit/Source/core/layout/svg/SVGLayoutSupport.cpp
+third_party/WebKit/Source/core/paint/BlockPainter.cpp
+third_party/WebKit/Source/core/paint/BoxPainter.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.cpp
+third_party/WebKit/Source/core/paint/PaintLayer.h
+third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.h
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilderTest.cpp
+third_party/WebKit/Source/core/paint/SVGContainerPainter.cpp
+third_party/WebKit/Source/core/paint/SVGForeignObjectPainter.cpp
+third_party/WebKit/Source/core/style/ComputedStyle.cpp
+third_party/WebKit/Source/core/style/ComputedStyle.h
+third_party/WebKit/Source/core/style/ComputedStyleTest.cpp
+
+Author: atotic@chromium.org
+No-WPT-Author: atotic@chromium.org
+commit 64f1197e6bffc374c1678757eae8b212340a590b
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/color_and_background/background_attachment-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css1/color_and_background/background_repeat-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css2.1/t1202-counters-08-b-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/css/line-thickness-underline-strikethrough-overline-expected.txt
+third_party/WebKit/Source/core/layout/ng/layout_ng_mixin.cc
+
+Author: kojii@chromium.org
+No-WPT-Author: kojii@chromium.org
+commit 5203babe26c4f50e1e167a4436cc55b8abba39c7
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/html/css3-modsel-179a-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/xhtml/css3-modsel-179a-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/css3/selectors3/xml/css3-modsel-179a-expected.txt
+third_party/WebKit/Source/core/layout/ng/inline/ng_inline_break_token.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_inline_break_token.h
+third_party/WebKit/Source/core/layout/ng/inline/ng_inline_layout_algorithm.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_inline_layout_algorithm.h
+third_party/WebKit/Source/core/layout/ng/inline/ng_inline_node.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_line_breaker.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_line_breaker.h
+third_party/WebKit/Source/core/layout/ng/inline/ng_line_breaker_test.cc
+third_party/WebKit/Source/core/layout/ng/ng_fragment_builder.cc
+
+Author: pdr@chromium.org
+No-WPT-Author: pdr@chromium.org
+commit fb079780798a45f84b3fb9c0f1ba02e8fb800f3d
+third_party/WebKit/LayoutTests/FlagExpectations/enable-slimming-paint-v2
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/dom/scroll-reveal-left-overflow-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/dom/scroll-reveal-top-overflow-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/overflow/overflow_hidden-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/overflow/overflow_hidden-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/fast/writing-mode/border-radius-clipping-vertical-lr-expected.png
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/paint/invalidation/outline/outline-change-vertical-rl-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/paint/invalidation/scroll/outline-change-scrollable-expected.txt
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilder.cpp
+third_party/WebKit/Source/core/paint/PaintPropertyTreeBuilderTest.cpp
+third_party/WebKit/Source/core/paint/compositing/CompositingReasonFinder.cpp
+third_party/WebKit/Source/core/paint/compositing/CompositingReasonFinder.h
+
+Author: eirage@chromium.org
+No-WPT-Author: eirage@chromium.org
+commit 1116059d3f918982cc5fb669d5ddea17b6172849
+third_party/WebKit/LayoutTests/plugins/transformed-events-expected.txt
+third_party/WebKit/Source/core/events/WebInputEventConversionTest.cpp
+third_party/WebKit/Source/core/exported/WebFrameTest.cpp
+third_party/WebKit/Source/core/exported/WebPagePopupImpl.cpp
+third_party/WebKit/Source/core/exported/WebPluginContainerImpl.cpp
+third_party/WebKit/Source/core/exported/WebPluginContainerTest.cpp
+third_party/WebKit/Source/core/exported/WebViewImpl.cpp
+third_party/WebKit/Source/core/exported/WebViewTest.cpp
+third_party/WebKit/Source/core/frame/BrowserControlsTest.cpp
+third_party/WebKit/Source/core/frame/VisualViewportTest.cpp
+third_party/WebKit/Source/core/frame/WebFrameWidgetBase.cpp
+third_party/WebKit/Source/core/frame/WebFrameWidgetBase.h
+third_party/WebKit/Source/core/input/EventHandlerTest.cpp
+third_party/WebKit/Source/core/input/ImeOnFocusTest.cpp
+third_party/WebKit/Source/core/input/OverscrollBehaviorTest.cpp
+third_party/WebKit/Source/core/input/ScrollManager.cpp
+third_party/WebKit/Source/core/input/ScrollSnapTest.cpp
+third_party/WebKit/Source/core/layout/ScrollbarsTest.cpp
+third_party/WebKit/Source/core/page/scrolling/RootScrollerTest.cpp
+third_party/WebKit/Source/core/page/scrolling/ScrollMetricsTest.cpp
+third_party/WebKit/Source/core/paint/LinkHighlightImplTest.cpp
+third_party/WebKit/Source/platform/WebGestureEvent.cpp
+third_party/WebKit/Source/platform/WebMouseEvent.cpp
+third_party/WebKit/Source/platform/scroll/Scrollbar.cpp
+third_party/WebKit/public/platform/WebGestureEvent.h
+third_party/WebKit/public/platform/WebPointerProperties.h
+third_party/WebKit/public/web/WebActiveFlingParameters.h
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit b7e8c6eb13e6eb297747b9e394854408b3f29195
+third_party/WebKit/LayoutTests/css3/blending/effect-background-blend-mode-expected.png
+third_party/WebKit/LayoutTests/css3/blending/effect-background-blend-mode-stacking-expected.png
+third_party/WebKit/LayoutTests/css3/blending/effect-background-blend-mode-tiled-expected.png
+third_party/WebKit/LayoutTests/css3/blending/mix-blend-mode-isolated-group-1-expected.png
+third_party/WebKit/LayoutTests/css3/filters/nested-filter-expected.png
+third_party/WebKit/LayoutTests/fast/backgrounds/svg-as-mask-expected.png
+third_party/WebKit/LayoutTests/paint/invalidation/svg/js-update-bounce-expected.png
+third_party/WebKit/LayoutTests/platform/linux/compositing/reflections/nested-reflection-transformed-expected.png
+third_party/WebKit/LayoutTests/platform/linux/compositing/reflections/nested-reflection-transformed2-expected.png
+third_party/WebKit/LayoutTests/platform/linux/compositing/reflections/reflection-in-composited-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/borders/inline-mask-overlay-image-outset-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/css/transformed-mask-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/reflections/opacity-reflection-transform-expected.png
+third_party/WebKit/LayoutTests/platform/linux/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/linux/paint/invalidation/reflection/reflection-with-rotation-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/as-background-image/svg-as-background-6-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-modify-container-in-target-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-modify-target-container-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-g-containing-use-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-g-expected.png
+third_party/WebKit/LayoutTests/platform/linux/svg/custom/use-on-use-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/exotic-color-space/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/gpu-rasterization/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.10/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.10/virtual/gpu-rasterization/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.11/virtual/gpu-rasterization/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/svg/as-background-image/svg-as-background-6-expected.png
+third_party/WebKit/LayoutTests/platform/mac/compositing/reflections/nested-reflection-transformed-expected.png
+third_party/WebKit/LayoutTests/platform/mac/compositing/reflections/nested-reflection-transformed2-expected.png
+third_party/WebKit/LayoutTests/platform/mac/compositing/reflections/reflection-in-composited-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/css/transformed-mask-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/reflections/opacity-reflection-transform-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/text/complex-text-opacity-expected.png
+third_party/WebKit/LayoutTests/platform/mac/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/mac/paint/invalidation/reflection/reflection-with-rotation-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/as-background-image/svg-as-background-6-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/batik/text/textProperties-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-modify-container-in-target-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-modify-target-container-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-g-containing-use-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-g-expected.png
+third_party/WebKit/LayoutTests/platform/mac/svg/custom/use-on-use-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/exotic-color-space/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/mac/virtual/gpu-rasterization/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/win/compositing/reflections/nested-reflection-transformed-expected.png
+third_party/WebKit/LayoutTests/platform/win/compositing/reflections/nested-reflection-transformed2-expected.png
+third_party/WebKit/LayoutTests/platform/win/compositing/reflections/reflection-in-composited-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/borders/inline-mask-overlay-image-outset-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/css/transformed-mask-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/reflections/opacity-reflection-transform-expected.png
+third_party/WebKit/LayoutTests/platform/win/images/color-profile-filter-expected.png
+third_party/WebKit/LayoutTests/platform/win/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/win/paint/invalidation/reflection/reflection-with-rotation-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/W3C-SVG-1.1/render-groups-01-b-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/as-background-image/svg-as-background-6-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-modify-container-in-target-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-modify-target-container-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-g-containing-use-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-g-expected.png
+third_party/WebKit/LayoutTests/platform/win/svg/custom/use-on-use-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/exotic-color-space/images/color-profile-filter-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/exotic-color-space/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/gpu-rasterization/images/color-profile-filter-expected.png
+third_party/WebKit/LayoutTests/platform/win/virtual/gpu-rasterization/images/color-profile-image-filter-all-expected.png
+third_party/WebKit/LayoutTests/svg/custom/group-opacity-expected.png
+third_party/WebKit/Source/platform/graphics/compositing/PaintChunksToCcLayer.cpp
+third_party/WebKit/Source/platform/graphics/compositing/PaintChunksToCcLayerTest.cpp
+
+Author: foolip@chromium.org
+No-WPT-Author: foolip@chromium.org
+commit b660ab20e3748a897fa0bc9c19f72f5560a4bed4
+third_party/WebKit/LayoutTests/animations/web-animations/animation-state-changes-negative-playback-rate.html
+third_party/WebKit/LayoutTests/animations/web-animations/animation-state-changes-positive-playback-rate.html
+third_party/WebKit/LayoutTests/animations/web-animations/the-effect-value-of-a-keyframe-effect.html
+third_party/WebKit/Source/core/animation/Animation.idl
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnly.h
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnly.idl
+third_party/WebKit/Source/core/animation/AnimationEffectTiming.idl
+third_party/WebKit/Source/core/animation/AnimationEffectTimingProperties.idl
+third_party/WebKit/Source/core/animation/AnimationEffectTimingReadOnly.idl
+third_party/WebKit/Source/core/animation/AnimationTimeline.idl
+third_party/WebKit/Source/core/animation/ComputedTimingProperties.idl
+third_party/WebKit/Source/core/animation/DocumentAnimation.idl
+third_party/WebKit/Source/core/animation/DocumentTimeline.idl
+third_party/WebKit/Source/core/animation/DocumentTimelineOptions.idl
+third_party/WebKit/Source/core/animation/ElementAnimation.idl
+third_party/WebKit/Source/core/animation/Keyframe.h
+third_party/WebKit/Source/core/animation/KeyframeAnimationOptions.idl
+third_party/WebKit/Source/core/animation/KeyframeEffect.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.idl
+third_party/WebKit/Source/core/animation/KeyframeEffectOptions.idl
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.h
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.idl
+third_party/WebKit/Source/core/animation/TimingCalculations.h
+third_party/WebKit/Source/core/animation/css/CSSAnimations.cpp
+third_party/WebKit/Source/core/events/AnimationPlaybackEvent.idl
+third_party/WebKit/Source/core/events/AnimationPlaybackEventInit.idl
+
+Author: ricea@chromium.org
+WPT-Author: ricea@chromium.org
+commit 024df98cb4319d467ac54ae5ca40f13413e0f2bf
+third_party/WebKit/LayoutTests/external/wpt/fetch/api/abort/general-serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/fetch/api/abort/general-sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/fetch/api/abort/general.any-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/fetch/api/abort/general.any.worker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/lint.whitelist
+third_party/WebKit/LayoutTests/external/wpt/service-workers/cache-storage/script-tests/cache-abort.js
+third_party/WebKit/LayoutTests/external/wpt/service-workers/cache-storage/serviceworker/cache-abort.https.html
+third_party/WebKit/LayoutTests/external/wpt/service-workers/cache-storage/window/cache-abort.https.html
+third_party/WebKit/LayoutTests/external/wpt/service-workers/cache-storage/worker/cache-abort.https.html
+third_party/WebKit/Source/bindings/core/v8/V8WasmResponseExtensions.cpp
+third_party/WebKit/Source/core/fetch/Body.cpp
+third_party/WebKit/Source/core/fetch/BodyStreamBuffer.cpp
+third_party/WebKit/Source/core/fetch/BodyStreamBufferTest.cpp
+third_party/WebKit/Source/core/fetch/BytesConsumerTestUtil.h
+third_party/WebKit/Source/core/fetch/FetchDataLoader.h
+third_party/WebKit/Source/modules/cachestorage/Cache.cpp
+third_party/WebKit/Source/modules/serviceworkers/FetchRespondWithObserver.cpp
+
+Author: oksamyt@chromium.org
+No-WPT-Author: oksamyt@chromium.org
+commit 57e8dca9e4c670f1db3b92383fc5249fabeaef75
+third_party/WebKit/LayoutTests/geolocation-api/resources/geolocation-mock.js
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/credentialscontainer-create-from-nested-frame-expected.txt
+third_party/WebKit/LayoutTests/http/tests/credentialmanager/credentialscontainer-get-from-nested-frame-expected.txt
+third_party/WebKit/LayoutTests/virtual/enable-webauthn/http/tests/credentialmanager/credentialscontainer-create-from-nested-frame-expected.txt
+third_party/WebKit/LayoutTests/virtual/enable-webauthn/http/tests/credentialmanager/credentialscontainer-get-from-nested-frame-expected.txt
+third_party/WebKit/Source/platform/graphics/OffscreenCanvasFrameDispatcherImpl.cpp
+third_party/WebKit/Source/platform/graphics/OffscreenCanvasFrameDispatcherImpl.h
+third_party/WebKit/Source/platform/graphics/VideoFrameSubmitter.cpp
+third_party/WebKit/Source/platform/graphics/VideoFrameSubmitter.h
+third_party/WebKit/Source/platform/mojo/DEPS
+third_party/WebKit/Source/platform/mojo/Time.typemap
+third_party/WebKit/public/mojom/blob/data_element.mojom
+third_party/WebKit/public/mojom/service_worker/service_worker_client.mojom
+third_party/WebKit/public/platform/modules/fetch/fetch_api_response.mojom
+third_party/WebKit/public/platform/modules/payments/payment_app.mojom
+third_party/WebKit/public/platform/modules/webauth/authenticator.mojom
+third_party/WebKit/public/platform/reporting.mojom
+
+Author: sunyunjia@chromium.org
+No-WPT-Author: sunyunjia@chromium.org
+commit a895624596bea9349c5ce3758f89122e306f16a5
+third_party/WebKit/LayoutTests/fast/scroll-behavior/snaps-after-scrollbar-dragging.html
+third_party/WebKit/Source/core/frame/LocalFrameView.cpp
+third_party/WebKit/Source/core/frame/LocalFrameView.h
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.h
+third_party/WebKit/Source/platform/scroll/ScrollableArea.cpp
+third_party/WebKit/Source/platform/scroll/ScrollableArea.h
+third_party/WebKit/Source/platform/scroll/Scrollbar.cpp
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit 90b4c9ef795954ca806efc890701deb8d212f546
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/pointer-events.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/resources/testsuite.js
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
+Author: sunyunjia@chromium.org
+WPT-Author: sunyunjia@chromium.org
+commit e76547af4cb2b8b979b2b309f04c897cb6f74f79
+third_party/WebKit/LayoutTests/external/wpt/css/css-scroll-snap/snap-inline-block.html
+third_party/WebKit/Source/core/css/properties/ComputedStyleUtils.cpp
+third_party/WebKit/Source/core/css/resolver/StyleBuilderConverter.cpp
+third_party/WebKit/Source/core/page/scrolling/SnapCoordinator.cpp
+
+Author: rego@igalia.com
+WPT-Author: rego@igalia.com
+commit 78822c6d1c1170be5387fd457444c6c7a969160c
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-001-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-002-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-003-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-003.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-004.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-005-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-005.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-006-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-006.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-007-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-007.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-writing-modes/sizing-orthogonal-percentage-margin-008.html
+third_party/WebKit/Source/core/layout/LayoutBox.cpp
+
+Author: fs@opera.com
+No-WPT-Author: fs@opera.com
+commit 570f299060fe6ee1f1cb596069af884fd3bcf040
+third_party/WebKit/LayoutTests/svg/custom/multiple-resource-cycles-expected.html
+third_party/WebKit/LayoutTests/svg/custom/multiple-resource-cycles.html
+third_party/WebKit/Source/core/layout/svg/SVGResourcesCache.cpp
+third_party/WebKit/Source/core/layout/svg/SVGResourcesCycleSolver.cpp
+third_party/WebKit/Source/core/layout/svg/SVGResourcesCycleSolver.h
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 2fa761b1df17208203571877dff926932150b0b1
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/height.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/width.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 114934842ea9c4ae99f36fe75f7ceb03e8715821
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/offset-anchor.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/offset-distance.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/offset-path.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/offset-position.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/offset-rotate.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/offset.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/cssom/StyleValueFactory.cpp
+third_party/WebKit/Source/core/css/properties/ComputedStyleUtils.cpp
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit 90e11190f9e38a3610fc801cd442a87543b4f0b7
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/mix-blend-mode.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/object-fit.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/table-layout.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/text-orientation.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
+Author: rtoy@chromium.org
+No-WPT-Author: rtoy@chromium.org
+commit 45a0c949c2a456761ffa3011f7058c3d8b7a2d96
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/webaudio/AudioNode/tail-processing.html
+third_party/WebKit/LayoutTests/webaudio/DynamicsCompressor/dynamicscompressor-clear-internal-state.html
+third_party/WebKit/Source/modules/webaudio/AudioNode.cpp
+third_party/WebKit/Source/modules/webaudio/AudioNode.h
+third_party/WebKit/Source/modules/webaudio/DynamicsCompressorNode.cpp
+third_party/WebKit/Source/modules/webaudio/DynamicsCompressorNode.h
+third_party/WebKit/Source/modules/webaudio/PannerNode.cpp
+
+Author: ikilpatrick@chromium.org
+WPT-Author: ikilpatrick@chromium.org
+commit f739a39b76d1f0eb62579f27be422d4340ea8a84
+third_party/WebKit/LayoutTests/external/wpt/css/css-shapes/shape-outside/formatting-context/reference/shape-outside-formatting-context-ref.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-shapes/shape-outside/formatting-context/shape-outside-formatting-context.tentative.html
+third_party/WebKit/Source/core/layout/FloatingObjects.h
+third_party/WebKit/Source/core/layout/LayoutBlockFlow.cpp
+third_party/WebKit/Source/core/layout/LayoutBlockFlow.h
+third_party/WebKit/Source/core/layout/LayoutBox.cpp
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 9f796586717f9b1621520872deccdba79c3c4660
+third_party/WebKit/LayoutTests/FlagExpectations/site-per-process
+third_party/WebKit/LayoutTests/http/tests/printing/cross-site-frame-expected.html
+third_party/WebKit/LayoutTests/http/tests/printing/cross-site-frame-scrolled-expected.html
+third_party/WebKit/LayoutTests/http/tests/printing/cross-site-frame-scrolled.html
+third_party/WebKit/LayoutTests/http/tests/printing/cross-site-frame.html
+third_party/WebKit/LayoutTests/http/tests/printing/resources/subframe.html
+third_party/WebKit/Source/core/frame/RemoteFrameView.cpp
+
+Author: steimel@chromium.org
+No-WPT-Author: steimel@chromium.org
+commit 33dd468c11d52696213d761254b1ec4d78829383
+third_party/WebKit/LayoutTests/media/controls/modern/add-poster-after-page-load.html
+third_party/WebKit/Source/modules/media_controls/MediaControlsImpl.cpp
+
+Author: chaopeng@chromium.org
+No-WPT-Author: chaopeng@chromium.org
+commit 177e20da67ed035c0c2300e73f2cefc7e0a5206d
+third_party/WebKit/LayoutTests/plugins/overlay-scrollbar-mouse-capture.html
+third_party/WebKit/Source/core/frame/LocalFrameView.cpp
+third_party/WebKit/Source/core/layout/ScrollbarsTest.cpp
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+third_party/WebKit/Source/core/paint/PaintLayerScrollableAreaTest.cpp
+third_party/WebKit/Source/core/testing/Internals.cpp
+third_party/WebKit/Source/platform/exported/WebScrollbarThemeClientImpl.cpp
+third_party/WebKit/Source/platform/exported/WebScrollbarThemeClientImpl.h
+third_party/WebKit/Source/platform/graphics/GraphicsLayer.cpp
+third_party/WebKit/Source/platform/graphics/GraphicsLayer.h
+third_party/WebKit/Source/platform/scroll/ScrollableArea.cpp
+third_party/WebKit/Source/platform/scroll/ScrollableArea.h
+third_party/WebKit/Source/platform/scroll/Scrollbar.cpp
+third_party/WebKit/Source/platform/scroll/Scrollbar.h
+third_party/WebKit/Source/platform/scroll/ScrollbarTestSuite.h
+third_party/WebKit/Source/platform/scroll/ScrollbarThemeClient.h
+third_party/WebKit/Source/platform/scroll/ScrollbarThemeMac.mm
+third_party/WebKit/Source/platform/scroll/ScrollbarThemeOverlayTest.cpp
+
+Author: steimel@chromium.org
+No-WPT-Author: steimel@chromium.org
+commit b9e6260a774e51d94904e4427fa4747434e454e3
+third_party/WebKit/LayoutTests/media/controls/modern/scrubbing-touch.html
+third_party/WebKit/LayoutTests/media/controls/modern/scrubbing.html
+third_party/WebKit/LayoutTests/media/media-controls.js
+third_party/WebKit/Source/modules/media_controls/elements/MediaControlTimelineElement.cpp
+third_party/WebKit/Source/modules/media_controls/elements/MediaControlTimelineElement.h
+third_party/WebKit/Source/modules/media_controls/resources/modernMediaControls.css
+
+Author: binlu@chromium.org
+No-WPT-Author: binlu@chromium.org
+commit 28620663e5ff743874e295c24950c4d244522a20
+third_party/WebKit/LayoutTests/fast/dom/HTMLIFrameElement/sandbox-feature-detection.html
+third_party/WebKit/Source/core/html/HTMLIFrameElementSandbox.cpp
+
+Author: cnardi@chromium.org
+WPT-Author: cnardi@chromium.org
+commit aeb732660dec53fb17e3d87f78ef5a4fdb35f44f
+third_party/WebKit/LayoutTests/external/wpt/css/cssom/stylesheet-same-origin.sub-expected.txt
+third_party/WebKit/Source/core/css/CSSStyleSheet.cpp
+third_party/WebKit/Source/core/html/media/HTMLMediaElement.cpp
+third_party/WebKit/Source/core/loader/resource/ImageResource.cpp
+third_party/WebKit/Source/platform/weborigin/SecurityOrigin.cpp
+third_party/WebKit/Source/platform/weborigin/SecurityOrigin.h
+
+Author: rob.buis@samsung.com
+No-WPT-Author: rob.buis@samsung.com
+commit 766bc54b4093641aa646a908b9c586e0898993af
+third_party/WebKit/LayoutTests/fast/css/getComputedStyle/computed-style-listing-expected.txt
+third_party/WebKit/LayoutTests/fast/css/getComputedStyle/computed-style-without-renderer-listing-expected.txt
+third_party/WebKit/LayoutTests/svg/css/getComputedStyle-listing-expected.txt
+third_party/WebKit/Source/core/css/parser/CSSParserFastPaths.cpp
+third_party/WebKit/Source/core/css/properties/longhands/WebkitAppRegionCustom.cpp
+
+Author: c.padhi@samsung.com
+WPT-Author: c.padhi@samsung.com
+commit 2ea508165c07cb74f6e632a117ce6f38c08bf18b
+third_party/WebKit/LayoutTests/external/wpt/mediacapture-streams/MediaDevices-enumerateDevices.https.html
+third_party/WebKit/Source/modules/mediastream/InputDeviceInfo.cpp
+third_party/WebKit/Source/modules/mediastream/InputDeviceInfo.h
+third_party/WebKit/Source/modules/mediastream/MediaDevices.cpp
+third_party/WebKit/Source/modules/mediastream/MediaDevices.h
+third_party/WebKit/Source/modules/mediastream/MediaDevicesTest.cpp
+third_party/WebKit/public/platform/modules/mediastream/media_devices.mojom
+
+Author: ricea@chromium.org
+WPT-Author: ricea@chromium.org
+commit 22f1175d58878e0da74589453bc64f264d4679c8
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/external/wpt/streams/piping/error-propagation-backward-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/piping/error-propagation-backward.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/piping/error-propagation-backward.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/piping/error-propagation-backward.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/piping/multiple-propagation-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/piping/multiple-propagation.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/piping/multiple-propagation.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/piping/multiple-propagation.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/readable-streams/general-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/errors-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/errors.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/errors.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/transform-streams/errors.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/aborting-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/aborting.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/aborting.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/aborting.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/bad-underlying-sinks-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/bad-underlying-sinks.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/bad-underlying-sinks.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/bad-underlying-sinks.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/close-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/close.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/close.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/close.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/general-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/general.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/general.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/general.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/properties-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/properties.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/properties.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/properties.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/reentrant-strategy-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/reentrant-strategy.dedicatedworker-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/reentrant-strategy.serviceworker.https-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/streams/writable-streams/reentrant-strategy.sharedworker-expected.txt
+third_party/WebKit/LayoutTests/http/tests/streams/chromium/simple-queue-full-node-reject.html
+third_party/WebKit/LayoutTests/http/tests/streams/chromium/simple-queue-many-foreach.html
+third_party/WebKit/Source/core/streams/CommonOperations.js
+third_party/WebKit/Source/core/streams/WritableStream.js
+
+Author: futhark@chromium.org
+No-WPT-Author: futhark@chromium.org
+commit a46b62e9900f5ac48951f8ad68d9e03eded4cc8d
+third_party/WebKit/LayoutTests/fast/css/CSSStyleSheet-constructable.html
+third_party/WebKit/Source/core/css/StyleSheetList.cpp
+third_party/WebKit/Source/core/css/StyleSheetList.h
+third_party/WebKit/Source/core/dom/TreeScope.cpp
+
+Author: tkent@chromium.org
+WPT-Author: tkent@chromium.org
+commit 133bc5c262b2555af223263452e9875a95db9eb7
+third_party/WebKit/LayoutTests/external/wpt/html/syntax/parsing/html-integration-point.html
+third_party/WebKit/Source/core/html/parser/HTMLTreeBuilderSimulator.cpp
+third_party/WebKit/Source/core/html/parser/HTMLTreeBuilderSimulator.h
+
+Author: bajones@chromium.org
+No-WPT-Author: bajones@chromium.org
+commit 69d3f0648a5962ea3a2a4d0e5244b2be57afbae1
+third_party/WebKit/LayoutTests/xr/xrWebGLLayer_non_exclusive_adjust_size.html
+third_party/WebKit/Source/platform/graphics/gpu/XRWebGLDrawingBuffer.cpp
+third_party/WebKit/Source/platform/graphics/gpu/XRWebGLDrawingBuffer.h
+
+Author: rtoy@chromium.org
+WPT-Author: rtoy@chromium.org
+commit 9d4a34cadf1b7d85f4ad0b709374aaaf59325a8d
+third_party/WebKit/LayoutTests/external/wpt/webaudio/the-audio-api/the-audioworklet-interface/audioworkletnode-disconnected-input.https.html
+third_party/WebKit/LayoutTests/external/wpt/webaudio/the-audio-api/the-audioworklet-interface/processors/input-length-processor.js
+third_party/WebKit/Source/modules/webaudio/AudioWorkletGlobalScope.cpp
+third_party/WebKit/Source/modules/webaudio/AudioWorkletNode.cpp
+
+Author: thomasanderson@chromium.org
+No-WPT-Author: thomasanderson@chromium.org
+commit 44027d41f779d62af9def030160ad2015c0d851f
+third_party/WebKit/LayoutTests/platform/linux/fast/forms/text-control-intrinsic-widths-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/fast/forms/validation-bubble-appearance-edge-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/forms/validation-bubble-appearance-iframe-expected.png
+third_party/WebKit/LayoutTests/platform/linux/fast/forms/validation-bubble-appearance-rtl-ui-expected.png
+third_party/WebKit/LayoutTests/platform/linux/inspector-protocol/layout-fonts/generic-system-ui-expected.txt
+third_party/WebKit/LayoutTests/platform/linux/virtual/scalefactor150/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/scalefactor200/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/linux/virtual/scalefactor200withzoom/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.10/virtual/scalefactor150/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.10/virtual/scalefactor200withzoom/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.11/virtual/scalefactor150/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.11/virtual/scalefactor200withzoom/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/virtual/scalefactor150/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/mac-mac10.12/virtual/scalefactor200withzoom/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/mac-retina/virtual/scalefactor150/fast/hidpi/static/validation-bubble-appearance-hidpi-expected.png
+third_party/WebKit/LayoutTests/platform/mac-retina/webaudio/DynamicsCompressor/dynamicscompressor-clear-internal-state-expected.txt
+third_party/WebKit/Source/platform/fonts/shaping/HarfBuzzShaperTest.cpp
+third_party/WebKit/Tools/Scripts/webkitpy/layout_tests/port/android.py
+third_party/WebKit/Tools/Scripts/webkitpy/layout_tests/port/base.py
+third_party/WebKit/Tools/Scripts/webkitpy/layout_tests/port/fuchsia.py
+
+Author: yuhong.sha@samsung.com
+No-WPT-Author: yuhong.sha@samsung.com
+commit 556a9a41fc89dbf0ba6695379495bdd8f85270c1
+third_party/WebKit/LayoutTests/fast/css/dumpAsText/xml-stylesheet-pi-not-in-prolog-expected.txt
+third_party/WebKit/LayoutTests/svg/hixie/error/dumpAsText/004-expected.txt
+third_party/WebKit/LayoutTests/svg/hixie/error/dumpAsText/005-expected.txt
+third_party/WebKit/LayoutTests/xmlviewer/leading-and-trailing-whitespaces-expected.txt
+third_party/WebKit/LayoutTests/xmlviewer/leading-and-trailing-whitespaces.html
+third_party/WebKit/LayoutTests/xmlviewer/resources/leading-and-trailing-whitespaces.xml
+third_party/WebKit/Source/core/xml/DocumentXMLTreeViewer.js
+
+Author: rob.buis@samsung.com
+No-WPT-Author: rob.buis@samsung.com
+commit b207b03193de4b9d8ab8ae8ca122869e25f21c3e
+third_party/WebKit/LayoutTests/W3CImportExpectations
+third_party/WebKit/LayoutTests/svg/dom/rgb-color-parser-expected.txt
+third_party/WebKit/Source/core/css/parser/CSSPropertyParserHelpers.cpp
+
+Author: zhuoyu.qian@samsung.com
+No-WPT-Author: zhuoyu.qian@samsung.com
+commit 141b23e55c08725252179ff3e03d0f702e8a2023
+third_party/WebKit/LayoutTests/fast/css/background-position-inherit-expected.txt
+third_party/WebKit/LayoutTests/fast/css/background-position-inherit.html
+third_party/WebKit/Source/build/scripts/core/css/properties/templates/CSSPropertySubclass.cpp.tmpl
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 5bd654a757956bcc0e916734340c8001701d6e37
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/flex-basis-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/flex-basis.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/flex-direction.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/flex-flow.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/flex-grow.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/flex-shrink.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/flex-wrap.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/flex.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/cssom/CSSUnitValue.cpp
+
+Author: chrishtr@chromium.org
+No-WPT-Author: chrishtr@chromium.org
+commit bc3e6fa5756624cf270d4c7667d6b58a10d3fc3d
+third_party/WebKit/LayoutTests/compositing/scroll-update-with-clamp-expected.html
+third_party/WebKit/LayoutTests/compositing/scroll-update-with-clamp.html
+third_party/WebKit/Source/core/paint/PaintLayerScrollableArea.cpp
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit 54d2cbe0b249cae723f0635146e294fa6e164778
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/caption-side.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/isolation.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/unicode-bidi.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/writing-mode-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/writing-mode.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
+Author: wangxianzhu@chromium.org
+No-WPT-Author: wangxianzhu@chromium.org
+commit 62343e24f9c6596e44887c3554e19eed6608a049
+third_party/WebKit/LayoutTests/TestExpectations
+third_party/WebKit/LayoutTests/platform/linux/plugins/webview-plugin-nested-iframe-scroll-expected.png
+third_party/WebKit/LayoutTests/platform/linux/plugins/webview-plugin-scroll-expected.png
+third_party/WebKit/LayoutTests/platform/mac/plugins/plugin-scroll-expected.png
+third_party/WebKit/LayoutTests/platform/mac/plugins/plugin-scroll-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/plugins/webview-plugin-scroll-expected.png
+third_party/WebKit/LayoutTests/platform/mac/plugins/webview-plugin-scroll-expected.txt
+third_party/WebKit/LayoutTests/platform/win/plugins/webview-plugin-scroll-expected.png
+third_party/WebKit/LayoutTests/platform/win/plugins/webview-plugin-scroll-expected.txt
+third_party/WebKit/LayoutTests/plugins/plugin-scroll-expected.png
+third_party/WebKit/LayoutTests/plugins/plugin-scroll-expected.txt
+third_party/WebKit/LayoutTests/plugins/plugin-scroll.html
+third_party/WebKit/LayoutTests/plugins/webview-plugin-scroll-expected.png
+third_party/WebKit/LayoutTests/plugins/webview-plugin-scroll-expected.txt
+third_party/WebKit/LayoutTests/plugins/webview-plugin-scroll.html
+third_party/WebKit/Source/core/exported/WebPluginContainerImpl.cpp
+third_party/WebKit/Source/core/exported/WebPluginContainerImpl.h
+third_party/WebKit/Source/core/frame/EmbeddedContentView.h
+third_party/WebKit/Source/core/frame/LocalFrameView.cpp
+third_party/WebKit/Source/core/frame/LocalFrameView.h
+third_party/WebKit/Source/core/frame/RemoteFrameView.cpp
+third_party/WebKit/Source/core/frame/RemoteFrameView.h
+third_party/WebKit/Source/core/paint/EmbeddedContentPainter.cpp
+
+Author: ikilpatrick@chromium.org
+No-WPT-Author: ikilpatrick@chromium.org
+commit edcaa42b78d784492c60379322c8697102fe13a8
+third_party/WebKit/LayoutTests/fast/css/getComputedStyle/computed-style-listing-expected.txt
+third_party/WebKit/LayoutTests/fast/css/getComputedStyle/computed-style-without-renderer-listing-expected.txt
+third_party/WebKit/LayoutTests/fast/deprecated-flexbox/020.html
+third_party/WebKit/LayoutTests/ietestcenter/css3/flexbox/flexbox-groups-001-expected.htm
+third_party/WebKit/LayoutTests/ietestcenter/css3/flexbox/flexbox-groups-001.htm
+third_party/WebKit/LayoutTests/ietestcenter/css3/flexbox/flexbox-groups-002-expected.htm
+third_party/WebKit/LayoutTests/ietestcenter/css3/flexbox/flexbox-groups-002.htm
+third_party/WebKit/LayoutTests/ietestcenter/css3/flexbox/flexbox-groups-003-expected.htm
+third_party/WebKit/LayoutTests/ietestcenter/css3/flexbox/flexbox-groups-003.htm
+third_party/WebKit/LayoutTests/ietestcenter/css3/flexbox/flexbox-groups-004-expected.htm
+third_party/WebKit/LayoutTests/ietestcenter/css3/flexbox/flexbox-groups-004.htm
+third_party/WebKit/LayoutTests/svg/css/getComputedStyle-listing-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/css-properties-as-js-properties-expected.txt
+third_party/WebKit/LayoutTests/virtual/stable/webexposed/css-property-listing-expected.txt
+third_party/WebKit/LayoutTests/webexposed/css-properties-as-js-properties-expected.txt
+third_party/WebKit/LayoutTests/webexposed/css-property-listing-expected.txt
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/css/BUILD.gn
+third_party/WebKit/Source/core/css/CSSComputedStyleDeclaration.cpp
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/CSSPropertiesRanking.json5
+third_party/WebKit/Source/core/css/ComputedStyleDiffFunctions.json5
+third_party/WebKit/Source/core/css/parser/CSSProtoConverter.cpp
+third_party/WebKit/Source/core/css/properties/longhands/WebkitBoxFlexGroupCustom.cpp
+third_party/WebKit/Source/core/frame/UseCounter.cpp
+third_party/WebKit/Source/core/layout/LayoutDeprecatedFlexibleBox.cpp
+third_party/WebKit/Source/core/layout/LayoutDeprecatedFlexibleBox.h
+
+Author: sunyunjia@chromium.org
+WPT-Author: sunyunjia@chromium.org
+commit 32dd13568781a882fb6730f578023d3bf8f294f1
+third_party/WebKit/LayoutTests/external/wpt/css/css-scroll-snap/snap-to-visible-areas.html
+third_party/WebKit/Source/core/page/scrolling/SnapCoordinator.cpp
+third_party/WebKit/Source/core/page/scrolling/SnapCoordinatorTest.cpp
+third_party/WebKit/Source/platform/scroll/ScrollSnapData.h
+
+Author: hta@chromium.org
+WPT-Author: hta@chromium.org
+commit a71178f294046c17adc70f8f09015c34defb9aa5
+third_party/WebKit/LayoutTests/external/wpt/webrtc/RTCPeerConnection-setRemoteDescription-answer-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/webrtc/RTCPeerConnection-setRemoteDescription-offer-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/webrtc/RTCPeerConnection-setRemoteDescription-pranswer-expected.txt
+third_party/WebKit/LayoutTests/fast/peerconnection/RTCPeerConnection-sdes-constraint.html
+third_party/WebKit/Source/modules/peerconnection/RTCErrorUtil.cpp
+
+Author: jbroman@chromium.org
+No-WPT-Author: jbroman@chromium.org
+commit f8e2ba434e0a21f81b817bd107739a39a3deb105
+third_party/WebKit/LayoutTests/fast/dom/Window/window-postmessage-neutered-arraybuffer.html
+third_party/WebKit/Source/bindings/core/v8/serialization/SerializedScriptValue.cpp
+
+Author: schenney@chromium.org
+No-WPT-Author: schenney@chromium.org
+commit 80441f0a1eb089bf4e9d755a7af5c3bfd3b787ec
+third_party/WebKit/LayoutTests/fast/hidpi/image-srcset-fit-scale-down-expected.html
+third_party/WebKit/LayoutTests/fast/hidpi/image-srcset-fit-scale-down.html
+third_party/WebKit/Source/core/layout/LayoutReplaced.cpp
+
+Author: rego@igalia.com
+WPT-Author: rego@igalia.com
+commit 35d044cf27bde7781ab720f20803e35c07ee833d
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/gaps/column-gap-parsing-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/gaps/gap-parsing-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/gaps/grid-column-gap-parsing-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/gaps/grid-gap-parsing-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/gaps/grid-row-gap-parsing-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-align/gaps/row-gap-parsing-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/alignment/grid-gutters-011.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/alignment/grid-gutters-012.html
+third_party/WebKit/Source/core/layout/LayoutGrid.cpp
+third_party/WebKit/Source/core/style/GapLength.h
+
+Author: mstensho@chromium.org
+WPT-Author: mstensho@chromium.org
+commit 18637ad884228cb3134eee9ae87615250d534898
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/external/wpt/css/css-multicol/float-and-block.html
+third_party/WebKit/Source/core/layout/ng/ng_block_node.cc
+
+Author: alpercakan98@gmail.com
+No-WPT-Author: alpercakan98@gmail.com
+commit 261cb0ef9a5a0d7603f28a516a1aaff82b5dd7da
+third_party/WebKit/LayoutTests/animations/interpolation/text-size-adjust-interpolation.html
+third_party/WebKit/LayoutTests/animations/responsive/animations-responsive-text-size-adjust.html
+third_party/WebKit/Source/core/animation/CSSInterpolationTypesMap.cpp
+third_party/WebKit/Source/core/animation/CSSNumberInterpolationType.cpp
+third_party/WebKit/Source/core/animation/NumberPropertyFunctions.cpp
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/CSSPropertyEquality.cpp
+
+Author: rego@igalia.com
+WPT-Author: rego@igalia.com
+commit 70a0a9991823afda169f858dfe4aa7e5ddbef223
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/grid-items-minimum-width-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/grid-items-minimum-width-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/grid-items-minimum-width-orthogonal-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/grid-items-minimum-width-orthogonal-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/grid-items-minimum-width-vertical-lr-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/grid-items-minimum-width-vertical-lr-002.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/grid-items-minimum-width-vertical-rl-001.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-items/grid-items-minimum-width-vertical-rl-002.html
+third_party/WebKit/Source/core/layout/GridLayoutUtils.cpp
+third_party/WebKit/Source/core/layout/GridTrackSizingAlgorithm.cpp
+third_party/WebKit/Source/core/layout/GridTrackSizingAlgorithm.h
+
+Author: pwnall@chromium.org
+WPT-Author: pwnall@chromium.org
+commit ea536c8e259d320d142d3bb7113705298737c3ec
+third_party/WebKit/LayoutTests/external/wpt/cookie-store/cookieStore_event_arguments.tenative.window.js
+third_party/WebKit/LayoutTests/external/wpt/cookie-store/cookieStore_event_basic.tentative.window.js
+third_party/WebKit/LayoutTests/external/wpt/cookie-store/cookieStore_event_delete.tenative.window.js
+third_party/WebKit/LayoutTests/external/wpt/cookie-store/cookieStore_event_overwrite.tentative.window.js
+third_party/WebKit/LayoutTests/external/wpt/cookie-store/idlharness.tentative.html
+third_party/WebKit/LayoutTests/external/wpt/cookie-store/idlharness_serviceworker.js
+third_party/WebKit/LayoutTests/external/wpt/interfaces/cookie-store.idl
+third_party/WebKit/LayoutTests/fast/dom/Window/property-access-on-cached-properties-after-frame-navigated-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/Window/property-access-on-cached-properties-after-frame-removed-and-gced-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/Window/property-access-on-cached-properties-after-frame-removed-expected.txt
+third_party/WebKit/LayoutTests/fast/dom/Window/property-access-on-cached-window-after-frame-navigated-expected.txt
+third_party/WebKit/LayoutTests/http/tests/serviceworker/webexposed/global-interface-listing-service-worker-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/bindings/modules/BUILD.gn
+third_party/WebKit/Source/modules/cookie_store/BUILD.gn
+third_party/WebKit/Source/modules/cookie_store/CookieChangeEvent.cpp
+third_party/WebKit/Source/modules/cookie_store/CookieChangeEvent.h
+third_party/WebKit/Source/modules/cookie_store/CookieChangeEvent.idl
+third_party/WebKit/Source/modules/cookie_store/CookieChangeEventInit.idl
+third_party/WebKit/Source/modules/cookie_store/CookieStore.cpp
+third_party/WebKit/Source/modules/cookie_store/CookieStore.h
+third_party/WebKit/Source/modules/cookie_store/CookieStore.idl
+third_party/WebKit/Source/modules/cookie_store/DEPS
+third_party/WebKit/Source/modules/event_target_modules_names.json5
+third_party/WebKit/Source/modules/modules_idl_files.gni
+
+Author: mstensho@chromium.org
+WPT-Author: mstensho@chromium.org
+commit 0956beaf373e226398934ce6c5a006867595c855
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/external/wpt/css/CSS2/normal-flow/unresolvable-max-height.html
+third_party/WebKit/LayoutTests/external/wpt/css/CSS2/normal-flow/unresolvable-min-height.html
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/css/acid2-expected.png
+third_party/WebKit/Source/core/layout/ng/ng_length_utils.cc
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit d44c9a6c27c2b36d6eac74061be5029ef52174a0
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/scroll-margin.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 335bf87015fc6351811860d149478d14e6122edf
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-size.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/cssom/CSSUnitValue.cpp
+
+Author: hs1217.lee@samsung.com
+WPT-Author: hs1217.lee@samsung.com
+commit b24b8c89155d06feac71c09b6f7aa3ec6ff1647a
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/break-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/break.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+
 Author: ikilpatrick@chromium.org
 No-WPT-Author: ikilpatrick@chromium.org
 commit f2750048912d169aa44f7b7155b1c8fbfafcfb57
@@ -8169,4 +9407,4 @@ third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertyma
 third_party/WebKit/Source/core/css/cssom/StylePropertyMap.cpp
 third_party/WebKit/Source/core/css/cssom/StylePropertyMap.h
 
-87 source+test changes, 35 in wpt
+158 source+test changes, 72 in wpt
