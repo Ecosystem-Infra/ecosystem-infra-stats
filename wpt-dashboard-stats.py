@@ -21,6 +21,14 @@ def get_latencies(prs, runs):
     """For each PR, find the earliest run for each browser that included that PR,
     and calucate the latencies between the PR and the runs."""
     latencies = {}
+
+    browsers = list(set(run['browser_name'] for run in runs))
+    browsers.sort()
+    print(browsers)
+
+    for run in runs:
+        print(run['revision'])
+
     return latencies
 
 
