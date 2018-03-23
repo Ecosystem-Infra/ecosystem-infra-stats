@@ -15,14 +15,6 @@ mkdir out
 # copy the static webapp content
 cp -r webapp "$OUTDIR"
 
-# Check out databases from gh-pages, which may fail harmlessly.
-git fetch origin || true
-# Don't combine them into one line in case some file doesn't exist.
-git checkout origin/gh-pages -- wpt-prs.csv || true
-git checkout origin/gh-pages -- import-latencies.csv || true
-git checkout origin/gh-pages -- export-latencies.csv || true
-git reset HEAD *.csv || true
-
 echo "upstream wpt commit stats..."
 ./wpt-commits.sh "$WPT_DIR" > "$OUTDIR/wpt-commits.csv"
 echo
