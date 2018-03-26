@@ -1,3 +1,211 @@
+Author: shend@chromium.org
+WPT-Author: shend@chromium.org
+commit 077ec79cc252b625b2bfbfaf3b1fd1fdebce12fa
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-family.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-language-override-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-language-override.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-optical-sizing-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-optical-sizing.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-palette-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-palette.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-presentation-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-presentation.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-size-adjust.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-size-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-size.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-stretch-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-stretch.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-synthesis-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-synthesis.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-variant-alternates-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-variant-alternates.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-variant-emoji-expected.txt
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-variant-emoji.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-variant.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font-variation-settings.html
+third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertymap/properties/font.html
+third_party/WebKit/Source/core/css/CSSProperties.json5
+third_party/WebKit/Source/core/css/cssom/CSSUnitValue.cpp
+
+Author: smcgruer@chromium.org
+WPT-Author: smcgruer@chromium.org
+commit aa1e42c4e100db4d6241bce983bb98491b1f6176
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/idlharness-expected.txt
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/bindings/modules/v8/generated.gni
+third_party/WebKit/Source/core/BUILD.gn
+third_party/WebKit/Source/core/animation/Animation.cpp
+third_party/WebKit/Source/core/animation/Animation.h
+third_party/WebKit/Source/core/animation/Animation.idl
+third_party/WebKit/Source/core/animation/AnimationEffect.cpp
+third_party/WebKit/Source/core/animation/AnimationEffect.h
+third_party/WebKit/Source/core/animation/AnimationEffect.idl
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnly.cpp
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnly.h
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnly.idl
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnlyTest.cpp
+third_party/WebKit/Source/core/animation/AnimationEffectTest.cpp
+third_party/WebKit/Source/core/animation/AnimationEffectTiming.cpp
+third_party/WebKit/Source/core/animation/AnimationEffectTiming.h
+third_party/WebKit/Source/core/animation/AnimationEffectTimingReadOnly.cpp
+third_party/WebKit/Source/core/animation/AnimationEffectTimingReadOnly.h
+third_party/WebKit/Source/core/animation/AnimationTest.cpp
+third_party/WebKit/Source/core/animation/BUILD.gn
+third_party/WebKit/Source/core/animation/CompositorAnimations.cpp
+third_party/WebKit/Source/core/animation/DocumentTimeline.cpp
+third_party/WebKit/Source/core/animation/DocumentTimeline.h
+third_party/WebKit/Source/core/animation/DocumentTimelineTest.cpp
+third_party/WebKit/Source/core/animation/InertEffect.cpp
+third_party/WebKit/Source/core/animation/InertEffect.h
+third_party/WebKit/Source/core/animation/Keyframe.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffect.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.idl
+third_party/WebKit/Source/core/animation/KeyframeEffectModel.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffectModel.h
+third_party/WebKit/Source/core/animation/README.md
+third_party/WebKit/Source/core/animation/TimingCalculations.h
+third_party/WebKit/Source/core/animation/TimingCalculationsTest.cpp
+third_party/WebKit/Source/core/animation/css/CSSAnimations.cpp
+third_party/WebKit/Source/core/animation/css/CSSAnimations.h
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/inspector/InspectorAnimationAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorTraceEvents.cpp
+third_party/WebKit/Source/modules/animationworklet/WorkletAnimation.cpp
+third_party/WebKit/Source/modules/animationworklet/WorkletAnimation.h
+third_party/WebKit/Source/modules/animationworklet/WorkletAnimation.idl
+third_party/WebKit/Source/modules/animationworklet/WorkletAnimationTest.cpp
+
+Author: smcgruer@chromium.org
+WPT-Author: smcgruer@chromium.org
+commit 41f61c889af479a2558c94fac9e134e0336b6ff6
+third_party/WebKit/LayoutTests/animations/web-animations/KeyframeEffect-animation.html
+third_party/WebKit/LayoutTests/animations/web-animations/KeyframeEffect-getKeyframes-correct-context.html
+third_party/WebKit/LayoutTests/animations/web-animations/KeyframeEffectReadOnly-animation.html
+third_party/WebKit/LayoutTests/animations/web-animations/KeyframeEffectReadOnly-getKeyframes-correct-context.html
+third_party/WebKit/LayoutTests/animations/web-animations/api-readonly-object-types.html
+third_party/WebKit/LayoutTests/external/wpt/web-animations/interfaces/KeyframeEffect/idlharness-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/animation/animation-KeyframeEffect-crash-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/animation/animation-KeyframeEffect-crash.js
+third_party/WebKit/LayoutTests/http/tests/devtools/animation/animation-KeyframeEffectReadOnly-crash-expected.txt
+third_party/WebKit/LayoutTests/http/tests/devtools/animation/animation-KeyframeEffectReadOnly-crash.js
+third_party/WebKit/LayoutTests/virtual/threaded/animations/KeyframeEffect-composited-animation.html
+third_party/WebKit/LayoutTests/virtual/threaded/animations/KeyframeEffectReadOnly-composited-animation.html
+third_party/WebKit/LayoutTests/webexposed/global-interface-listing-expected.txt
+third_party/WebKit/Source/core/animation/Animation.cpp
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnly.cpp
+third_party/WebKit/Source/core/animation/AnimationEffectReadOnly.h
+third_party/WebKit/Source/core/animation/BUILD.gn
+third_party/WebKit/Source/core/animation/EffectStack.cpp
+third_party/WebKit/Source/core/animation/EffectStack.h
+third_party/WebKit/Source/core/animation/EffectStackTest.cpp
+third_party/WebKit/Source/core/animation/ElementAnimation.cpp
+third_party/WebKit/Source/core/animation/ElementAnimations.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffect.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffect.h
+third_party/WebKit/Source/core/animation/KeyframeEffect.idl
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.cpp
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.h
+third_party/WebKit/Source/core/animation/KeyframeEffectReadOnly.idl
+third_party/WebKit/Source/core/animation/SampledEffect.cpp
+third_party/WebKit/Source/core/animation/SampledEffect.h
+third_party/WebKit/Source/core/animation/WorkletAnimationBase.h
+third_party/WebKit/Source/core/animation/css/CSSAnimations.cpp
+third_party/WebKit/Source/core/core_idl_files.gni
+third_party/WebKit/Source/core/inspector/InspectorAnimationAgent.cpp
+third_party/WebKit/Source/core/inspector/InspectorTraceEvents.cpp
+third_party/WebKit/Source/core/svg/SVGElement.cpp
+third_party/WebKit/Source/modules/animationworklet/WorkletAnimation.cpp
+third_party/WebKit/Source/modules/animationworklet/WorkletAnimation.h
+
+Author: mstensho@chromium.org
+No-WPT-Author: mstensho@chromium.org
+commit b53b29c27fe6d4b22015471b614a669b35b654f3
+third_party/WebKit/LayoutTests/fast/multicol/balance-float-with-insane-offset-crash.html
+third_party/WebKit/Source/core/layout/ColumnBalancer.cpp
+
+Author: mstensho@chromium.org
+No-WPT-Author: mstensho@chromium.org
+commit 1787f9d8b9b0dbcfa70c1ad9cadfb34291d861df
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/forms/select/menulist-appearance-rtl-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/multicol/composited-layer-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/multicol/dynamic/insert-spanner-after-inner-multicol-crash-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/multicol/fixedpos-in-transform-at-column-boundary-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fast/multicol/nested-after-composited-layer-crash-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fragmentation/block-with-float-and-1-orphaned-line-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/fragmentation/single-cell-too-large-for-page-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/printing/ellipsis-printing-style-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/printing/page-height-zero-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/printing/webgl-repeated-printing-expected.txt
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/printing/webgl-repeated-printing-preservedrawingbuffer-expected.txt
+third_party/WebKit/Source/core/css/resolver/StyleAdjuster.cpp
+third_party/WebKit/Source/core/layout/ng/ng_column_layout_algorithm_test.cc
+third_party/WebKit/Source/platform/runtime_enabled_features.json5
+
+Author: steimel@chromium.org
+No-WPT-Author: steimel@chromium.org
+commit 0701fde7ec45cb948452b9983ce9c03bcae869fe
+third_party/WebKit/LayoutTests/media/controls/modern/video-does-not-go-fullscreen-on-double-click-before-preload.html
+third_party/WebKit/Source/modules/media_controls/MediaControlsImpl.cpp
+third_party/WebKit/Source/modules/media_controls/MediaControlsImpl.h
+third_party/WebKit/Source/modules/media_controls/elements/MediaControlOverlayPlayButtonElement.cpp
+
+Author: chrishtr@chromium.org
+No-WPT-Author: chrishtr@chromium.org
+commit ee9e9d29aab83547734c5487ff452900015897cf
+third_party/WebKit/LayoutTests/flag-specific/enable-slimming-paint-v2/paint/invalidation/cull-rect-change-crash-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/cull-rect-change-crash-expected.txt
+third_party/WebKit/LayoutTests/paint/invalidation/cull-rect-change-crash.html
+third_party/WebKit/LayoutTests/virtual/disable-spv175/paint/invalidation/cull-rect-change-crash-expected.txt
+third_party/WebKit/Source/core/paint/PaintLayerPainter.cpp
+
+Author: luoe@chromium.org
+No-WPT-Author: luoe@chromium.org
+commit d3c95fae0e7ccceda86d7b3bb1bf7a1910c52b07
+third_party/WebKit/LayoutTests/fast/dom/HTMLLinkElement/link-preload-unused-expected.txt
+third_party/WebKit/Source/platform/loader/fetch/ResourceFetcher.cpp
+
+Author: c.padhi@samsung.com
+No-WPT-Author: c.padhi@samsung.com
+commit ea434a2ae6f530bd2fc4bb706228ab3395bc67bd
+third_party/WebKit/LayoutTests/fast/mediastream/MediaDevices-getSupportedConstraints.html
+third_party/WebKit/Source/modules/mediastream/MediaTrackSupportedConstraints.idl
+
+Author: futhark@chromium.org
+WPT-Author: futhark@chromium.org
+commit 91be5c7c64cfd8f87dd8e98e749c2f32ab4b7bd6
+third_party/WebKit/LayoutTests/external/wpt/html/semantics/forms/the-select-element/selected-index.html
+third_party/WebKit/Source/core/html/forms/HTMLOptionElement.cpp
+third_party/WebKit/Source/core/html/forms/HTMLSelectElement.cpp
+
+Author: rego@igalia.com
+No-WPT-Author: rego@igalia.com
+commit 62798742ed5422cf0042d4c39f3ded2f691d47d4
+third_party/WebKit/LayoutTests/editing/composition-underline-color.html
+third_party/WebKit/LayoutTests/platform/linux/editing/composition-underline-color-expected.png
+third_party/WebKit/LayoutTests/platform/linux/editing/composition-underline-color-expected.txt
+third_party/WebKit/LayoutTests/platform/mac/editing/composition-underline-color-expected.png
+third_party/WebKit/LayoutTests/platform/mac/editing/composition-underline-color-expected.txt
+third_party/WebKit/LayoutTests/platform/win/editing/composition-underline-color-expected.png
+third_party/WebKit/LayoutTests/platform/win/editing/composition-underline-color-expected.txt
+third_party/WebKit/LayoutTests/platform/win7/editing/composition-underline-color-expected.txt
+third_party/WebKit/Source/core/editing/ime/InputMethodController.cpp
+third_party/WebKit/Source/core/editing/markers/ActiveSuggestionMarkerListImplTest.cpp
+third_party/WebKit/Source/core/editing/markers/CompositionMarkerListImplTest.cpp
+third_party/WebKit/Source/core/editing/markers/DocumentMarkerControllerTest.cpp
+third_party/WebKit/Source/core/editing/markers/StyleableMarker.cpp
+third_party/WebKit/Source/core/editing/markers/StyleableMarker.h
+third_party/WebKit/Source/core/editing/suggestion/TextSuggestionControllerTest.cpp
+third_party/WebKit/Source/core/paint/InlineTextBoxPainter.cpp
+third_party/WebKit/public/web/WebImeTextSpan.h
+
+Author: svillar@igalia.com
+WPT-Author: svillar@igalia.com
+commit e14c9f41fada84c7162a659e0194d5150ff7d293
+third_party/WebKit/LayoutTests/external/wpt/css/css-grid/grid-definition/grid-inline-auto-repeat-001.html
+third_party/WebKit/Source/core/layout/LayoutGrid.cpp
+
 Author: wangxianzhu@chromium.org
 WPT-Author: wangxianzhu@chromium.org
 commit 80a959a1273c3f91bed6c9a1696312456f6a5b07
@@ -9407,4 +9615,4 @@ third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertyma
 third_party/WebKit/Source/core/css/cssom/StylePropertyMap.cpp
 third_party/WebKit/Source/core/css/cssom/StylePropertyMap.h
 
-158 source+test changes, 72 in wpt
+170 source+test changes, 77 in wpt
