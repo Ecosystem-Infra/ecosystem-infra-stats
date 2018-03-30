@@ -15,6 +15,15 @@ mkdir out
 # copy the static webapp content
 cp -r webapp "$OUTDIR"
 
+# virtualenv initialization
+if [[ ! -f "env/bin/activate" ]]; then
+    virtualenv -p python3 --no-site-packages env
+fi
+set +u
+source env/bin/activate
+set -u
+pip install -U -r requirements.txt
+
 # Check out databases from gh-pages, which may fail harmlessly.
 git fetch origin || true
 # Don't combine them into one line in case some file doesn't exist.
