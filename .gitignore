@@ -1,4 +1,5 @@
 *.csv
 *.pyc
+env/
 gh-pages/
 out/
