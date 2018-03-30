@@ -17,7 +17,7 @@ cp -r webapp "$OUTDIR"
 
 # virtualenv initialization
 if [[ ! -f "env/bin/activate" ]]; then
-    virtualenv -p python3 --no-site-packages env
+    virtualenv -p python2 --no-site-packages env
 fi
 set +u
 source env/bin/activate
