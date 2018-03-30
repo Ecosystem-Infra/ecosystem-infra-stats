@@ -120,7 +120,7 @@ def fetch_all_prs():
                     except AttributeError:
                         pass
             pr_db.add({
-                'PR': pr['number'],
+                'PR': str(pr['number']),
                 'merge_commit_sha': pr['merge_commit_sha'],
                 'merged_at': pr['merged_at'],
                 'author': pr['user']['login'],
