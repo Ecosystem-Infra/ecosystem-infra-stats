@@ -69,6 +69,7 @@ def fetch_all_prs():
         pr_db = PRDB(PRS_FILE)
         pr_db.read()
         print('Read', len(pr_db), 'PRs from', PRS_FILE)
+        return pr_db
         print('Fetching new PRs')
     except (IOError, AssertionError):
         pr_db = PRDB(PRS_FILE)
@@ -139,3 +140,11 @@ def fetch_all_prs():
 
 def is_export_pr(pr):
     return bool(pr['chromium_commit'])
+
+def get_pr_latencies(prs, events):
+    """For each PR, find the earliest run for each browser that included that PR,
+    and calucate the latencies between the PR and the runs."""
+
+    latencies = {}
+
+    return latencies
