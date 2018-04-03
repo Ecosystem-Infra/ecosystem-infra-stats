@@ -1,3 +1,25 @@
+Author: kojii@chromium.org
+No-WPT-Author: kojii@chromium.org
+commit c6733a576db579fb3630d5d80de62b43430a1fc9
+third_party/WebKit/LayoutTests/FlagExpectations/enable-blink-features=LayoutNG
+third_party/WebKit/LayoutTests/flag-specific/enable-blink-features=LayoutNG/external/wpt/css/cssom-view/cssom-getClientRects-002-expected.txt
+third_party/WebKit/Source/core/layout/ng/inline/ng_physical_text_fragment.cc
+third_party/WebKit/Source/core/layout/ng/inline/ng_physical_text_fragment.h
+third_party/WebKit/Source/platform/fonts/shaping/ShapeResult.cpp
+third_party/WebKit/Source/platform/fonts/shaping/ShapeResult.h
+third_party/WebKit/Source/platform/fonts/shaping/ShapeResultBuffer.cpp
+third_party/WebKit/Source/platform/fonts/shaping/ShapeResultInlineHeaders.h
+
+Author: schenney@chromium.org
+No-WPT-Author: schenney@chromium.org
+commit aa9a6d779bcad148ce3c128bc991a335382cc550
+third_party/WebKit/LayoutTests/fast/table/background-gradient-border-collapsed.html
+third_party/WebKit/LayoutTests/platform/linux/fast/table/background-gradient-border-collapsed-expected.png
+third_party/WebKit/LayoutTests/platform/mac/fast/table/background-gradient-border-collapsed-expected.png
+third_party/WebKit/LayoutTests/platform/win/fast/table/background-gradient-border-collapsed-expected.png
+third_party/WebKit/Source/core/paint/BackgroundImageGeometry.cpp
+third_party/WebKit/Source/core/paint/BackgroundImageGeometry.h
+
 Author: chrishtr@chromium.org
 No-WPT-Author: chrishtr@chromium.org
 commit bc611587d59c74fc0ac0749bff47b4dc96a171c5
@@ -10152,4 +10174,4 @@ third_party/WebKit/LayoutTests/external/wpt/css/css-typed-om/the-stylepropertyma
 third_party/WebKit/Source/core/css/cssom/StylePropertyMap.cpp
 third_party/WebKit/Source/core/css/cssom/StylePropertyMap.h
 
-209 source+test changes, 100 in wpt
+211 source+test changes, 100 in wpt
