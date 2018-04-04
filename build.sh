@@ -44,10 +44,6 @@ echo "chromium export stats..."
 python wpt-export-stats.py "$CHROMIUM_DIR"
 echo
 
-echo "wpt.fyi stats..."
-python wpt-dashboard-stats.py
-echo
-
 mv *.csv "$OUTDIR/"
 
 echo "chromium usage stats..."
