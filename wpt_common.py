@@ -5,6 +5,7 @@ Python 6 (2 and 3 compatible) please.
 # Requirements: python-dateutil, requests
 
 from __future__ import print_function
+from collections import defaultdict
 import os
 import re
 import subprocess
@@ -141,10 +142,71 @@ def fetch_all_prs():
 def is_export_pr(pr):
     return bool(pr['chromium_commit'])
 
+
+def pr_number_from_tag(tagish):
+    """Extracts the PR number as integer from a string that begins with
+    merge_pr*, like merge_pr_6581 or merge_pr_6589-1-gc9db8d86f6."""
+    match = re.search(r'merge_pr_(\d+)', tagish)
+    if match is not None:
+        return int(match.group(1))
+    return None
+
+def get_tagged_prs():
+    """Gets the set of integers for which merge_pr_* exists."""
+    # --format="%(refname:strip=2) %(objectname)" would also include SHA-1
+    output = wpt_git(['tag', '--list', 'merge_pr_*'])
+    return set(pr_number_from_tag(tag) for tag in output.split() if tag)
+
+
+def git_contained_pr(commit):
+    """Returns the limited to pattern."""
+    try:
+        tag = wpt_git(['describe', '--tags', '--match', 'merge_pr_*', commit])
+        return pr_number_from_tag(tag)
+    except subprocess.CalledProcessError:
+        return None
+
+
 def get_pr_latencies(prs, events):
-    """For each PR, find the earliest run for each browser that included that PR,
-    and calucate the latencies between the PR and the runs."""
+    """For each PR, find the earliest event that included that PR,
+    and calucate the latencies between the PR and the event.
 
-    latencies = {}
+    Args:
+        prs: list of PRs from fetch_all_prs()
+        events: list of { 'sha': 'abcdef', date: '2018-03-20T18:25:58Z' } objects
 
+    Returns list of { 'pr': pr, 'event': event, 'latency': latency } objects
+    """
+
+    # We get PR-to-event latencies by the following process:
+    #  - For each event's commit find the latest contained PR. This is done via
+    #    git tags, and after this point the git commit graph doesn't matter.
+    #  - Associate (a subset of) PRs with the earliest event that had that
+    #    *specific* PR as it latest contained PR.
+    #  - For every PR, find the earliest event date associated with that or any
+    #    later PR. This is O(n^2) because it's *possible* for events to not
+    #    be in the same order as the PRs were merged.
+
+    # Create a mapping from event to latest contained PR.
+    earliest_event_for_pr = defaultdict(list)
+    for event in events:
+        contained_pr = git_contained_pr(event['sha'])
+        if contained_pr is None:
+            continue
+        existing_event = earliest_event_for_pr.get(contained_pr)
+        if existing_event is not None:
+            if dateutil.parser.parse(existing_event['date']) < dateutil.parser.parse(event['date']):
+                continue
+        earliest_event_for_pr[contained_pr] = event
+
+    # Reverse to a mapping from PR to earliest containing event.
+    sorted_prs = sorted(prs, key=lambda pr: dateutil.parser.parse(pr['merged_at']))
+    for index, pr in enumerate(sorted_prs):
+        pr_number = int(pr['PR'])
+        #
+        print(pr_number, pr['merged_at'])
+
+    #latencies.append({ 'pr': contained_pr, 'event': event, 'latency': 0})
+
+    latencies = []
     return latencies

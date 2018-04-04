@@ -22,7 +22,7 @@ fi
 set +u
 source env/bin/activate
 set -u
-pip install -U -r requirements.txt
+#pip install -U -r requirements.txt
 
 # Check out databases from gh-pages, which may fail harmlessly.
 git fetch origin || true
@@ -30,7 +30,13 @@ git fetch origin || true
 git checkout origin/gh-pages -- wpt-prs.csv || true
 git checkout origin/gh-pages -- import-latencies.csv || true
 git checkout origin/gh-pages -- export-latencies.csv || true
-git reset HEAD *.csv || true
+#git reset HEAD *.csv || true
+
+echo "wpt dashboard stats..."
+# note: the first argument isn't used, only passed
+python wpt-dashboard-stats.py "$CHROMIUM_DIR" "$WPT_DIR"
+echo
+exit
 
 echo "upstream wpt commit stats..."
 ./wpt-commits.sh "$WPT_DIR" > "$OUTDIR/wpt-commits.csv"
