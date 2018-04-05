@@ -49,9 +49,12 @@ def filter_unique_runs(runs):
     return [run for run in runs if run['created_at'] == earliest_dates[key(run)]]
 
 
-def event_from_run(run):
-    """Return an event object for get_latencies."""
-    return { 'sha': run['revision'], 'date': run['created_at'] }
+def run_sha(run):
+    return run['revision']
+
+
+def run_date(run):
+    return dateutil.parser.parse(run['created_at'])
 
 
 def calculate_latencies(prs, runs):
@@ -66,13 +69,10 @@ def calculate_latencies(prs, runs):
     browsers = list(set(run['browser_name'] for run in runs))
     browsers.sort()
 
-    # For each browser, create a list of events which is the completion of a
-    # run for a given commit, as arguments for get_pr_latencies.
+    # Per-browser latencies:
     for name in browsers:
-        events = [event_from_run(run) for run in runs if run['browser_name'] == name]
-        latencies = get_pr_latencies(prs, events)
-        print(name, len(events), 'latencies:')
-        #print(json.dumps(latencies, indent=2))
+        browser_runs = [run for run in runs if run['browser_name'] == name]
+        get_pr_latencies(prs, events=browser_runs, event_sha=run_sha, event_date=run_date)
     return
 
     # Get the complete runs by starting with the union of all and intersecting

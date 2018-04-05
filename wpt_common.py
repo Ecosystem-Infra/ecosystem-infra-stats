@@ -151,6 +151,7 @@ def pr_number_from_tag(tagish):
         return int(match.group(1))
     return None
 
+
 def get_tagged_prs():
     """Gets the set of integers for which merge_pr_* exists."""
     # --format="%(refname:strip=2) %(objectname)" would also include SHA-1
@@ -167,46 +168,57 @@ def git_contained_pr(commit):
         return None
 
 
-def get_pr_latencies(prs, events):
+def pr_date(pr):
+    return dateutil.parser.parse(pr['merged_at'])
+
+
+def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
     """For each PR, find the earliest event that included that PR,
     and calucate the latencies between the PR and the event.
 
     Args:
         prs: list of PRs from fetch_all_prs()
-        events: list of { 'sha': 'abcdef', date: '2018-03-20T18:25:58Z' } objects
+        events: list of events in any format
+        event_sha: function to get a sha from an event
+        event_date: function to get a datetime.datetime from an event
 
-    Returns list of { 'pr': pr, 'event': event, 'latency': latency } objects
+    Returns list of { 'pr': pr, 'event': event, 'latency': latency } objects.
     """
 
+    # Sort the PRs by merge date and filter out the ones that weren't tagged,
+    # since we don't know at which commit they were merged, and their computed
+    # latency can therefore be higher than the real latency. (Any PR which has
+    # correct merge information via the GitHub API should also have a tag:
+    # https://github.com/foolip/ecosystem-infra-stats/issues/6#issuecomment-375731858)
+    tagged_prs = get_tagged_prs()
+    prs = sorted(filter(lambda pr: int(pr['PR']) in tagged_prs, prs), key=pr_date)
+
     # We get PR-to-event latencies by the following process:
-    #  - For each event's commit find the latest contained PR. This is done via
-    #    git tags, and after this point the git commit graph doesn't matter.
-    #  - Associate (a subset of) PRs with the earliest event that had that
-    #    *specific* PR as it latest contained PR.
-    #  - For every PR, find the earliest event date associated with that or any
-    #    later PR. This is O(n^2) because it's *possible* for events to not
-    #    be in the same order as the PRs were merged.
+    #  1. Find the latest contained PR for each event. This is done using git
+    #     describe, and after this point the git commit graph doesn't matter.
+    #  2. Reverse to a 1:many mapping from PRs to earliest containing event.
+    #  3. For every PR, find the earliest event for that or any later PR. This
+    #     is O(n^2) because it's possible for events to not be in the same
+    #     order as the PRs were merged.
 
-    # Create a mapping from event to latest contained PR.
-    earliest_event_for_pr = defaultdict(list)
-    for event in events:
-        contained_pr = git_contained_pr(event['sha'])
-        if contained_pr is None:
+    # Step 1.
+    event_prs = [git_contained_pr(event_sha(event)) for event in events]
+
+    # Step 2.
+    pr_events = [[] for pr in prs]
+    pr_number_to_index = dict(zip((int(pr['PR']) for pr in prs), range(len(prs))))
+    for event, pr_number in zip(events, event_prs):
+        index = pr_number_to_index.get(pr_number)
+        if index is None:
             continue
-        existing_event = earliest_event_for_pr.get(contained_pr)
-        if existing_event is not None:
-            if dateutil.parser.parse(existing_event['date']) < dateutil.parser.parse(event['date']):
-                continue
-        earliest_event_for_pr[contained_pr] = event
+        pr_events[index].append(event)
 
-    # Reverse to a mapping from PR to earliest containing event.
-    sorted_prs = sorted(prs, key=lambda pr: dateutil.parser.parse(pr['merged_at']))
-    for index, pr in enumerate(sorted_prs):
-        pr_number = int(pr['PR'])
-        #
-        print(pr_number, pr['merged_at'])
-
-    #latencies.append({ 'pr': contained_pr, 'event': event, 'latency': 0})
+    # Step 3.
+    for index, (pr, events) in enumerate(zip(prs, pr_events)):
+        following_events = [event for events in pr_events[index:] for event in events]
+        earliest_event = min(following_events, key=event_date)
+        print(pr['PR'], earliest_event)
+    return
 
     latencies = []
     return latencies
