@@ -160,7 +160,7 @@ def get_tagged_prs():
 
 
 def git_contained_pr(commit):
-    """Returns the limited to pattern."""
+    """Returns the number of the latest contained PR of commit using git describe."""
     try:
         tag = wpt_git(['describe', '--tags', '--match', 'merge_pr_*', commit])
         return pr_number_from_tag(tag)
@@ -194,31 +194,43 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
     prs = sorted(filter(lambda pr: int(pr['PR']) in tagged_prs, prs), key=pr_date)
 
     # We get PR-to-event latencies by the following process:
-    #  1. Find the latest contained PR for each event. This is done using git
+    #  1. For each event find the latest contained PR. This is done using git
     #     describe, and after this point the git commit graph doesn't matter.
-    #  2. Reverse to a 1:many mapping from PRs to earliest containing event.
-    #  3. For every PR, find the earliest event for that or any later PR. This
-    #     is O(n^2) because it's possible for events to not be in the same
-    #     order as the PRs were merged.
+    #     Not all events necessarily have a known contained PR at all.
+    #  2. Reverse to a mapping from PR to event. Some PRs won't be the latest
+    #     contained PR of any event, and if there are multiple events for a
+    #     single PR only the earliest is saved.
+    #  3. Walk the list of PR and associated events backwards, keeping track
+    #     of the earliest event encountered so far. That is the event against
+    #     which the latency for the PR is measured.
 
     # Step 1.
     event_prs = [git_contained_pr(event_sha(event)) for event in events]
 
+    # Convenience to allow using None as a placeholder for no event.
+    def earliest_event(event1, event2):
+        if event1 is None:
+            return event2
+        if event2 is None:
+            return event1
+        return min(event1, event2, key=event_date)
+
     # Step 2.
-    pr_events = [[] for pr in prs]
+    pr_events = [None for pr in prs]
     pr_number_to_index = dict(zip((int(pr['PR']) for pr in prs), range(len(prs))))
     for event, pr_number in zip(events, event_prs):
         index = pr_number_to_index.get(pr_number)
         if index is None:
             continue
-        pr_events[index].append(event)
+        pr_events[index] = earliest_event(pr_events[index], event)
 
     # Step 3.
-    for index, (pr, events) in enumerate(zip(prs, pr_events)):
-        following_events = [event for events in pr_events[index:] for event in events]
-        earliest_event = min(following_events, key=event_date)
-        print(pr['PR'], earliest_event)
-    return
-
-    latencies = []
+    latencies = [{ 'pr': pr, 'event': None, 'latency': None } for pr in prs]
+    foo_event = None
+    for event, result in reversed(zip(pr_events, latencies)):
+        foo_event = earliest_event(foo_event, event)
+        if foo_event is None:
+            continue
+        result['event'] = foo_event
+        result['latency'] = (event_date(foo_event) - pr_date(result['pr'])).total_seconds() / 60
     return latencies

@@ -72,7 +72,11 @@ def calculate_latencies(prs, runs):
     # Per-browser latencies:
     for name in browsers:
         browser_runs = [run for run in runs if run['browser_name'] == name]
-        get_pr_latencies(prs, events=browser_runs, event_sha=run_sha, event_date=run_date)
+        latencies = get_pr_latencies(prs, events=browser_runs, event_sha=run_sha, event_date=run_date)
+        print(name, 'latencies:')
+        for l in latencies:
+            run = l['event']
+            print(l['pr']['PR'], run['revision'] if run else None, l['latency'])
     return
 
     # Get the complete runs by starting with the union of all and intersecting
