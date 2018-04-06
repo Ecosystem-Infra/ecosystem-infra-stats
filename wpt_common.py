@@ -5,7 +5,6 @@ Python 6 (2 and 3 compatible) please.
 # Requirements: python-dateutil, requests
 
 from __future__ import print_function
-from collections import defaultdict
 import os
 import re
 import subprocess
