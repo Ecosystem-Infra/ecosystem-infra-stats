@@ -4,7 +4,6 @@
 
 from __future__ import print_function
 from collections import defaultdict, namedtuple
-import csv
 import re
 import subprocess
 

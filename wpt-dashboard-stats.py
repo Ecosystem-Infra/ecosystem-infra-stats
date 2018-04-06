@@ -6,11 +6,12 @@ import dateutil.parser
 import json
 import requests
 
+from csv_database import RunLatencyDB
 from wpt_common import CUTOFF, QUARTER_START, fetch_all_prs, get_pr_latencies, wpt_git
 
 # 1000 because of https://github.com/w3c/wptdashboard/issues/524
 RUNS_URL='https://wpt.fyi/api/runs?max-count=1000'
-CSV_FILE = 'wpt-dashboard-latency.csv'
+CSV_PATH_TEMPLATE = 'wpt-dashboard-{}-latency.csv'
 
 # If the runs expand to non-desktop platforms, those should be measured
 # separately, so assert that only desktop configurations exist.
@@ -73,10 +74,19 @@ def calculate_latencies(prs, runs):
     for name in browsers:
         browser_runs = [run for run in runs if run['browser_name'] == name]
         latencies = get_pr_latencies(prs, events=browser_runs, event_sha=run_sha, event_date=run_date)
-        print(name, 'latencies:')
-        for l in latencies:
-            run = l['event']
-            print(l['pr']['PR'], run['revision'] if run else None, l['latency'])
+        csv_path = CSV_PATH_TEMPLATE.format(name)
+        db = RunLatencyDB(csv_path)
+        for entry in latencies:
+            run = entry['event']
+            if run is None:
+                continue
+            db.add({
+                'PR': entry['pr']['PR'],
+                'run_sha': run['revision'],
+                'run_time': run['created_at'],
+                'latency': entry['latency'],
+            })
+        db.write()
     return
 
     # Get the complete runs by starting with the union of all and intersecting
