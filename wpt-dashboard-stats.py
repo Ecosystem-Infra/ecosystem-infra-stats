@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 
-from __future__ import print_function
-from collections import defaultdict
 import dateutil.parser
-import json
 import requests
 
 from csv_database import RunLatencyDB
-from wpt_common import CUTOFF, QUARTER_START, fetch_all_prs, get_pr_latencies, wpt_git
+from wpt_common import fetch_all_prs, get_pr_latencies
 
 # 1000 because of https://github.com/w3c/wptdashboard/issues/524
 RUNS_URL='https://wpt.fyi/api/runs?max-count=1000'
@@ -25,29 +22,6 @@ KNOWN_RUN_CONFIGS = set([
     ('safari', 'macos'),
     ('safari', 'macOS'),
 ])
-
-
-# There can be duplicate runs. Use the earliest run for each browser.
-# See https://github.com/w3c/wptdashboard/issues/528.
-def filter_unique_runs(runs):
-    """Builds a mapping from browser name and wpt sha to earliest date, and
-    then filters runs to just the runs in that mapping."""
-
-    def key(run):
-        return (run['browser_name'], run['revision'])
-
-    earliest_dates = defaultdict(list)
-
-    for run in runs:
-        browser_and_sha = key(run)
-        date = run['created_at']
-        existing_date = earliest_dates.get(browser_and_sha)
-        if existing_date is not None:
-            if dateutil.parser.parse(existing_date) < dateutil.parser.parse(date):
-                continue
-        earliest_dates[browser_and_sha] = date
-
-    return [run for run in runs if run['created_at'] == earliest_dates[key(run)]]
 
 
 def run_sha(run):
@@ -87,26 +61,12 @@ def calculate_latencies(prs, runs):
                 'latency': entry['latency'],
             })
         db.write()
-    return
-
-    # Get the complete runs by starting with the union of all and intersecting
-    # with the runs for each browser.
-    complete_shas = set(run['revision'] for run in runs)
-    for browser in browsers:
-        browser_runs = (run['revision'] for run in runs if run['browser_name'] == browser)
-        complete_shas.intersection_update(browser_runs)
-    print(len(complete_shas), 'complete runs:')
-    print(complete_shas)
-    for sha in complete_shas:
-        complete_runs = [run for run in runs if run['revision'] == sha]
-        assert len(complete_runs) == len(browsers)
 
 
 def main():
     prs = fetch_all_prs().values()
     runs = requests.get(RUNS_URL).json()
-    unique_runs = filter_unique_runs(runs)
-    calculate_latencies(prs, unique_runs)
+    calculate_latencies(prs, runs)
 
 
 if __name__ == '__main__':
