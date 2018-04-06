@@ -70,7 +70,6 @@ def fetch_all_prs():
         pr_db = PRDB(PRS_FILE)
         pr_db.read()
         print('Read', len(pr_db), 'PRs from', PRS_FILE)
-        return pr_db
         print('Fetching new PRs')
     except (IOError, AssertionError):
         pr_db = PRDB(PRS_FILE)
