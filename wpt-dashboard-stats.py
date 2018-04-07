@@ -65,7 +65,9 @@ def calculate_latencies(prs, runs):
 
 def main():
     prs = fetch_all_prs().values()
-    runs = requests.get(RUNS_URL).json()
+    runs_response = requests.get(RUNS_URL)
+    runs_response.raise_for_status()
+    runs = runs_response.json()
     calculate_latencies(prs, runs)
 
 

@@ -32,8 +32,12 @@ git checkout origin/gh-pages -- import-latencies.csv || true
 git checkout origin/gh-pages -- export-latencies.csv || true
 git reset HEAD *.csv || true
 
-echo "upstream wpt commit stats..."
-./wpt-commits.sh "$WPT_DIR" > "$OUTDIR/wpt-commits.csv"
+echo "chromium import stats..."
+python wpt-import-stats.py "$CHROMIUM_DIR" "$WPT_DIR"
+echo
+
+echo "chromium export stats..."
+python wpt-export-stats.py "$CHROMIUM_DIR"
 echo
 
 echo "wpt.fyi stats..."
@@ -41,12 +45,9 @@ echo "wpt.fyi stats..."
 python wpt-dashboard-stats.py "$CHROMIUM_DIR" "$WPT_DIR"
 echo
 
-echo "chromium import stats..."
-python wpt-import-stats.py "$CHROMIUM_DIR" "$WPT_DIR"
-echo
-
-echo "chromium export stats..."
-python wpt-export-stats.py "$CHROMIUM_DIR"
+echo "upstream wpt commit stats..."
+# note: the first argument isn't used, only passed
+python wpt-commits.py "$CHROMIUM_DIR" "$WPT_DIR"
 echo
 
 mv *.csv "$OUTDIR/"
