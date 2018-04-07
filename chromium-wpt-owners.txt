@@ -1,3 +1,4 @@
+Missing TEAM: WebCryptoAPI
 Missing OWNERS: accname
 Missing OWNERS: acid
 Missing COMPONENT: battery-status
@@ -14,9 +15,9 @@ Missing OWNERS: geolocation-sensor
 Missing OWNERS: graphics-aam
 Missing TEAM: keyboard-lock
 Missing COMPONENT: keyboard-lock
-Missing TEAM: mediacapture-streams
 Missing TEAM: media-source
 Missing COMPONENT: media-source
+Missing TEAM: mediacapture-streams
 Missing OWNERS: mimesniff
 Missing TEAM: page-visibility
 Missing COMPONENT: page-visibility
@@ -29,7 +30,6 @@ Missing TEAM: screen-orientation
 Orphaned OWNERS: staticrange
 Missing TEAM: wasm
 Missing TEAM: webaudio
-Missing TEAM: WebCryptoAPI
 Missing TEAM: webmessaging
 Missing TEAM: webrtc
 Missing OWNERS: css/css-animations
@@ -42,6 +42,7 @@ Missing OWNERS: css/css-overflow
 Missing OWNERS: css/css-properties-values-api
 Missing OWNERS: css/css-pseudo
 Missing OWNERS: css/css-scroll-snap
+Missing OWNERS: css/css-shadow-parts
 Missing OWNERS: css/css-sizing
 Missing OWNERS: css/css-style-attr
 Missing OWNERS: css/css-transitions
