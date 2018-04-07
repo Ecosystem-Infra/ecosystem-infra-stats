@@ -8,7 +8,7 @@ from wpt_common import fetch_all_prs, get_pr_latencies
 
 # 1000 because of https://github.com/w3c/wptdashboard/issues/524
 RUNS_URL='https://wpt.fyi/api/runs?max-count=1000'
-CSV_PATH_TEMPLATE = 'wpt-dashboard-{}-latency.csv'
+CSV_PATH_TEMPLATE = 'wpt-dashboard-{}-latencies.csv'
 
 # If the runs expand to non-desktop platforms, those should be measured
 # separately, so assert that only desktop configurations exist.
