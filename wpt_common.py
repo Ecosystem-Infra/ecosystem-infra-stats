@@ -22,12 +22,10 @@ CUTOFF = '2017-07-01T00:00:00Z'
 # Change this when it is a new quarter.
 QUARTER_START = '2018-01-01T00:00:00Z'
 
-# Read tokens from env vars.
-GH_USER = os.environ.get('GH_USER')
+# Read token from env var.
 GH_TOKEN = os.environ.get('GH_TOKEN')
-GH_AUTH = (GH_USER, GH_TOKEN) if (GH_USER and GH_TOKEN) else None
-if GH_AUTH is None:
-    print('Warning: Provide GH_USER and GH_TOKEN to get full results')
+if GH_TOKEN is None:
+    print('Warning: Provide GH_TOKEN to get full results')
 
 # GitHub cache. Delete the file to fetch PRs again.
 PRS_FILE = 'wpt-prs.csv'
@@ -60,7 +58,10 @@ def wpt_git(args):
 
 def github_request(url):
     base_url = 'https://api.github.com'
-    res = requests.get(base_url + url, auth=GH_AUTH)
+    headers = None
+    if GH_TOKEN is not None:
+        headers = { 'Authorization': 'token {}'.format(GH_TOKEN) }
+    res = requests.get(base_url + url, headers=headers)
     return res.json()
 
 
