@@ -62,6 +62,7 @@ def github_request(url):
     if GH_TOKEN is not None:
         headers = { 'Authorization': 'token {}'.format(GH_TOKEN) }
     res = requests.get(base_url + url, headers=headers)
+    res.raise_for_status()
     return res.json()
 
 
