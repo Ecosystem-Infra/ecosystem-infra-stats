@@ -18,8 +18,10 @@ FIELD_GREP_ARGS = {
     'WebKit exports': ['--grep', '^WebKit export of https://bugs\\.webkit\\.org/'],
 }
 
+
 def isoformat(dt):
     return dt.isoformat() + 'Z'
+
 
 db = CommitDB(COMMITS_CSV)
 now = datetime.now()
@@ -29,7 +31,7 @@ while since < now:
     until = since + relativedelta(months=1)
     args = ['rev-list', 'origin/master', '--count', '--no-merges',
             '--since', isoformat(since), '--until', isoformat(until)]
-    record = { 'Month': since.strftime('%Y-%m')}
+    record = {'Month': since.strftime('%Y-%m')}
     for field, grep_args in FIELD_GREP_ARGS.items():
         count = wpt_git(args + grep_args).strip()
         record[field] = count
