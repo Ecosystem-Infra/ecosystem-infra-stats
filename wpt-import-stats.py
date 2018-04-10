@@ -116,11 +116,11 @@ def get_latencies(imports, prs):
         previous_import = imports[index_found - 1]
         # Check if I get my binary search right :)
         assert _compare_commits(merge_commit, import_found.wpt_sha) <= 0, \
-               "PR merge point {} after import {}".format(
-                   merge_commit, import_found)
+            "PR merge point {} after import {}".format(
+            merge_commit, import_found)
         assert _compare_commits(merge_commit, previous_import.wpt_sha) > 0, \
-               "PR merge point {} before the previous import {}".format(
-                   merge_commit, previous_import)
+            "PR merge point {} before the previous import {}".format(
+            merge_commit, previous_import)
 
         import_time = dateutil.parser.parse(imports[index_found].date)
         wpt_merge_time = dateutil.parser.parse(merged_at)

@@ -86,7 +86,7 @@ class CSVIndexedDB(object):
 class CommitDB(CSVIndexedDB):
     def __init__(self, csv_path):
         super(CommitDB, self).__init__(csv_path, fields=[
-            'Month', 'Total commits', 'Chromium exports' , 'Gecko exports',
+            'Month', 'Total commits', 'Chromium exports', 'Gecko exports',
             'Servo exports', 'WebKit exports'])
 
 
@@ -112,6 +112,7 @@ class ImportLatencyStatDB(CSVIndexedDB):
     def __init__(self, csv_path):
         super(ImportLatencyStatDB, self).__init__(csv_path, fields=[
             'Week', 'PRs', '50%', '90%', 'Mean', 'Meeting SLA'])
+
 
 class ExportLatencyStatDB(CSVIndexedDB):
     def __init__(self, csv_path):

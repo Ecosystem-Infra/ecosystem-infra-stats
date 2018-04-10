@@ -13,7 +13,7 @@ import subprocess
 
 from wpt_common import CUTOFF, QUARTER_START, fetch_all_prs, wpt_git
 
-RUNS_URL='https://wpt.fyi/api/runs?max-count=100'
+RUNS_URL = 'https://wpt.fyi/api/runs?max-count=100'
 CSV_FILE = 'wpt-dashboard-latency.csv'
 
 
