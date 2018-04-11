@@ -168,6 +168,10 @@ def git_contained_pr(commit):
         return None
 
 
+def pr_number(pr):
+    return int(pr['PR'])
+
+
 def pr_date(pr):
     return dateutil.parser.parse(pr['merged_at'])
 
@@ -191,8 +195,8 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
     # correct merge information via the GitHub API should also have a tag:
     # https://github.com/foolip/ecosystem-infra-stats/issues/6#issuecomment-375731858)
     tagged_prs = get_tagged_prs()
-    prs = sorted(filter(lambda pr: int(
-        pr['PR']) in tagged_prs, prs), key=pr_date)
+    prs = sorted(filter(lambda pr: pr_number(pr) in tagged_prs, prs),
+                 key=pr_date)
 
     # We get PR-to-event latencies by the following process:
     #  1. For each event find the latest contained PR. This is done using git
@@ -206,9 +210,11 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
     #     which the latency for the PR is measured.
 
     # Step 1.
-    event_prs = [git_contained_pr(event_sha(event)) for event in events]
+    # event_contained_prs is a list of PR numbers, not dicts.
+    event_contained_prs = [git_contained_pr(
+        event_sha(event)) for event in events]
 
-    # Convenience to allow using None as a placeholder for no event.
+    # earliest_event allows using None as a placeholder for no event.
     def earliest_event(event1, event2):
         if event1 is None:
             return event2
@@ -217,26 +223,25 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
         return min(event1, event2, key=event_date)
 
     # Step 2.
-    pr_events = [None for pr in prs]
-    # The pr_number_to_index dict is used to make the pr_events and event_prs
-    # order match, to simplify step 3.
-    pr_number_to_index = dict(
-        zip((int(pr['PR']) for pr in prs), range(len(prs))))
-    for event, pr_number in zip(events, event_prs):
-        index = pr_number_to_index.get(pr_number)
-        if index is None:
+    # pr_earliest_events is a dict with PR numbers as the key.
+    pr_earliest_events = {}
+    for event, contained_pr in zip(events, event_contained_prs):
+        if contained_pr is None:
             continue
-        pr_events[index] = earliest_event(pr_events[index], event)
+        pr_earliest_events[contained_pr] = earliest_event(
+            pr_earliest_events.get(contained_pr), event)
 
     # Step 3.
-    # The results are first created and then modified in reverse loop.
+    # results is first created and then swept/updated in reverse order.
     results = [{'pr': pr, 'event': None, 'latency': None} for pr in prs]
     earliest_event_so_far = None
-    for event, result in reversed(zip(pr_events, results)):
+    for result in reversed(results):
+        pr = result['pr']
+        event = pr_earliest_events.get(pr_number(pr))
         earliest_event_so_far = earliest_event(earliest_event_so_far, event)
         if earliest_event_so_far is None:
             continue
         result['event'] = earliest_event_so_far
         result['latency'] = (event_date(earliest_event_so_far) -
-                             pr_date(result['pr'])).total_seconds() / 60
+                             pr_date(pr)).total_seconds() / 60
     return results
