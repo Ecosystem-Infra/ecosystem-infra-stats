@@ -191,7 +191,8 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
     # correct merge information via the GitHub API should also have a tag:
     # https://github.com/foolip/ecosystem-infra-stats/issues/6#issuecomment-375731858)
     tagged_prs = get_tagged_prs()
-    prs = sorted(filter(lambda pr: int(pr['PR']) in tagged_prs, prs), key=pr_date)
+    prs = sorted(filter(lambda pr: int(
+        pr['PR']) in tagged_prs, prs), key=pr_date)
 
     # We get PR-to-event latencies by the following process:
     #  1. For each event find the latest contained PR. This is done using git
@@ -217,7 +218,10 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
 
     # Step 2.
     pr_events = [None for pr in prs]
-    pr_number_to_index = dict(zip((int(pr['PR']) for pr in prs), range(len(prs))))
+    # The pr_number_to_index dict is used to make the pr_events and event_prs
+    # order match, to simplify step 3.
+    pr_number_to_index = dict(
+        zip((int(pr['PR']) for pr in prs), range(len(prs))))
     for event, pr_number in zip(events, event_prs):
         index = pr_number_to_index.get(pr_number)
         if index is None:
@@ -225,12 +229,14 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
         pr_events[index] = earliest_event(pr_events[index], event)
 
     # Step 3.
-    latencies = [{ 'pr': pr, 'event': None, 'latency': None } for pr in prs]
-    foo_event = None
-    for event, result in reversed(zip(pr_events, latencies)):
-        foo_event = earliest_event(foo_event, event)
-        if foo_event is None:
+    # The results are first created and then modified in reverse loop.
+    results = [{'pr': pr, 'event': None, 'latency': None} for pr in prs]
+    earliest_event_so_far = None
+    for event, result in reversed(zip(pr_events, results)):
+        earliest_event_so_far = earliest_event(earliest_event_so_far, event)
+        if earliest_event_so_far is None:
             continue
-        result['event'] = foo_event
-        result['latency'] = (event_date(foo_event) - pr_date(result['pr'])).total_seconds() / 60
-    return latencies
+        result['event'] = earliest_event_so_far
+        result['latency'] = (event_date(earliest_event_so_far) -
+                             pr_date(result['pr'])).total_seconds() / 60
+    return results
