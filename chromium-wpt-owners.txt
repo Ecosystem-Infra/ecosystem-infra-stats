@@ -1,7 +1,9 @@
+Missing OWNERS: BackgroundSync
 Missing TEAM: WebCryptoAPI
 Missing OWNERS: accname
 Missing OWNERS: acid
 Missing COMPONENT: battery-status
+Missing OWNERS: budget-api
 Missing TEAM: clipboard-apis
 Missing COMPONENT: clipboard-apis
 Missing TEAM: compat
