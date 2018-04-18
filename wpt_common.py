@@ -186,7 +186,10 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
         event_sha: function to get a sha from an event
         event_date: function to get a datetime.datetime from an event
 
-    Returns list of { 'pr': pr, 'event': event, 'latency': latency } objects.
+    Returns:
+        A list of dictionaries in the following format:
+           [{'pr': PR number (string), 'event': event,
+             'latency': latency in minutes (float)}, ...]
     """
 
     # Sort the PRs by merge date and filter out the ones that weren't tagged,
