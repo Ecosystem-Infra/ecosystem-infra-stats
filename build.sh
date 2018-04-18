@@ -43,6 +43,11 @@ echo "chromium export stats..."
 python wpt-export-stats.py "$CHROMIUM_DIR"
 echo
 
+echo "wpt.fyi stats..."
+# note: the first argument isn't used, only passed
+python wpt-dashboard-stats.py "$CHROMIUM_DIR" "$WPT_DIR"
+echo
+
 echo "upstream wpt commit stats..."
 # note: the first argument isn't used, only passed
 python wpt-commits.py "$CHROMIUM_DIR" "$WPT_DIR"

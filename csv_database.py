@@ -118,3 +118,9 @@ class ExportLatencyStatDB(CSVIndexedDB):
     def __init__(self, csv_path):
         super(ExportLatencyStatDB, self).__init__(csv_path, fields=[
             'Week', 'PRs', '50%', '90%', 'Mean', 'Meeting SLA'])
+
+
+class RunLatencyDB(CSVIndexedDB):
+    def __init__(self, csv_path):
+        super(RunLatencyDB, self).__init__(csv_path, fields=[
+            'PR', 'run_sha', 'run_time', 'latency'])
