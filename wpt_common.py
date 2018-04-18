@@ -176,15 +176,15 @@ def pr_date(pr):
     return dateutil.parser.parse(pr['merged_at'])
 
 
-def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
+def get_pr_latencies(prs, events=None, event_sha_func=None, event_date_func=None):
     """For each PR, find the earliest event that included that PR,
     and calucate the latencies between the PR and the event.
 
     Args:
         prs: list of PRs from fetch_all_prs()
         events: list of events in any format
-        event_sha: function to get a sha from an event
-        event_date: function to get a datetime.datetime from an event
+        event_sha_func: function to get a sha from an event
+        event_date_func: function to get a datetime.datetime from an event
 
     Returns:
         A list of dictionaries in the following format:
@@ -225,7 +225,7 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
     # Step 1.
     # event_contained_prs is a list of PR numbers, not dicts.
     event_contained_prs = [git_contained_pr(
-        event_sha(event)) for event in events]
+        event_sha_func(event)) for event in events]
 
     # earliest_event allows using None as a placeholder for no event.
     def earliest_event(event1, event2):
@@ -233,7 +233,7 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
             return event2
         if event2 is None:
             return event1
-        return min(event1, event2, key=event_date)
+        return min(event1, event2, key=event_date_func)
 
     # Step 2.
     # pr_earliest_events is a dict with PR numbers as the key.
@@ -255,6 +255,6 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
         if earliest_event_so_far is None:
             continue
         result['event'] = earliest_event_so_far
-        result['latency'] = (event_date(earliest_event_so_far) -
+        result['latency'] = (event_date_func(earliest_event_so_far) -
                              pr_date(pr)).total_seconds() / 60
     return results
