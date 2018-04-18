@@ -50,7 +50,7 @@ def write_latencies(prs, runs, name):
     file."""
 
     latencies = get_pr_latencies(
-        prs, events=runs, event_sha=run_sha, event_date=run_date)
+        prs, events=runs, event_sha_func=run_sha, event_date_func=run_date)
     csv_path = CSV_PATH_TEMPLATE.format(name)
     db = RunLatencyDB(csv_path)
     for entry in latencies:
