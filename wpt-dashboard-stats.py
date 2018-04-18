@@ -66,12 +66,7 @@ def write_latencies(prs, runs, name):
     db.write()
 
 
-def main():
-    prs = fetch_all_prs().values()
-    runs_response = requests.get(RUNS_URL)
-    runs_response.raise_for_status()
-    runs = runs_response.json()
-
+def analyze(prs, runs):
     for run in runs:
         # If this assert fails, add to the known set if it's a desktop
         # configuration, otherwise filter out the run.
@@ -105,6 +100,14 @@ def main():
     print("Found {} complete ({}) runs".format(
         len(complete_runs), ', '.join(browsers)))
     write_latencies(prs, complete_runs, 'desktop')
+
+
+def main():
+    prs = fetch_all_prs().values()
+    runs_response = requests.get(RUNS_URL)
+    runs_response.raise_for_status()
+    runs = runs_response.json()
+    analyze(prs, runs)
 
 
 if __name__ == '__main__':
