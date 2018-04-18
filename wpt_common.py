@@ -198,8 +198,16 @@ def get_pr_latencies(prs, events=None, event_sha=None, event_date=None):
     # correct merge information via the GitHub API should also have a tag:
     # https://github.com/foolip/ecosystem-infra-stats/issues/6#issuecomment-375731858)
     tagged_prs = get_tagged_prs()
-    prs = sorted(filter(lambda pr: pr_number(pr) in tagged_prs, prs),
-                 key=pr_date)
+    skipped_prs = []
+    def is_tagged_pr(pr):
+        n = pr_number(pr)
+        if n in tagged_prs:
+            return True
+        skipped_prs.append(n)
+        return False
+    prs = filter(is_tagged_pr, sorted(prs, key=pr_date))
+    if len(skipped_prs) > 0:
+        print('Skipped PRs (no merge_pr_* tag):', skipped_prs)
 
     # We get PR-to-event latencies by the following process:
     #  1. For each event find the latest contained PR. This is done using git
