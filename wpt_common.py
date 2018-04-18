@@ -236,13 +236,14 @@ def get_pr_latencies(prs, events=None, event_sha_func=None, event_date_func=None
         return min(event1, event2, key=event_date_func)
 
     # Step 2.
-    # pr_earliest_events is a dict with PR numbers as the key.
-    pr_earliest_events = {}
+    # earliest_event_for_pr is a mapping from PR to earliest event for that
+    # specific PR, implemented as a dict with PR numbers as the key.
+    earliest_event_for_pr = {}
     for event, contained_pr in zip(events, event_contained_prs):
         if contained_pr is None:
             continue
-        pr_earliest_events[contained_pr] = earliest_event(
-            pr_earliest_events.get(contained_pr), event)
+        earliest_event_for_pr[contained_pr] = earliest_event(
+            earliest_event_for_pr.get(contained_pr), event)
 
     # Step 3.
     # results is first created and then swept/updated in reverse order.
@@ -250,7 +251,7 @@ def get_pr_latencies(prs, events=None, event_sha_func=None, event_date_func=None
     earliest_event_so_far = None
     for result in reversed(results):
         pr = result['pr']
-        event = pr_earliest_events.get(pr_number(pr))
+        event = earliest_event_for_pr.get(pr_number(pr))
         earliest_event_so_far = earliest_event(earliest_event_so_far, event)
         if earliest_event_so_far is None:
             continue
