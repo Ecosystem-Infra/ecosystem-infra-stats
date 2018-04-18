@@ -11,7 +11,7 @@ import dateutil.parser
 import numpy
 
 from csv_database import ImportLatencyDB, ImportLatencyStatDB
-from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr, wpt_git
+from wpt_common import IMPORT_EXPORT_SINCE, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr, wpt_git
 
 
 # Target SLA (in minutes).
@@ -28,7 +28,7 @@ def list_imports():
     output = chromium_git([
         'log', '--format=%H|%s|%cI',
         '--grep=^[Ii]mport wpt@',
-        '--after', CUTOFF,
+        '--since', IMPORT_EXPORT_SINCE,
         '--reverse',  # our binary_search uses chronological order.
         # Uncomment the line below to count only auto imports.
         # '--author', 'blink-w3c-test-autoroller@chromium.org'

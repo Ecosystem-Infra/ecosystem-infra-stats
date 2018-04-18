@@ -33,6 +33,7 @@ git checkout origin/gh-pages -- wpt-prs.csv || true
 git checkout origin/gh-pages -- import-latencies.csv || true
 git checkout origin/gh-pages -- export-latencies.csv || true
 git reset HEAD *.csv || true
+rm wpt-prs.csv
 echo
 
 echo "chromium import stats..."
