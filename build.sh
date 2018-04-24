@@ -34,6 +34,11 @@ git checkout origin/gh-pages -- export-latencies.csv || true
 git reset HEAD *.csv || true
 echo
 
+echo "fetching wpt PRs..."
+# note: the first argument isn't used, only passed
+python wpt-prs.py "$CHROMIUM_DIR" "$WPT_DIR"
+echo
+
 echo "chromium import stats..."
 python wpt-import-stats.py "$CHROMIUM_DIR" "$WPT_DIR"
 echo

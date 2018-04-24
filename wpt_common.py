@@ -43,7 +43,7 @@ except IndexError:
 
 def git(args, cwd):
     command = ['git'] + args
-    output = subprocess.check_output(command, cwd=cwd)
+    output = subprocess.check_output(command, cwd=cwd, env={'TZ': 'UTC'})
     # Alright this only works in UTF-8 locales...
     return output.decode('utf-8').rstrip()
 
@@ -66,72 +66,40 @@ def github_request(url):
     return res.json()
 
 
-def fetch_all_prs():
-    try:
-        pr_db = PRDB(PRS_FILE)
+def fetch_all_prs(update=False):
+    pr_db = PRDB(PRS_FILE)
+
+    if update == False:
         pr_db.read()
-        print('Read', len(pr_db), 'PRs from', PRS_FILE)
-        print('Fetching new PRs')
-    except (IOError, AssertionError):
-        pr_db = PRDB(PRS_FILE)
-        print('Fetching all PRs')
+        print('Read {} PRs from {}'.format(len(pr_db), PRS_FILE))
+        return pr_db
 
-    # Sorting by merged date is not supported, so we sort by created date
-    # instead, which is good enough because a PR cannot be merged before
-    # being created.
-    base_url = ('/repos/w3c/web-platform-tests/pulls?'
-                'sort=created&direction=desc&state=closed&per_page=100')
+    for pr_tag in get_merge_pr_tags():
+        pr_number = pr_number_from_tag(pr_tag)
+        # --iso-strict-local works because TZ=UTC is set in the environment
+        info = wpt_git(['log', '--no-walk', '--format=%H%n%cd%n%B',
+                        '--date=iso-strict-local', pr_tag])
+        lines = info.splitlines()
 
-    cutoff = dateutil.parser.parse(CUTOFF)
-    # 5000 is the rate limit. We'll break early.
-    for page in range(1, 5000):
-        print('Fetching page', page)
-        url = base_url + '&page={}'.format(page)
-        data = github_request(url)
-        if not data:
-            print('No items in page {}. Probably reached rate limit. Stopping.'
-                  .format(page))
-            break
-
-        finished = False
-        for pr in data:
-            if not pr.get('merged_at'):
-                # Abandoned PRs
-                continue
-
-            if dateutil.parser.parse(pr['merged_at']) < cutoff:
-                print('Reached cutoff point. Stop fetching more PRs.')
-                finished = True
-                break
-            if pr_db.get(pr['number']):
-                print('No more new PRs')
-                finished = True
+        commit = lines[0]
+        commit_date = lines[1][0:19] + 'Z'
+        chromium_commit = ''
+        for line in lines[2:]:
+            match = re.match(r'Change-Id: (.+)', line)
+            if match == None:
+                match = re.match(r'Cr-Commit-Position: (.+)', line)
+            if match != None:
+                chromium_commit = match.group(1).strip()
                 break
 
-            chromium_commit = ''
-            labels = [label['name'] for label in pr['labels']]
-            if 'chromium-export' in labels:
-                match = re.search(r'^Change-Id\: (.+)$', pr['body'], re.MULTILINE)
-                try:
-                    chromium_commit = match.groups()[0].strip()
-                except AttributeError:
-                    match = re.search(r'^Cr-Commit-Position\: (.+)$', pr['body'],
-                                      re.MULTILINE)
-                    try:
-                        chromium_commit = match.groups()[0].strip()
-                    except AttributeError:
-                        pass
-            pr_db.add({
-                'PR': str(pr['number']),
-                'merge_commit_sha': pr['merge_commit_sha'],
-                'merged_at': pr['merged_at'],
-                'chromium_commit': chromium_commit
-            })
-        if finished:
-            break
+        pr_db.add({
+            'PR': str(pr_number),
+            'merge_commit_sha': commit,
+            'merged_at': commit_date,
+            'chromium_commit': chromium_commit
+        })
 
-    print('Fetched {} PRs created and merged after {}'
-          .format(len(pr_db), CUTOFF))
+    print('Found {} PRs'.format(len(pr_db)))
 
     print('Writing file', PRS_FILE)
     pr_db.write(order='asc')
@@ -151,11 +119,10 @@ def pr_number_from_tag(tagish):
     return None
 
 
-def get_tagged_prs():
-    """Gets the set of integers for which merge_pr_* exists."""
+def get_merge_pr_tags():
+    """Gets the set of merge_pr_* tags as string."""
     # --format="%(refname:strip=2) %(objectname)" would also include SHA-1
-    output = wpt_git(['tag', '--list', 'merge_pr_*'])
-    return set(pr_number_from_tag(tag) for tag in output.split() if tag)
+    return wpt_git(['tag', '--list', 'merge_pr_*']).splitlines()
 
 
 def git_contained_pr(commit):
@@ -196,7 +163,7 @@ def get_pr_latencies(prs, events=None, event_sha_func=None, event_date_func=None
     # latency can therefore be higher than the real latency. (Any PR which has
     # correct merge information via the GitHub API should also have a tag:
     # https://github.com/foolip/ecosystem-infra-stats/issues/6#issuecomment-375731858)
-    tagged_prs = get_tagged_prs()
+    tagged_prs = set(pr_number_from_tag(tag) for tag in get_merge_pr_tags())
     skipped_prs = []
 
     def is_tagged_pr(pr):
