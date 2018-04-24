@@ -3,8 +3,8 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-from webkitpy.common.host import Host
-from webkitpy.w3c.chromium_finder import absolute_chromium_dir
+from blinkpy.common.host import Host
+from blinkpy.w3c.chromium_finder import absolute_chromium_dir
 
 import os.path
 import re
