@@ -125,7 +125,6 @@ def fetch_all_prs():
                 'PR': str(pr['number']),
                 'merge_commit_sha': pr['merge_commit_sha'],
                 'merged_at': pr['merged_at'],
-                'author': pr['user']['login'],
                 'chromium_commit': chromium_commit
             })
         if finished:

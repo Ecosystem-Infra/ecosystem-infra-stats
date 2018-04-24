@@ -93,7 +93,7 @@ class CommitDB(CSVIndexedDB):
 class PRDB(CSVIndexedDB):
     def __init__(self, csv_path):
         super(PRDB, self).__init__(csv_path, fields=[
-            'PR', 'merge_commit_sha', 'merged_at', 'author', 'chromium_commit'])
+            'PR', 'merge_commit_sha', 'merged_at', 'chromium_commit'])
 
 
 class ImportLatencyDB(CSVIndexedDB):
