@@ -22,11 +22,6 @@ CUTOFF = '2017-07-01T00:00:00Z'
 # Change this when it is a new quarter.
 QUARTER_START = '2018-04-01T00:00:00Z'
 
-# Read token from env var.
-GH_TOKEN = os.environ.get('GH_TOKEN')
-if GH_TOKEN is None:
-    print('Warning: Provide GH_TOKEN to get full results')
-
 # GitHub cache. Delete the file to fetch PRs again.
 PRS_FILE = 'wpt-prs.csv'
 
@@ -54,16 +49,6 @@ def chromium_git(args):
 
 def wpt_git(args):
     return git(args, cwd=WPT_DIR)
-
-
-def github_request(url):
-    base_url = 'https://api.github.com'
-    headers = None
-    if GH_TOKEN is not None:
-        headers = {'Authorization': 'token {}'.format(GH_TOKEN)}
-    res = requests.get(base_url + url, headers=headers)
-    res.raise_for_status()
-    return res.json()
 
 
 def fetch_all_prs(update=False):

@@ -19,9 +19,6 @@ The build script needs Python 2 and Virtualenv:
 sudo apt install python2 virtualenv
 ```
 
-Finally, [generate a new access token](https://github.com/settings/tokens/new)
-and set `GH_TOKEN` in the environment to the value.
-
 ## Build & deploy
 
 To build and serve locally:
