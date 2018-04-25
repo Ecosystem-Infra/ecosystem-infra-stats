@@ -11,7 +11,7 @@ import dateutil.parser
 import numpy
 
 from csv_database import ExportLatencyDB, ExportLatencyStatDB
-from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr
+from wpt_common import IMPORT_EXPORT_SINCE, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr
 
 
 # Target SLA (in minutes).
@@ -110,8 +110,8 @@ def analyze(latencies):
         if commit_time >= quarter_cutoff:
             this_quarter.append(latency)
 
-    print('NOTE: Results eariler than cutoff time ({}) are not accurate.'
-          .format(CUTOFF))
+    print('NOTE: Results eariler than 2-way sync stabilization ({}) are not accurate.'
+          .format(IMPORT_EXPORT_SINCE))
 
     stats = ExportLatencyStatDB(STATS_CSV)
     for week, values in latency_by_week.iteritems():

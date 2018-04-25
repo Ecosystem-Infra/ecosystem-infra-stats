@@ -16,9 +16,9 @@ import requests
 from csv_database import PRDB
 
 
-# Only PRs after this time (UTC) will be processed. Our 2-way sync really
-# started to stablize around this time. Earlier results are inaccurate.
-CUTOFF = '2017-07-01T00:00:00Z'
+# Our 2-way sync really started to stablize around this time. Stats from before
+# this would be inaccurate.
+IMPORT_EXPORT_SINCE = '2017-07-01T00:00:00Z'
 # Change this when it is a new quarter.
 QUARTER_START = '2018-04-01T00:00:00Z'
 
@@ -82,7 +82,6 @@ def fetch_all_prs():
     base_url = ('/repos/w3c/web-platform-tests/pulls?'
                 'sort=created&direction=desc&state=closed&per_page=100')
 
-    cutoff = dateutil.parser.parse(CUTOFF)
     # 5000 is the rate limit. We'll break early.
     for page in range(1, 5000):
         print('Fetching page', page)
@@ -99,10 +98,6 @@ def fetch_all_prs():
                 # Abandoned PRs
                 continue
 
-            if dateutil.parser.parse(pr['merged_at']) < cutoff:
-                print('Reached cutoff point. Stop fetching more PRs.')
-                finished = True
-                break
             if pr_db.get(pr['number']):
                 print('No more new PRs')
                 finished = True
@@ -130,8 +125,7 @@ def fetch_all_prs():
         if finished:
             break
 
-    print('Fetched {} PRs created and merged after {}'
-          .format(len(pr_db), CUTOFF))
+    print('Fetched {} PRs')
 
     print('Writing file', PRS_FILE)
     pr_db.write(order='asc')
