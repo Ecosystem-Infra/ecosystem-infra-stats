@@ -51,16 +51,28 @@ def wpt_git(args):
     return git(args, cwd=WPT_DIR)
 
 
-def fetch_all_prs(update=False):
-    pr_db = PRDB(PRS_FILE)
+def verify_pr_tags(prs):
+    # sort PRs by commit date and assert that this matches commit DAG order
+    sorted_prs = sorted(prs, key=lambda pr: pr['commit_date'])
+    for pr, next_pr in zip(sorted_prs, sorted_prs[1:]):
+        try:
+            wpt_git(['merge-base', '--is-ancestor', pr['tag'], next_pr['tag']])
+        except subprocess.CalledProcessError:
+            print('Expected {} ({}) to be an ancestor of {} ({}) based on commit dates.'.format(
+                pr['tag'], pr['commit_date'], next_pr['tag'], next_pr['commit_date']))
+            print('When this is not the case, the commit dates of merge_pr_* tags cannot be trusted.')
+            exit(1)
 
+
+def fetch_all_prs(update=False):
     if update == False:
+        pr_db = PRDB(PRS_FILE)
         pr_db.read()
         print('Read {} PRs from {}'.format(len(pr_db), PRS_FILE))
         return pr_db
 
+    prs = []
     for pr_tag in get_merge_pr_tags():
-        pr_number = pr_number_from_tag(pr_tag)
         # --iso-strict-local works because TZ=UTC is set in the environment
         info = wpt_git(['log', '--no-walk', '--format=%H%n%cd%n%B',
                         '--date=iso-strict-local', pr_tag])
@@ -77,16 +89,26 @@ def fetch_all_prs(update=False):
                 chromium_commit = match.group(1).strip()
                 break
 
-        pr_db.add({
-            'PR': str(pr_number),
-            'merge_commit_sha': commit,
-            'merged_at': commit_date,
+        prs.append({
+            'tag': pr_tag,
+            'commit': commit,
+            'commit_date': commit_date,
             'chromium_commit': chromium_commit
         })
 
-    print('Found {} PRs'.format(len(pr_db)))
+    print('Found {} PRs'.format(len(prs)))
+
+    verify_pr_tags(prs)
 
     print('Writing file', PRS_FILE)
+    pr_db = PRDB(PRS_FILE)
+    for pr in prs:
+        pr_db.add({
+            'PR': str(pr_number_from_tag(pr['tag'])),
+            'merge_commit_sha': pr['commit'],
+            'merged_at': pr['commit_date'],
+            'chromium_commit': pr['chromium_commit']
+        })
     pr_db.write(order='asc')
     return pr_db
 
