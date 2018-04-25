@@ -5,13 +5,12 @@
 from __future__ import print_function
 from collections import defaultdict, namedtuple
 import re
-import subprocess
 
 import dateutil.parser
 import numpy
 
 from csv_database import ImportLatencyDB, ImportLatencyStatDB
-from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr, wpt_git
+from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, get_pr_latencies, is_export_pr, wpt_git
 
 
 # Target SLA (in minutes).
@@ -45,103 +44,28 @@ def list_imports():
     return imports
 
 
-def _compare_commits(sha1, sha2):
-    if sha1 == sha2:
-        return 0
-    try:
-        wpt_git(['merge-base', '--is-ancestor', sha1, sha2])
-        # SHA1 is an ancestor of SHA2
-        return -1
-    except subprocess.CalledProcessError:
-        # The exception is raised when the return code is non-zero.
-        return 1
-
-
-def binary_search_import(wpt_commit, imports):
-    """Finds which import includes the given wpt_commit."""
-    left = 0
-    right = len(imports) - 1
-    while left < right:
-        mid = (left + right) // 2
-        current = imports[mid]
-        comp = _compare_commits(wpt_commit, current.wpt_sha)
-        if comp <= 0:
-            right = mid
-        else:
-            left = mid+1
-    return left
-
-
 def get_latencies(imports, prs):
-    try:
-        latencies = ImportLatencyDB(LATENCIES_CSV)
-        latencies.read()
-        print('Read', len(latencies), 'latency entries from', LATENCIES_CSV)
-        print('Processing new PRs')
-    except (IOError, AssertionError):
-        latencies = ImportLatencyDB(LATENCIES_CSV)
+    db = ImportLatencyDB(LATENCIES_CSV)
 
-    skipped = []
-    total_prs = len(prs)
-    for index, pr in enumerate(prs):
-        pr_number = pr['PR']
-        print("[{}/{}] PR: https://github.com/w3c/web-platform-tests/pull/{}"
-              .format(index + 1, total_prs, pr_number))
-        if latencies.get(pr_number):
-            continue
+    latencies = get_pr_latencies(
+        prs, events=imports,
+        event_sha_func=lambda i: i.wpt_sha,
+        event_date_func=lambda i: dateutil.parser.parse(i.date))
 
-        merge_commit = pr['merge_commit_sha']
-        merged_at = pr['merged_at']
-        try:
-            wpt_git(['cat-file', '-t', merge_commit])
-        except subprocess.CalledProcessError:
-            print('Merge commit {} does not exist. SKIPPING!'
-                  .format(merge_commit))
-            skipped.append(pr_number)
+    for entry in latencies:
+        i = entry['event']
+        if i is None:
             continue
-        if _compare_commits(merge_commit, imports[-1].wpt_sha) > 0:
-            print('Merge point {} after last import point {}. SKIPPING!'
-                  .format(merge_commit, imports[-1].wpt_sha))
-            skipped.append(pr_number)
-            continue
-        if _compare_commits(merge_commit, imports[0].wpt_sha) < 0:
-            print('Merge point {} before first import point {}. SKIPPING!'
-                  .format(merge_commit, imports[0].wpt_sha))
-            skipped.append(pr_number)
-            continue
-
-        index_found = binary_search_import(merge_commit, imports)
-        import_found = imports[index_found]
-        previous_import = imports[index_found - 1]
-        # Check if I get my binary search right :)
-        assert _compare_commits(merge_commit, import_found.wpt_sha) <= 0, \
-            "PR merge point {} after import {}".format(
-            merge_commit, import_found)
-        assert _compare_commits(merge_commit, previous_import.wpt_sha) > 0, \
-            "PR merge point {} before the previous import {}".format(
-            merge_commit, previous_import)
-
-        import_time = dateutil.parser.parse(imports[index_found].date)
-        wpt_merge_time = dateutil.parser.parse(merged_at)
-        delay = (import_time - wpt_merge_time).total_seconds() / 60
-        print('PR merged at {} imported at {}'.format(
-            merge_commit, import_found.wpt_sha))
-        print('Chromium import {} at {}'.format(
-            import_found.cr_sha, import_found.date))
-        print('Delay (mins):', delay)
-        latencies.add({
-            'PR': pr_number,
-            'import_sha': import_found.cr_sha,
-            'import_time': import_found.date,
-            'latency': delay,
+        db.add({
+            'PR': entry['pr']['PR'],
+            'import_sha': i.cr_sha,
+            'import_time': i.date,
+            'latency': entry['latency'],
         })
 
-    if skipped:
-        print('Skipped PRs:', skipped)
-
     print('Writing file', LATENCIES_CSV)
-    latencies.write()
-    return latencies
+    db.write()
+    return db
 
 
 def analyze(latencies):
