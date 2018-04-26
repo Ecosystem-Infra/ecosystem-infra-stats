@@ -26,10 +26,10 @@ Import = namedtuple('Import', 'cr_sha, wpt_sha, date')
 
 def list_imports():
     output = chromium_git([
-        'log', '--format=%H|%s|%cI',
+        'log', 'origin/master',
+        '--format=%H|%s|%cI',
         '--grep=^[Ii]mport wpt@',
-        '--after', CUTOFF,
-        '--reverse',  # our binary_search uses chronological order.
+        '--since', CUTOFF,
         # Uncomment the line below to count only auto imports.
         # '--author', 'blink-w3c-test-autoroller@chromium.org'
     ])
