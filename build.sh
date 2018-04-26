@@ -29,7 +29,6 @@ echo "checking out existing CSV files from gh-pages..."
 # This is to do incremental updates which is faster. Failure here are hamrless.
 git fetch origin || true
 # Don't combine them into one line in case some file doesn't exist.
-git checkout origin/gh-pages -- import-latencies.csv || true
 git checkout origin/gh-pages -- export-latencies.csv || true
 git reset HEAD *.csv || true
 echo
