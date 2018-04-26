@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from __future__ import print_function
+import dateutil.parser
 import re
 import subprocess
 
@@ -13,10 +14,12 @@ def get_merge_pr_tags():
     # --format="%(refname:strip=2) %(objectname)" would also include SHA-1
     return wpt_git(['tag', '--list', 'merge_pr_*']).splitlines()
 
+def pr_commit_date(pr):
+    return dateutil.parser.isoparse(pr['commit_date'])
 
 def verify_pr_tags(prs):
     # sort PRs by commit date and assert that this matches commit DAG order
-    sorted_prs = sorted(prs, key=lambda pr: pr['commit_date'])
+    sorted_prs = sorted(prs, key=pr_commit_date)
     for pr, next_pr in zip(sorted_prs, sorted_prs[1:]):
         try:
             wpt_git(['merge-base', '--is-ancestor', pr['tag'], next_pr['tag']])
@@ -33,21 +36,16 @@ def verify_pr_tags(prs):
 def write_pr_db():
     prs = []
     for pr_tag in get_merge_pr_tags():
-        # --iso-strict-local works because TZ=UTC is set in the environment
-        info = wpt_git(['log', '--no-walk', '--format=%H%n%cd%n%B',
-                        '--date=iso-strict-local', pr_tag])
-        lines = info.splitlines()
+        info = wpt_git(['log', '--no-walk', '--format=%H|%cI|%B', pr_tag])
+        commit, commit_date, commit_message = lines = info.split('|', 2)
 
-        commit = lines[0]
-        commit_date = lines[1][0:19] + 'Z'
         chromium_commit = ''
-        for line in lines[2:]:
-            match = re.match(r'Change-Id: (.+)', line)
-            if match is None:
-                match = re.match(r'Cr-Commit-Position: (.+)', line)
-            if match is not None:
-                chromium_commit = match.group(1).strip()
-                break
+        match = re.search(r'^Change-Id: (.+)$', commit_message, re.MULTILINE)
+        if match is None:
+            match = re.search(r'^Cr-Commit-Position: (.+)$',
+                              commit_message, re.MULTILINE)
+        if match is not None:
+            chromium_commit = match.group(1).strip()
 
         prs.append({
             'tag': pr_tag,
