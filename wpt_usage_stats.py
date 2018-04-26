@@ -6,7 +6,6 @@
 from blinkpy.common.host import Host
 from blinkpy.w3c.chromium_finder import absolute_chromium_dir
 
-import os.path
 import re
 import sys
 
@@ -17,11 +16,15 @@ import sys
 NOT_TEST_PATTERNS = [
     '.*/devtools/',
     '.*/inspector-protocol/',
-    '.*/inspector/', # moved in crbug.com/667560
+    # moved in crbug.com/667560
+    '.*/inspector/',
     'third_party/WebKit/LayoutTests/FlagExpectations/',
-    'third_party/WebKit/LayoutTests/[^/]*$', # TestExpectations, etc.
-    'third_party/WebKit/LayoutTests/external/[^/]*$', # WPT_BASE_MANIFEST.json, etc.
-    'third_party/WebKit/LayoutTests/external/wpt/[^/]*$', # lint.whitelist, etc.
+    # TestExpectations, etc.
+    'third_party/WebKit/LayoutTests/[^/]*$',
+    # WPT_BASE_MANIFEST.json, etc.
+    'third_party/WebKit/LayoutTests/external/[^/]*$',
+    # lint.whitelist, etc.
+    'third_party/WebKit/LayoutTests/external/wpt/[^/]*$',
 ]
 
 
@@ -95,6 +98,7 @@ def main():
         print
 
     print '{} source+test changes, {} in wpt'.format(changes, wpt_changes)
+
 
 if __name__ == '__main__':
     main()

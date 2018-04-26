@@ -39,7 +39,7 @@ def filter_runs(runs, sort_key=None, sort_reverse=False, filter_key=None):
     filtered_runs = {}
     for run in sorted(runs, key=sort_key, reverse=sort_reverse):
         key = filter_key(run)
-        if not filtered_runs.has_key(key):
+        if key not in filtered_runs:
             filtered_runs[key] = run
     return filtered_runs.values()
 
