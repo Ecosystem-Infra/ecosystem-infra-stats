@@ -4,7 +4,7 @@ import dateutil.parser
 import requests
 
 from csv_database import RunLatencyDB
-from wpt_common import fetch_all_prs, get_pr_latencies
+from wpt_common import read_pr_db, get_pr_latencies
 
 # 1000 because of https://github.com/w3c/wptdashboard/issues/524
 RUNS_URL = 'https://wpt.fyi/api/runs?max-count=1000'
@@ -103,7 +103,7 @@ def analyze(prs, runs):
 
 
 def main():
-    prs = fetch_all_prs().values()
+    prs = read_pr_db().values()
     runs_response = requests.get(RUNS_URL)
     runs_response.raise_for_status()
     runs = runs_response.json()

@@ -10,7 +10,7 @@ import dateutil.parser
 import numpy
 
 from csv_database import ExportLatencyDB, ExportLatencyStatDB
-from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, \
+from wpt_common import CUTOFF, QUARTER_START, chromium_git, read_pr_db, \
     is_export_pr
 
 
@@ -144,7 +144,7 @@ def analyze(latencies):
 
 
 def main():
-    pr_db = fetch_all_prs()
+    pr_db = read_pr_db()
     export_prs = [pr for pr in pr_db.values() if is_export_pr(pr)]
     latencies = get_latencies(export_prs)
     analyze(latencies)

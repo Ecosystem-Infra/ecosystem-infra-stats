@@ -10,7 +10,7 @@ import dateutil.parser
 import numpy
 
 from csv_database import ImportLatencyDB, ImportLatencyStatDB
-from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, \
+from wpt_common import CUTOFF, QUARTER_START, chromium_git, read_pr_db, \
     get_pr_latencies, is_export_pr
 
 
@@ -118,7 +118,7 @@ def main():
     # including export PRs, as we can import an export PR and bring along
     # other changes since the previous import. https://crrev.com/31261077b
     # is such an import. Exports PRs are filtered inside get_latencies.
-    prs = fetch_all_prs().values()
+    prs = read_pr_db().values()
     imports = list_imports()
     latencies = get_latencies(imports, prs)
     analyze(latencies)
