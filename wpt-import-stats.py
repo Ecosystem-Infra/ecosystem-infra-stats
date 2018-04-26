@@ -54,11 +54,16 @@ def get_latencies(imports, prs):
         event_date_func=lambda i: dateutil.parser.parse(i.date))
 
     for entry in latencies:
+        pr = entry['pr']
         i = entry['event']
         if i is None:
             continue
+        # Skip export PRs, as we won't try to import if there are no changes,
+        # which happens when the only new commits are our exports.
+        if is_export_pr(pr):
+            continue
         db.add({
-            'PR': str(entry['pr']['PR']),
+            'PR': str(pr['PR']),
             'import_sha': i.cr_sha,
             'import_time': i.date,
             'latency': entry['latency'],
@@ -112,7 +117,7 @@ def main():
     # When computing latencies it is important that all PRs are used,
     # including export PRs, as we can import an export PR and bring along
     # other changes since the previous import. https://crrev.com/31261077b
-    # is such an import.
+    # is such an import. Exports PRs are filtered inside get_latencies.
     prs = fetch_all_prs().values()
     imports = list_imports()
     latencies = get_latencies(imports, prs)
