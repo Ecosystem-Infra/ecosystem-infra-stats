@@ -14,8 +14,10 @@ def get_merge_pr_tags():
     # --format="%(refname:strip=2) %(objectname)" would also include SHA-1
     return wpt_git(['tag', '--list', 'merge_pr_*']).splitlines()
 
+
 def pr_commit_date(pr):
     return dateutil.parser.isoparse(pr['commit_date'])
+
 
 def verify_pr_tags(prs):
     # sort PRs by commit date and assert that this matches commit DAG order
@@ -37,7 +39,7 @@ def write_pr_db():
     prs = []
     for pr_tag in get_merge_pr_tags():
         info = wpt_git(['log', '--no-walk', '--format=%H|%cI|%B', pr_tag])
-        commit, commit_date, commit_message = lines = info.split('|', 2)
+        commit, commit_date, commit_message = info.split('|', 2)
 
         chromium_commit = ''
         match = re.search(r'^Change-Id: (.+)$', commit_message, re.MULTILINE)
