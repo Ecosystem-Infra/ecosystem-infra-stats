@@ -109,10 +109,13 @@ def analyze(latencies):
 
 
 def main():
-    pr_db = fetch_all_prs()
-    non_export_prs = [pr for pr in pr_db.values() if not is_export_pr(pr)]
+    # When computing latencies it is important that all PRs are used,
+    # including export PRs, as we can import an export PR and bring along
+    # other changes since the previous import. https://crrev.com/31261077b
+    # is such an import.
+    prs = fetch_all_prs().values()
     imports = list_imports()
-    latencies = get_latencies(imports, non_export_prs)
+    latencies = get_latencies(imports, prs)
     analyze(latencies)
 
 
