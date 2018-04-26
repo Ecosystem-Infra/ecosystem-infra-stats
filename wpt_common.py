@@ -11,7 +11,6 @@ import subprocess
 import sys
 
 import dateutil.parser
-import requests
 
 from csv_database import PRDB
 
@@ -58,14 +57,17 @@ def verify_pr_tags(prs):
         try:
             wpt_git(['merge-base', '--is-ancestor', pr['tag'], next_pr['tag']])
         except subprocess.CalledProcessError:
-            print('Expected {} ({}) to be an ancestor of {} ({}) based on commit dates.'.format(
-                pr['tag'], pr['commit_date'], next_pr['tag'], next_pr['commit_date']))
-            print('When this is not the case, the commit dates of merge_pr_* tags cannot be trusted.')
+            print('Expected {} ({}) to be an ancestor of'
+                  '{} ({}) based on commit dates.'
+                  .format(pr['tag'], pr['commit_date'],
+                          next_pr['tag'], next_pr['commit_date']))
+            print('When this is not the case, the commit dates of merge_pr_*'
+                  'tags cannot be trusted.')
             exit(1)
 
 
 def fetch_all_prs(update=False):
-    if update == False:
+    if update is False:
         pr_db = PRDB(PRS_FILE)
         pr_db.read()
         print('Read {} PRs from {}'.format(len(pr_db), PRS_FILE))
@@ -83,9 +85,9 @@ def fetch_all_prs(update=False):
         chromium_commit = ''
         for line in lines[2:]:
             match = re.match(r'Change-Id: (.+)', line)
-            if match == None:
+            if match is None:
                 match = re.match(r'Cr-Commit-Position: (.+)', line)
-            if match != None:
+            if match is not None:
                 chromium_commit = match.group(1).strip()
                 break
 
@@ -133,7 +135,8 @@ def get_merge_pr_tags():
 
 
 def git_contained_pr(commit):
-    """Returns the number of the latest contained PR of commit using git describe."""
+    """Returns the number of the latest contained PR of commit using git
+    describe."""
     try:
         tag = wpt_git(['describe', '--tags', '--match', 'merge_pr_*', commit])
         return pr_number_from_tag(tag)
@@ -149,7 +152,8 @@ def pr_date(pr):
     return dateutil.parser.parse(pr['merged_at'])
 
 
-def get_pr_latencies(prs, events=None, event_sha_func=None, event_date_func=None):
+def get_pr_latencies(prs, events=None, event_sha_func=None,
+                     event_date_func=None):
     """For each PR, find the earliest event that included that PR,
     and calucate the latencies between the PR and the event.
 

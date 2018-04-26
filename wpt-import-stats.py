@@ -11,7 +11,8 @@ import dateutil.parser
 import numpy
 
 from csv_database import ImportLatencyDB, ImportLatencyStatDB
-from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr, wpt_git
+from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, \
+    is_export_pr, wpt_git
 
 
 # Target SLA (in minutes).
@@ -117,8 +118,9 @@ def get_latencies(imports, prs):
         assert _compare_commits(merge_commit, import_found.wpt_sha) <= 0, \
             "PR merge point {} after import {}".format(
             merge_commit, import_found)
-        if previous_import != None:
-            assert _compare_commits(merge_commit, previous_import.wpt_sha) > 0, \
+        if previous_import is not None:
+            assert _compare_commits(merge_commit,
+                                    previous_import.wpt_sha) > 0, \
                 "PR merge point {} before the previous import {}".format(
                 merge_commit, previous_import)
 
@@ -175,8 +177,10 @@ def analyze(latencies):
     out_of_sla = (np_this_quarter > SLA).sum()
     print('This quarter since', QUARTER_START, '(import time):')
     print('Average latency (mins):', numpy.average(np_this_quarter))
-    print('Quarter 50th percentile (mins):', numpy.percentile(np_this_quarter, 50))
-    print('Quarter 90th percentile (mins):', numpy.percentile(np_this_quarter, 90))
+    print('Quarter 50th percentile (mins):',
+          numpy.percentile(np_this_quarter, 50))
+    print('Quarter 90th percentile (mins):',
+          numpy.percentile(np_this_quarter, 90))
     print('{} / {} PRs out of {} min SLA ({})'.format(
         out_of_sla, quarter_total, SLA, out_of_sla / float(quarter_total)))
     print('KR:', (quarter_total - out_of_sla) / float(quarter_total))

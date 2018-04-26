@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from datetime import datetime, timedelta
+from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 from csv_database import CommitDB
@@ -10,12 +10,20 @@ COMMITS_CSV = 'wpt-commits.csv'
 
 FIELD_GREP_ARGS = {
     'Total commits': [],
-    'Chromium exports': ['--grep', '^Change-Id:',
-                         '--grep', '^Cr-Commit-Position:'],
-    'Gecko exports': ['--grep', '^Upstreamed from https://bugzilla\\.mozilla\\.org/',
-                      '--grep', '^gecko-commit:'],
-    'Servo exports': ['--grep', '^Upstreamed from https://github\\.com/servo/'],
-    'WebKit exports': ['--grep', '^WebKit export of https://bugs\\.webkit\\.org/'],
+    'Chromium exports': [
+        '--grep', '^Change-Id:',
+        '--grep', '^Cr-Commit-Position:'
+    ],
+    'Gecko exports': [
+        '--grep', '^Upstreamed from https://bugzilla\\.mozilla\\.org/',
+        '--grep', '^gecko-commit:'
+    ],
+    'Servo exports': [
+        '--grep', '^Upstreamed from https://github\\.com/servo/'
+    ],
+    'WebKit exports': [
+        '--grep', '^WebKit export of https://bugs\\.webkit\\.org/'
+    ],
 }
 
 

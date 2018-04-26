@@ -5,13 +5,13 @@
 
 from __future__ import print_function
 from collections import defaultdict
-import csv
 
 import dateutil.parser
 import numpy
 
 from csv_database import ExportLatencyDB, ExportLatencyStatDB
-from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, is_export_pr
+from wpt_common import CUTOFF, QUARTER_START, chromium_git, fetch_all_prs, \
+    is_export_pr
 
 
 # Target SLA (in minutes).
@@ -72,11 +72,13 @@ def get_latencies(prs):
             skipped.append(pr_number)
             continue
 
-        commit_time_str = chromium_git(['show', '-s', '--format=%cI', sha]).strip()
+        commit_time_str = chromium_git(
+            ['show', '-s', '--format=%cI', sha]).strip()
         commit_time = dateutil.parser.parse(commit_time_str)
         delay = (merged_at - commit_time).total_seconds() / 60
 
-        print('Found Chromium commit {} committed at {}'.format(sha, commit_time_str))
+        print('Found Chromium commit {} committed at {}'
+              .format(sha, commit_time_str))
         print('Export PR merged at {}'.format(merged_at))
         print('Delay (mins):', delay)
         if delay < 0:
@@ -131,10 +133,13 @@ def analyze(latencies):
     out_of_sla = (np_this_quarter > SLA).sum()
     print('This quarter since', QUARTER_START, '(Chromium commit time):')
     print('Average latency (mins):', numpy.average(np_this_quarter))
-    print('Quarter 50th percentile (mins):', numpy.percentile(np_this_quarter, 50))
-    print('Quarter 90th percentile (mins):', numpy.percentile(np_this_quarter, 90))
-    print('{} / {} PRs out of {} min SLA ({})'.format(
-        out_of_sla, quarter_total, SLA, out_of_sla / float(quarter_total)))
+    print('Quarter 50th percentile (mins):',
+          numpy.percentile(np_this_quarter, 50))
+    print('Quarter 90th percentile (mins):',
+          numpy.percentile(np_this_quarter, 90))
+    print('{} / {} PRs out of {} min SLA ({})'
+          .format(out_of_sla, quarter_total, SLA,
+                  out_of_sla / float(quarter_total)))
     print('KR:', (quarter_total - out_of_sla) / float(quarter_total))
 
 
