@@ -86,7 +86,7 @@ def get_latencies(prs):
             skipped.append(pr_number)
             continue
         latencies.add({
-            'PR': pr_number,
+            'PR': str(pr_number),
             'exported_sha': sha,
             'commit_time': commit_time_str,
             'latency': delay,
@@ -96,7 +96,7 @@ def get_latencies(prs):
         print('Skipped PRs:', skipped)
 
     print('Writing file', LATENCIES_CSV)
-    latencies.write()
+    latencies.write(order='asc')
     return latencies
 
 

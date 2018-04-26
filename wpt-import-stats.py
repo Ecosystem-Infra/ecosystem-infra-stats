@@ -133,7 +133,7 @@ def get_latencies(imports, prs):
             import_found.cr_sha, import_found.date))
         print('Delay (mins):', delay)
         latencies.add({
-            'PR': pr_number,
+            'PR': str(pr_number),
             'import_sha': import_found.cr_sha,
             'import_time': import_found.date,
             'latency': delay,
@@ -143,7 +143,7 @@ def get_latencies(imports, prs):
         print('Skipped PRs:', skipped)
 
     print('Writing file', LATENCIES_CSV)
-    latencies.write()
+    latencies.write(order='asc')
     return latencies
 
 

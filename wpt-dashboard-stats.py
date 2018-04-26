@@ -58,12 +58,12 @@ def write_latencies(prs, runs, name):
         if run is None:
             continue
         db.add({
-            'PR': entry['pr']['PR'],
+            'PR': str(entry['pr']['PR']),
             'run_sha': run['revision'],
             'run_time': run['created_at'],
             'latency': entry['latency'],
         })
-    db.write()
+    db.write(order='asc')
 
 
 def analyze(prs, runs):
