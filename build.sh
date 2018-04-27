@@ -58,11 +58,5 @@ echo
 
 mv *.csv "$OUTDIR/"
 
-echo "chromium usage stats..."
-cp wpt_usage_stats.py "$CHROMIUM_DIR/third_party/blink/tools/"
-"$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py" 2018-04-01 2018-05-01 > "$OUTDIR/chromium-usage-stats.txt"
-rm "$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py"
-echo
-
 echo "chromium OWNERS check..."
 ./chromium-wpt-owners.sh "$CHROMIUM_DIR/third_party/WebKit/LayoutTests/external/wpt" > "$OUTDIR/chromium-wpt-owners.txt"
