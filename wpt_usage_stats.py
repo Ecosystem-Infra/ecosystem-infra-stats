@@ -85,24 +85,13 @@ def main():
         if len(test_files) == 0:
             continue
 
-        author = host.executive.run_command([
-            'git', 'show', '-s', '--format=%ae', sha,
-        ], cwd=chromium_dir).strip()
-
-        print 'Author:', author
+        wpt_change = any((is_in_wpt(f) for f in test_files))
         changes += 1
-
-        if any((is_in_wpt(f) for f in test_files)):
-            print 'WPT-Author:', author
+        if wpt_change:
             wpt_changes += 1
-        else:
-            print 'No-WPT-Author:', author
+        print sha, 'WPT' if wpt_change else 'No-WPT'
 
-        print 'commit', sha
-        for f in changed_files:
-            print f
-        print
-
+    print
     print '{} source+test changes, {} in wpt'.format(changes, wpt_changes)
 
 
