@@ -28,7 +28,6 @@ Missing COMPONENT: quirks
 Missing TEAM: resources
 Missing COMPONENT: resources
 Missing TEAM: screen-orientation
-Orphaned OWNERS: staticrange
 Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing TEAM: WebCryptoAPI
