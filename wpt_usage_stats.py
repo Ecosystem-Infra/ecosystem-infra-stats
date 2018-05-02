@@ -31,8 +31,15 @@ NOT_TEST_PATTERNS = [
 NOT_TEST_EXPRS = [re.compile(p) for p in NOT_TEST_PATTERNS]
 
 
+# Source moved around in the Great Blink mv, https://crbug.com/768828.
+SOURCE_PATHS = [
+    'third_party/blink/renderer/',
+    'third_party/WebKit/Source/',
+]
+
+
 def is_source(path):
-    return path.startswith('third_party/WebKit/Source/')
+    return any(path.startswith(prefix) for prefix in SOURCE_PATHS)
 
 
 def is_test(path):
@@ -66,8 +73,7 @@ def main():
     wpt_changes = 0
     for sha in lt_revs:
         changed_files = host.executive.run_command([
-            'git', 'diff-tree', '--name-only', '--no-commit-id', '-r', sha,
-            '--', 'third_party/WebKit',
+            'git', 'diff-tree', '--name-only', '--no-commit-id', '-r', sha
         ], cwd=chromium_dir).splitlines()
 
         # ignore commits that do not touch the source
