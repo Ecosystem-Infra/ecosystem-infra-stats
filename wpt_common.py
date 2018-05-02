@@ -37,7 +37,7 @@ except IndexError:
 
 def git(args, cwd):
     command = ['git'] + args
-    output = subprocess.check_output(command, cwd=cwd)
+    output = subprocess.check_output(command, cwd=cwd, env={'TZ': 'UTC'})
     # Alright this only works in UTF-8 locales...
     return output.decode('utf-8').rstrip()
 

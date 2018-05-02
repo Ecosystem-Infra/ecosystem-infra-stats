@@ -38,7 +38,9 @@ def verify_pr_tags(prs):
 def write_pr_db():
     prs = []
     for pr_tag in get_merge_pr_tags():
-        info = wpt_git(['log', '--no-walk', '--format=%H|%cI|%B', pr_tag])
+        # iso-strict-local works because TZ=UTC is set in the environment
+        info = wpt_git(['log', '--no-walk', '--format=%H|%cd|%B',
+                        '--date=iso-strict-local', pr_tag])
         commit, commit_date, commit_message = info.split('|', 2)
 
         chromium_commit = ''
