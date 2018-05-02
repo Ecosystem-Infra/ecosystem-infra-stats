@@ -4,7 +4,7 @@ import dateutil.parser
 import requests
 
 from csv_database import RunLatencyDB
-from wpt_common import read_pr_db, get_pr_latencies
+from wpt_common import CUTOFF, read_pr_db, get_pr_latencies
 
 # 1000 because of https://github.com/w3c/wptdashboard/issues/524
 RUNS_URL = 'https://wpt.fyi/api/runs?max-count=1000'
@@ -34,10 +34,13 @@ def run_date(run):
 
 def filter_runs(runs, sort_key=None, sort_reverse=False, filter_key=None):
     """Returns a list of runs filtered to the first (by sort_key) run
-    considered a duplicate by filter_key."""
+    considered a duplicate by filter_key. Skips runs before the cutoff."""
 
+    cutoff_date = dateutil.parser.isoparse(CUTOFF)
     filtered_runs = {}
     for run in sorted(runs, key=sort_key, reverse=sort_reverse):
+        if run_date(run) < cutoff_date:
+            continue
         key = filter_key(run)
         if key not in filtered_runs:
             filtered_runs[key] = run
@@ -72,9 +75,9 @@ def analyze(prs, runs):
         # configuration, otherwise filter out the run.
         assert (run['browser_name'], run['os_name']) in KNOWN_RUN_CONFIGS
 
-    # There can be duplicate runs. Use the earliest run for each
-    # browser+revision, ignoring OS and any other features of the run.
-    # See https://github.com/w3c/wptdashboard/issues/528.
+    # There are runs before the cutoff and there can be duplicate runs. Use the
+    # earliest run for each browser+revision, ignoring OS and any other
+    # features of the run. See https://github.com/w3c/wptdashboard/issues/528.
     runs = filter_runs(runs, sort_key=run_date,
                        filter_key=lambda r: (r['browser_name'], r['revision']))
 
