@@ -10,7 +10,7 @@ from wpt_common import PRS_FILE, pr_number_from_tag, wpt_git
 
 
 def get_merge_pr_tags():
-    """Gets the set of merge_pr_* tags as string."""
+    """Gets the list of merge_pr_* tags as string."""
     # --format="%(refname:strip=2) %(objectname)" would also include SHA-1
     return wpt_git(['tag', '--list', 'merge_pr_*']).splitlines()
 
