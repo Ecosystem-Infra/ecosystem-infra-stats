@@ -15,6 +15,7 @@ Missing TEAM: domxpath
 Missing TEAM: encrypted-media
 Missing OWNERS: geolocation-sensor
 Missing OWNERS: graphics-aam
+Orphaned OWNERS: http
 Missing TEAM: keyboard-lock
 Missing COMPONENT: keyboard-lock
 Missing TEAM: mediacapture-streams
