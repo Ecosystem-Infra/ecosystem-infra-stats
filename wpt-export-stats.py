@@ -55,7 +55,7 @@ def get_latencies(prs):
     total_prs = len(prs)
     for index, pr in enumerate(prs):
         pr_number = pr['PR']
-        print('[{}/{}] PR: https://github.com/w3c/web-platform-tests/pull/{}'
+        print('[{}/{}] PR: https://github.com/web-platform-tests/wpt/pull/{}'
               .format(index + 1, total_prs, pr_number))
         if latencies.get(pr_number):
             continue

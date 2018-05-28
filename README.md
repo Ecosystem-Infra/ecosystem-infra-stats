@@ -11,7 +11,7 @@ This is intended to replace the
 
 Up-to-date checkouts of
 [Chromium](https://www.chromium.org/developers/how-tos/get-the-code)
-and [web-platform-tests](https://github.com/w3c/web-platform-tests)
+and [web-platform-tests](https://github.com/web-platform-tests/wpt)
 are needed in `$HOME/chromium/src` and `$HOME/web-platform-tests`.
 
 The build script needs Python 2 and Virtualenv:
