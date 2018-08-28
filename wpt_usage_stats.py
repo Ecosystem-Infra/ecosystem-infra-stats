@@ -18,6 +18,7 @@ NOT_TEST_PATTERNS = [
     '.*/inspector-protocol/',
     # moved in crbug.com/667560
     '.*/inspector/',
+    # Expectations
     'third_party/WebKit/LayoutTests/FlagExpectations/',
     # TestExpectations, etc.
     'third_party/WebKit/LayoutTests/[^/]*$',
@@ -25,6 +26,14 @@ NOT_TEST_PATTERNS = [
     'third_party/WebKit/LayoutTests/external/[^/]*$',
     # lint.whitelist, etc.
     'third_party/WebKit/LayoutTests/external/wpt/[^/]*$',
+    # Baselines
+    'third_party/WebKit/LayoutTests/flag-specific/',
+    'third_party/WebKit/LayoutTests/platform/',
+    'third_party/WebKit/LayoutTests/virtual/',
+    '.*-expected\.(txt|png|wav)$',
+    # Misc
+    '.*/OWNERS$',
+    '.*/README(\.md|\.txt)?$',
 ]
 
 
