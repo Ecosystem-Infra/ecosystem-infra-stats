@@ -17,6 +17,7 @@ KNOWN_RUN_CONFIGS = set([
     ('chrome', 'linux'),
     ('chrome', 'linux\n'),
     ('edge', 'windows'),
+    ('edge', 'Windows'),
     ('firefox', 'debian'),
     ('firefox', 'linux'),
     ('safari', 'macos'),
@@ -73,7 +74,8 @@ def analyze(prs, runs):
     for run in runs:
         # If this assert fails, add to the known set if it's a desktop
         # configuration, otherwise filter out the run.
-        assert (run['browser_name'], run['os_name']) in KNOWN_RUN_CONFIGS
+        assert (run['browser_name'], run['os_name']) in KNOWN_RUN_CONFIGS, \
+            'unknown config: {run[browser_name]} on {run[os_name]}'.format(run=run)
 
     # There are runs before the cutoff and there can be duplicate runs. Use the
     # earliest run for each browser+revision, ignoring OS and any other
