@@ -7,7 +7,7 @@ from csv_database import RunLatencyDB
 from wpt_common import CUTOFF, read_pr_db, get_pr_latencies
 
 # 1000 because of https://github.com/w3c/wptdashboard/issues/524
-RUNS_URL = 'https://wpt.fyi/api/runs?max-count=1000'
+RUNS_URL = 'https://wpt.fyi/api/runs?max-count=1000&label=stable'
 CSV_PATH_TEMPLATE = 'wpt-dashboard-{}-latencies.csv'
 
 # If the runs expand to non-desktop platforms, those should be measured
