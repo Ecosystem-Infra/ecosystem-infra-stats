@@ -5,7 +5,6 @@ Missing OWNERS: appmanifest
 Missing OWNERS: async-local-storage
 Missing OWNERS: BackgroundSync
 Missing COMPONENT: battery-status
-Missing OWNERS: budget-api
 Missing TEAM: clipboard-apis
 Missing COMPONENT: clipboard-apis
 Missing TEAM: compat
@@ -26,6 +25,9 @@ Missing TEAM: mediacapture-streams
 Missing TEAM: media-source
 Missing COMPONENT: media-source
 Missing OWNERS: mimesniff
+Missing OWNERS: mst-content-hint
+Missing OWNERS: network-error-logging
+Missing OWNERS: origin-policy
 Missing TEAM: page-visibility
 Missing COMPONENT: page-visibility
 Missing OWNERS: permissions
@@ -34,8 +36,10 @@ Missing OWNERS: priority-hints
 Missing OWNERS: push-api
 Missing TEAM: quirks
 Missing COMPONENT: quirks
+Missing OWNERS: reporting
 Missing TEAM: resources
 Missing COMPONENT: resources
+Missing TEAM: screen-capture
 Missing TEAM: screen-orientation
 Missing OWNERS: scroll-animations
 Missing OWNERS: shape-detection
@@ -44,6 +48,7 @@ Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing TEAM: WebCryptoAPI
 Missing TEAM: webmessaging
+Missing OWNERS: webmidi
 Missing TEAM: webrtc
 Missing OWNERS: webrtc-stats
 Missing OWNERS: css/css-animations
