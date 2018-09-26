@@ -6,7 +6,7 @@ import requests
 from csv_database import RunLatencyDB
 from wpt_common import CUTOFF, read_pr_db, get_pr_latencies
 
-# 1000 because of https://github.com/w3c/wptdashboard/issues/524
+# 1000 because of https://github.com/web-platform-tests/wpt.fyi/issues/3.
 RUNS_URL = 'https://wpt.fyi/api/runs?max-count=1000&label=stable'
 CSV_PATH_TEMPLATE = 'wpt-dashboard-{}-latencies.csv'
 
@@ -79,7 +79,8 @@ def analyze(prs, runs):
 
     # There are runs before the cutoff and there can be duplicate runs. Use the
     # earliest run for each browser+revision, ignoring OS and any other
-    # features of the run. See https://github.com/w3c/wptdashboard/issues/528.
+    # features of the run. See
+    # https://github.com/web-platform-tests/wpt.fyi/issues/54.
     runs = filter_runs(runs, sort_key=run_date,
                        filter_key=lambda r: (r['browser_name'], r['revision']))
 
