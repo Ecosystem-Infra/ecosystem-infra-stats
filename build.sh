@@ -4,7 +4,7 @@ set -o nounset
 set -o pipefail
 
 CHROMIUM_DIR="$HOME/chromium/src"
-WPT_DIR="$HOME/web-platform-tests"
+WPT_DIR="$HOME/web-platform-tests/wpt"
 
 # put the output in a directory to match how it will be served:
 # https://foolip.github.io/ecosystem-infra-stats/
