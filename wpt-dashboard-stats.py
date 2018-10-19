@@ -62,10 +62,13 @@ def write_latencies(prs, runs, name):
         run = entry['event']
         if run is None:
             continue
+        pr = entry['pr']
         db.add({
-            'PR': str(entry['pr']['PR']),
+            'PR': str(pr['PR']),
+            'merge_sha': pr['merge_commit_sha'][0:10],
+            'merge_date': pr['merged_at'],
             'run_sha': run['revision'],
-            'run_time': run['created_at'],
+            'run_date': run['created_at'],
             'latency': entry['latency'],
         })
     db.write(order='asc')
