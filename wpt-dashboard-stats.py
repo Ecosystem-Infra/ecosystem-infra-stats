@@ -106,7 +106,7 @@ def analyze(prs, runs):
                                 sort_reverse=True, filter_key=run_sha)
     print("Found {} complete ({}) runs".format(
         len(complete_runs), ', '.join(browsers)))
-    write_latencies(prs, complete_runs, 'desktop')
+    write_latencies(prs, complete_runs, 'aligned')
 
 
 def main():
