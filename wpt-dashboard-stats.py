@@ -52,13 +52,17 @@ def write_latencies(prs, name, runs):
     the latencies between the PR and the runs. Write the results to a CSV
     file."""
 
+    # Find the earliest run and filter out PRs associated with that run, as
+    # all PRs that came before that will be associated with that single run.
+    earliest_run = min(runs, key=run_date)
+
     latencies = get_pr_latencies(
         prs, events=runs, event_sha_func=run_sha, event_date_func=run_date)
     csv_path = CSV_PATH_TEMPLATE.format(name)
     db = RunLatencyDB(csv_path)
     for entry in latencies:
         run = entry['event']
-        if run is None:
+        if run is None or run is earliest_run:
             continue
         pr = entry['pr']
         db.add({
