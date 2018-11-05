@@ -7,23 +7,21 @@ from csv_database import RunLatencyDB
 from wpt_common import CUTOFF, read_pr_db, get_pr_latencies
 
 # max-count=1000 because of https://github.com/web-platform-tests/wpt.fyi/issues/3.
-# staging.wpt.fyi until https://github.com/web-platform-tests/wpt.fyi/pull/584 is deployed.
-RUNS_URL = 'https://staging.wpt.fyi/api/runs?max-count=1000&label=stable'
+RUNS_URL_TEMPLATE = 'https://wpt.fyi/api/runs?max-count=1000&{}'
 CSV_PATH_TEMPLATE = 'wpt-dashboard-{}-latencies.csv'
 
-# If the runs expand to non-desktop platforms, those should be measured
-# separately, so assert that only desktop configurations exist.
-KNOWN_RUN_CONFIGS = set([
-    ('chrome', 'debian'),
-    ('chrome', 'linux'),
-    ('chrome', 'linux\n'),
-    ('edge', 'windows'),
-    ('edge', 'Windows'),
-    ('firefox', 'debian'),
-    ('firefox', 'linux'),
-    ('safari', 'macos'),
-    ('safari', 'macOS'),
-])
+NAME_AND_QUERIES = [
+    ('chrome-stable', 'product=chrome&label=stable'),
+    ('edge-stable', 'product=edge&label=stable'),
+    ('firefox-stable', 'product=firefox&label=stable'),
+    ('safari-stable', 'product=safari&label=stable'),
+    ('aligned-stable', 'products=chrome,edge,firefox,safari&label=stable&aligned'),
+    ('chrome-experimental', 'product=chrome&label=experimental'),
+    #('edge-experimental', 'product=edge&label=experimental'),
+    ('firefox-experimental', 'product=firefox&label=experimental'),
+    ('safari-experimental', 'product=safari&label=experimental'),
+    #('aligned-experimental', 'products=chrome,edge,firefox,safari&label=experimental&aligned'),
+]
 
 
 def run_sha(run):
@@ -49,7 +47,7 @@ def filter_runs(runs, sort_key=None, sort_reverse=False, filter_key=None):
     return filtered_runs.values()
 
 
-def write_latencies(prs, runs, name):
+def write_latencies(prs, name, runs):
     """For each PR, find the earliest run that included that PR, and calucate
     the latencies between the PR and the runs. Write the results to a CSV
     file."""
@@ -74,12 +72,12 @@ def write_latencies(prs, runs, name):
     db.write(order='asc')
 
 
-def analyze(prs, runs):
-    for run in runs:
-        # If this assert fails, add to the known set if it's a desktop
-        # configuration, otherwise filter out the run.
-        assert (run['browser_name'], run['os_name']) in KNOWN_RUN_CONFIGS, \
-            'unknown config: {r[browser_name]} on {r[os_name]}'.format(r=run)
+def analyze(prs, name, query):
+    runs_url = RUNS_URL_TEMPLATE.format(query)
+    #print("URL for {}: {}".format(name, runs_url))
+    runs_response = requests.get(runs_url)
+    runs_response.raise_for_status()
+    runs = runs_response.json()
 
     # There are runs before the cutoff and there can be duplicate runs. Use the
     # earliest run for each browser+revision, ignoring OS and any other
@@ -88,36 +86,19 @@ def analyze(prs, runs):
     runs = filter_runs(runs, sort_key=run_date,
                        filter_key=lambda r: (r['browser_name'], r['revision']))
 
-    browsers = list(set(run['browser_name'] for run in runs))
-    browsers.sort()
+    # For aligned runs, filter to just the one with the latest run date
+    if name.startswith('aligned-'):
+        runs = filter_runs(runs, sort_key=run_date, sort_reverse=True,
+                           filter_key=run_sha)
 
-    # Find complete runs by starting with the union of all commits and
-    # intersecting with the runs for each browser in the below loop.
-    complete_shas = set(map(run_sha, runs))
-
-    # Per-browser latencies:
-    for name in browsers:
-        browser_runs = [r for r in runs if r['browser_name'] == name]
-        complete_shas.intersection_update(set(map(run_sha, browser_runs)))
-        print("Found {} unique {} runs".format(len(browser_runs), name))
-        write_latencies(prs, browser_runs, name)
-
-    # Group latency: keep the latest run for each revision, as that's when the
-    # results became complete.
-    complete_shas_runs = (r for r in runs if r['revision'] in complete_shas)
-    complete_runs = filter_runs(complete_shas_runs, sort_key=run_date,
-                                sort_reverse=True, filter_key=run_sha)
-    print("Found {} complete ({}) runs".format(
-        len(complete_runs), ', '.join(browsers)))
-    write_latencies(prs, complete_runs, 'aligned')
+    print("Found {} unique {} runs".format(len(runs), name))
+    write_latencies(prs, name, runs)
 
 
 def main():
     prs = read_pr_db().values()
-    runs_response = requests.get(RUNS_URL)
-    runs_response.raise_for_status()
-    runs = runs_response.json()
-    analyze(prs, runs)
+    for (name, query) in NAME_AND_QUERIES:
+        analyze(prs, name, query)
 
 
 if __name__ == '__main__':
