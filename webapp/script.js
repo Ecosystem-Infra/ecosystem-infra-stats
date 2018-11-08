@@ -1,7 +1,10 @@
 'use strict';
 
 const GITHUB_GREEN = '#2CBE4E'; // color of the "Changes approved" checkmark
+const CHROME_RED = '#DB4437'; // https://github.com/alrra/browser-logos/blob/master/src/chrome/chrome.svg
+const CHROME_GREEN = '#0F9D58'; // https://github.com/alrra/browser-logos/blob/master/src/chrome/chrome.svg
 const CHROME_BLUE = '#4285F4'; // https://github.com/alrra/browser-logos/blob/master/src/chrome/chrome.svg (also the Google blue)
+const CHROME_YELLOW = '#FFCD40'; // https://github.com/alrra/browser-logos/blob/master/src/chrome/chrome.svg
 const EDGE_BLUE = '#0078D7'; // https://commons.wikimedia.org/wiki/File:Microsoft_Edge_logo.svg
 const FIREFOX_ORANGE = '#E66000'; // https://www.mozilla.org/en-US/styleguide/identity/firefox/color/
 const FIREFOX_YELLOW = '#FFCB00'; // ditto
