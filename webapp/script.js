@@ -2,6 +2,7 @@
 
 const GITHUB_GREEN = '#2CBE4E'; // color of the "Changes approved" checkmark
 const CHROME_BLUE = '#4285F4'; // https://github.com/alrra/browser-logos/blob/master/src/chrome/chrome.svg (also the Google blue)
+const EDGE_BLUE = '#0078D7'; // https://commons.wikimedia.org/wiki/File:Microsoft_Edge_logo.svg
 const FIREFOX_ORANGE = '#E66000'; // https://www.mozilla.org/en-US/styleguide/identity/firefox/color/
 const FIREFOX_YELLOW = '#FFCB00'; // ditto
 const WEBKIT_PURPLE = '#8E56B1'; // https://github.com/web-platform-tests/wpt/pull/8986#issuecomment-356979677
