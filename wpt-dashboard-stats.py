@@ -7,7 +7,7 @@ from csv_database import RunLatencyDB
 from wpt_common import CUTOFF, read_pr_db, get_pr_latencies
 
 # max-count=1000 because of https://github.com/web-platform-tests/wpt.fyi/issues/3.
-RUNS_URL_TEMPLATE = 'https://wpt.fyi/api/runs?max-count=1000&{}'
+RUNS_URL_TEMPLATE = 'https://wpt.fyi/api/runs?max-count=1000&label=master&{}'
 CSV_PATH_TEMPLATE = 'wpt-dashboard-{}-latencies.csv'
 
 NAME_AND_QUERIES = [

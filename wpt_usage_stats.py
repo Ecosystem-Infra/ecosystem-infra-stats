@@ -11,6 +11,8 @@ import sys
 
 # Note: Rename to LayoutTests/external/ was on 2017-01-17, in commit
 # 6506b8b80db745936336bb88855cd078c083691e.
+# The directory was further moved to blink/web_tests/external on
+# 2017-11-25 in commit 77578ccb4082ae20a9326d9e673225f1189ebb63.
 
 # File name patterns not considered tests
 NOT_TEST_PATTERNS = [
@@ -19,17 +21,17 @@ NOT_TEST_PATTERNS = [
     # moved in crbug.com/667560
     '.*/inspector/',
     # Expectations
-    'third_party/WebKit/LayoutTests/FlagExpectations/',
+    'third_party/blink/web_tests/FlagExpectations/',
     # TestExpectations, etc.
-    'third_party/WebKit/LayoutTests/[^/]*$',
+    'third_party/blink/web_tests/[^/]*$',
     # WPT_BASE_MANIFEST.json, etc.
-    'third_party/WebKit/LayoutTests/external/[^/]*$',
+    'third_party/blink/web_tests/external/[^/]*$',
     # lint.whitelist, etc.
-    'third_party/WebKit/LayoutTests/external/wpt/[^/]*$',
+    'third_party/blink/web_tests/external/wpt/[^/]*$',
     # Baselines
-    'third_party/WebKit/LayoutTests/flag-specific/',
-    'third_party/WebKit/LayoutTests/platform/',
-    'third_party/WebKit/LayoutTests/virtual/',
+    'third_party/blink/web_tests/flag-specific/',
+    'third_party/blink/web_tests/platform/',
+    'third_party/blink/web_tests/virtual/',
     '.*-expected\.(txt|png|wav)$',
     # Misc
     '.*/OWNERS$',
@@ -52,7 +54,7 @@ def is_source(path):
 
 
 def is_test(path):
-    if not path.startswith('third_party/WebKit/LayoutTests/'):
+    if not path.startswith('third_party/blink/web_tests/'):
         return False
     for expr in NOT_TEST_EXPRS:
         if expr.match(path):
@@ -61,7 +63,7 @@ def is_test(path):
 
 
 def is_in_wpt(path):
-    return path.startswith('third_party/WebKit/LayoutTests/external/wpt/')
+    return path.startswith('third_party/blink/web_tests/external/wpt/')
 
 
 def main():
@@ -75,7 +77,7 @@ def main():
         'git', 'rev-list', 'origin/master',
         '--since={}T00:00:00Z'.format(since),
         '--until={}T00:00:00Z'.format(until),
-        '--', 'third_party/WebKit/LayoutTests',
+        '--', 'third_party/blink/web_tests',
     ], cwd=chromium_dir).strip().split()
 
     changes = 0

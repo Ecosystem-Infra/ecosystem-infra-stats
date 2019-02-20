@@ -19,7 +19,7 @@ from csv_database import PRDB
 # started to stablize around this time. Earlier results are inaccurate.
 CUTOFF = '2017-07-01T00:00:00Z'
 # Change this when it is a new quarter.
-QUARTER_START = '2018-07-01T00:00:00Z'
+QUARTER_START = '2018-10-01T00:00:00Z'
 
 # GitHub cache. Delete the file to fetch PRs again.
 PRS_FILE = 'wpt-prs.csv'
@@ -28,7 +28,7 @@ try:
     CHROMIUM_DIR = sys.argv[1]
 except IndexError:
     CHROMIUM_DIR = os.path.expanduser('~/chromium/src')
-CHROMIUM_WPT_PATH = 'third_party/WebKit/LayoutTests/external/wpt'
+CHROMIUM_WPT_PATH = 'third_party/blink/web_tests/external/wpt'
 try:
     WPT_DIR = sys.argv[2]
 except IndexError:
