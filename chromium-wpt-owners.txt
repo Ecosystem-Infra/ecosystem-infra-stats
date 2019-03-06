@@ -54,6 +54,7 @@ Missing OWNERS: serial
 Missing OWNERS: shape-detection
 Missing OWNERS: signed-exchange
 Missing OWNERS: staticrange
+Missing OWNERS: tools
 Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing TEAM: WebCryptoAPI
