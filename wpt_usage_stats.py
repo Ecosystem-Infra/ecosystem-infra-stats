@@ -12,7 +12,7 @@ import sys
 # Note: Rename to LayoutTests/external/ was on 2017-01-17, in commit
 # 6506b8b80db745936336bb88855cd078c083691e.
 # The directory was further moved to blink/web_tests/external on
-# 2017-11-25 in commit 77578ccb4082ae20a9326d9e673225f1189ebb63.
+# 2018-11-25 in commit 77578ccb4082ae20a9326d9e673225f1189ebb63.
 
 # File name patterns not considered tests
 NOT_TEST_PATTERNS = [
