@@ -33,6 +33,7 @@ Missing TEAM: media-source
 Missing COMPONENT: media-source
 Missing OWNERS: mimesniff
 Missing OWNERS: mst-content-hint
+Missing OWNERS: native-file-system
 Missing OWNERS: network-error-logging
 Missing OWNERS: origin-policy
 Missing TEAM: page-visibility
