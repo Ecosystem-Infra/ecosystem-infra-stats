@@ -13,8 +13,6 @@ cp -r out/ecosystem-infra-stats/* gh-pages/
 
 cd gh-pages
 
-git config user.email "bot@foolip.org"
-git config user.name "Automat af Ekosystem"
 git add -A
-git commit -m "Automatic update" -m "Using commit $COMMIT"
+git commit -m "Update stats" -m "Using commit $COMMIT"
 git push
