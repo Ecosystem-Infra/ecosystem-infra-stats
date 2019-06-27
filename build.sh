@@ -59,9 +59,10 @@ echo
 mv *.csv "$OUTDIR/"
 
 echo "chromium usage stats..."
-cp wpt_usage_stats.py "$CHROMIUM_DIR/third_party/blink/tools/"
-"$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py" 2019-05-01 2019-06-01 > "$OUTDIR/chromium-usage-stats.txt"
-rm "$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py"
+cp source_and_test_stats.py "$CHROMIUM_DIR/third_party/blink/tools/"
+"$CHROMIUM_DIR/third_party/blink/tools/source_and_test_stats.py" 2019-06-01 2019-07-01 > "$OUTDIR/chromium-usage-stats.txt"
+rm "$CHROMIUM_DIR/third_party/blink/tools/source_and_test_stats.py"
+python3 wpt_commit_stats.py --since 2019-06-01 --until 2019-07-01 > "$OUTDIR/chromium-wpt-stats.txt"
 echo
 
 echo "chromium OWNERS check..."
