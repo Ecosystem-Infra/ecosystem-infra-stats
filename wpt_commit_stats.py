@@ -189,7 +189,7 @@ class FileStats(AbstractCheck):
 
 
 class HistoryAnalyzer(object):
-    def __init__(self, options, *checks):
+    def __init__(self, options, *aggregators):
         self.options = options
         since = datetime.strptime(self.options.since, ISO_DATE_FORMAT)
         blink_move = datetime.strptime(BLINK_MOVE, ISO_DATE_FORMAT)
@@ -206,9 +206,9 @@ class HistoryAnalyzer(object):
             raise ValueError('%s is not a valid Chromium checkout' %
                              self.chromium_dir)
         self.git = Git(self.chromium_dir)
-        self.checks = checks
-        for check in self.checks:
-            assert issubclass(type(check), AbstractCheck)
+        self.aggregators = aggregators
+        for aggregator in self.aggregators:
+            assert issubclass(type(aggregator), AbstractCheck)
 
     def run(self):
         revisions = self.get_rev_list()
@@ -216,26 +216,26 @@ class HistoryAnalyzer(object):
         _log.info('Found %d revisions in range', total)
         current = 0
         pool = multiprocessing.Pool()
-        for rev, results in pool.imap(self.run_checks, revisions):
+        for rev, results in pool.imap(self.run_aggregators, revisions):
             current += 1
             _log.info('Processed %s [%d/%d]', rev, current, total)
-            assert len(results) == len(self.checks)
+            assert len(results) == len(self.aggregators)
             for i, result in enumerate(results):
-                self.checks[i].accumulate_result(rev, result)
+                self.aggregators[i].accumulate_result(rev, result)
 
-        for check in self.checks:
-            print(str(check))
+        for aggregator in self.aggregators:
+            print(str(aggregator))
 
         if self.options.pickle:
             with open(self.options.pickle, 'wb') as f:
-                pickle.dump(self.checks, f)
+                pickle.dump(self.aggregators, f)
 
-    def run_checks(self, rev):
+    def run_aggregators(self, rev):
         # This actually runs in seperate processes. Make sure return values can
         # be pickled.
         results = []
-        for check in self.checks:
-            results.append(check.check_revision(self.git, rev))
+        for aggregator in self.aggregators:
+            results.append(aggregator.check_revision(self.git, rev))
         return rev, results
 
     def get_rev_list(self):
