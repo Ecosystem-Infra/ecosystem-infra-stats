@@ -10,7 +10,8 @@ import subprocess
 import sys
 from datetime import datetime
 
-# For simplicity, we do not want to trace cross the great Blink mv.
+# For simplicity, we do not want to trace cross the great Blink mv
+# 77578ccb4082ae20a9326d9e673225f1189ebb63.
 BLINK_MOVE = '2018-11-26'
 ISO_DATE_FORMAT = '%Y-%m-%d'
 # Added, Copied, Modified, Renamed
