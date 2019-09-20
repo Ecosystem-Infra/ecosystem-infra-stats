@@ -10,7 +10,22 @@ jobs:
   update:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Checkout wpt
+      uses: actions/checkout@master
+      with:
+        repository: web-platform-tests/wpt
+        ref: master
+        fetch-depth: 1
+        path: web-platform-tests/wpt
+    - name: Checkout chromium
+      uses: actions/checkout@master
+      with:
+        repository: https://chromium.googlesource.com/chromium/src
+        ref: master
+        fetch-depth: 1
+        path: chromium/src
     - uses: actions/setup-python@v1
       with:
         python-version: 2.7
