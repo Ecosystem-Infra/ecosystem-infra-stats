@@ -60,7 +60,7 @@ mv *.csv "$OUTDIR/"
 
 echo "chromium usage stats..."
 cp wpt_usage_stats.py "$CHROMIUM_DIR/third_party/blink/tools/"
-"$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py" 2019-05-01 2019-06-01 > "$OUTDIR/chromium-usage-stats.txt"
+"$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py" 2019-09-01 2019-10-01 > "$OUTDIR/chromium-usage-stats.txt"
 rm "$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py"
 echo
 
