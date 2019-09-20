@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - cron-update
+  schedule:
+    # 06:45 UTC daily
+    - cron: '45 6 * * *'
+name: update
+jobs:
+  update:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
+      with:
+        python-version: 2.7
+    - run: ./build.sh
+    - uses: JamesIves/github-pages-deploy-action@2.0.1
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: out
