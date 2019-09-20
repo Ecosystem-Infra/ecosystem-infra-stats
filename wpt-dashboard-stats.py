@@ -17,10 +17,10 @@ NAME_AND_QUERIES = [
     ('safari-stable', 'product=safari&label=stable'),
     ('aligned-stable', 'products=chrome,edge,firefox,safari&label=stable&aligned'),
     ('chrome-experimental', 'product=chrome&label=experimental'),
-    #('edge-experimental', 'product=edge&label=experimental'),
+    # ('edge-experimental', 'product=edge&label=experimental'),
     ('firefox-experimental', 'product=firefox&label=experimental'),
     ('safari-experimental', 'product=safari&label=experimental'),
-    #('aligned-experimental', 'products=chrome,edge,firefox,safari&label=experimental&aligned'),
+    # ('aligned-experimental', 'products=chrome,edge,firefox,safari&label=experimental&aligned'),
 ]
 
 
@@ -78,7 +78,6 @@ def write_latencies(prs, name, runs):
 
 def analyze(prs, name, query):
     runs_url = RUNS_URL_TEMPLATE.format(query)
-    #print("URL for {}: {}".format(name, runs_url))
     runs_response = requests.get(runs_url)
     runs_response.raise_for_status()
     runs = runs_response.json()

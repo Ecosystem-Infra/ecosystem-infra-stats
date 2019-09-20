@@ -32,10 +32,10 @@ NOT_TEST_PATTERNS = [
     'third_party/blink/web_tests/flag-specific/',
     'third_party/blink/web_tests/platform/',
     'third_party/blink/web_tests/virtual/',
-    '.*-expected\.(txt|png|wav)$',
+    '.*-expected\\.(txt|png|wav)$',
     # Misc
     '.*/OWNERS$',
-    '.*/README(\.md|\.txt)?$',
+    '.*/README(\\.md|\\.txt)?$',
 ]
 
 

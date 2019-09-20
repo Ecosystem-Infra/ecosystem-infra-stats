@@ -15,7 +15,7 @@ from wpt_common import CUTOFF, QUARTER_START, chromium_git, read_pr_db, \
 
 
 # Target SLA (in minutes).
-SLA = 12*60
+SLA = 12 * 60
 # Result files.
 LATENCIES_CSV = 'import-latencies.csv'
 STATS_CSV = 'import-latency-stats.csv'

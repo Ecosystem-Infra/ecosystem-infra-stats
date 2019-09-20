@@ -153,6 +153,6 @@ def get_pr_latencies(prs, events=None, event_sha_func=None,
         if earliest_event_so_far is None:
             continue
         result['event'] = earliest_event_so_far
-        result['latency'] = (event_date_func(earliest_event_so_far) -
-                             pr_date(pr)).total_seconds() / 60
+        result['latency'] = (event_date_func(earliest_event_so_far)
+                             - pr_date(pr)).total_seconds() / 60
     return results
