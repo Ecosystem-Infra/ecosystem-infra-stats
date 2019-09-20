@@ -22,7 +22,7 @@ jobs:
     - name: Checkout chromium
       uses: actions/checkout@master
       with:
-        repository: https://chromium.googlesource.com/chromium/src
+        repository: chromium/chromium
         ref: master
         fetch-depth: 1
         path: chromium/src
