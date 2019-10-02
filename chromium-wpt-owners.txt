@@ -5,6 +5,7 @@ Missing OWNERS: BackgroundSync
 Missing COMPONENT: battery-status
 Missing TEAM: compat
 Missing COMPONENT: compat
+Missing OWNERS: compression
 Missing TEAM: console
 Missing COMPONENT: console
 Missing TEAM: domparsing
