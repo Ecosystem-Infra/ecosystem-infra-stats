@@ -56,7 +56,7 @@ function configDataPoint(label, color, data) {
   }
 }
 
-function drawChart(canvas, title, data) {
+function drawChart(canvas, title, data, yAxisLabel) {
   new Chart(canvas, {
     type: 'line',
     data: data,
@@ -72,6 +72,10 @@ function drawChart(canvas, title, data) {
       scales: {
         yAxes: [{
           ticks: { beginAtZero: true },
+          scaleLabel: {
+            display: !!yAxisLabel,
+            labelString: yAxisLabel,
+          },
         }],
       },
     },
@@ -128,7 +132,8 @@ fetch('import-latency-stats.csv')
     drawChart(
         document.querySelector('#wpt-imports canvas'),
         'WPT => Chromium import latency',
-        data);
+        data,
+        'minutes');
   });
 
 fetch('export-latency-stats.csv')
@@ -156,5 +161,6 @@ fetch('export-latency-stats.csv')
     drawChart(
         document.querySelector('#wpt-exports canvas'),
         'Chromium => WPT export latency',
-        data);
+        data,
+        'minutes');
   });
