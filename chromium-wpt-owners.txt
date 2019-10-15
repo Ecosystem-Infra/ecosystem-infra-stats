@@ -28,6 +28,7 @@ Missing OWNERS: layout-instability
 Missing OWNERS: lifecycle
 Missing OWNERS: loading
 Missing OWNERS: mathml
+Missing OWNERS: measure-memory
 Missing OWNERS: mediacapture-depth
 Missing OWNERS: mediacapture-image
 Missing TEAM: mediacapture-streams
