@@ -8,9 +8,12 @@ Missing COMPONENT: compat
 Missing OWNERS: compression
 Missing TEAM: console
 Missing COMPONENT: console
+Missing OWNERS: content-dpr
+Missing OWNERS: document-policy
 Missing TEAM: domparsing
 Missing TEAM: domxpath
 Missing OWNERS: element-timing
+Missing OWNERS: encoding-detection
 Missing TEAM: encrypted-media
 Missing OWNERS: event-timing
 Missing OWNERS: forced-colors-mode
@@ -20,6 +23,7 @@ Missing OWNERS: idle-detection
 Missing OWNERS: import-maps
 Missing OWNERS: inert
 Missing OWNERS: input-device-capabilities
+Missing OWNERS: installedapp
 Missing TEAM: keyboard-lock
 Missing COMPONENT: keyboard-lock
 Missing OWNERS: kv-storage
@@ -42,6 +46,7 @@ Missing OWNERS: network-error-logging
 Missing OWNERS: origin-policy
 Missing TEAM: page-visibility
 Missing COMPONENT: page-visibility
+Missing OWNERS: PeriodicBackgroundSync
 Missing OWNERS: permissions
 Missing OWNERS: picture-in-picture
 Missing OWNERS: portals
@@ -69,11 +74,13 @@ Missing TEAM: tools
 Missing COMPONENT: tools
 Missing TEAM: wasm
 Missing TEAM: webaudio
+Missing OWNERS: web-bundle
 Missing TEAM: WebCryptoAPI
 Missing OWNERS: webdriver
 Missing TEAM: webmessaging
 Missing OWNERS: webmidi
 Missing TEAM: webrtc
+Missing OWNERS: webrtc-extensions
 Missing OWNERS: webrtc-identity
 Missing OWNERS: webrtc-quic
 Missing OWNERS: webrtc-stats
