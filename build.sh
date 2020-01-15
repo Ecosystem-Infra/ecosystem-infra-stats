@@ -7,7 +7,7 @@ CHROMIUM_DIR="$HOME/chromium/src"
 WPT_DIR="$HOME/web-platform-tests/wpt"
 
 # put the output in a directory to match how it will be served:
-# https://foolip.github.io/ecosystem-infra-stats/
+# https://stephenmcgruer.github.io/ecosystem-infra-stats/
 OUTDIR="out/ecosystem-infra-stats"
 rm -rf out
 mkdir out
