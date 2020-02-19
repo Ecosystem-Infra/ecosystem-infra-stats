@@ -2,6 +2,7 @@ Missing OWNERS: acid
 Missing OWNERS: animation-worklet
 Missing OWNERS: appmanifest
 Missing OWNERS: BackgroundSync
+Missing OWNERS: badging
 Missing COMPONENT: battery-status
 Missing TEAM: compat
 Missing COMPONENT: compat
@@ -24,6 +25,7 @@ Missing OWNERS: import-maps
 Missing OWNERS: inert
 Missing OWNERS: input-device-capabilities
 Missing OWNERS: installedapp
+Missing OWNERS: js-self-profiling
 Missing TEAM: keyboard-lock
 Missing COMPONENT: keyboard-lock
 Missing OWNERS: kv-storage
@@ -41,13 +43,14 @@ Missing TEAM: media-source
 Missing COMPONENT: media-source
 Missing OWNERS: mimesniff
 Missing OWNERS: mst-content-hint
-Missing OWNERS: native-file-system
 Missing OWNERS: network-error-logging
 Missing OWNERS: origin-policy
 Missing TEAM: page-visibility
 Missing COMPONENT: page-visibility
 Missing OWNERS: PeriodicBackgroundSync
 Missing OWNERS: permissions
+Missing OWNERS: permissions-request
+Missing OWNERS: permissions-revoke
 Missing OWNERS: picture-in-picture
 Missing OWNERS: portals
 Missing OWNERS: printing
@@ -72,6 +75,7 @@ Missing OWNERS: storage-access-api
 Missing OWNERS: timing-entrytypes-registry
 Missing TEAM: tools
 Missing COMPONENT: tools
+Missing OWNERS: video-raf
 Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing OWNERS: web-bundle
@@ -86,6 +90,7 @@ Missing OWNERS: webrtc-quic
 Missing OWNERS: webrtc-stats
 Missing OWNERS: webrtc-svc
 Missing OWNERS: xslt
+Missing OWNERS: css/compositing
 Missing OWNERS: css/css-animations
 Missing OWNERS: css/css-box
 Missing OWNERS: css/css-color-adjust
