@@ -2,7 +2,7 @@
 
 This is a collection of scripts to compute stats for
 [ecosystem infra](https://bit.ly/ecosystem-infra), backing
-[some graphs](https://stephenmcgruer.github.io/ecosystem-infra-stats/).
+[some graphs](https://ecosystem-infra.github.io/ecosystem-infra-stats/).
 
 This is intended to replace the
 [old stats spreadsheet](https://bit.ly/ecosystem-infra-stats).
