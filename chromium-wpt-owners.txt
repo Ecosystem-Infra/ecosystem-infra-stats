@@ -10,6 +10,9 @@ Missing OWNERS: compression
 Missing TEAM: console
 Missing COMPONENT: console
 Missing OWNERS: content-dpr
+Missing OWNERS: contenteditable
+Missing OWNERS: content-index
+Missing OWNERS: delegated-ink
 Missing OWNERS: document-policy
 Missing TEAM: domparsing
 Missing TEAM: domxpath
@@ -43,10 +46,13 @@ Missing COMPONENT: media-source
 Missing OWNERS: mimesniff
 Missing OWNERS: mst-content-hint
 Missing OWNERS: network-error-logging
+Missing TEAM: origin-isolation
+Missing COMPONENT: origin-isolation
 Missing OWNERS: origin-policy
+Missing OWNERS: page-lifecycle
 Missing TEAM: page-visibility
 Missing COMPONENT: page-visibility
-Missing OWNERS: PeriodicBackgroundSync
+Missing OWNERS: periodic-background-sync
 Missing OWNERS: permissions
 Missing OWNERS: permissions-request
 Missing OWNERS: permissions-revoke
@@ -64,7 +70,6 @@ Missing TEAM: screen-capture
 Missing OWNERS: screen_enumeration
 Missing TEAM: screen-orientation
 Missing OWNERS: scroll-animations
-Missing OWNERS: scroll-to-text-fragment
 Missing OWNERS: serial
 Missing OWNERS: shape-detection
 Missing OWNERS: signed-exchange
@@ -73,7 +78,7 @@ Missing OWNERS: timing-entrytypes-registry
 Missing TEAM: tools
 Missing COMPONENT: tools
 Missing OWNERS: trust-tokens
-Missing OWNERS: video-raf
+Missing OWNERS: video-rvfc
 Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing OWNERS: web-bundle
@@ -109,6 +114,7 @@ Missing OWNERS: css/css-overscroll-behavior
 Missing OWNERS: css/css-page
 Missing OWNERS: css/css-parser-api
 Missing OWNERS: css/css-pseudo
+Missing OWNERS: css/css-ruby
 Missing OWNERS: css/css-scrollbars
 Missing OWNERS: css/css-scroll-snap
 Missing OWNERS: css/css-shadow-parts
