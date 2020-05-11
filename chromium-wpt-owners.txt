@@ -58,7 +58,6 @@ Missing OWNERS: permissions-request
 Missing OWNERS: permissions-revoke
 Missing OWNERS: picture-in-picture
 Missing OWNERS: portals
-Missing OWNERS: printing
 Missing OWNERS: priority-hints
 Missing OWNERS: push-api
 Missing TEAM: quirks
