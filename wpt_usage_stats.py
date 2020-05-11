@@ -3,11 +3,15 @@
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
 
-from blinkpy.common.host import Host
-from blinkpy.w3c.chromium_finder import absolute_chromium_dir
+from __future__ import print_function
 
+import argparse
+import datetime
+import os
 import re
 import sys
+
+from csv_database import ChromiumWPTUsageDB
 
 # Note: Rename to LayoutTests/external/ was on 2017-01-17, in commit
 # 6506b8b80db745936336bb88855cd078c083691e.
@@ -26,7 +30,7 @@ NOT_TEST_PATTERNS = [
     'third_party/blink/web_tests/[^/]*$',
     # WPT_BASE_MANIFEST.json, etc.
     'third_party/blink/web_tests/external/[^/]*$',
-    # lint.whitelist, etc.
+    # lint.ignore, etc.
     'third_party/blink/web_tests/external/wpt/[^/]*$',
     # Baselines
     'third_party/blink/web_tests/flag-specific/',
@@ -66,17 +70,11 @@ def is_in_wpt(path):
     return path.startswith('third_party/blink/web_tests/external/wpt/')
 
 
-def main():
-    host = Host()
-    chromium_dir = absolute_chromium_dir(host)
-
-    since = sys.argv[1]
-    until = sys.argv[2]
-
+def get_stats(host, chromium_dir, since, until):
     lt_revs = host.executive.run_command([
         'git', 'rev-list', 'origin/master',
-        '--since={}T00:00:00Z'.format(since),
-        '--until={}T00:00:00Z'.format(until),
+        '--since={}-01T00:00:00Z'.format(since),
+        '--until={}-01T00:00:00Z'.format(until),
         '--', 'third_party/blink/web_tests',
     ], cwd=chromium_dir).strip().split()
 
@@ -100,10 +98,75 @@ def main():
         changes += 1
         if wpt_change:
             wpt_changes += 1
-        print sha, 'WPT' if wpt_change else 'No-WPT'
+        print(sha, 'WPT' if wpt_change else 'No-WPT')
 
-    print
-    print '{} source+test changes, {} in wpt'.format(changes, wpt_changes)
+    print()
+    print('{} source+test changes, {} in wpt'.format(changes, wpt_changes))
+    fraction = 0 if changes == 0 else wpt_changes / float(changes)
+    return {'date': since, 'total_changes': changes, 'changes_with_wpt': wpt_changes, 'fraction': fraction}
+
+
+def get_next_month(date):
+    # Naive implementation; assumes an input of YYYY-MM.
+    year, month = map(lambda x: int(x), date.split('-'))
+    day = 1
+    month += 1
+    if month > 12:
+        month = 1
+        year += 1
+    return datetime.date(year, month, day).strftime('%Y-%m')
+
+
+def date_is_before(a, b):
+    # Naive implementation; assumes both a and b are dates in the form YYYY-MM.
+    return datetime.datetime.strptime(a, '%Y-%m') < datetime.datetime.strptime(b, '%Y-%m')
+
+
+def main():
+    parser = argparse.ArgumentParser(description='Get stats on WPT usage in Chromium')
+    parser.add_argument('chromium_src', help='Path to the src/ folder of a Chromium checkout')
+    parser.add_argument('--csv-file', default='wpt-usage.csv', help='CSV file for results; also used to load existing results')
+    parser.add_argument('--since', default='2019-01', help='Month to start at (inclusive)')
+    parser.add_argument('--until', default=datetime.datetime.now().strftime('%Y-%m'), help='Month to end at (exclusive)')
+    args = parser.parse_args()
+
+    # We depend on the blinkpy library, so temporarily modify sys.path to bring
+    # it in.
+    blink_tools = os.path.join(args.chromium_src, 'third_party', 'blink', 'tools')
+    sys.path.insert(0, blink_tools)
+    from blinkpy.common.host import Host
+    from blinkpy.w3c.chromium_finder import absolute_chromium_dir
+    sys.path.remove(blink_tools)
+
+    since = args.since
+    until = args.until
+
+    print('Processing WPT usage from', since, 'until', until)
+
+    # Get existing CSV data, if any.
+    usage = ChromiumWPTUsageDB(args.csv_file)
+    try:
+        usage.read()
+        since = get_next_month(usage.values()[-1]['date'])
+        print('Found existing CSV file, processing from', since, 'until', until)
+    except (IOError, AssertionError):
+        # Non-fatal error
+        pass
+
+    if not date_is_before(since, until):
+        print('No data to update, finished!')
+        return
+
+    host = Host()
+    chromium_dir = absolute_chromium_dir(host)
+
+    while date_is_before(since, until):
+        print('Getting stats for', since)
+        next_month = get_next_month(since)
+        usage.add(get_stats(host, chromium_dir, since, next_month))
+        since = next_month
+
+    usage.write()
 
 
 if __name__ == '__main__':

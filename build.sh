@@ -30,6 +30,7 @@ echo "checking out existing CSV files from gh-pages..."
 git fetch origin || true
 # Don't combine them into one line in case some file doesn't exist.
 git checkout origin/gh-pages -- export-latencies.csv || true
+git checkout origin/gh-pages -- wpt-usage.csv || true
 git reset HEAD *.csv || true
 echo
 
@@ -56,13 +57,11 @@ echo "upstream wpt commit stats..."
 python wpt-commits.py "$CHROMIUM_DIR" "$WPT_DIR"
 echo
 
-mv *.csv "$OUTDIR/"
-
 echo "chromium usage stats..."
-cp wpt_usage_stats.py "$CHROMIUM_DIR/third_party/blink/tools/"
-"$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py" 2020-04-01 2020-05-01 > "$OUTDIR/chromium-usage-stats.txt"
-rm "$CHROMIUM_DIR/third_party/blink/tools/wpt_usage_stats.py"
+./wpt_usage_stats.py "$CHROMIUM_DIR"
 echo
+
+mv *.csv "$OUTDIR/"
 
 echo "chromium OWNERS check..."
 ./chromium-wpt-owners.sh "$CHROMIUM_DIR/third_party/blink/web_tests/external/wpt" > "$OUTDIR/chromium-wpt-owners.txt"

@@ -124,3 +124,9 @@ class RunLatencyDB(CSVIndexedDB):
     def __init__(self, csv_path):
         super(RunLatencyDB, self).__init__(csv_path, fields=[
             'PR', 'merge_sha', 'merge_date', 'run_sha', 'run_date', 'latency'])
+
+
+class ChromiumWPTUsageDB(CSVIndexedDB):
+    def __init__(self, csv_path):
+        super(ChromiumWPTUsageDB, self).__init__(csv_path, fields=[
+            'date', 'total_changes', 'changes_with_wpt', 'fraction'])
