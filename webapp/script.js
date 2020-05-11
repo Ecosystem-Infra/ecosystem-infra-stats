@@ -57,7 +57,7 @@ function configDataPoint(label, color, data) {
 }
 
 function drawChart(canvas, title, data, yAxisLabel) {
-  new Chart(canvas, {
+  return new Chart(canvas, {
     type: 'line',
     data: data,
     options: {
@@ -106,6 +106,28 @@ fetch('wpt-commits.csv')
         document.querySelector('#wpt-commits canvas'),
         'web-platform-tests commits',
         data);
+  });
+
+fetch('wpt-usage.csv')
+  .then(response => response.text())
+  .then(text => {
+    const table = parseCSV(text);
+    const data = {
+      labels: table.rows.map(row => row[0]),
+      datasets: [],
+    };
+
+    // Fraction only
+    data.datasets.push(configDataPoint('Fraction of changes using WPT',
+        CHROME_BLUE, table.rows.map(row => +row[3])));
+
+    data.datasets.reverse();
+    const chart = drawChart(
+        document.querySelector('#wpt-usage canvas'),
+        'Usage of wpt in blink source+test changes',
+        data);
+    chart.options.scales.yAxes[0].ticks.max = 1;
+    chart.update();
   });
 
 fetch('import-latency-stats.csv')
