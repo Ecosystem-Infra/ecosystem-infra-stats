@@ -13,6 +13,7 @@ Missing OWNERS: content-dpr
 Missing OWNERS: contenteditable
 Missing OWNERS: content-index
 Missing OWNERS: delegated-ink
+Missing OWNERS: docs
 Missing OWNERS: document-policy
 Missing TEAM: domparsing
 Missing TEAM: domxpath
@@ -35,6 +36,7 @@ Missing OWNERS: largest-contentful-paint
 Missing OWNERS: layout-instability
 Missing OWNERS: lifecycle
 Missing OWNERS: loading
+Missing OWNERS: manifest
 Missing OWNERS: mathml
 Missing OWNERS: measure-memory
 Missing OWNERS: mediacapture-depth
@@ -57,7 +59,6 @@ Missing OWNERS: permissions
 Missing OWNERS: permissions-request
 Missing OWNERS: permissions-revoke
 Missing OWNERS: picture-in-picture
-Missing OWNERS: portals
 Missing OWNERS: priority-hints
 Missing OWNERS: push-api
 Missing TEAM: quirks
@@ -89,9 +90,11 @@ Missing TEAM: webrtc
 Missing OWNERS: webrtc-extensions
 Missing OWNERS: webrtc-identity
 Missing OWNERS: webrtc-insertable-streams
+Missing OWNERS: webrtc-priority
 Missing OWNERS: webrtc-quic
 Missing OWNERS: webrtc-stats
 Missing OWNERS: webrtc-svc
+Missing OWNERS: webtransport
 Missing OWNERS: xslt
 Missing OWNERS: css/compositing
 Missing OWNERS: css/construct-stylesheets
