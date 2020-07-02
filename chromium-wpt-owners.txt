@@ -29,6 +29,7 @@ Missing OWNERS: import-maps
 Missing OWNERS: inert
 Missing OWNERS: input-device-capabilities
 Missing OWNERS: installedapp
+Missing OWNERS: is-input-pending
 Missing OWNERS: js-self-profiling
 Missing TEAM: keyboard-lock
 Missing COMPONENT: keyboard-lock
@@ -36,12 +37,12 @@ Missing OWNERS: largest-contentful-paint
 Missing OWNERS: layout-instability
 Missing OWNERS: lifecycle
 Missing OWNERS: loading
-Missing OWNERS: manifest
 Missing OWNERS: mathml
 Missing OWNERS: measure-memory
 Missing OWNERS: mediacapture-depth
 Missing OWNERS: mediacapture-image
 Missing TEAM: mediacapture-streams
+Missing OWNERS: media-feeds
 Missing OWNERS: media-playback-quality
 Missing TEAM: media-source
 Missing COMPONENT: media-source
@@ -66,6 +67,7 @@ Missing COMPONENT: quirks
 Missing OWNERS: reporting
 Missing TEAM: resources
 Missing COMPONENT: resources
+Missing OWNERS: savedata
 Missing TEAM: screen-capture
 Missing OWNERS: screen_enumeration
 Missing TEAM: screen-orientation
@@ -78,14 +80,17 @@ Missing OWNERS: timing-entrytypes-registry
 Missing TEAM: tools
 Missing COMPONENT: tools
 Missing OWNERS: trust-tokens
+Missing OWNERS: ua-client-hints
 Missing OWNERS: video-rvfc
 Missing TEAM: wasm
 Missing TEAM: webaudio
 Missing OWNERS: web-bundle
 Missing TEAM: WebCryptoAPI
 Missing OWNERS: webdriver
+Missing OWNERS: webhid
 Missing TEAM: webmessaging
 Missing OWNERS: webmidi
+Missing OWNERS: web-otp
 Missing TEAM: webrtc
 Missing OWNERS: webrtc-extensions
 Missing OWNERS: webrtc-identity
@@ -95,6 +100,7 @@ Missing OWNERS: webrtc-quic
 Missing OWNERS: webrtc-stats
 Missing OWNERS: webrtc-svc
 Missing OWNERS: webtransport
+Missing OWNERS: window-segments
 Missing OWNERS: xslt
 Missing OWNERS: css/compositing
 Missing OWNERS: css/construct-stylesheets
