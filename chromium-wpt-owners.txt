@@ -12,8 +12,10 @@ Missing COMPONENT: console
 Missing OWNERS: content-dpr
 Missing OWNERS: contenteditable
 Missing OWNERS: content-index
+Missing OWNERS: cors-rfc1918
 Missing OWNERS: custom-state-pseudo-class
 Missing OWNERS: delegated-ink
+Missing OWNERS: density-size-correction
 Missing OWNERS: deprecation-reporting
 Missing OWNERS: docs
 Missing OWNERS: document-policy
@@ -46,6 +48,7 @@ Missing OWNERS: media-feeds
 Missing OWNERS: media-playback-quality
 Missing TEAM: media-source
 Missing COMPONENT: media-source
+Missing OWNERS: merchant-validation
 Missing OWNERS: mimesniff
 Missing OWNERS: mst-content-hint
 Missing OWNERS: network-error-logging
@@ -69,6 +72,7 @@ Missing TEAM: screen-capture
 Missing OWNERS: screen_enumeration
 Missing TEAM: screen-orientation
 Missing OWNERS: scroll-animations
+Missing OWNERS: secure-payment-confirmation
 Missing OWNERS: serial
 Missing OWNERS: shape-detection
 Missing OWNERS: signed-exchange
@@ -78,6 +82,7 @@ Missing TEAM: tools
 Missing COMPONENT: tools
 Missing OWNERS: trust-tokens
 Missing OWNERS: ua-client-hints
+Missing OWNERS: _venv2
 Missing OWNERS: video-rvfc
 Missing TEAM: wasm
 Missing TEAM: webaudio
@@ -94,7 +99,6 @@ Missing OWNERS: webrtc-extensions
 Missing OWNERS: webrtc-identity
 Missing OWNERS: webrtc-insertable-streams
 Missing OWNERS: webrtc-priority
-Missing OWNERS: webrtc-quic
 Missing OWNERS: webrtc-stats
 Missing OWNERS: webrtc-svc
 Missing OWNERS: webtransport
