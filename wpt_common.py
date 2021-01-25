@@ -19,7 +19,7 @@ from csv_database import PRDB
 # started to stablize around this time. Earlier results are inaccurate.
 CUTOFF = '2017-07-01T00:00:00Z'
 # Change this when it is a new quarter.
-QUARTER_START = '2020-10-01T00:00:00Z'
+QUARTER_START = '2021-01-01T00:00:00Z'
 
 # GitHub cache. Delete the file to fetch PRs again.
 PRS_FILE = 'wpt-prs.csv'
