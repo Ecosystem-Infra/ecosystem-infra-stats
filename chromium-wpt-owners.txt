@@ -28,7 +28,6 @@ Missing TEAM: cookie-store
 Missing COMPONENT: cookie-store
 Missing TEAM: cors
 Missing COMPONENT: cors
-Missing OWNERS: cors-rfc1918
 Missing OWNERS: custom-elements
 Missing OWNERS: custom-state-pseudo-class
 Missing OWNERS: delegated-ink
@@ -60,6 +59,8 @@ Missing TEAM: fetch
 Missing COMPONENT: fetch
 Missing TEAM: FileAPI
 Missing COMPONENT: FileAPI
+Missing TEAM: file-system-access
+Missing COMPONENT: file-system-access
 Missing OWNERS: focus
 Missing TEAM: font-access
 Missing COMPONENT: font-access
@@ -112,6 +113,7 @@ Missing OWNERS: mathml
 Missing OWNERS: measure-memory
 Missing OWNERS: mediacapture-depth
 Missing OWNERS: mediacapture-image
+Missing OWNERS: mediacapture-insertable-streams
 Missing TEAM: mediacapture-record
 Missing COMPONENT: mediacapture-record
 Missing TEAM: mediacapture-streams
@@ -127,8 +129,6 @@ Missing OWNERS: mimesniff
 Missing TEAM: mixed-content
 Missing COMPONENT: mixed-content
 Missing OWNERS: mst-content-hint
-Missing TEAM: native-file-system
-Missing COMPONENT: native-file-system
 Missing TEAM: native-io
 Missing COMPONENT: native-io
 Missing TEAM: navigation-timing
@@ -136,8 +136,6 @@ Missing COMPONENT: navigation-timing
 Missing OWNERS: network-error-logging
 Missing TEAM: orientation-event
 Missing COMPONENT: orientation-event
-Missing TEAM: origin-isolation
-Missing COMPONENT: origin-isolation
 Missing OWNERS: origin-policy
 Missing OWNERS: page-lifecycle
 Missing TEAM: page-visibility
@@ -202,8 +200,6 @@ Missing TEAM: subresource-integrity
 Missing COMPONENT: subresource-integrity
 Missing OWNERS: svg
 Missing OWNERS: timing-entrytypes-registry
-Missing TEAM: tools
-Missing COMPONENT: tools
 Missing TEAM: touch-events
 Missing COMPONENT: touch-events
 Missing TEAM: trusted-types
@@ -217,7 +213,6 @@ Missing COMPONENT: upgrade-insecure-requests
 Missing OWNERS: url
 Missing OWNERS: urlpattern
 Missing OWNERS: user-timing
-Missing OWNERS: _venv2
 Missing OWNERS: vibration
 Missing OWNERS: video-rvfc
 Missing TEAM: visual-viewport
@@ -244,6 +239,8 @@ Missing OWNERS: web-otp
 Missing TEAM: webrtc
 Missing COMPONENT: webrtc
 Missing OWNERS: webrtc-extensions
+Missing TEAM: webrtc-ice
+Missing COMPONENT: webrtc-ice
 Missing OWNERS: webrtc-identity
 Missing OWNERS: webrtc-insertable-streams
 Missing OWNERS: webrtc-priority
@@ -283,6 +280,7 @@ Missing COMPONENT: css/css-conditional
 Missing TEAM: css/css-contain
 Missing COMPONENT: css/css-contain
 Missing OWNERS: css/css-content
+Missing OWNERS: css/css-counter-styles
 Missing OWNERS: css/css-device-adapt
 Missing TEAM: css/css-display
 Missing COMPONENT: css/css-display
