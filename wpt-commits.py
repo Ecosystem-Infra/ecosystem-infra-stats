@@ -1,10 +1,31 @@
 from datetime import datetime
+import os
+import subprocess
+import sys
+
 from dateutil.relativedelta import relativedelta
 
 from csv_database import CommitDB
-from wpt_common import wpt_git
+
+try:
+    WPT_DIR = sys.argv[1]
+except IndexError:
+    WPT_DIR = os.path.expanduser('~/web-platform-tests/wpt')
+
+
+def git(args, cwd):
+    command = ['git'] + args
+    output = subprocess.check_output(command, cwd=cwd, env={'TZ': 'UTC'})
+    # Alright this only works in UTF-8 locales...
+    return output.decode('utf-8').rstrip()
+
+
+def wpt_git(args):
+    return git(args, cwd=WPT_DIR)
+
 
 COMMITS_CSV = 'wpt-commits.csv'
+
 
 FIELD_GREP_ARGS = {
     'Total commits': [],
