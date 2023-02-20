@@ -69,7 +69,7 @@ def is_in_wpt(path):
 
 def get_stats(host, chromium_dir, since, until):
     lt_revs = host.executive.run_command([
-        'git', 'rev-list', 'origin/master',
+        'git', 'rev-list', 'origin/main',
         '--since={}-01T00:00:00Z'.format(since),
         '--until={}-01T00:00:00Z'.format(until),
         '--', 'third_party/blink/web_tests',
