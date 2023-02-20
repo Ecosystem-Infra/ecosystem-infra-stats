@@ -14,10 +14,7 @@ Up-to-date checkouts of
 and [web-platform-tests](https://github.com/web-platform-tests/wpt)
 are needed in `$HOME/chromium/src` and `$HOME/web-platform-tests`.
 
-The build script needs Python 2 and Virtualenv:
-```bash
-sudo apt install python2 virtualenv
-```
+The build script needs Python 3 available as a `python3` binary.
 
 ## Build & deploy
 

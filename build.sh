@@ -15,9 +15,9 @@ mkdir out
 # copy the static webapp content
 cp -r webapp "$OUTDIR"
 
-# virtualenv initialization
+# venv setup
 if [[ ! -f "env/bin/activate" ]]; then
-    virtualenv -p python2 --no-site-packages env
+    python3 -m venv env
 fi
 set +u
 source env/bin/activate
@@ -58,7 +58,7 @@ python wpt-commits.py "$CHROMIUM_DIR" "$WPT_DIR"
 echo
 
 echo "chromium usage stats..."
-./wpt_usage_stats.py "$CHROMIUM_DIR"
+python wpt_usage_stats.py "$CHROMIUM_DIR"
 echo
 
 mv *.csv "$OUTDIR/"

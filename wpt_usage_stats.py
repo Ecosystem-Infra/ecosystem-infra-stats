@@ -1,9 +1,6 @@
-#!/usr/bin/env python2
 # Copyright 2017 The Chromium Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that can be
 # found in the LICENSE file.
-
-from __future__ import print_function
 
 import argparse
 import datetime
@@ -108,7 +105,7 @@ def get_stats(host, chromium_dir, since, until):
 
 def get_next_month(date):
     # Naive implementation; assumes an input of YYYY-MM.
-    year, month = map(lambda x: int(x), date.split('-'))
+    year, month = [int(x) for x in date.split('-')]
     day = 1
     month += 1
     if month > 12:
@@ -147,7 +144,7 @@ def main():
     usage = ChromiumWPTUsageDB(args.csv_file)
     try:
         usage.read()
-        since = get_next_month(usage.values()[-1]['date'])
+        since = get_next_month(list(usage.values())[-1]['date'])
         print('Found existing CSV file, processing from', since, 'until', until)
     except (IOError, AssertionError):
         # Non-fatal error
