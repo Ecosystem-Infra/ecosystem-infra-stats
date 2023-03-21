@@ -90,42 +90,6 @@ class CommitDB(CSVIndexedDB):
             'Servo exports', 'WebKit exports'])
 
 
-class PRDB(CSVIndexedDB):
-    def __init__(self, csv_path):
-        super(PRDB, self).__init__(csv_path, fields=[
-            'PR', 'merge_commit_sha', 'merged_at', 'chromium_commit'])
-
-
-class ImportLatencyDB(CSVIndexedDB):
-    def __init__(self, csv_path):
-        super(ImportLatencyDB, self).__init__(csv_path, fields=[
-            'PR', 'import_sha', 'import_time', 'latency'])
-
-
-class ExportLatencyDB(CSVIndexedDB):
-    def __init__(self, csv_path):
-        super(ExportLatencyDB, self).__init__(csv_path, fields=[
-            'PR', 'exported_sha', 'commit_time', 'latency'])
-
-
-class ImportLatencyStatDB(CSVIndexedDB):
-    def __init__(self, csv_path):
-        super(ImportLatencyStatDB, self).__init__(csv_path, fields=[
-            'Week', 'PRs', '50%', '90%', 'Mean', 'Meeting SLA'])
-
-
-class ExportLatencyStatDB(CSVIndexedDB):
-    def __init__(self, csv_path):
-        super(ExportLatencyStatDB, self).__init__(csv_path, fields=[
-            'Week', 'PRs', '50%', '90%', 'Mean', 'Meeting SLA'])
-
-
-class RunLatencyDB(CSVIndexedDB):
-    def __init__(self, csv_path):
-        super(RunLatencyDB, self).__init__(csv_path, fields=[
-            'PR', 'merge_sha', 'merge_date', 'run_sha', 'run_date', 'latency'])
-
-
 class ChromiumWPTUsageDB(CSVIndexedDB):
     def __init__(self, csv_path):
         super(ChromiumWPTUsageDB, self).__init__(csv_path, fields=[
